@@ -64,7 +64,7 @@ class GstEngine : public Engine::Base {
 
   bool Init();
 
-  bool CanDecode(const QUrl& url);
+  bool CanDecode(const QUrl& url) { return false; }
 
   int AddBackgroundStream(const QUrl& url);
   void StopBackgroundStream(int id);
@@ -115,13 +115,6 @@ class GstEngine : public Engine::Base {
   void BackgroundStreamFinished();
 
  private:
-  // Callbacks
-  static void CanDecodeNewPadCallback(GstElement*, GstPad*, gboolean, gpointer);
-  static void CanDecodeLastCallback(GstElement*, gpointer);
-  static GstBusSyncReply CanDecodeBusCallbackSync(GstBus*, GstMessage*, gpointer);
-  static gboolean CanDecodeBusCallback(GstBus*, GstMessage*, gpointer);
-  static void PrintGstError(GstMessage* msg);
-
   static void SetEnv(const char* key, const QString& value);
   PluginDetailsList GetPluginList(const QString& classname) const;
 
