@@ -44,7 +44,7 @@ class GstEnginePipeline;
  * @short GStreamer engine plugin
  * @author Mark Kretschmann <markey@web.de>
  */
-class GstEngine : public Engine::Base, public BufferConsumer {
+class GstEngine : public Engine::Base {
   Q_OBJECT
 
  public:
@@ -111,8 +111,6 @@ class GstEngine : public Engine::Base, public BufferConsumer {
   void EndOfStreamReached(bool has_next_track);
   void HandlePipelineError(const QString& message);
   void NewMetaData(const Engine::SimpleMetaBundle& bundle);
-  void ClearScopeBuffers();
-  void AddBufferToScope(GstBuffer* buf, GstEnginePipeline* pipeline);
   void FadeoutFinished();
   void SeekNow();
   void BackgroundStreamFinished();
@@ -132,9 +130,6 @@ class GstEngine : public Engine::Base, public BufferConsumer {
 
   boost::shared_ptr<GstEnginePipeline> CreatePipeline(const QUrl& url);
 
-  void UpdateScope();
-  qint64 PruneScope();
-
  private:
   // Interval of main timer, handles the volume fading
   static const int kTimerInterval = 40; // msec
@@ -150,10 +145,6 @@ class GstEngine : public Engine::Base, public BufferConsumer {
   QUrl preloaded_url_;
 
   QList<BufferConsumer*> buffer_consumers_;
-
-  GQueue* delayq_;
-  float current_scope_[kScopeSize];
-  int current_sample_;
 
   bool equalizer_enabled_;
   int equalizer_preamp_;
