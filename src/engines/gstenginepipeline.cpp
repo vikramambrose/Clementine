@@ -118,16 +118,12 @@ bool GstEnginePipeline::Init(const QUrl &url) {
 
   if (!(audioconvert_ = engine_->CreateElement("audioconvert", audiobin_))) { return false; }
   if (!(audioscale_ = engine_->CreateElement("audioresample", audiobin_))) { return false; }
-  GstElement* scope_element = audioconvert_;
 
   GstPad* pad = gst_element_get_pad(audioconvert_, "sink");
   gst_element_add_pad(audiobin_, gst_ghost_pad_new("sink", pad));
   gst_object_unref(pad);
 
-  // Add an extra audioconvert at the end as osxaudiosink supports only one format.
-  GstElement* convert = engine_->CreateElement("audioconvert", audiobin_, "audioconvert3");
-  if (!convert) { return false; }
-  gst_element_link_many(scope_element, audioscale_, convert, audiosink_, NULL);
+  gst_element_link_many(audioconvert_, audioscale_, audiosink_, NULL);
 
   gst_bus_set_sync_handler(gst_pipeline_get_bus(GST_PIPELINE(pipeline_)), BusCallbackSync, this);
   bus_cb_id_ = gst_bus_add_watch(gst_pipeline_get_bus(GST_PIPELINE(pipeline_)), BusCallback, this);
