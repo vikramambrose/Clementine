@@ -194,24 +194,10 @@ bool GstEngine::Load(const QUrl& url, Engine::TrackChangeType change) {
     gst_url.setHost(QString());
   }
 
-  const bool crossfade = current_pipeline_ &&
-                         ((crossfade_enabled_ && change == Engine::Manual) ||
-                          (autocrossfade_enabled_ && change == Engine::Auto));
-
-  if (!crossfade && current_pipeline_ && current_pipeline_->url() == gst_url &&
-      change == Engine::Auto) {
-    // We're not crossfading, and the pipeline is already playing the URI we
-    // want, so just do nothing.
-    return true;
-  }
-
   shared_ptr<GstEnginePipeline> pipeline;
   pipeline = CreatePipeline(gst_url);
   if (!pipeline)
     return false;
-
-  if (crossfade)
-    StartFadeout();
 
   current_pipeline_ = pipeline;
 
@@ -219,22 +205,8 @@ bool GstEngine::Load(const QUrl& url, Engine::TrackChangeType change) {
   SetEqualizerEnabled(equalizer_enabled_);
   SetEqualizerParameters(equalizer_preamp_, equalizer_gains_);
 
-  // Maybe fade in this track
-  if (crossfade)
-    current_pipeline_->StartFader(fadeout_duration_, QTimeLine::Forward);
-
   return true;
 }
-
-void GstEngine::StartFadeout() {
-  fadeout_pipeline_ = current_pipeline_;
-  disconnect(fadeout_pipeline_.get(), 0, 0, 0);
-  fadeout_pipeline_->RemoveAllBufferConsumers();
-
-  fadeout_pipeline_->StartFader(fadeout_duration_, QTimeLine::Backward);
-  connect(fadeout_pipeline_.get(), SIGNAL(FaderFinished()), SLOT(FadeoutFinished()));
-}
-
 
 bool GstEngine::Play( uint offset ) {
   // Try to play input pipeline; if fails, destroy input bin
@@ -267,15 +239,8 @@ bool GstEngine::Play( uint offset ) {
 void GstEngine::Stop() {
   url_ = QUrl(); // To ensure we return Empty from state()
 
-  if (fadeout_enabled_ && current_pipeline_)
-    StartFadeout();
-
   current_pipeline_.reset();
   emit StateChanged(Engine::Empty);
-}
-
-void GstEngine::FadeoutFinished() {
-  fadeout_pipeline_.reset();
 }
 
 void GstEngine::Pause() {

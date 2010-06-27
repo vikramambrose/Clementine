@@ -109,14 +109,11 @@ class GstEngine : public Engine::Base {
   void EndOfStreamReached(bool has_next_track);
   void HandlePipelineError(const QString& message);
   void NewMetaData(const Engine::SimpleMetaBundle& bundle);
-  void FadeoutFinished();
   void BackgroundStreamFinished();
 
  private:
   static void SetEnv(const char* key, const QString& value);
   PluginDetailsList GetPluginList(const QString& classname) const;
-
-  void StartFadeout();
 
   boost::shared_ptr<GstEnginePipeline> CreatePipeline(const QUrl& url);
 
@@ -130,7 +127,6 @@ class GstEngine : public Engine::Base {
   QString device_;
 
   boost::shared_ptr<GstEnginePipeline> current_pipeline_;
-  boost::shared_ptr<GstEnginePipeline> fadeout_pipeline_;
 
   QList<BufferConsumer*> buffer_consumers_;
 
@@ -142,9 +138,6 @@ class GstEngine : public Engine::Base {
   int rg_mode_;
   float rg_preamp_;
   bool rg_compression_;
-
-  mutable bool can_decode_success_;
-  mutable bool can_decode_last_;
 
   QHash<int, boost::shared_ptr<GstEnginePipeline> > background_streams_;
 };
