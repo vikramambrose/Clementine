@@ -121,18 +121,6 @@ bool GstEnginePipeline::Init(const QUrl &url) {
   if (!(audioscale_ = engine_->CreateElement("audioresample", audiobin_))) { return false; }
   GstElement* scope_element = audioconvert_;
 
-  if (rg_enabled_) {
-    if (!(rgvolume_ = engine_->CreateElement("rgvolume", audiobin_))) { return false; }
-    if (!(rglimiter_ = engine_->CreateElement("rglimiter", audiobin_))) { return false; }
-    if (!(audioconvert2_ = engine_->CreateElement("audioconvert", audiobin_, "audioconvert2"))) { return false; }
-    scope_element = audioconvert2_;
-
-    // Set replaygain settings
-    g_object_set(G_OBJECT(rgvolume_), "album-mode", rg_mode_, NULL);
-    g_object_set(G_OBJECT(rgvolume_), "pre-amp", double(rg_preamp_), NULL);
-    g_object_set(G_OBJECT(rglimiter_), "enabled", int(rg_compression_), NULL);
-  }
-
   GstPad* pad = gst_element_get_pad(audioconvert_, "sink");
   gst_element_add_pad(audiobin_, gst_ghost_pad_new("sink", pad));
   gst_object_unref(pad);
@@ -140,8 +128,6 @@ bool GstEnginePipeline::Init(const QUrl &url) {
   // Add an extra audioconvert at the end as osxaudiosink supports only one format.
   GstElement* convert = engine_->CreateElement("audioconvert", audiobin_, "audioconvert3");
   if (!convert) { return false; }
-  if (rg_enabled_)
-    gst_element_link_many(audioconvert_, rgvolume_, rglimiter_, audioconvert2_, NULL);
   gst_element_link_many(scope_element, volume_, audioscale_, convert, audiosink_, NULL);
 
   gst_bus_set_sync_handler(gst_pipeline_get_bus(GST_PIPELINE(pipeline_)), BusCallbackSync, this);
