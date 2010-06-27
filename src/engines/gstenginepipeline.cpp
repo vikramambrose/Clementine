@@ -140,13 +140,6 @@ bool GstEnginePipeline::Init(const QUrl &url) {
   gst_element_add_pad(audiobin_, gst_ghost_pad_new("sink", pad));
   gst_object_unref(pad);
 
-  // Add a data probe on the src pad of the audioconvert element for our scope.
-  // We do it here because we want pre-equalized and pre-volume samples
-  // so that our visualization are not affected by them
-  pad = gst_element_get_pad(scope_element, "src");
-  gst_pad_add_buffer_probe(pad, G_CALLBACK(HandoffCallback), this);
-  gst_object_unref (pad);
-
   // Ensure we get the right type out of audioconvert for our scope
   GstCaps* caps = gst_caps_new_simple ("audio/x-raw-int",
       "width", G_TYPE_INT, 16,
