@@ -140,20 +140,12 @@ bool GstEnginePipeline::Init(const QUrl &url) {
   gst_element_add_pad(audiobin_, gst_ghost_pad_new("sink", pad));
   gst_object_unref(pad);
 
-  // Ensure we get the right type out of audioconvert for our scope
-  GstCaps* caps = gst_caps_new_simple ("audio/x-raw-int",
-      "width", G_TYPE_INT, 16,
-      "signed", G_TYPE_BOOLEAN, true,
-      NULL);
-  gst_element_link_filtered(scope_element, equalizer_, caps);
-  gst_caps_unref(caps);
-
   // Add an extra audioconvert at the end as osxaudiosink supports only one format.
   GstElement* convert = engine_->CreateElement("audioconvert", audiobin_, "audioconvert3");
   if (!convert) { return false; }
   if (rg_enabled_)
     gst_element_link_many(audioconvert_, rgvolume_, rglimiter_, audioconvert2_, NULL);
-  gst_element_link_many(equalizer_, volume_, audioscale_, convert, audiosink_, NULL);
+  gst_element_link_many(scope_element, equalizer_, volume_, audioscale_, convert, audiosink_, NULL);
 
   gst_bus_set_sync_handler(gst_pipeline_get_bus(GST_PIPELINE(pipeline_)), BusCallbackSync, this);
   bus_cb_id_ = gst_bus_add_watch(gst_pipeline_get_bus(GST_PIPELINE(pipeline_)), BusCallback, this);
