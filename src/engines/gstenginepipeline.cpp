@@ -117,7 +117,6 @@ bool GstEnginePipeline::Init(const QUrl &url) {
     g_object_set(G_OBJECT(audiosink_), "device", device_.toUtf8().constData(), NULL);
 
   if (!(audioconvert_ = engine_->CreateElement("audioconvert", audiobin_))) { return false; }
-  if (!(volume_ = engine_->CreateElement("volume", audiobin_))) { return false; }
   if (!(audioscale_ = engine_->CreateElement("audioresample", audiobin_))) { return false; }
   GstElement* scope_element = audioconvert_;
 
@@ -128,7 +127,7 @@ bool GstEnginePipeline::Init(const QUrl &url) {
   // Add an extra audioconvert at the end as osxaudiosink supports only one format.
   GstElement* convert = engine_->CreateElement("audioconvert", audiobin_, "audioconvert3");
   if (!convert) { return false; }
-  gst_element_link_many(scope_element, volume_, audioscale_, convert, audiosink_, NULL);
+  gst_element_link_many(scope_element, audioscale_, convert, audiosink_, NULL);
 
   gst_bus_set_sync_handler(gst_pipeline_get_bus(GST_PIPELINE(pipeline_)), BusCallbackSync, this);
   bus_cb_id_ = gst_bus_add_watch(gst_pipeline_get_bus(GST_PIPELINE(pipeline_)), BusCallback, this);
@@ -358,8 +357,6 @@ void GstEnginePipeline::SetVolumeModifier(qreal mod) {
 }
 
 void GstEnginePipeline::UpdateVolume() {
-  float vol = double(volume_percent_) * 0.01 * volume_modifier_;
-  g_object_set(G_OBJECT(volume_), "volume", vol, NULL);
 }
 
 void GstEnginePipeline::StartFader(int duration_msec,
