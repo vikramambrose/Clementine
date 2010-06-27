@@ -86,33 +86,8 @@ bool GstEnginePipeline::Init(const QUrl &url) {
   //   audioscale -> audioconvert -> audiosink
 
   // Decode bin
-  GstElement* new_bin = engine_->CreateElement("uridecodebin");
-  if (!new_bin) return false;
-
-  uridecodebin_ = new_bin;
-  gst_bin_add(GST_BIN(pipeline_), uridecodebin_);
-
-  g_object_set(G_OBJECT(uridecodebin_), "uri", url.toEncoded().constData(), NULL);
-  g_signal_connect(G_OBJECT(uridecodebin_), "pad-added", G_CALLBACK(NewPadCallback), this);
-
-  // Audio bin
-  audiobin_ = gst_bin_new("audiobin");
-  gst_bin_add(GST_BIN(pipeline_), audiobin_);
-
-  if (!(audiosink_ = engine_->CreateElement(sink_, audiobin_)))
-    return false;
-
-  if (GstEngine::DoesThisSinkSupportChangingTheOutputDeviceToAUserEditableString(sink_) && !device_.isEmpty())
-    g_object_set(G_OBJECT(audiosink_), "device", device_.toUtf8().constData(), NULL);
-
-  if (!(audioconvert_ = engine_->CreateElement("audioconvert", audiobin_))) { return false; }
-  if (!(audioscale_ = engine_->CreateElement("audioresample", audiobin_))) { return false; }
-
-  GstPad* pad = gst_element_get_pad(audioconvert_, "sink");
-  gst_element_add_pad(audiobin_, gst_ghost_pad_new("sink", pad));
-  gst_object_unref(pad);
-
-  gst_element_link_many(audioconvert_, audioscale_, audiosink_, NULL);
+  GstElement* playbin = engine_->CreateElement("playbin2", pipeline_);
+  g_object_set(G_OBJECT(playbin), "uri", url.toEncoded().constData(), NULL);
 
   gst_bus_set_sync_handler(gst_pipeline_get_bus(GST_PIPELINE(pipeline_)), BusCallbackSync, this);
   bus_cb_id_ = gst_bus_add_watch(gst_pipeline_get_bus(GST_PIPELINE(pipeline_)), BusCallback, this);
