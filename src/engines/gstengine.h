@@ -112,7 +112,6 @@ class GstEngine : public Engine::Base {
   void HandlePipelineError(const QString& message);
   void NewMetaData(const Engine::SimpleMetaBundle& bundle);
   void FadeoutFinished();
-  void SeekNow();
   void BackgroundStreamFinished();
 
  private:
@@ -157,11 +156,6 @@ class GstEngine : public Engine::Base {
 
   mutable bool can_decode_success_;
   mutable bool can_decode_last_;
-
-  // Hack to stop seeks happening too often
-  QTimer* seek_timer_;
-  bool waiting_to_seek_;
-  uint seek_pos_;
 
   int timer_id_;
 

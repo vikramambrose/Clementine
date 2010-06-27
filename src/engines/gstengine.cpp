@@ -58,13 +58,8 @@ GstEngine::GstEngine()
     rg_mode_(0),
     rg_preamp_(0.0),
     rg_compression_(true),
-    seek_timer_(new QTimer(this)),
     timer_id_(-1)
 {
-  seek_timer_->setSingleShot(true);
-  seek_timer_->setInterval(kSeekDelay);
-  connect(seek_timer_, SIGNAL(timeout()), SLOT(SeekNow()));
-
   ReloadSettings();
 }
 
@@ -439,23 +434,7 @@ void GstEngine::Seek(uint ms) {
   if (!current_pipeline_)
     return;
 
-  seek_pos_ = ms;
-  waiting_to_seek_ = true;
-
-  if (!seek_timer_->isActive()) {
-    SeekNow();
-    seek_timer_->start(); // Stop us from seeking again for a little while
-  }
-}
-
-void GstEngine::SeekNow() {
-  if (!waiting_to_seek_) return;
-  waiting_to_seek_ = false;
-
-  if (!current_pipeline_)
-    return;
-
-  if (!current_pipeline_->Seek(seek_pos_ * GST_MSECOND))
+  if (!current_pipeline_->Seek(ms * GST_MSECOND))
     qDebug() << "Seek failed";
 }
 
