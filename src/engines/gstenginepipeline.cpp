@@ -116,9 +116,6 @@ bool GstEnginePipeline::Init(const QUrl &url) {
   if (GstEngine::DoesThisSinkSupportChangingTheOutputDeviceToAUserEditableString(sink_) && !device_.isEmpty())
     g_object_set(G_OBJECT(audiosink_), "device", device_.toUtf8().constData(), NULL);
 
-  equalizer_ = GST_ELEMENT(gst_equalizer_new());
-  gst_bin_add(GST_BIN(audiobin_), equalizer_);
-
   if (!(audioconvert_ = engine_->CreateElement("audioconvert", audiobin_))) { return false; }
   if (!(volume_ = engine_->CreateElement("volume", audiobin_))) { return false; }
   if (!(audioscale_ = engine_->CreateElement("audioresample", audiobin_))) { return false; }
@@ -145,7 +142,7 @@ bool GstEnginePipeline::Init(const QUrl &url) {
   if (!convert) { return false; }
   if (rg_enabled_)
     gst_element_link_many(audioconvert_, rgvolume_, rglimiter_, audioconvert2_, NULL);
-  gst_element_link_many(scope_element, equalizer_, volume_, audioscale_, convert, audiosink_, NULL);
+  gst_element_link_many(scope_element, volume_, audioscale_, convert, audiosink_, NULL);
 
   gst_bus_set_sync_handler(gst_pipeline_get_bus(GST_PIPELINE(pipeline_)), BusCallbackSync, this);
   bus_cb_id_ = gst_bus_add_watch(gst_pipeline_get_bus(GST_PIPELINE(pipeline_)), BusCallback, this);
@@ -358,21 +355,10 @@ bool GstEnginePipeline::Seek(qint64 nanosec) {
 }
 
 void GstEnginePipeline::SetEqualizerEnabled(bool enabled) {
-  g_object_set(G_OBJECT(equalizer_), "active", enabled, NULL);
 }
 
 
 void GstEnginePipeline::SetEqualizerParams(int preamp, const QList<int>& band_gains) {
-  // Preamp
-  g_object_set(G_OBJECT(equalizer_), "preamp", ( preamp + 100 ) / 2, NULL);
-
-  // Gains
-  std::vector<int> gains_temp;
-  gains_temp.resize( band_gains.count() );
-  for ( int i = 0; i < band_gains.count(); i++ )
-    gains_temp[i] = band_gains.at( i ) + 100;
-
-  g_object_set(G_OBJECT(equalizer_), "gain", &gains_temp, NULL);
 }
 
 void GstEnginePipeline::SetVolume(int percent) {
