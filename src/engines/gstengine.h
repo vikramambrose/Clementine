@@ -84,7 +84,6 @@ class GstEngine : public Engine::Base {
   void ConsumeBuffer(GstBuffer *buffer, GstEnginePipeline* pipeline);
 
  public slots:
-  void StartPreloading(const QUrl &);
   bool Load(const QUrl&, Engine::TrackChangeType change);
   bool Play(uint offset);
   void Stop();
@@ -105,7 +104,6 @@ class GstEngine : public Engine::Base {
 
  protected:
   void SetVolumeSW(uint percent);
-  void timerEvent(QTimerEvent*);
 
  private slots:
   void EndOfStreamReached(bool has_next_track);
@@ -133,8 +131,6 @@ class GstEngine : public Engine::Base {
 
   boost::shared_ptr<GstEnginePipeline> current_pipeline_;
   boost::shared_ptr<GstEnginePipeline> fadeout_pipeline_;
-  boost::shared_ptr<GstEnginePipeline> preload_pipeline_;
-  QUrl preloaded_url_;
 
   QList<BufferConsumer*> buffer_consumers_;
 
@@ -149,8 +145,6 @@ class GstEngine : public Engine::Base {
 
   mutable bool can_decode_success_;
   mutable bool can_decode_last_;
-
-  int timer_id_;
 
   QHash<int, boost::shared_ptr<GstEnginePipeline> > background_streams_;
 };
