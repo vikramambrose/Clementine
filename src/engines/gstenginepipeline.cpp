@@ -48,6 +48,7 @@ GstEnginePipeline::GstEnginePipeline(GstEngine* engine)
     audioscale_(NULL),
     audiosink_(NULL)
 {
+  qDebug() << __PRETTY_FUNCTION__;
 }
 
 void GstEnginePipeline::set_output_device(const QString &sink, const QString &device) {
@@ -63,16 +64,8 @@ void GstEnginePipeline::set_replaygain(bool enabled, int mode, float preamp,
   rg_compression_ = compression;
 }
 
-bool GstEnginePipeline::StopUriDecodeBin(gpointer bin) {
-  gst_element_set_state(GST_ELEMENT(bin), GST_STATE_NULL);
-  return false; // So it doesn't get called again
-}
-
-bool GstEnginePipeline::ReplaceDecodeBin(const QUrl& url) {
-  return true;
-}
-
 bool GstEnginePipeline::Init(const QUrl &url) {
+  qDebug() << __PRETTY_FUNCTION__;
   pipeline_ = gst_pipeline_new("pipeline");
   url_ = url;
 
@@ -96,6 +89,7 @@ bool GstEnginePipeline::Init(const QUrl &url) {
 }
 
 GstEnginePipeline::~GstEnginePipeline() {
+  qDebug() << __PRETTY_FUNCTION__;
   if (pipeline_) {
     gst_bus_set_sync_handler(gst_pipeline_get_bus(GST_PIPELINE(pipeline_)), NULL, NULL);
     g_source_remove(bus_cb_id_);
@@ -107,6 +101,7 @@ GstEnginePipeline::~GstEnginePipeline() {
 
 
 gboolean GstEnginePipeline::BusCallback(GstBus*, GstMessage* msg, gpointer self) {
+  qDebug() << __PRETTY_FUNCTION__;
   GstEnginePipeline* instance = reinterpret_cast<GstEnginePipeline*>(self);
 
   switch ( GST_MESSAGE_TYPE(msg)) {
@@ -126,6 +121,7 @@ gboolean GstEnginePipeline::BusCallback(GstBus*, GstMessage* msg, gpointer self)
 }
 
 GstBusSyncReply GstEnginePipeline::BusCallbackSync(GstBus*, GstMessage* msg, gpointer self) {
+  qDebug() << __PRETTY_FUNCTION__;
   GstEnginePipeline* instance = reinterpret_cast<GstEnginePipeline*>(self);
   switch (GST_MESSAGE_TYPE(msg)) {
     case GST_MESSAGE_EOS:
@@ -151,6 +147,7 @@ GstBusSyncReply GstEnginePipeline::BusCallbackSync(GstBus*, GstMessage* msg, gpo
 }
 
 void GstEnginePipeline::ElementMessageReceived(GstMessage* msg) {
+  qDebug() << __PRETTY_FUNCTION__;
   const GstStructure* structure = gst_message_get_structure(msg);
 
   if (gst_structure_has_name(structure, "redirect")) {
@@ -164,6 +161,7 @@ void GstEnginePipeline::ElementMessageReceived(GstMessage* msg) {
 }
 
 void GstEnginePipeline::ErrorMessageReceived(GstMessage* msg) {
+  qDebug() << __PRETTY_FUNCTION__;
   GError* error;
   gchar* debugs;
 
@@ -187,6 +185,7 @@ void GstEnginePipeline::ErrorMessageReceived(GstMessage* msg) {
 }
 
 void GstEnginePipeline::TagMessageReceived(GstMessage* msg) {
+  qDebug() << __PRETTY_FUNCTION__;
   GstTagList* taglist = NULL;
   gst_message_parse_tag(msg, &taglist);
 
@@ -204,6 +203,7 @@ void GstEnginePipeline::TagMessageReceived(GstMessage* msg) {
 }
 
 QString GstEnginePipeline::ParseTag(GstTagList* list, const char* tag) const {
+  qDebug() << __PRETTY_FUNCTION__;
   gchar* data = NULL;
   bool success = gst_tag_list_get_string(list, tag, &data);
 
@@ -215,42 +215,6 @@ QString GstEnginePipeline::ParseTag(GstTagList* list, const char* tag) const {
   return ret.trimmed();
 }
 
-
-void GstEnginePipeline::NewPadCallback(GstElement*, GstPad* pad, gpointer self) {
-  GstEnginePipeline* instance = reinterpret_cast<GstEnginePipeline*>(self);
-  GstPad* const audiopad = gst_element_get_pad(instance->audiobin_, "sink");
-
-  if (GST_PAD_IS_LINKED(audiopad)) {
-    qDebug() << "audiopad is already linked. Unlinking old pad.";
-    gst_pad_unlink(audiopad, GST_PAD_PEER(audiopad));
-  }
-
-  gst_pad_link(pad, audiopad);
-
-  gst_object_unref(audiopad);
-}
-
-
-bool GstEnginePipeline::HandoffCallback(GstPad*, GstBuffer* buf, gpointer self) {
-  GstEnginePipeline* instance = reinterpret_cast<GstEnginePipeline*>(self);
-
-  QList<BufferConsumer*> consumers;
-  {
-    QMutexLocker l(&instance->buffer_consumers_mutex_);
-    consumers = instance->buffer_consumers_;
-  }
-
-  foreach (BufferConsumer* consumer, consumers) {
-    gst_buffer_ref(buf);
-    consumer->ConsumeBuffer(buf, instance);
-  }
-
-  return true;
-}
-
-void GstEnginePipeline::SourceDrainedCallback(GstURIDecodeBin* bin, gpointer self) {
-}
-
 qint64 GstEnginePipeline::position() const {
   GstFormat fmt = GST_FORMAT_TIME;
   gint64 value = 0;
@@ -258,7 +222,6 @@ qint64 GstEnginePipeline::position() const {
 
   return value;
 }
-
 
 qint64 GstEnginePipeline::length() const {
   GstFormat fmt = GST_FORMAT_TIME;
@@ -279,10 +242,12 @@ GstState GstEnginePipeline::state() const {
 }
 
 bool GstEnginePipeline::SetState(GstState state) {
+  qDebug() << __PRETTY_FUNCTION__;
   return gst_element_set_state(pipeline_, state) != GST_STATE_CHANGE_FAILURE;
 }
 
 bool GstEnginePipeline::Seek(qint64 nanosec) {
+  qDebug() << __PRETTY_FUNCTION__;
   return gst_element_seek_simple(pipeline_, GST_FORMAT_TIME,
                                  GST_SEEK_FLAG_FLUSH, nanosec);
 }
@@ -310,6 +275,7 @@ void GstEnginePipeline::UpdateVolume() {
 void GstEnginePipeline::StartFader(int duration_msec,
                                    QTimeLine::Direction direction,
                                    QTimeLine::CurveShape shape) {
+  qDebug() << __PRETTY_FUNCTION__;
   // If there's already another fader running then start from the same time
   // that one was already at.
   int start_time = direction == QTimeLine::Forward ? 0 : duration_msec;
@@ -330,6 +296,7 @@ void GstEnginePipeline::StartFader(int duration_msec,
 }
 
 void GstEnginePipeline::FaderTimelineFinished() {
+  qDebug() << __PRETTY_FUNCTION__;
   fader_.reset();
 
   // Wait a little while longer before emitting the finished signal (and
@@ -339,6 +306,7 @@ void GstEnginePipeline::FaderTimelineFinished() {
 }
 
 void GstEnginePipeline::timerEvent(QTimerEvent* e) {
+  qDebug() << __PRETTY_FUNCTION__;
   if (e->timerId() == fader_fudge_timer_.timerId()) {
     fader_fudge_timer_.stop();
     emit FaderFinished();

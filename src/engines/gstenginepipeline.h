@@ -92,10 +92,6 @@ class GstEnginePipeline : public QObject {
   // argument.
   static GstBusSyncReply BusCallbackSync(GstBus*, GstMessage*, gpointer);
   static gboolean BusCallback(GstBus*, GstMessage*, gpointer);
-  static void NewPadCallback(GstElement*, GstPad*, gpointer);
-  static bool HandoffCallback(GstPad*, GstBuffer*, gpointer);
-  static void SourceDrainedCallback(GstURIDecodeBin*, gpointer);
-  static bool StopUriDecodeBin(gpointer bin);
   void TagMessageReceived(GstMessage*);
   void ErrorMessageReceived(GstMessage*);
   void ElementMessageReceived(GstMessage*);
