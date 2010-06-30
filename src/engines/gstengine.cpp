@@ -176,28 +176,6 @@ const Engine::Scope& GstEngine::scope() {
   return scope_;
 }
 
-void GstEngine::StartPreloading(const QUrl& url) {
-  if (autocrossfade_enabled_) {
-    // Have to create a new pipeline so we can crossfade between the two
-
-    preload_pipeline_ = CreatePipeline(url);
-    if (!preload_pipeline_)
-      return;
-
-    // We don't want to get metadata messages before the track starts playing -
-    // we reconnect this in GstEngine::Load
-    disconnect(preload_pipeline_.get(), SIGNAL(MetadataFound(Engine::SimpleMetaBundle)), this, 0);
-
-    preloaded_url_ = url;
-    preload_pipeline_->SetState(GST_STATE_PAUSED);
-  } else {
-    // No crossfading, so we can just queue the new URL in the existing
-    // pipeline and get gapless playback (hopefully)
-    if (current_pipeline_)
-      current_pipeline_->SetNextUrl(url);
-  }
-}
-
 bool GstEngine::Load(const QUrl& url, Engine::TrackChangeType change) {
   Engine::Base::Load(url, change);
 
@@ -229,22 +207,14 @@ bool GstEngine::Load(const QUrl& url, Engine::TrackChangeType change) {
   }
 
   shared_ptr<GstEnginePipeline> pipeline;
-  if (preload_pipeline_ && preloaded_url_ == gst_url) {
-    pipeline = preload_pipeline_;
-    connect(preload_pipeline_.get(),
-            SIGNAL(MetadataFound(Engine::SimpleMetaBundle)),
-            SLOT(NewMetaData(Engine::SimpleMetaBundle)));
-  } else {
-    pipeline = CreatePipeline(gst_url);
-    if (!pipeline)
-      return false;
-  }
+  pipeline = CreatePipeline(gst_url);
+  if (!pipeline)
+    return false;
 
   if (crossfade)
     StartFadeout();
 
   current_pipeline_ = pipeline;
-  preload_pipeline_.reset();
 
   SetVolume(volume_);
   SetEqualizerEnabled(equalizer_enabled_);

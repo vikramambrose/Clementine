@@ -84,7 +84,6 @@ class GstEngine : public Engine::Base {
   void ConsumeBuffer(GstBuffer *buffer, GstEnginePipeline* pipeline);
 
  public slots:
-  void StartPreloading(const QUrl &);
   bool Load(const QUrl&, Engine::TrackChangeType change);
   bool Play(uint offset);
   void Stop();
@@ -133,8 +132,6 @@ class GstEngine : public Engine::Base {
 
   boost::shared_ptr<GstEnginePipeline> current_pipeline_;
   boost::shared_ptr<GstEnginePipeline> fadeout_pipeline_;
-  boost::shared_ptr<GstEnginePipeline> preload_pipeline_;
-  QUrl preloaded_url_;
 
   QList<BufferConsumer*> buffer_consumers_;
 
