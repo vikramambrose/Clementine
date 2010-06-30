@@ -104,7 +104,6 @@ class GstEngine : public Engine::Base {
 
  protected:
   void SetVolumeSW(uint percent);
-  void timerEvent(QTimerEvent*);
 
  private slots:
   void EndOfStreamReached(bool has_next_track);

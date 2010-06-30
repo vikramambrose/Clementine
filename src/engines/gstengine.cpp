@@ -340,10 +340,6 @@ void GstEngine::SetVolumeSW( uint percent ) {
     current_pipeline_->SetVolume(percent);
 }
 
-
-void GstEngine::timerEvent( QTimerEvent* ) {
-}
-
 void GstEngine::HandlePipelineError(const QString& message) {
   qWarning() << "Gstreamer error:" << message;
 
