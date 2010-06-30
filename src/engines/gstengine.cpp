@@ -57,7 +57,8 @@ GstEngine::GstEngine()
     rg_enabled_(false),
     rg_mode_(0),
     rg_preamp_(0.0),
-    rg_compression_(true)
+    rg_compression_(true),
+    timer_id_(-1)
 {
   ReloadSettings();
 }
@@ -175,6 +176,28 @@ const Engine::Scope& GstEngine::scope() {
   return scope_;
 }
 
+void GstEngine::StartPreloading(const QUrl& url) {
+  if (autocrossfade_enabled_) {
+    // Have to create a new pipeline so we can crossfade between the two
+
+    preload_pipeline_ = CreatePipeline(url);
+    if (!preload_pipeline_)
+      return;
+
+    // We don't want to get metadata messages before the track starts playing -
+    // we reconnect this in GstEngine::Load
+    disconnect(preload_pipeline_.get(), SIGNAL(MetadataFound(Engine::SimpleMetaBundle)), this, 0);
+
+    preloaded_url_ = url;
+    preload_pipeline_->SetState(GST_STATE_PAUSED);
+  } else {
+    // No crossfading, so we can just queue the new URL in the existing
+    // pipeline and get gapless playback (hopefully)
+    if (current_pipeline_)
+      current_pipeline_->SetNextUrl(url);
+  }
+}
+
 bool GstEngine::Load(const QUrl& url, Engine::TrackChangeType change) {
   Engine::Base::Load(url, change);
 
@@ -194,19 +217,55 @@ bool GstEngine::Load(const QUrl& url, Engine::TrackChangeType change) {
     gst_url.setHost(QString());
   }
 
+  const bool crossfade = current_pipeline_ &&
+                         ((crossfade_enabled_ && change == Engine::Manual) ||
+                          (autocrossfade_enabled_ && change == Engine::Auto));
+
+  if (!crossfade && current_pipeline_ && current_pipeline_->url() == gst_url &&
+      change == Engine::Auto) {
+    // We're not crossfading, and the pipeline is already playing the URI we
+    // want, so just do nothing.
+    return true;
+  }
+
   shared_ptr<GstEnginePipeline> pipeline;
-  pipeline = CreatePipeline(gst_url);
-  if (!pipeline)
-    return false;
+  if (preload_pipeline_ && preloaded_url_ == gst_url) {
+    pipeline = preload_pipeline_;
+    connect(preload_pipeline_.get(),
+            SIGNAL(MetadataFound(Engine::SimpleMetaBundle)),
+            SLOT(NewMetaData(Engine::SimpleMetaBundle)));
+  } else {
+    pipeline = CreatePipeline(gst_url);
+    if (!pipeline)
+      return false;
+  }
+
+  if (crossfade)
+    StartFadeout();
 
   current_pipeline_ = pipeline;
+  preload_pipeline_.reset();
 
   SetVolume(volume_);
   SetEqualizerEnabled(equalizer_enabled_);
   SetEqualizerParameters(equalizer_preamp_, equalizer_gains_);
 
+  // Maybe fade in this track
+  if (crossfade)
+    current_pipeline_->StartFader(fadeout_duration_, QTimeLine::Forward);
+
   return true;
 }
+
+void GstEngine::StartFadeout() {
+  fadeout_pipeline_ = current_pipeline_;
+  disconnect(fadeout_pipeline_.get(), 0, 0, 0);
+  fadeout_pipeline_->RemoveAllBufferConsumers();
+
+  fadeout_pipeline_->StartFader(fadeout_duration_, QTimeLine::Backward);
+  connect(fadeout_pipeline_.get(), SIGNAL(FaderFinished()), SLOT(FadeoutFinished()));
+}
+
 
 bool GstEngine::Play( uint offset ) {
   // Try to play input pipeline; if fails, destroy input bin
@@ -231,16 +290,30 @@ bool GstEngine::Play( uint offset ) {
   // If "Resume playback on start" is enabled, we must seek to the last position
   if (offset) Seek(offset);
 
+  if (timer_id_ != -1)
+    killTimer(timer_id_);
+  timer_id_ = startTimer(kTimerInterval);
+
   emit StateChanged(Engine::Playing);
   return true;
 }
 
 
 void GstEngine::Stop() {
+  killTimer(timer_id_);
+  timer_id_ = -1;
+
   url_ = QUrl(); // To ensure we return Empty from state()
+
+  if (fadeout_enabled_ && current_pipeline_)
+    StartFadeout();
 
   current_pipeline_.reset();
   emit StateChanged(Engine::Empty);
+}
+
+void GstEngine::FadeoutFinished() {
+  fadeout_pipeline_.reset();
 }
 
 void GstEngine::Pause() {
@@ -250,6 +323,9 @@ void GstEngine::Pause() {
   if ( current_pipeline_->state() == GST_STATE_PLAYING ) {
     current_pipeline_->SetState(GST_STATE_PAUSED);
     emit StateChanged(Engine::Paused);
+
+    killTimer(timer_id_);
+    timer_id_ = -1;
   }
 }
 
@@ -260,6 +336,8 @@ void GstEngine::Unpause() {
   if ( current_pipeline_->state() == GST_STATE_PAUSED ) {
     current_pipeline_->SetState(GST_STATE_PLAYING);
     emit StateChanged(Engine::Playing);
+
+    timer_id_ = startTimer(kTimerInterval);
   }
 }
 
@@ -290,6 +368,21 @@ void GstEngine::SetEqualizerParameters(int preamp, const QList<int>& band_gains)
 void GstEngine::SetVolumeSW( uint percent ) {
   if (current_pipeline_)
     current_pipeline_->SetVolume(percent);
+}
+
+
+void GstEngine::timerEvent( QTimerEvent* ) {
+  // Emit TrackAboutToEnd when we're a few seconds away from finishing
+  if (current_pipeline_) {
+    const qint64 nanosec_position = current_pipeline_->position();
+    const qint64 nanosec_length = current_pipeline_->length();
+    const qint64 remaining = (nanosec_length - nanosec_position) / 1000000;
+    const qint64 fudge = 100; // Mmm fudge
+    const qint64 gap = autocrossfade_enabled_ ? fadeout_duration_ : kPreloadGap;
+
+    if (nanosec_length > 0 && remaining < gap + fudge)
+      EmitAboutToEnd();
+  }
 }
 
 void GstEngine::HandlePipelineError(const QString& message) {

@@ -84,6 +84,7 @@ class GstEngine : public Engine::Base {
   void ConsumeBuffer(GstBuffer *buffer, GstEnginePipeline* pipeline);
 
  public slots:
+  void StartPreloading(const QUrl &);
   bool Load(const QUrl&, Engine::TrackChangeType change);
   bool Play(uint offset);
   void Stop();
@@ -104,16 +105,20 @@ class GstEngine : public Engine::Base {
 
  protected:
   void SetVolumeSW(uint percent);
+  void timerEvent(QTimerEvent*);
 
  private slots:
   void EndOfStreamReached(bool has_next_track);
   void HandlePipelineError(const QString& message);
   void NewMetaData(const Engine::SimpleMetaBundle& bundle);
+  void FadeoutFinished();
   void BackgroundStreamFinished();
 
  private:
   static void SetEnv(const char* key, const QString& value);
   PluginDetailsList GetPluginList(const QString& classname) const;
+
+  void StartFadeout();
 
   boost::shared_ptr<GstEnginePipeline> CreatePipeline(const QUrl& url);
 
@@ -127,6 +132,9 @@ class GstEngine : public Engine::Base {
   QString device_;
 
   boost::shared_ptr<GstEnginePipeline> current_pipeline_;
+  boost::shared_ptr<GstEnginePipeline> fadeout_pipeline_;
+  boost::shared_ptr<GstEnginePipeline> preload_pipeline_;
+  QUrl preloaded_url_;
 
   QList<BufferConsumer*> buffer_consumers_;
 
@@ -138,6 +146,11 @@ class GstEngine : public Engine::Base {
   int rg_mode_;
   float rg_preamp_;
   bool rg_compression_;
+
+  mutable bool can_decode_success_;
+  mutable bool can_decode_last_;
+
+  int timer_id_;
 
   QHash<int, boost::shared_ptr<GstEnginePipeline> > background_streams_;
 };
