@@ -344,7 +344,7 @@ void GstEngine::SetVolumeSW( uint percent ) {
 void GstEngine::timerEvent( QTimerEvent* ) {
   // Emit TrackAboutToEnd when we're a few seconds away from finishing
   if (current_pipeline_) {
-    const qint64 nanosec_position = current_pipeline_->position();
+    const qint64 nanosec_position = 0;
     const qint64 nanosec_length = current_pipeline_->length();
     const qint64 remaining = (nanosec_length - nanosec_position) / 1000000;
     const qint64 fudge = 100; // Mmm fudge
