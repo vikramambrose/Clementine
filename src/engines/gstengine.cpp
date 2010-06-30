@@ -342,9 +342,6 @@ void GstEngine::SetVolumeSW( uint percent ) {
 
 
 void GstEngine::timerEvent( QTimerEvent* ) {
-  // Emit TrackAboutToEnd when we're a few seconds away from finishing
-  if (current_pipeline_) {
-  }
 }
 
 void GstEngine::HandlePipelineError(const QString& message) {
