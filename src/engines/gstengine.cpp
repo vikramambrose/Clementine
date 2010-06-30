@@ -349,9 +349,6 @@ void GstEngine::timerEvent( QTimerEvent* ) {
     const qint64 remaining = (nanosec_length - nanosec_position) / 1000000;
     const qint64 fudge = 100; // Mmm fudge
     const qint64 gap = autocrossfade_enabled_ ? fadeout_duration_ : kPreloadGap;
-
-    if (nanosec_length > 0 && remaining < gap + fudge)
-      EmitAboutToEnd();
   }
 }
 
