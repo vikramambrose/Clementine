@@ -146,8 +146,6 @@ class GstEngine : public Engine::Base {
   mutable bool can_decode_success_;
   mutable bool can_decode_last_;
 
-  int timer_id_;
-
   QHash<int, boost::shared_ptr<GstEnginePipeline> > background_streams_;
 };
 

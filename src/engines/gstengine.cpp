@@ -57,8 +57,7 @@ GstEngine::GstEngine()
     rg_enabled_(false),
     rg_mode_(0),
     rg_preamp_(0.0),
-    rg_compression_(true),
-    timer_id_(-1)
+    rg_compression_(true)
 {
   ReloadSettings();
 }
@@ -260,19 +259,12 @@ bool GstEngine::Play( uint offset ) {
   // If "Resume playback on start" is enabled, we must seek to the last position
   if (offset) Seek(offset);
 
-  if (timer_id_ != -1)
-    killTimer(timer_id_);
-  timer_id_ = startTimer(kTimerInterval);
-
   emit StateChanged(Engine::Playing);
   return true;
 }
 
 
 void GstEngine::Stop() {
-  killTimer(timer_id_);
-  timer_id_ = -1;
-
   url_ = QUrl(); // To ensure we return Empty from state()
 
   if (fadeout_enabled_ && current_pipeline_)
@@ -293,9 +285,6 @@ void GstEngine::Pause() {
   if ( current_pipeline_->state() == GST_STATE_PLAYING ) {
     current_pipeline_->SetState(GST_STATE_PAUSED);
     emit StateChanged(Engine::Paused);
-
-    killTimer(timer_id_);
-    timer_id_ = -1;
   }
 }
 
@@ -306,8 +295,6 @@ void GstEngine::Unpause() {
   if ( current_pipeline_->state() == GST_STATE_PAUSED ) {
     current_pipeline_->SetState(GST_STATE_PLAYING);
     emit StateChanged(Engine::Playing);
-
-    timer_id_ = startTimer(kTimerInterval);
   }
 }
 
