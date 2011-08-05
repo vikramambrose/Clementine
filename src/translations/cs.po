@@ -1121,6 +1121,9 @@ msgstr ""
 msgid "Encoding mode"
 msgstr ""
 
+msgid "Enter a filename for exported covers (no extension):"
+msgstr ""
+
 msgid "Enter a new name for this playlist"
 msgstr "Zadejte název pro tento seznam skladeb"
 
@@ -1185,6 +1188,9 @@ msgstr "Přehrané skladby"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Kromě mezistop na tom samém albu nebo v tom samém listu CUE"
+
+msgid "Export covers"
+msgstr ""
 
 msgid "Export to folders"
 msgstr ""
@@ -3325,6 +3331,9 @@ msgstr "Na"
 
 msgid "options"
 msgstr "Volby"
+
+msgid "overwrite existing covers"
+msgstr ""
 
 msgid "press enter"
 msgstr ""

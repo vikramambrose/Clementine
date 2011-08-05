@@ -1101,6 +1101,9 @@ msgstr ""
 msgid "Encoding mode"
 msgstr ""
 
+msgid "Enter a filename for exported covers (no extension):"
+msgstr ""
+
 msgid "Enter a new name for this playlist"
 msgstr "Унеси нови назив листе нумера"
 
@@ -1163,6 +1166,9 @@ msgid "Ever played"
 msgstr ""
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
+msgstr ""
+
+msgid "Export covers"
 msgstr ""
 
 msgid "Export to folders"
@@ -3267,6 +3273,9 @@ msgstr ""
 
 msgid "options"
 msgstr "Опције"
+
+msgid "overwrite existing covers"
+msgstr ""
 
 msgid "press enter"
 msgstr ""

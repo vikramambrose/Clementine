@@ -1116,6 +1116,9 @@ msgstr ""
 msgid "Encoding mode"
 msgstr ""
 
+msgid "Enter a filename for exported covers (no extension):"
+msgstr ""
+
 msgid "Enter a new name for this playlist"
 msgstr "Lakait un anv evit ar roll c'hoari"
 
@@ -1179,6 +1182,9 @@ msgid "Ever played"
 msgstr "Bet lennet dija"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
+msgstr ""
+
+msgid "Export covers"
 msgstr ""
 
 msgid "Export to folders"
@@ -3291,6 +3297,9 @@ msgstr "war"
 
 msgid "options"
 msgstr "dibarzhioù"
+
+msgid "overwrite existing covers"
+msgstr ""
 
 msgid "press enter"
 msgstr ""

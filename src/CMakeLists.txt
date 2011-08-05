@@ -239,6 +239,7 @@ set(SOURCES
   ui/coverfromurldialog.cpp
   ui/edittagdialog.cpp
   ui/equalizer.cpp
+  ui/exportcoversdialog.cpp
   ui/flowlayout.cpp
   ui/globalshortcutgrabber.cpp
   ui/globalshortcutsconfig.cpp
@@ -445,6 +446,7 @@ set(HEADERS
   ui/coverfromurldialog.h
   ui/edittagdialog.h
   ui/equalizer.h
+  ui/exportcoversdialog.h
   ui/globalshortcutgrabber.h
   ui/globalshortcutsconfig.h
   ui/mainwindow.h
@@ -538,6 +540,7 @@ set(UI
   ui/coverfromurldialog.ui
   ui/edittagdialog.ui
   ui/equalizer.ui
+  ui/exportcoversdialog.ui
   ui/globalshortcutgrabber.ui
   ui/globalshortcutsconfig.ui
   ui/mainwindow.ui

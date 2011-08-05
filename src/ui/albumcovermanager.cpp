@@ -30,6 +30,7 @@
 #include "widgets/forcescrollperpixel.h"
 #include "widgets/maclineedit.h"
 #include "ui/albumcoverchoicecontroller.h"
+#include "ui/exportcoversdialog.h"
 
 #include <QActionGroup>
 #include <QContextMenuEvent>
@@ -54,6 +55,7 @@ AlbumCoverManager::AlbumCoverManager(LibraryBackend* backend,
                                      QNetworkAccessManager* network)
   : QMainWindow(parent),
     ui_(new Ui_CoverManager),
+    export_covers_dialog_(NULL),
     cover_providers_(cover_providers),
     album_cover_choice_controller_(new AlbumCoverChoiceController(this)),
     backend_(backend),
@@ -530,6 +532,17 @@ void AlbumCoverManager::ShowCover() {
 }
 
 void AlbumCoverManager::ExportCovers() {
+  if(!export_covers_dialog_) {
+    export_covers_dialog_ = new ExportCoversDialog(this);
+  }
+
+  ExportCoversDialog::DialogResult result = export_covers_dialog_->Exec();
+
+  // cancelled?
+  if(result.fileName_.isEmpty()) {
+    return;
+  }
+
   DisableCoversButtons();
 
   int album_count = ui_->albums->count();
@@ -555,7 +568,7 @@ void AlbumCoverManager::ExportCovers() {
     QString extension = cover_path.section('.', -1);
     QString dir = song.url().toLocalFile().section('/', 0, -2);
 
-    QFile::copy(cover_path, dir + "/cover." + extension);
+    QFile::copy(cover_path, dir + '/' + result.fileName_ + '.' + extension);
 
     UpdateExportStatus(i, album_count);
   }

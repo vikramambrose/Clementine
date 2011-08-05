@@ -33,6 +33,7 @@ class AlbumCoverChoiceController;
 class AlbumCoverFetcher;
 class AlbumCoverSearcher;
 class CoverProviders;
+class ExportCoversDialog;
 class LibraryBackend;
 class LineEditInterface;
 class SongMimeData;
@@ -145,6 +146,7 @@ class AlbumCoverManager : public QMainWindow {
 
  private:
   Ui_CoverManager* ui_;
+  ExportCoversDialog* export_covers_dialog_;
 
   CoverProviders* cover_providers_;
   AlbumCoverChoiceController* album_cover_choice_controller_;

@@ -1126,6 +1126,9 @@ msgstr ""
 msgid "Encoding mode"
 msgstr ""
 
+msgid "Enter a filename for exported covers (no extension):"
+msgstr ""
+
 msgid "Enter a new name for this playlist"
 msgstr "Neuer Name für diese Wiedergabeliste"
 
@@ -1190,6 +1193,9 @@ msgstr "Irgendwann gespielt"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Außer für Stücke des gleichen Albums oder des gleichen Cuesheets."
+
+msgid "Export covers"
+msgstr ""
 
 msgid "Export to folders"
 msgstr ""
@@ -3342,6 +3348,9 @@ msgstr "auf"
 
 msgid "options"
 msgstr "Einstellungen"
+
+msgid "overwrite existing covers"
+msgstr ""
 
 msgid "press enter"
 msgstr ""

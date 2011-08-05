@@ -1112,6 +1112,9 @@ msgstr ""
 msgid "Encoding mode"
 msgstr ""
 
+msgid "Enter a filename for exported covers (no extension):"
+msgstr ""
+
 msgid "Enter a new name for this playlist"
 msgstr "הזן שם חדש לרשימת ההשמעה הזו"
 
@@ -1173,6 +1176,9 @@ msgid "Ever played"
 msgstr "לא נוגן אף פעם"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
+msgstr ""
+
+msgid "Export covers"
 msgstr ""
 
 msgid "Export to folders"
@@ -3292,6 +3298,9 @@ msgstr "ב־"
 
 msgid "options"
 msgstr "אפשרויות"
+
+msgid "overwrite existing covers"
+msgstr ""
 
 msgid "press enter"
 msgstr ""

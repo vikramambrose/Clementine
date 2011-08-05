@@ -1117,6 +1117,9 @@ msgstr ""
 msgid "Encoding mode"
 msgstr ""
 
+msgid "Enter a filename for exported covers (no extension):"
+msgstr ""
+
 msgid "Enter a new name for this playlist"
 msgstr "Bu çalma listesi için yeni bir isim gir"
 
@@ -1181,6 +1184,9 @@ msgstr "Önceden çalınmış"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Aynı albümde veya aynı CUE dosyasında bulunan parçalar hariç"
+
+msgid "Export covers"
+msgstr ""
 
 msgid "Export to folders"
 msgstr ""
@@ -3316,6 +3322,9 @@ msgstr "açık"
 
 msgid "options"
 msgstr "seçenekler"
+
+msgid "overwrite existing covers"
+msgstr ""
 
 msgid "press enter"
 msgstr ""

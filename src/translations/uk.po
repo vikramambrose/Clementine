@@ -1165,6 +1165,9 @@ msgstr "Режим перекодування"
 msgid "Encoding mode"
 msgstr ""
 
+msgid "Enter a filename for exported covers (no extension):"
+msgstr ""
+
 msgid "Enter a new name for this playlist"
 msgstr "Введіть нову назву для цього списку відтворення"
 
@@ -1229,6 +1232,9 @@ msgstr "Будь-коли відтворений"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Крім як між треками на одному альбомі, або в тому ж CUE листі"
+
+msgid "Export covers"
+msgstr ""
 
 msgid "Export to folders"
 msgstr ""
@@ -3428,6 +3434,9 @@ msgstr "на"
 
 msgid "options"
 msgstr "параметри"
+
+msgid "overwrite existing covers"
+msgstr ""
 
 msgid "press enter"
 msgstr ""

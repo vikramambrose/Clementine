@@ -1118,6 +1118,9 @@ msgstr ""
 msgid "Encoding mode"
 msgstr ""
 
+msgid "Enter a filename for exported covers (no extension):"
+msgstr ""
+
 msgid "Enter a new name for this playlist"
 msgstr "Nhập tên mới cho danh sách này"
 
@@ -1184,6 +1187,9 @@ msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr ""
 "Ngoại trừ giữa các track trong album tương tự hoặc trong danh sách CUE tương "
 "tự"
+
+msgid "Export covers"
+msgstr ""
 
 msgid "Export to folders"
 msgstr ""
@@ -3326,6 +3332,9 @@ msgstr "on"
 
 msgid "options"
 msgstr "options"
+
+msgid "overwrite existing covers"
+msgstr ""
 
 msgid "press enter"
 msgstr ""
