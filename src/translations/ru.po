@@ -1186,6 +1186,10 @@ msgstr "Кроме треков с одного и того же альбома 
 msgid "Export to folders"
 msgstr ""
 
+#, qt-format
+msgid "Exported %1 covers out of %2"
+msgstr ""
+
 msgid "Extras"
 msgstr "Расширения"
 

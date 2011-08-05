@@ -1186,6 +1186,10 @@ msgstr "Nezoslabovať medzi skladbami z rovnakého albumu"
 msgid "Export to folders"
 msgstr ""
 
+#, qt-format
+msgid "Exported %1 covers out of %2"
+msgstr ""
+
 msgid "Extras"
 msgstr "Bonusy"
 

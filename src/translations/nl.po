@@ -1193,6 +1193,10 @@ msgstr "Behalve tussen nummers van hetzelfde album of in dezelfde CUE sheet"
 msgid "Export to folders"
 msgstr ""
 
+#, qt-format
+msgid "Exported %1 covers out of %2"
+msgstr ""
+
 msgid "Extras"
 msgstr "Extra's"
 

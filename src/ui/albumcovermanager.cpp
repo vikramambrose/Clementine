@@ -402,7 +402,7 @@ void AlbumCoverManager::FetchAlbumCovers() {
   progress_bar_->setMaximum(jobs_);
   progress_bar_->show();
   fetch_statistics_ = CoverSearchStatistics();
-  UpdateStatusText();
+  UpdateFetchStatus();
 }
 
 void AlbumCoverManager::AlbumCoverFetched(quint64 id, const QImage& image,
@@ -420,10 +420,10 @@ void AlbumCoverManager::AlbumCoverFetched(quint64 id, const QImage& image,
   }
 
   fetch_statistics_ += statistics;
-  UpdateStatusText();
+  UpdateFetchStatus();
 }
 
-void AlbumCoverManager::UpdateStatusText() {
+void AlbumCoverManager::UpdateFetchStatus() {
   QString message = tr("Got %1 covers out of %2 (%3 failed)")
                     .arg(fetch_statistics_.chosen_images_)
                     .arg(jobs_)
@@ -448,6 +448,15 @@ void AlbumCoverManager::UpdateStatusText() {
 
     jobs_ = 0;
   }
+}
+
+void AlbumCoverManager::UpdateExportStatus(int current, int max) {
+  progress_bar_->setValue(current);
+
+  QString message = tr("Exported %1 covers out of %2")
+                      .arg(current)
+                      .arg(max);
+  statusBar()->showMessage(message);
 }
 
 bool AlbumCoverManager::eventFilter(QObject *obj, QEvent *event) {
@@ -521,6 +530,41 @@ void AlbumCoverManager::ShowCover() {
 }
 
 void AlbumCoverManager::ExportCovers() {
+  DisableCoversButtons();
+
+  int album_count = ui_->albums->count();
+
+  progress_bar_->setMaximum(album_count);
+  progress_bar_->show();
+
+  for (int i = 0; i < album_count; i++) {
+    QListWidgetItem* item = ui_->albums->item(i);
+
+    // ignore hidden and coverless albums
+    if (item->isHidden() || item->icon().cacheKey() == no_cover_icon_.cacheKey())
+      continue;
+
+    Song song = ItemAsSong(item);
+    QString cover_path = song.CoverPath();
+
+    // manually unset or (TODO) embedded
+    if(cover_path.isEmpty()) {
+      continue;
+    }
+
+    QString extension = cover_path.section('.', -1);
+    QString dir = song.url().toLocalFile().section('/', 0, -2);
+
+    QFile::copy(cover_path, dir + "/cover." + extension);
+
+    UpdateExportStatus(i, album_count);
+  }
+
+  UpdateExportStatus(album_count, album_count);
+  QTimer::singleShot(2000, statusBar(), SLOT(clearMessage()));
+
+  progress_bar_->hide();
+  EnableCoversButtons();
 }
 
 void AlbumCoverManager::UpdateCoverInList(QListWidgetItem* item, const QString& cover) {

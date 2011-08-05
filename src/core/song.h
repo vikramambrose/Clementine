@@ -224,6 +224,9 @@ class Song {
   // cover.
   void set_embedded_cover() { d->art_automatic_ = kEmbeddedCover; }
 
+  // Returns path to this song's cover.
+  QString CoverPath() const;
+
   const QImage& image() const { return d->image_; }
 
   // Pretty accessors

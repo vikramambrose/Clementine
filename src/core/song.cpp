@@ -1088,6 +1088,18 @@ void Song::ToLastFM(lastfm::Track* track) const {
 }
 #endif // HAVE_LIBLASTFM
 
+QString Song::CoverPath() const {
+  if(has_manually_unset_cover() || has_embedded_cover()) {
+    return QString();
+  } else if(!art_manual().isEmpty()) {
+    return art_manual();
+  } else if(!art_automatic().isEmpty()) {
+    return art_automatic();
+  } else {
+    return QString();
+  }
+}
+
 QString Song::PrettyTitle() const {
   QString title(d->title_);
 

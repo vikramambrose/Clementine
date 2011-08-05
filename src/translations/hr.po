@@ -1191,6 +1191,10 @@ msgstr "Osim između pjesama na istom albumu ili na istoj CUE listi"
 msgid "Export to folders"
 msgstr ""
 
+#, qt-format
+msgid "Exported %1 covers out of %2"
+msgstr ""
+
 msgid "Extras"
 msgstr "Dodaci"
 

@@ -1193,6 +1193,10 @@ msgstr "Exceto entre as músicas do mesmo álbum ou ficheiros CUE"
 msgid "Export to folders"
 msgstr ""
 
+#, qt-format
+msgid "Exported %1 covers out of %2"
+msgstr ""
+
 msgid "Extras"
 msgstr "Extras"
 

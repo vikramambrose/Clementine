@@ -1189,6 +1189,10 @@ msgstr "Kromě mezistop na tom samém albu nebo v tom samém listu CUE"
 msgid "Export to folders"
 msgstr ""
 
+#, qt-format
+msgid "Exported %1 covers out of %2"
+msgstr ""
+
 msgid "Extras"
 msgstr "Doplňky"
 

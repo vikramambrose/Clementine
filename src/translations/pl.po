@@ -1188,6 +1188,10 @@ msgstr "Za wyjątkiem utworów z tego samego albumu lub arkusza CUE"
 msgid "Export to folders"
 msgstr ""
 
+#, qt-format
+msgid "Exported %1 covers out of %2"
+msgstr ""
+
 msgid "Extras"
 msgstr "Dodatki"
 

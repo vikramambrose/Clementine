@@ -137,7 +137,9 @@ class AlbumCoverManager : public QMainWindow {
 
   void CancelRequests();
 
-  void UpdateStatusText();
+  void UpdateFetchStatus();
+  void UpdateExportStatus(int current, int count);
+
   bool ShouldHide(const QListWidgetItem& item, const QString& filter, HideCovers hide) const;
   void SaveAndSetCover(QListWidgetItem* item, const QImage& image);
 

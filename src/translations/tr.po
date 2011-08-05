@@ -1185,6 +1185,10 @@ msgstr "Aynı albümde veya aynı CUE dosyasında bulunan parçalar hariç"
 msgid "Export to folders"
 msgstr ""
 
+#, qt-format
+msgid "Exported %1 covers out of %2"
+msgstr ""
+
 msgid "Extras"
 msgstr "Ekler"
 

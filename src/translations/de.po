@@ -1194,6 +1194,10 @@ msgstr "Außer für Stücke des gleichen Albums oder des gleichen Cuesheets."
 msgid "Export to folders"
 msgstr ""
 
+#, qt-format
+msgid "Exported %1 covers out of %2"
+msgstr ""
+
 msgid "Extras"
 msgstr "Extras"
 

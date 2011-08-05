@@ -1189,6 +1189,10 @@ msgstr "Išskyrus tarp takelių tame pačiame albume arba tame pačiame CUE lape
 msgid "Export to folders"
 msgstr ""
 
+#, qt-format
+msgid "Exported %1 covers out of %2"
+msgstr ""
+
 msgid "Extras"
 msgstr "Ekstra"
 

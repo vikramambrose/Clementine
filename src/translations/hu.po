@@ -1191,6 +1191,10 @@ msgstr "Kivéve az azonos albumon vagy azonos CUE fájlban lévő számok közö
 msgid "Export to folders"
 msgstr ""
 
+#, qt-format
+msgid "Exported %1 covers out of %2"
+msgstr ""
+
 msgid "Extras"
 msgstr "Extrák"
 
