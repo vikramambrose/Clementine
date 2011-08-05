@@ -1197,7 +1197,7 @@ msgid "Export to folders"
 msgstr ""
 
 #, qt-format
-msgid "Exported %1 covers out of %2"
+msgid "Exported %1 covers out of %2 (%3 skipped)"
 msgstr ""
 
 msgid "Extras"

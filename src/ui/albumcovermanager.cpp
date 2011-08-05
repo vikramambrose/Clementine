@@ -452,12 +452,13 @@ void AlbumCoverManager::UpdateFetchStatus() {
   }
 }
 
-void AlbumCoverManager::UpdateExportStatus(int current, int max) {
+void AlbumCoverManager::UpdateExportStatus(int current, int bad, int max) {
   progress_bar_->setValue(current);
 
-  QString message = tr("Exported %1 covers out of %2")
+  QString message = tr("Exported %1 covers out of %2 (%3 skipped)")
                       .arg(current)
-                      .arg(max);
+                      .arg(max)
+                      .arg(bad);
   statusBar()->showMessage(message);
 }
 
@@ -545,6 +546,7 @@ void AlbumCoverManager::ExportCovers() {
 
   DisableCoversButtons();
 
+  int bad = 0;
   int album_count = ui_->albums->count();
 
   progress_bar_->setMaximum(album_count);
@@ -568,12 +570,22 @@ void AlbumCoverManager::ExportCovers() {
     QString extension = cover_path.section('.', -1);
     QString dir = song.url().toLocalFile().section('/', 0, -2);
 
-    QFile::copy(cover_path, dir + '/' + result.fileName_ + '.' + extension);
+    QString new_file = dir + '/' + result.fileName_ + '.' + extension;
 
-    UpdateExportStatus(i, album_count);
+    // handle overwrite as remove + copy
+    bool removeFailed = false;
+    if(result.overwrite_ && QFile::exists(new_file)) {
+      removeFailed = !QFile::remove(new_file);
+    }
+
+    if(removeFailed || !QFile::copy(cover_path, new_file)) {
+      bad++;
+    }
+
+    UpdateExportStatus(i, bad, album_count);
   }
 
-  UpdateExportStatus(album_count, album_count);
+  UpdateExportStatus(album_count, bad, album_count);
   QTimer::singleShot(2000, statusBar(), SLOT(clearMessage()));
 
   progress_bar_->hide();
