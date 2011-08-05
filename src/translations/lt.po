@@ -3288,8 +3288,14 @@ msgstr "baigiasi iš"
 msgid "equals"
 msgstr "lygus"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "daugiau nei"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3352,6 +3358,9 @@ msgstr "stabdyti"
 #, qt-format
 msgid "track %1"
 msgstr "takelis %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Gauti trūkstamus albumų viršelius"

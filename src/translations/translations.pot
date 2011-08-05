@@ -3215,7 +3215,13 @@ msgstr ""
 msgid "equals"
 msgstr ""
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
+msgstr ""
+
+msgid "height:"
 msgstr ""
 
 msgid "in the last"
@@ -3278,4 +3284,7 @@ msgstr ""
 
 #, qt-format
 msgid "track %1"
+msgstr ""
+
+msgid "width:"
 msgstr ""

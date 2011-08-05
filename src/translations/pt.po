@@ -3307,8 +3307,14 @@ msgstr "termina com"
 msgid "equals"
 msgstr "igual"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "maior que"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3371,6 +3377,9 @@ msgstr "parar"
 #, qt-format
 msgid "track %1"
 msgstr "música %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Obter as capas em falta"

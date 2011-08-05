@@ -3310,8 +3310,14 @@ msgstr "endet mit"
 msgid "equals"
 msgstr "gleich"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "größer als"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3374,6 +3380,9 @@ msgstr "Anhalten"
 #, qt-format
 msgid "track %1"
 msgstr "Stück %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Fehlende Cover holen"

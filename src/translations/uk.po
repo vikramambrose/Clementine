@@ -3396,8 +3396,14 @@ msgstr "закінчується на"
 msgid "equals"
 msgstr "збігається з"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "більше ніж"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3460,6 +3466,9 @@ msgstr "зупинити"
 #, qt-format
 msgid "track %1"
 msgstr "доріжка %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Знайти обкладинки, яких бракує"

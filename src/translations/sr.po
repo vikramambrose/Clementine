@@ -3235,7 +3235,13 @@ msgstr ""
 msgid "equals"
 msgstr ""
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
+msgstr ""
+
+msgid "height:"
 msgstr ""
 
 msgid "in the last"
@@ -3299,6 +3305,9 @@ msgstr "Заустави"
 #, qt-format
 msgid "track %1"
 msgstr "нумера %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Добави недостајуће омоте"

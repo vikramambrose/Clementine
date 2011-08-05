@@ -27,6 +27,8 @@ ExportCoversDialog::ExportCoversDialog(QWidget* parent)
     ui_(new Ui_ExportCoversDialog)
 {
   ui_->setupUi(this);
+
+  connect(ui_->forceSize, SIGNAL(stateChanged(int)), SLOT(ForceSizeToggled(int)));
 }
 
 ExportCoversDialog::~ExportCoversDialog() {
@@ -34,25 +36,41 @@ ExportCoversDialog::~ExportCoversDialog() {
 }
 
 ExportCoversDialog::DialogResult ExportCoversDialog::Exec() {
-  // remembers last accepted settings
   QSettings s;
   s.beginGroup(kSettingsGroup);
 
+  // restore last accepted settings
   ui_->fileName->setText(s.value("fileName", "cover").toString());
   ui_->overwrite->setChecked(s.value("overwrite", false).toBool());
+  ui_->forceSize->setChecked(s.value("forceSize", false).toBool());
+  ui_->width->setText(s.value("width", "").toString());
+  ui_->height->setText(s.value("height", "").toString());
+
+  ForceSizeToggled(ui_->forceSize->checkState());
 
   DialogResult result = DialogResult();
 
   if(exec() != QDialog::Rejected) {
     QString fileName = ui_->fileName->text();
     bool overwrite = ui_->overwrite->isChecked();
+    bool forceSize = ui_->forceSize->isChecked();
+    QString width = ui_->width->text();
+    QString height = ui_->height->text();
 
     s.setValue("fileName", fileName);
     s.setValue("overwrite", overwrite);
+    s.setValue("forceSize", forceSize);
+    s.setValue("width", width);
+    s.setValue("height", height);
 
     result.fileName_ = fileName;
     result.overwrite_ = overwrite;
   }
 
   return result;
+}
+
+void ExportCoversDialog::ForceSizeToggled(int state) {
+  ui_->width->setEnabled(state == Qt::Checked);
+  ui_->height->setEnabled(state == Qt::Checked);
 }

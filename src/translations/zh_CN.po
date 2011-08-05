@@ -3227,8 +3227,14 @@ msgstr ""
 msgid "equals"
 msgstr "等于"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "大于"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3291,6 +3297,9 @@ msgstr "停止"
 #, qt-format
 msgid "track %1"
 msgstr "音轨 %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "获取缺少的封面"

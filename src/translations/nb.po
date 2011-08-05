@@ -3238,7 +3238,13 @@ msgstr ""
 msgid "equals"
 msgstr ""
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
+msgstr ""
+
+msgid "height:"
 msgstr ""
 
 msgid "in the last"
@@ -3302,6 +3308,9 @@ msgstr "stopp"
 #, qt-format
 msgid "track %1"
 msgstr "spor %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Hent manglende omslag"

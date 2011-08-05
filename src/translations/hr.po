@@ -3294,8 +3294,14 @@ msgstr "završetak sa"
 msgid "equals"
 msgstr "jednak"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "veći od"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3358,6 +3364,9 @@ msgstr "zaustavi"
 #, qt-format
 msgid "track %1"
 msgstr "pjesma %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Dohvati prazan omot"

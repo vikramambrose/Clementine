@@ -3326,8 +3326,14 @@ msgstr "se termine par"
 msgid "equals"
 msgstr "est égal à"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "supérieur à"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3390,6 +3396,9 @@ msgstr "stop"
 #, qt-format
 msgid "track %1"
 msgstr "piste %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Récupérer les jaquettes manquantes"

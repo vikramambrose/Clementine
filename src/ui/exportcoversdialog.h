@@ -37,6 +37,9 @@ class ExportCoversDialog : public QDialog {
 
   DialogResult Exec();
 
+ private slots:
+  void ForceSizeToggled(int state);
+
  private:
   Ui_ExportCoversDialog* ui_;
 

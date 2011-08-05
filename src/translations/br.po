@@ -3259,8 +3259,14 @@ msgstr "a echu gant"
 msgid "equals"
 msgstr "kevatal"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "brasoc'h eget"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3323,6 +3329,9 @@ msgstr "paouez"
 #, qt-format
 msgid "track %1"
 msgstr "roadenn %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Pellkargañ ar goloioù a vank"

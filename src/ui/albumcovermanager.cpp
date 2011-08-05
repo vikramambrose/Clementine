@@ -562,24 +562,44 @@ void AlbumCoverManager::ExportCovers() {
     Song song = ItemAsSong(item);
     QString cover_path = song.CoverPath();
 
-    // manually unset or (TODO) embedded
+    // manually unset
     if(cover_path.isEmpty()) {
       continue;
     }
 
-    QString extension = cover_path.section('.', -1);
     QString dir = song.url().toLocalFile().section('/', 0, -2);
+    QString extension = cover_path.section('.', -1);
 
-    QString new_file = dir + '/' + result.fileName_ + '.' + extension;
+    QString new_file = dir + '/' + result.fileName_ + '.' +
+                           (cover_path == Song::kEmbeddedCover
+                              ? "jpg"
+                              : extension);
 
-    // handle overwrite as remove + copy
-    bool removeFailed = false;
+    // we're handling overwrite as remove + copy; we remove
+    // the old file first
     if(result.overwrite_ && QFile::exists(new_file)) {
-      removeFailed = !QFile::remove(new_file);
+      // make sure we can remove the old file
+      if(!QFile::remove(new_file)) {
+        bad++;
+        continue;
+      }
     }
 
-    if(removeFailed || !QFile::copy(cover_path, new_file)) {
-      bad++;
+    // an embedded cover
+    if(cover_path == Song::kEmbeddedCover) {
+
+      QImage embedded = Song::LoadEmbeddedArt(song.url().toLocalFile());
+      if(!embedded.save(new_file)) {
+        bad++;
+      }
+
+   // automatic or manual cover, available in an image file
+    } else {
+
+      if(!QFile::copy(cover_path, new_file)) {
+        bad++;
+      }
+
     }
 
     UpdateExportStatus(i, bad, album_count);

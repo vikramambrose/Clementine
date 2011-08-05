@@ -3292,8 +3292,14 @@ msgstr "заканчивается на"
 msgid "equals"
 msgstr "ровняется"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "больше"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3356,6 +3362,9 @@ msgstr "Остановить"
 #, qt-format
 msgid "track %1"
 msgstr "композиция %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Выберите пропущенные обложки"

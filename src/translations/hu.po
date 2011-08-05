@@ -3300,8 +3300,14 @@ msgstr "végződik"
 msgid "equals"
 msgstr "egyenlő"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "nagyobb mint"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3364,6 +3370,9 @@ msgstr "leállítás"
 #, qt-format
 msgid "track %1"
 msgstr "%1. szám"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "A hiányzó borítók letöltése"

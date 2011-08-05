@@ -3316,8 +3316,14 @@ msgstr "termina con"
 msgid "equals"
 msgstr "sea igual a"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "mayor que"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3380,6 +3386,9 @@ msgstr "detener"
 #, qt-format
 msgid "track %1"
 msgstr "Pista %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Descargar las portadas que faltan"

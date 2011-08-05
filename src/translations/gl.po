@@ -3234,7 +3234,13 @@ msgstr ""
 msgid "equals"
 msgstr ""
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
+msgstr ""
+
+msgid "height:"
 msgstr ""
 
 msgid "in the last"
@@ -3298,6 +3304,9 @@ msgstr ""
 #, qt-format
 msgid "track %1"
 msgstr "faixa %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "%1 total plays"
 #~ msgstr "%1 repoducción totais"

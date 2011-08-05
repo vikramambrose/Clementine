@@ -3294,8 +3294,14 @@ msgstr "se konča z"
 msgid "equals"
 msgstr "je enako"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "večje kot"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3358,6 +3364,9 @@ msgstr "zaustavi"
 #, qt-format
 msgid "track %1"
 msgstr "skladba %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Pridobi manjkajoče ovitke"

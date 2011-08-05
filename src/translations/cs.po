@@ -3293,8 +3293,14 @@ msgstr "Končí na"
 msgid "equals"
 msgstr "Rovná se"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "Větší než"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3357,6 +3363,9 @@ msgstr "Zastavit"
 #, qt-format
 msgid "track %1"
 msgstr "Skladba %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Natáhnout chybějící obaly"

@@ -3319,8 +3319,14 @@ msgstr "τελειώνει με"
 msgid "equals"
 msgstr "ισούται"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "μεγαλύτερο από"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3383,6 +3389,9 @@ msgstr "διακοπή"
 #, qt-format
 msgid "track %1"
 msgstr "κομμάτι %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Κατέβασμα εξώφυλλων που λείπουν"

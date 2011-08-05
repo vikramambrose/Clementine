@@ -3273,8 +3273,14 @@ msgstr "次で終わる"
 msgid "equals"
 msgstr "次に一致する"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "次より大きい"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3337,6 +3343,9 @@ msgstr "停止"
 #, qt-format
 msgid "track %1"
 msgstr "トラック %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "見つからないカバーのフェッチ"

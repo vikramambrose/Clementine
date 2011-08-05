@@ -3299,8 +3299,14 @@ msgstr "kończy się na"
 msgid "equals"
 msgstr "jest równy"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "większy niż"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3363,6 +3369,9 @@ msgstr "zatrzymaj"
 #, qt-format
 msgid "track %1"
 msgstr "utwór %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Pobierz brakujące okładki"

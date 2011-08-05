@@ -3284,8 +3284,14 @@ msgstr "şununla bitiyor"
 msgid "equals"
 msgstr "eşittir"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "büyüktür"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3348,6 +3354,9 @@ msgstr "durdur"
 #, qt-format
 msgid "track %1"
 msgstr "parça %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Eksik Albüm Kapaklarını İndir"

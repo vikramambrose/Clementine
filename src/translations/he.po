@@ -3260,8 +3260,14 @@ msgstr "מסתיים ב־"
 msgid "equals"
 msgstr "שווה ל־"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "גדול מ־"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3324,6 +3330,9 @@ msgstr "הפסקה"
 #, qt-format
 msgid "track %1"
 msgstr "רצועה %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "מצא עטיפות חסרות"

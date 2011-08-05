@@ -3311,8 +3311,14 @@ msgstr "eindigt met"
 msgid "equals"
 msgstr "is gelijk aan"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "is groter dan"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3375,6 +3381,9 @@ msgstr "stoppen"
 #, qt-format
 msgid "track %1"
 msgstr "track %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Ontbrekende hoezen ophalen"

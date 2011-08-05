@@ -3303,8 +3303,14 @@ msgstr "свършва с"
 msgid "equals"
 msgstr "равно"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "по-голям от"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3367,6 +3373,9 @@ msgstr "Стоп"
 #, qt-format
 msgid "track %1"
 msgstr "песен %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Сваляне на липсващите обложки"

@@ -3294,8 +3294,14 @@ msgstr "kết thúc với"
 msgid "equals"
 msgstr "là"
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "lớn hơn"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3358,6 +3364,9 @@ msgstr "stop"
 #, qt-format
 msgid "track %1"
 msgstr "track %1"
+
+msgid "width:"
+msgstr ""
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Tải các ảnh bìa còn thiếu"

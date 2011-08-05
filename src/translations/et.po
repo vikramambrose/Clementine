@@ -3226,8 +3226,14 @@ msgstr ""
 msgid "equals"
 msgstr ""
 
+msgid "force size"
+msgstr ""
+
 msgid "greater than"
 msgstr "suurem kui"
+
+msgid "height:"
+msgstr ""
 
 msgid "in the last"
 msgstr ""
@@ -3289,6 +3295,9 @@ msgstr "peata"
 
 #, qt-format
 msgid "track %1"
+msgstr ""
+
+msgid "width:"
 msgstr ""
 
 #~ msgid "Fetch Missing Covers"
