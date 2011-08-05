@@ -75,6 +75,10 @@ msgid "%1 tracks"
 msgstr "%1 Stücke"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1: Wiimotedev-Modul"
 
@@ -159,6 +163,9 @@ msgstr "128k MP3"
 msgid "50 random tracks"
 msgstr "50 zufällige Stücke"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -194,6 +201,15 @@ msgstr "A-Z"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -212,6 +228,9 @@ msgstr "Über Qt…"
 
 msgid "Account details"
 msgstr "Benutzerkonto"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Aktion"
@@ -437,9 +456,6 @@ msgstr "Komprimieren um Clippingfehler zu vermeiden"
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Profil \"%1\" wirklich löschen?"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "Sind Sie sicher, die folgenden Skripte installieren zu wollen?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "Wollen Sie die Statistiken dieses Liedes wirklich zurücksetzen?"
 
@@ -460,6 +476,9 @@ msgstr "Initialen des Künstlers"
 
 msgid "Audio format"
 msgstr "Audioformat"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Authentifiziere..."
@@ -483,6 +502,9 @@ msgid "Available"
 msgstr "Verfügbar"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -658,9 +680,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Clementine Bildbetrachter"
 
-msgid "Clementine scripts"
-msgstr "Clementine Skripte"
-
 msgid "Clementine was unable to find results for this file"
 msgstr "Clementine konnte keine Ergebnisse für diese Datei finden."
 
@@ -718,6 +737,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Musiksammlung einrichten..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr "Wii-Fernbedienungen mittels Aktivieren/deaktivieren-Aktion verbinden"
 
@@ -728,9 +750,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -798,6 +817,13 @@ msgstr "Cover nicht ausgewählt"
 #, qt-format
 msgid "Cover art set from %1"
 msgstr "Das Cover wird von %1 gesetzt"
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
+msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
 msgstr "Überblenden bei automatischem Stückwechsel"
@@ -934,9 +960,6 @@ msgstr "Ziel"
 msgid "Details..."
 msgstr "Details..."
 
-msgid "Developer mode"
-msgstr "Entwicklermodus"
-
 msgid "Device"
 msgstr "Gerät"
 
@@ -955,14 +978,20 @@ msgstr "Geräte"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Direkte Verbindung zum Internet"
 
 msgid "Directory"
 msgstr "Ordner"
-
-msgid "Disable"
-msgstr "Deaktivieren"
 
 msgid "Disable duration"
 msgstr ""
@@ -1073,9 +1102,6 @@ msgstr "Metadaten bearbeiten..."
 msgid "Edit..."
 msgstr "Bearbeiten..."
 
-msgid "Enable"
-msgstr "Aktivieren"
-
 msgid "Enable Wii Remote support"
 msgstr "Unterstützung für Wii-Fernbedienungen aktivieren"
 
@@ -1145,15 +1171,12 @@ msgstr "Fehler beim Löschen der Titel"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "Fehler beim Installieren vom Skript"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "Fehler beim Laden von %1"
 
-msgid "Error opening script archive"
-msgstr "Fehler beim Öffnen des Skript-Archivs"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1167,6 +1190,9 @@ msgstr "Irgendwann gespielt"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Außer für Stücke des gleichen Albums oder des gleichen Cuesheets."
+
+msgid "Export to folders"
+msgstr ""
 
 msgid "Extras"
 msgstr "Extras"
@@ -1207,11 +1233,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Lieblingsstücke"
 
-msgid "Fetch Missing Covers"
-msgstr "Fehlende Cover holen"
-
 msgid "Fetch automatically"
 msgstr "Cover automatisch holen"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr "Hole Cover Fehler"
@@ -1319,11 +1345,11 @@ msgstr "Allgemeine Einstellungen"
 msgid "Genre"
 msgstr "Genre"
 
-msgid "Get new scripts"
-msgstr "Neue Skripte holen"
-
 msgid "Getting channels"
 msgstr "Lade Channels"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Namen angeben:"
@@ -1463,15 +1489,6 @@ msgstr "Information"
 msgid "Insert..."
 msgstr "Einfügen..."
 
-msgid "Install from file..."
-msgstr "Aus Datei installieren ..."
-
-msgid "Install script file"
-msgstr "Skript-Datei installieren"
-
-msgid "Install scripts"
-msgstr "Skripte installieren"
-
 msgid "Installed"
 msgstr ""
 
@@ -1480,6 +1497,12 @@ msgstr "Internet"
 
 msgid "Invalid API key"
 msgstr "Ungültiger API-Schlüssel"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Ungültiges Format"
@@ -1713,6 +1736,12 @@ msgstr "Liedtexte von %1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1834,9 +1863,6 @@ msgstr "Meine Radiostation"
 msgid "My Recommendations"
 msgstr "Meine Empfehlungen"
 
-msgid "My scripts"
-msgstr "Meine Skripte"
-
 msgid "Name"
 msgstr "Name"
 
@@ -1956,6 +1982,10 @@ msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
 msgstr "Nur die ersten"
+
+#, qt-format
+msgid "Open %1 in browser"
+msgstr ""
 
 msgid "Open &audio CD..."
 msgstr ""
@@ -2184,9 +2214,6 @@ msgstr "Taste auf Wii-Fernbedienung drücken"
 msgid "Put songs in a random order"
 msgstr "Zufällige Titelreihenfolge"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "Qualität"
 
@@ -2244,11 +2271,11 @@ msgstr "Channels neu laden"
 msgid "Refresh station list"
 msgstr "Aktualisiere Senderliste"
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Reggae"
-
-msgid "Reload"
-msgstr "Neu Laden"
 
 msgid "Remember Wii remote swing"
 msgstr "Bewegung der Wii-Fernbedienung merken"
@@ -2373,9 +2400,6 @@ msgstr ""
 msgid "Score"
 msgstr "Bewertung"
 
-msgid "Script Manager"
-msgstr "Skript-Verwaltung"
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Stücke die ich höre \"scrobbeln\""
 
@@ -2460,9 +2484,6 @@ msgstr "Wert für ausgewählte Stücke benutzen..."
 
 msgid "Settings"
 msgstr "Einstellungen"
-
-msgid "Settings..."
-msgstr "Einstellungen..."
 
 msgid "Shortcut"
 msgstr "Tastenkürzel"
@@ -2593,11 +2614,6 @@ msgstr "Soft"
 
 msgid "Soft Rock"
 msgstr "Soft Rock"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr ""
-"Einige Dateien konnten nicht installiert werden. Das Skript funktioniert "
-"eventuell nicht korrekt."
 
 msgid "Song Information"
 msgstr "Titelinformationen"
@@ -2745,10 +2761,6 @@ msgid "The \"%1\" command could not be started."
 msgstr "Der \"%1\" Befehl konnte nicht ausgeführt werden."
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr "Das Skript »%1« wurde geändert, Sie werden es neu laden müssen"
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "Ordner %1 ist ungültig"
 
@@ -2847,9 +2859,6 @@ msgstr ""
 "Dies ist ein iPod, aber Clementine wurde ohne Unterstützung für libgpod "
 "kompiliert."
 
-msgid "This is not a valid Clementine script file."
-msgstr "Das ist keine gültige Skript-Datei für Clementine."
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2894,6 +2903,12 @@ msgid "Toggle scrobbling"
 msgstr "Scrobbeln ein- oder ausschalten"
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3056,13 +3071,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-"Hinweis: Die Skripte haben vollen Zugang zu Ihrem Computer und Ihrer Musik. "
-"Installieren Sie nur vertrauenswürdige Skripte."
-
 msgid "Wav"
 msgstr "WAV"
 
@@ -3112,6 +3120,15 @@ msgstr "Wii-Fernbedienung %1 getrennt"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii-Fernbedienung %1: Ladestand niedirg (%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "Windows Media Audio"
 
@@ -3132,6 +3149,11 @@ msgstr "Gestern"
 
 msgid "You are about to download the following albums"
 msgstr "Die Folgenden Alben werden jetzt heruntergeladen"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Sie können hier einstellen wie Ihre Musiksammlung sortiert wird."
@@ -3164,6 +3186,14 @@ msgstr ""
 "Sie können Ihre Wii-Fernbedienung als Fernbedienung für Clementine benutzen. "
 "Mehr Informationen dazu gibt es auf der <a href=\"http://www.clementine-"
 "player.org/wiimote\">entsprechenden Seite im Clementine Wiki.</a>\n"
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
+msgstr ""
 
 msgid "You love this track"
 msgstr "Sie lieben dieses Stück"
@@ -3331,6 +3361,72 @@ msgstr "Anhalten"
 #, qt-format
 msgid "track %1"
 msgstr "Stück %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Fehlende Cover holen"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "Sind Sie sicher, die folgenden Skripte installieren zu wollen?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Clementine Skripte"
+
+#~ msgid "Developer mode"
+#~ msgstr "Entwicklermodus"
+
+#~ msgid "Disable"
+#~ msgstr "Deaktivieren"
+
+#~ msgid "Enable"
+#~ msgstr "Aktivieren"
+
+#~ msgid "Error installing script"
+#~ msgstr "Fehler beim Installieren vom Skript"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Fehler beim Öffnen des Skript-Archivs"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Neue Skripte holen"
+
+#~ msgid "Install from file..."
+#~ msgstr "Aus Datei installieren ..."
+
+#~ msgid "Install script file"
+#~ msgstr "Skript-Datei installieren"
+
+#~ msgid "Install scripts"
+#~ msgstr "Skripte installieren"
+
+#~ msgid "My scripts"
+#~ msgstr "Meine Skripte"
+
+#~ msgid "Reload"
+#~ msgstr "Neu Laden"
+
+#~ msgid "Script Manager"
+#~ msgstr "Skript-Verwaltung"
+
+#~ msgid "Settings..."
+#~ msgstr "Einstellungen..."
+
+#~ msgid "Some files failed to install.  The script may not work correctly."
+#~ msgstr ""
+#~ "Einige Dateien konnten nicht installiert werden. Das Skript funktioniert "
+#~ "eventuell nicht korrekt."
+
+#~ msgid "The '%1' script was modified, you might have to reload it"
+#~ msgstr "Das Skript »%1« wurde geändert, Sie werden es neu laden müssen"
+
+#~ msgid "This is not a valid Clementine script file."
+#~ msgstr "Das ist keine gültige Skript-Datei für Clementine."
+
+#~ msgid ""
+#~ "Warning: scripts have full access to your computer and your music.  Only "
+#~ "install scripts that you trust."
+#~ msgstr ""
+#~ "Hinweis: Die Skripte haben vollen Zugang zu Ihrem Computer und Ihrer "
+#~ "Musik. Installieren Sie nur vertrauenswürdige Skripte."
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 andere Zuhörer"

@@ -77,6 +77,10 @@ msgid "%1 tracks"
 msgstr "%1 takeliai"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1: Wii pulto modulis"
 
@@ -161,6 +165,9 @@ msgstr "Transliuoti kaip MP3"
 msgid "50 random tracks"
 msgstr "50 atsitiktinių takelių"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -193,6 +200,15 @@ msgstr "A-Z"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF išpynimo metodas"
 
@@ -211,6 +227,9 @@ msgstr "Apie Qt..."
 
 msgid "Account details"
 msgstr "Paskyros informacija"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Veiksmas"
@@ -434,9 +453,6 @@ msgstr "Pritaikyti suspaudimą, kad išvengti nukirtimų"
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Ar tikrai norite ištrinti \"%1\" šabloną?"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "Ar tikrai norite įdiegti šiuos scenarijus?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "Ar tikrai norite atstatyti šios dainos statistiką?"
 
@@ -457,6 +473,9 @@ msgstr "Atlikėjo inicialai"
 
 msgid "Audio format"
 msgstr "Audio formatas"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Autorizuojama..."
@@ -480,6 +499,9 @@ msgid "Available"
 msgstr "Galima"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -653,9 +675,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Clementine nuotraukų peržiūros programa"
 
-msgid "Clementine scripts"
-msgstr "Clementine scenarijai"
-
 msgid "Clementine was unable to find results for this file"
 msgstr "Clementine nepavyko rasti rezultatų šiam failui"
 
@@ -713,6 +732,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Konfigūruoti biblioteką..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr "Prijungti Wii pultą naudojant aktyvuoti/dezaktyvuoti veiksmą"
 
@@ -723,9 +745,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -793,6 +812,13 @@ msgstr "Viršelio paveikslėlis nenustatytas"
 #, qt-format
 msgid "Cover art set from %1"
 msgstr "Viršelio paveikslėlis nustatytas iš %1"
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
+msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
 msgstr "Kryžminis suliejimas kai takeliai keičiami automatiškai"
@@ -929,9 +955,6 @@ msgstr "Kopijuoti į aplanką"
 msgid "Details..."
 msgstr "Detalės..."
 
-msgid "Developer mode"
-msgstr "Kūrėjo režimas"
-
 msgid "Device"
 msgstr "Įrenginys"
 
@@ -950,14 +973,20 @@ msgstr "Įrenginiai"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Tiesioginis interneto ryšys"
 
 msgid "Directory"
 msgstr "Aplankas"
-
-msgid "Disable"
-msgstr "Išjungti"
 
 msgid "Disable duration"
 msgstr ""
@@ -1068,9 +1097,6 @@ msgstr "Taisyti takelių informaciją..."
 msgid "Edit..."
 msgstr "Keisti..."
 
-msgid "Enable"
-msgstr "Įgalinti"
-
 msgid "Enable Wii Remote support"
 msgstr "Įgalinti Wii nuotolinio pulto palaikymą"
 
@@ -1140,15 +1166,12 @@ msgstr "Klaida trinant dainas"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "Klaida diegiant scenarijų"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "Klaida įkeliant %1"
 
-msgid "Error opening script archive"
-msgstr "Klaida atveriant scenarijų archyvą"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1162,6 +1185,9 @@ msgstr "Bet kada grota"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Išskyrus tarp takelių tame pačiame albume arba tame pačiame CUE lape"
+
+msgid "Export to folders"
+msgstr ""
 
 msgid "Extras"
 msgstr "Ekstra"
@@ -1202,11 +1228,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Megstami takeliai"
 
-msgid "Fetch Missing Covers"
-msgstr "Gauti trūkstamus albumų viršelius"
-
 msgid "Fetch automatically"
 msgstr "Gauti automatiškai"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr "Viršelio atsiuntimo klaida"
@@ -1314,11 +1340,11 @@ msgstr "Pagrindiniai nustatymai"
 msgid "Genre"
 msgstr "Žanras"
 
-msgid "Get new scripts"
-msgstr "Gauti naujus skriptus"
-
 msgid "Getting channels"
 msgstr "gaunami kanalai"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Suteikti pavadinimą"
@@ -1458,15 +1484,6 @@ msgstr "Informacija"
 msgid "Insert..."
 msgstr "Įterpti..."
 
-msgid "Install from file..."
-msgstr "Įdiegti iš failo..."
-
-msgid "Install script file"
-msgstr "Įdiegti scenarijaus failą"
-
-msgid "Install scripts"
-msgstr "Įdiegti scenarijus"
-
 msgid "Installed"
 msgstr ""
 
@@ -1475,6 +1492,12 @@ msgstr "Internetas"
 
 msgid "Invalid API key"
 msgstr "Netinkamas API raktas"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Netinkamas formatas"
@@ -1708,6 +1731,12 @@ msgstr "Žodžiai iš %1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1829,9 +1858,6 @@ msgstr "Mano radijo stotis"
 msgid "My Recommendations"
 msgstr "Mano rekomendacijos"
 
-msgid "My scripts"
-msgstr "Mano scenarijai"
-
 msgid "Name"
 msgstr "Veiksmas"
 
@@ -1950,6 +1976,10 @@ msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
 msgstr "Rodyti tik pirmą"
+
+#, qt-format
+msgid "Open %1 in browser"
+msgstr ""
 
 msgid "Open &audio CD..."
 msgstr ""
@@ -2178,9 +2208,6 @@ msgstr "Spauskite Wii pulto mygtuką"
 msgid "Put songs in a random order"
 msgstr "Dėti dainas atsitiktine tvarka"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "Kokybė"
 
@@ -2238,11 +2265,11 @@ msgstr "Atnaujinti kanalus"
 msgid "Refresh station list"
 msgstr "Atnaujinti stočių sąrašą"
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Regis"
-
-msgid "Reload"
-msgstr "Įkelti iš naujo"
 
 msgid "Remember Wii remote swing"
 msgstr "Prisiminti Wii pulto pasukimą"
@@ -2367,9 +2394,6 @@ msgstr ""
 msgid "Score"
 msgstr "Įvertinimas"
 
-msgid "Script Manager"
-msgstr "Scenarijų tvarkyklė"
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Pateikti klausomų takelių informaciją"
 
@@ -2454,9 +2478,6 @@ msgstr "Nustatyti vertę visiems pažymėtiems takeliams..."
 
 msgid "Settings"
 msgstr "Nustatymai"
-
-msgid "Settings..."
-msgstr "Nuostatos..."
 
 msgid "Shortcut"
 msgstr "Kombinacija"
@@ -2585,9 +2606,6 @@ msgstr "Rami"
 
 msgid "Soft Rock"
 msgstr "Ramus rokas"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr "Nepavyko įdiegti kai kurių failų. Scenarijus gali neveikti tinkamai."
 
 msgid "Song Information"
 msgstr "Dainos informacija"
@@ -2735,10 +2753,6 @@ msgid "The \"%1\" command could not be started."
 msgstr "Komanda \"%1\" negalėjo būti paleista."
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr "'%1' scenarijus buvo pakeistas, gali tekti paleisti jį iš naujo"
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "Aplankas %1 yra netinkamas"
 
@@ -2828,9 +2842,6 @@ msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr ""
 "Tai yra iPod įrenginys, bet jūs sukompiliavę Clementine be libgpod palaikymo."
 
-msgid "This is not a valid Clementine script file."
-msgstr "Tai ne tinkamas Clementine scenarijaus failas"
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2875,6 +2886,12 @@ msgid "Toggle scrobbling"
 msgstr ""
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3036,13 +3053,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-"Dėmesio: scenarijau turi pilną priėjimą prie jūsų kompiuterio ir jūsų "
-"muzikos. Įdiekite scenarijus tik tuo, kuriais pasitikite."
-
 msgid "Wav"
 msgstr "Wav"
 
@@ -3091,6 +3101,15 @@ msgstr "Wii pultas %1: atjungtas"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii pultas %1: išsekusi baterija (%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "Windows Media Audio"
 
@@ -3111,6 +3130,11 @@ msgstr "Vakar"
 
 msgid "You are about to download the following albums"
 msgstr "Jūs ketinate atsisiųsti šiuos albumus"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Galite nustatyti kaip organizuoti dainas fonotekoje"
@@ -3141,6 +3165,14 @@ msgstr ""
 "Galite naudoti Wii pultą nuotoliniam Clementine valdymui. Daugiau "
 "informacijos apie Wii pulto panaudojimą galite rasti <a href=\"http://www."
 "clementine-player.org/wiimote\">Clementine wiki puslapyje</a>.\n"
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
+msgstr ""
 
 msgid "You love this track"
 msgstr "Jūs mylite šį takelį"
@@ -3307,6 +3339,71 @@ msgstr "stabdyti"
 #, qt-format
 msgid "track %1"
 msgstr "takelis %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Gauti trūkstamus albumų viršelius"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "Ar tikrai norite įdiegti šiuos scenarijus?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Clementine scenarijai"
+
+#~ msgid "Developer mode"
+#~ msgstr "Kūrėjo režimas"
+
+#~ msgid "Disable"
+#~ msgstr "Išjungti"
+
+#~ msgid "Enable"
+#~ msgstr "Įgalinti"
+
+#~ msgid "Error installing script"
+#~ msgstr "Klaida diegiant scenarijų"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Klaida atveriant scenarijų archyvą"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Gauti naujus skriptus"
+
+#~ msgid "Install from file..."
+#~ msgstr "Įdiegti iš failo..."
+
+#~ msgid "Install script file"
+#~ msgstr "Įdiegti scenarijaus failą"
+
+#~ msgid "Install scripts"
+#~ msgstr "Įdiegti scenarijus"
+
+#~ msgid "My scripts"
+#~ msgstr "Mano scenarijai"
+
+#~ msgid "Reload"
+#~ msgstr "Įkelti iš naujo"
+
+#~ msgid "Script Manager"
+#~ msgstr "Scenarijų tvarkyklė"
+
+#~ msgid "Settings..."
+#~ msgstr "Nuostatos..."
+
+#~ msgid "Some files failed to install.  The script may not work correctly."
+#~ msgstr ""
+#~ "Nepavyko įdiegti kai kurių failų. Scenarijus gali neveikti tinkamai."
+
+#~ msgid "The '%1' script was modified, you might have to reload it"
+#~ msgstr "'%1' scenarijus buvo pakeistas, gali tekti paleisti jį iš naujo"
+
+#~ msgid "This is not a valid Clementine script file."
+#~ msgstr "Tai ne tinkamas Clementine scenarijaus failas"
+
+#~ msgid ""
+#~ "Warning: scripts have full access to your computer and your music.  Only "
+#~ "install scripts that you trust."
+#~ msgstr ""
+#~ "Dėmesio: scenarijau turi pilną priėjimą prie jūsų kompiuterio ir jūsų "
+#~ "muzikos. Įdiekite scenarijus tik tuo, kuriais pasitikite."
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 kiti klausytojai"

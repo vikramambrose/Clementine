@@ -74,6 +74,10 @@ msgid "%1 tracks"
 msgstr "%1 首"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1: Wii 遥控器设备模块"
 
@@ -158,6 +162,9 @@ msgstr "128k MP3"
 msgid "50 random tracks"
 msgstr "50 个随机音轨"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -185,6 +192,15 @@ msgstr "A-Z"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -203,6 +219,9 @@ msgstr "关于 Qt..."
 
 msgid "Account details"
 msgstr "帐号详情"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "操作"
@@ -426,9 +445,6 @@ msgstr "允许压缩以阻止剪切"
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "您确定要删除预设 %1 吗？"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "你确定要安装下列脚本?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "您确定要重置此曲目的统计信息吗？"
 
@@ -449,6 +465,9 @@ msgstr "艺术家名字的首字母"
 
 msgid "Audio format"
 msgstr "音频格式"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "正在认证..."
@@ -472,6 +491,9 @@ msgid "Available"
 msgstr "可用"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -637,9 +659,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Clementine 图像查看器"
 
-msgid "Clementine scripts"
-msgstr "Clementine 脚本"
-
 msgid "Clementine was unable to find results for this file"
 msgstr ""
 
@@ -697,6 +716,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "配置音乐库..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr ""
 
@@ -707,9 +729,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -771,6 +790,13 @@ msgstr ""
 #, qt-format
 msgid "Cover art set from %1"
 msgstr "从 %1 中设置封面"
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
+msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
 msgstr ""
@@ -907,9 +933,6 @@ msgstr "目标"
 msgid "Details..."
 msgstr "详情..."
 
-msgid "Developer mode"
-msgstr "开发者模式"
-
 msgid "Device"
 msgstr "设备"
 
@@ -928,14 +951,20 @@ msgstr "设备"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "直接连接到互联网"
 
 msgid "Directory"
 msgstr "目录"
-
-msgid "Disable"
-msgstr "禁用"
 
 msgid "Disable duration"
 msgstr ""
@@ -1046,9 +1075,6 @@ msgstr "编辑音轨信息..."
 msgid "Edit..."
 msgstr "编辑..."
 
-msgid "Enable"
-msgstr "启用"
-
 msgid "Enable Wii Remote support"
 msgstr "启用 Wii 遥控支持"
 
@@ -1116,15 +1142,12 @@ msgstr "删除曲目出错"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "安装脚本出错"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "载入 %1 出错"
 
-msgid "Error opening script archive"
-msgstr "打开脚本存档出错"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1137,6 +1160,9 @@ msgid "Ever played"
 msgstr "曾经播放"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
+msgstr ""
+
+msgid "Export to folders"
 msgstr ""
 
 msgid "Extras"
@@ -1178,11 +1204,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "最喜爱的音轨"
 
-msgid "Fetch Missing Covers"
-msgstr "获取缺少的封面"
-
 msgid "Fetch automatically"
 msgstr "自动获取"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr "获取封面出错"
@@ -1288,11 +1314,11 @@ msgstr "常规设置"
 msgid "Genre"
 msgstr "流派"
 
-msgid "Get new scripts"
-msgstr "获取新的脚本"
-
 msgid "Getting channels"
 msgstr "获得频道"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "给它起个名字"
@@ -1428,15 +1454,6 @@ msgstr "信息"
 msgid "Insert..."
 msgstr "插入..."
 
-msgid "Install from file..."
-msgstr ""
-
-msgid "Install script file"
-msgstr "安装脚本文件"
-
-msgid "Install scripts"
-msgstr "安装脚本"
-
 msgid "Installed"
 msgstr ""
 
@@ -1445,6 +1462,12 @@ msgstr "互联网"
 
 msgid "Invalid API key"
 msgstr "无效的 API 密钥"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "无效格式"
@@ -1676,6 +1699,12 @@ msgstr "歌词来自 %1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1797,9 +1826,6 @@ msgstr "我的电台"
 msgid "My Recommendations"
 msgstr "我的推荐"
 
-msgid "My scripts"
-msgstr "我的脚本"
-
 msgid "Name"
 msgstr "名称"
 
@@ -1916,6 +1942,10 @@ msgid "Ogg Vorbis"
 msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
+msgstr ""
+
+#, qt-format
+msgid "Open %1 in browser"
 msgstr ""
 
 msgid "Open &audio CD..."
@@ -2144,9 +2174,6 @@ msgstr ""
 msgid "Put songs in a random order"
 msgstr "随机打乱曲目顺序"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "质量"
 
@@ -2204,11 +2231,11 @@ msgstr "刷新频道"
 msgid "Refresh station list"
 msgstr "刷新电台列表"
 
-msgid "Reggae"
+msgid "Refresh streams"
 msgstr ""
 
-msgid "Reload"
-msgstr "重新载入"
+msgid "Reggae"
+msgstr ""
 
 msgid "Remember Wii remote swing"
 msgstr ""
@@ -2333,9 +2360,6 @@ msgstr ""
 msgid "Score"
 msgstr "得分"
 
-msgid "Script Manager"
-msgstr "脚本管理器"
-
 msgid "Scrobble tracks that I listen to"
 msgstr ""
 
@@ -2420,9 +2444,6 @@ msgstr "为全部选中的音轨设置值..."
 
 msgid "Settings"
 msgstr ""
-
-msgid "Settings..."
-msgstr "设置..."
 
 msgid "Shortcut"
 msgstr "快捷键"
@@ -2550,9 +2571,6 @@ msgid "Soft"
 msgstr ""
 
 msgid "Soft Rock"
-msgstr ""
-
-msgid "Some files failed to install.  The script may not work correctly."
 msgstr ""
 
 msgid "Song Information"
@@ -2701,10 +2719,6 @@ msgid "The \"%1\" command could not be started."
 msgstr ""
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr ""
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr ""
 
@@ -2785,9 +2799,6 @@ msgstr ""
 msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr ""
 
-msgid "This is not a valid Clementine script file."
-msgstr ""
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2830,6 +2841,12 @@ msgid "Toggle scrobbling"
 msgstr ""
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -2991,11 +3008,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-
 msgid "Wav"
 msgstr "Wav"
 
@@ -3041,6 +3053,15 @@ msgstr "Wii 遥控器 %1：已断开"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii 遥控器 %1：电池电量低(%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "Windows Media 音频"
 
@@ -3062,6 +3083,11 @@ msgstr "昨天"
 msgid "You are about to download the following albums"
 msgstr "您即将下载以下专辑"
 
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
+
 msgid "You can change the way the songs in the library are organised."
 msgstr ""
 
@@ -3082,6 +3108,14 @@ msgid ""
 "You can use your Wii Remote as a remote control for Clementine.  <a href="
 "\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
 "wiki</a> for more information.\n"
+msgstr ""
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
 msgstr ""
 
 msgid "You love this track"
@@ -3244,6 +3278,51 @@ msgstr "停止"
 #, qt-format
 msgid "track %1"
 msgstr "音轨 %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "获取缺少的封面"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "你确定要安装下列脚本?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Clementine 脚本"
+
+#~ msgid "Developer mode"
+#~ msgstr "开发者模式"
+
+#~ msgid "Disable"
+#~ msgstr "禁用"
+
+#~ msgid "Enable"
+#~ msgstr "启用"
+
+#~ msgid "Error installing script"
+#~ msgstr "安装脚本出错"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "打开脚本存档出错"
+
+#~ msgid "Get new scripts"
+#~ msgstr "获取新的脚本"
+
+#~ msgid "Install script file"
+#~ msgstr "安装脚本文件"
+
+#~ msgid "Install scripts"
+#~ msgstr "安装脚本"
+
+#~ msgid "My scripts"
+#~ msgstr "我的脚本"
+
+#~ msgid "Reload"
+#~ msgstr "重新载入"
+
+#~ msgid "Script Manager"
+#~ msgstr "脚本管理器"
+
+#~ msgid "Settings..."
+#~ msgstr "设置..."
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 位其他听众"

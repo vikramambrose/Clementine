@@ -76,6 +76,10 @@ msgid "%1 tracks"
 msgstr "%1 κομμάτια"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1: Άρθρωμα Wiimotedev"
 
@@ -160,6 +164,9 @@ msgstr "128k MP3"
 msgid "50 random tracks"
 msgstr "50 τυχαία τραγούδια"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -196,6 +203,15 @@ msgstr "Α-Ω"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -214,6 +230,9 @@ msgstr "Περί του Qt..."
 
 msgid "Account details"
 msgstr "Λεπτομέρειες λογαριασμού"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Ενέργεια"
@@ -438,11 +457,6 @@ msgstr "Εφαρμογή συμπίεσης για αποφυγή κολλημά
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Είστε σίγουροι πως θέλετε να διαγράψετε τη ρύθμιση \"%1\";"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr ""
-"Είστε σίγουροι πως θέλετε να εγκαταστήσετε την ακόλουθη δέσμη εντολών "
-"(script);"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "Είστε σίγουροι πως θέλετε να επαναφέρετε τα στατιστικά του τραγουδιού;"
 
@@ -463,6 +477,9 @@ msgstr "Αρχικά του καλλιτέχνη"
 
 msgid "Audio format"
 msgstr "Διαμόρφωση ήχου (format)"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Πιστοποίηση..."
@@ -486,6 +503,9 @@ msgid "Available"
 msgstr "Διαθέσιμα"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -662,9 +682,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Προβολή εικόνων του Clementine"
 
-msgid "Clementine scripts"
-msgstr "Δέσμες εντολών Clementine"
-
 msgid "Clementine was unable to find results for this file"
 msgstr "Ο Clementine δεν μπόρεσε να βρει αποτελέσματα για αυτό το αρχείο"
 
@@ -723,6 +740,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Παραμετροποίηση της βιβλιοθήκης"
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr ""
 "Σύνδεση των χειριστηρίων Wii χρησιμοποιώντας την ενέργεια ενεργοποίηση/"
@@ -735,9 +755,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -805,6 +822,13 @@ msgstr "Δεν έχει οριστεί εξώφυλλο"
 #, qt-format
 msgid "Cover art set from %1"
 msgstr "Το εξώφυλλο ορίστηκε από %1"
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
+msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
 msgstr "Χρήση «Cross-Fade» κατά την αυτόματη αλλαγή του κομματιού"
@@ -941,9 +965,6 @@ msgstr "Προορισμός"
 msgid "Details..."
 msgstr "Λεπτομέρειες..."
 
-msgid "Developer mode"
-msgstr "Λειτουργία για προγραμματιστές"
-
 msgid "Device"
 msgstr "Συσκευή"
 
@@ -962,14 +983,20 @@ msgstr "Συσκευές"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Απευθείας σύνδεση στο διαδίκτυο"
 
 msgid "Directory"
 msgstr "Κατάλογος"
-
-msgid "Disable"
-msgstr "Απενεργοποίηση"
 
 msgid "Disable duration"
 msgstr ""
@@ -1080,9 +1107,6 @@ msgstr "Επεξεργασία πληροφοριών των κομματιών.
 msgid "Edit..."
 msgstr "Επεξεργασία..."
 
-msgid "Enable"
-msgstr "Ενεργοποίηση"
-
 msgid "Enable Wii Remote support"
 msgstr "Ενεργοποίηση της υποστήριξης χειριστηρίων Wii"
 
@@ -1154,15 +1178,12 @@ msgstr "Σφάλμα κατά την διαγραφή τραγουδιών"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "Σφάλμα κατά την εγκατάσταση δέσμης εντολών"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "Σφάλμα φόρτωσης του %1"
 
-msgid "Error opening script archive"
-msgstr "Σφάλμα κατά το άνοιγμα του Αρχείου δέσμης εντολών"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1176,6 +1197,9 @@ msgstr "Ενίοτε έπαιξαν"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Εκτός μεταξύ δύο κομματιών στο ίδιο άλμπουμ ή στο ίδιο φύλλο CUE"
+
+msgid "Export to folders"
+msgstr ""
 
 msgid "Extras"
 msgstr "Επιπλέον"
@@ -1216,11 +1240,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Αγαπημένα κομμάτια"
 
-msgid "Fetch Missing Covers"
-msgstr "Κατέβασμα εξώφυλλων που λείπουν"
-
 msgid "Fetch automatically"
 msgstr "Αυτόματο κατέβασμα"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr "Σφάλμα στο κατέβασμα του εξώφυλλου"
@@ -1329,11 +1353,11 @@ msgstr "Γενικές ρυθμίσεις"
 msgid "Genre"
 msgstr "Είδος"
 
-msgid "Get new scripts"
-msgstr "Αποκτήστε νέες δέσμες εντολών (scripts)"
-
 msgid "Getting channels"
 msgstr "Λήψη καναλιών"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Δώστε του ένα όνομα:"
@@ -1474,15 +1498,6 @@ msgstr "Πληροφορία"
 msgid "Insert..."
 msgstr "Εισαγωγή..."
 
-msgid "Install from file..."
-msgstr "Εγκατάσταση από αρχείο..."
-
-msgid "Install script file"
-msgstr "Εγκατάσταση αρχείου δέσμης εντολών (script)"
-
-msgid "Install scripts"
-msgstr "Εγκατάσταση δέσμης εντολών (scripts)"
-
 msgid "Installed"
 msgstr ""
 
@@ -1491,6 +1506,12 @@ msgstr "Διαδίκτυο"
 
 msgid "Invalid API key"
 msgstr "Εσφαλμένο κλειδί API"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Εσφαλμένη διαμόρφωση"
@@ -1722,6 +1743,12 @@ msgstr "Στίχοι από %1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1842,9 +1869,6 @@ msgstr "Οι Σταθμοί μου"
 
 msgid "My Recommendations"
 msgstr "Οι Προτάσεις μου"
-
-msgid "My scripts"
-msgstr "Οι δέσμες εντολών (scripts) μου"
 
 msgid "Name"
 msgstr "Όνομα"
@@ -1967,6 +1991,10 @@ msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
 msgstr "Εμφάνιση μόνο του πρώτου"
+
+#, qt-format
+msgid "Open %1 in browser"
+msgstr ""
 
 msgid "Open &audio CD..."
 msgstr ""
@@ -2196,9 +2224,6 @@ msgstr "πιέστε ένα πλήκτρο Wiiremote"
 msgid "Put songs in a random order"
 msgstr "Τοποθέτηση τραγουδιών σΌροιε τυχαία σειρά"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "Ποιότητα"
 
@@ -2256,11 +2281,11 @@ msgstr "Ανανέωση καναλιών"
 msgid "Refresh station list"
 msgstr "ανανέωση της λίστας σταθμών"
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Reggae"
-
-msgid "Reload"
-msgstr "Ανανέωση"
 
 msgid "Remember Wii remote swing"
 msgstr "Απομνημόνευσε την ταλάντευση του χειριστηρίου του Wii"
@@ -2385,9 +2410,6 @@ msgstr ""
 msgid "Score"
 msgstr "Σκορ"
 
-msgid "Script Manager"
-msgstr "Διαχείριση σεναρίων"
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Κάνε \"srobble\" τα κομμάτια που ακούω"
 
@@ -2472,9 +2494,6 @@ msgstr "Δώσε τιμή σε όλα τα επιλεγμένα κομμάτια
 
 msgid "Settings"
 msgstr "Ρυθμίσεις"
-
-msgid "Settings..."
-msgstr "Ρυθμίσεις..."
 
 msgid "Shortcut"
 msgstr "Συντόμευση"
@@ -2603,11 +2622,6 @@ msgstr "Απαλή"
 
 msgid "Soft Rock"
 msgstr "Απαλή Rock"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr ""
-"Μερικά αρχεία απέτυχε να εγκατασταθούν. Η δέσμη εντολών (script) ίσως δεν "
-"λειτουργήσει σωστά."
 
 msgid "Song Information"
 msgstr "Πληρ. τραγουδιού"
@@ -2755,11 +2769,6 @@ msgid "The \"%1\" command could not be started."
 msgstr "Η εντολή \"%1\" δεν μπόρεσε να ξεκινήσει"
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr ""
-"Η δέσμη εντολών (script) '%1' τροποποιήθηκε, ίσως πρέπει να το ξαναφορτώσετε"
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "Ο κατάλογος %1 δεν είναι έγκυρος"
 
@@ -2858,10 +2867,6 @@ msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr ""
 "Αυτό είναι iPod, αλλά φτιάξατε τον Clementine χωρίς υποστήριξη της libgpod."
 
-msgid "This is not a valid Clementine script file."
-msgstr ""
-"Αυτό δεν είναι ένα έγκυρο αρχείο δέσμης εντολών (script) του Clementine."
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2907,6 +2912,12 @@ msgid "Toggle scrobbling"
 msgstr "Εναλλαγή του scrobbling"
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3069,14 +3080,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-"Προειδοποίηση: Οι δέσμες εντολών (scripts) έχουν πλήρη πρόσβαση στον "
-"υπολογιστή σας και στην μουσική σας. Εγκαταστήστε μόνο δέσμες εντολών "
-"(scripts) που εμπιστεύεστε."
-
 msgid "Wav"
 msgstr "Wav"
 
@@ -3126,6 +3129,15 @@ msgstr "Χειριστήριο Wii %1: αποσυνδέθηκε"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Χειριστήριο Wii %1: χαμηλή μπαταρία (%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "Windows Media audio"
 
@@ -3146,6 +3158,11 @@ msgstr "Χθες"
 
 msgid "You are about to download the following albums"
 msgstr "Πρόκειτε να \"κατεβάσετε\" τα παρακάτω άλμπουμ"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr ""
@@ -3177,6 +3194,14 @@ msgstr ""
 "Μπορείτε να χρησιμοποιήσετε χειριστήριο Wii σαν τηλεχειριστήριο για τον "
 "Clementine.  <a href=\"http://www.clementine-player.org/wiimote\">Δείτε την "
 "σχετική σελίδα στο wiki του Clementine</a> για περισσότερες πληροφορίες.\n"
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
+msgstr ""
 
 msgid "You love this track"
 msgstr "Λατρεύεις αυτό το κομμάτι"
@@ -3345,6 +3370,78 @@ msgstr "διακοπή"
 #, qt-format
 msgid "track %1"
 msgstr "κομμάτι %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Κατέβασμα εξώφυλλων που λείπουν"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr ""
+#~ "Είστε σίγουροι πως θέλετε να εγκαταστήσετε την ακόλουθη δέσμη εντολών "
+#~ "(script);"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Δέσμες εντολών Clementine"
+
+#~ msgid "Developer mode"
+#~ msgstr "Λειτουργία για προγραμματιστές"
+
+#~ msgid "Disable"
+#~ msgstr "Απενεργοποίηση"
+
+#~ msgid "Enable"
+#~ msgstr "Ενεργοποίηση"
+
+#~ msgid "Error installing script"
+#~ msgstr "Σφάλμα κατά την εγκατάσταση δέσμης εντολών"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Σφάλμα κατά το άνοιγμα του Αρχείου δέσμης εντολών"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Αποκτήστε νέες δέσμες εντολών (scripts)"
+
+#~ msgid "Install from file..."
+#~ msgstr "Εγκατάσταση από αρχείο..."
+
+#~ msgid "Install script file"
+#~ msgstr "Εγκατάσταση αρχείου δέσμης εντολών (script)"
+
+#~ msgid "Install scripts"
+#~ msgstr "Εγκατάσταση δέσμης εντολών (scripts)"
+
+#~ msgid "My scripts"
+#~ msgstr "Οι δέσμες εντολών (scripts) μου"
+
+#~ msgid "Reload"
+#~ msgstr "Ανανέωση"
+
+#~ msgid "Script Manager"
+#~ msgstr "Διαχείριση σεναρίων"
+
+#~ msgid "Settings..."
+#~ msgstr "Ρυθμίσεις..."
+
+#~ msgid "Some files failed to install.  The script may not work correctly."
+#~ msgstr ""
+#~ "Μερικά αρχεία απέτυχε να εγκατασταθούν. Η δέσμη εντολών (script) ίσως δεν "
+#~ "λειτουργήσει σωστά."
+
+#~ msgid "The '%1' script was modified, you might have to reload it"
+#~ msgstr ""
+#~ "Η δέσμη εντολών (script) '%1' τροποποιήθηκε, ίσως πρέπει να το "
+#~ "ξαναφορτώσετε"
+
+#~ msgid "This is not a valid Clementine script file."
+#~ msgstr ""
+#~ "Αυτό δεν είναι ένα έγκυρο αρχείο δέσμης εντολών (script) του Clementine."
+
+#~ msgid ""
+#~ "Warning: scripts have full access to your computer and your music.  Only "
+#~ "install scripts that you trust."
+#~ msgstr ""
+#~ "Προειδοποίηση: Οι δέσμες εντολών (scripts) έχουν πλήρη πρόσβαση στον "
+#~ "υπολογιστή σας και στην μουσική σας. Εγκαταστήστε μόνο δέσμες εντολών "
+#~ "(scripts) που εμπιστεύεστε."
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 άλλοι ακροατές"

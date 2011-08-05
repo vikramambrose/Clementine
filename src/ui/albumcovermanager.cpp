@@ -71,8 +71,8 @@ AlbumCoverManager::AlbumCoverManager(LibraryBackend* backend,
 
   // Icons
   ui_->action_fetch->setIcon(IconLoader::Load("download"));
+  ui_->action_export->setIcon(IconLoader::Load("document-save"));
   ui_->view->setIcon(IconLoader::Load("view-choose"));
-  ui_->fetch->setIcon(IconLoader::Load("download"));
   ui_->action_add_to_playlist->setIcon(IconLoader::Load("media-playback-start"));
   ui_->action_load->setIcon(IconLoader::Load("media-playback-start"));
 
@@ -102,7 +102,7 @@ AlbumCoverManager::AlbumCoverManager(LibraryBackend* backend,
   QShortcut* close = new QShortcut(QKeySequence::Close, this);
   connect(close, SIGNAL(activated()), SLOT(close()));
 
-  ResetFetchCoversButton();
+  EnableCoversButtons();
 }
 
 AlbumCoverManager::~AlbumCoverManager() {
@@ -112,6 +112,11 @@ AlbumCoverManager::~AlbumCoverManager() {
 }
 
 void AlbumCoverManager::Init() {
+  QMenu* covers_menu = new QMenu(this);
+  covers_menu->addAction(ui_->action_fetch);
+  covers_menu->addAction(ui_->action_export);
+  ui_->covers_button->setMenu(covers_menu);
+
   // View menu
   QActionGroup* filter_group = new QActionGroup(this);
   filter_all_ = filter_group->addAction(tr("All albums"));
@@ -158,10 +163,11 @@ void AlbumCoverManager::Init() {
   connect(ui_->filter, SIGNAL(textChanged(QString)), SLOT(UpdateFilter()));
   connect(filter_group, SIGNAL(triggered(QAction*)), SLOT(UpdateFilter()));
   connect(ui_->view, SIGNAL(clicked()), ui_->view, SLOT(showMenu()));
-  connect(ui_->fetch, SIGNAL(clicked()), SLOT(FetchAlbumCovers()));
+  connect(ui_->action_fetch, SIGNAL(triggered()), SLOT(FetchAlbumCovers()));
+  connect(ui_->action_export, SIGNAL(triggered()), SLOT(ExportCovers()));
+  connect(ui_->covers_button, SIGNAL(clicked()), ui_->covers_button, SLOT(showMenu()));
   connect(cover_fetcher_, SIGNAL(AlbumCoverFetched(quint64,QImage,CoverSearchStatistics)),
           SLOT(AlbumCoverFetched(quint64,QImage,CoverSearchStatistics)));
-  connect(ui_->action_fetch, SIGNAL(triggered()), SLOT(FetchSingleCover()));
   connect(ui_->albums, SIGNAL(doubleClicked(QModelIndex)), SLOT(AlbumDoubleClicked(QModelIndex)));
   connect(ui_->action_add_to_playlist, SIGNAL(triggered()), SLOT(AddSelectedToPlaylist()));
   connect(ui_->action_load, SIGNAL(triggered()), SLOT(LoadSelectedToPlaylist()));
@@ -240,11 +246,11 @@ void AlbumCoverManager::CancelRequests() {
   cover_fetcher_->Clear();
   progress_bar_->hide();
   statusBar()->clearMessage();
-  ResetFetchCoversButton();
+  EnableCoversButtons();
 }
 
 void AlbumCoverManager::Reset() {
-  ResetFetchCoversButton();
+  EnableCoversButtons();
 
   if (!backend_)
     return;
@@ -261,8 +267,14 @@ void AlbumCoverManager::Reset() {
   }
 }
 
-void AlbumCoverManager::ResetFetchCoversButton() {
-  ui_->fetch->setEnabled(cover_providers_->HasAnyProviders());
+void AlbumCoverManager::DisableCoversButtons() {
+  ui_->action_fetch->setEnabled(false);
+  ui_->action_export->setEnabled(false);
+}
+
+void AlbumCoverManager::EnableCoversButtons() {
+  ui_->action_fetch->setEnabled(cover_providers_->HasAnyProviders());
+  ui_->action_export->setEnabled(true);
 }
 
 void AlbumCoverManager::ArtistChanged(QListWidgetItem* current) {
@@ -383,8 +395,9 @@ void AlbumCoverManager::FetchAlbumCovers() {
     jobs_ ++;
   }
 
-  if (!cover_fetching_tasks_.isEmpty())
-    ui_->fetch->setEnabled(false);
+  if (!cover_fetching_tasks_.isEmpty()) {
+    DisableCoversButtons();
+  }
 
   progress_bar_->setMaximum(jobs_);
   progress_bar_->show();
@@ -403,7 +416,7 @@ void AlbumCoverManager::AlbumCoverFetched(quint64 id, const QImage& image,
   }
 
   if (cover_fetching_tasks_.isEmpty()) {
-    ResetFetchCoversButton();
+    EnableCoversButtons();
   }
 
   fetch_statistics_ += statistics;
@@ -507,19 +520,8 @@ void AlbumCoverManager::ShowCover() {
   album_cover_choice_controller_->ShowCover(song);
 }
 
-void AlbumCoverManager::FetchSingleCover() {
-  foreach (QListWidgetItem* item, context_menu_items_) {
-    quint64 id = cover_fetcher_->FetchAlbumCover(
-        item->data(Role_ArtistName).toString(), item->data(Role_AlbumName).toString());
-    cover_fetching_tasks_[id] = item;
-    jobs_ ++;
-  }
-
-  progress_bar_->setMaximum(jobs_);
-  progress_bar_->show();
-  UpdateStatusText();
+void AlbumCoverManager::ExportCovers() {
 }
-
 
 void AlbumCoverManager::UpdateCoverInList(QListWidgetItem* item, const QString& cover) {
   quint64 id = cover_loader_->Worker()->LoadImageAsync(QString(), cover);

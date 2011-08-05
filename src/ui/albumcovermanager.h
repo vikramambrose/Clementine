@@ -60,7 +60,8 @@ class AlbumCoverManager : public QMainWindow {
   void Reset();
   void Init();
 
-  void ResetFetchCoversButton();
+  void EnableCoversButtons();
+  void DisableCoversButtons();
 
   SongList GetSongsInAlbum(const QModelIndex& index) const;
   SongList GetSongsInAlbums(const QModelIndexList& indexes) const;
@@ -82,11 +83,9 @@ class AlbumCoverManager : public QMainWindow {
   void CoverImageLoaded(quint64 id, const QImage& image);
   void UpdateFilter();
   void FetchAlbumCovers();
+  void ExportCovers();
   void AlbumCoverFetched(quint64 id, const QImage& image,
                          const CoverSearchStatistics& statistics);
-
-  // On the context menu
-  void FetchSingleCover();
 
   void LoadCoverFromFile();
   void SaveCoverToFile();

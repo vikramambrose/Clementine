@@ -87,15 +87,40 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="fetch">
-            <property name="text">
-             <string>Fetch Missing Covers</string>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
             </property>
-            <property name="iconSize">
+            <property name="sizeType">
+             <enum>QSizePolicy::Minimum</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
              <size>
-              <width>16</width>
-              <height>16</height>
+              <width>40</width>
+              <height>20</height>
              </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QToolButton" name="covers_button">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Covers...</string>
+            </property>
+            <property name="popupMode">
+             <enum>QToolButton::MenuButtonPopup</enum>
+            </property>
+            <property name="toolButtonStyle">
+             <enum>Qt::ToolButtonTextBesideIcon</enum>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -166,6 +191,11 @@
     <string>Add to playlist</string>
    </property>
   </action>
+  <action name="action_export">
+   <property name="text">
+    <string>Export to folders</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
@@ -183,7 +213,6 @@
   <tabstop>artists</tabstop>
   <tabstop>filter</tabstop>
   <tabstop>view</tabstop>
-  <tabstop>fetch</tabstop>
   <tabstop>albums</tabstop>
  </tabstops>
  <resources>

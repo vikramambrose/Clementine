@@ -74,6 +74,10 @@ msgid "%1 tracks"
 msgstr "%1 skladb"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1: Wimotedev modul"
 
@@ -158,6 +162,9 @@ msgstr "128k MP3"
 msgid "50 random tracks"
 msgstr "50 naključnih skladb"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -190,6 +197,15 @@ msgstr "A-Ž"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -208,6 +224,9 @@ msgstr "O Qt ..."
 
 msgid "Account details"
 msgstr "Podrobnosti računa"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Dejanje"
@@ -431,9 +450,6 @@ msgstr "Uporabi stiskanje za preprečitev odrezanja"
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Ali resnično želite izbrisati prednastavitev \"%1\"?"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "Ste prepričani, da želite namestiti sledeče skripte?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "Ste prepričani, da želite ponastaviti statistike te skladbe"
 
@@ -454,6 +470,9 @@ msgstr "Začetnice izvajalca"
 
 msgid "Audio format"
 msgstr "Vrsta zvoka"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Overjanje ..."
@@ -477,6 +496,9 @@ msgid "Available"
 msgstr "Na voljo"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -652,9 +674,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Pregledovalnik datotek Clementine"
 
-msgid "Clementine scripts"
-msgstr "Clementine skripte"
-
 msgid "Clementine was unable to find results for this file"
 msgstr "Clemenitne ni mogel najti rezultatov za to datoteko"
 
@@ -712,6 +731,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Nastavi knjižnico ..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr "Poveži Wii Remotes z uporabo dejanja omogoči/onemogoči"
 
@@ -722,9 +744,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -792,6 +811,13 @@ msgstr "Ovitek albuma ni nastavljen"
 #, qt-format
 msgid "Cover art set from %1"
 msgstr "Ovitek albuma je nastavljen iz %1"
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
+msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
 msgstr "Postopni prehod med samodejno spremembo skladb"
@@ -928,9 +954,6 @@ msgstr "Cilj"
 msgid "Details..."
 msgstr "Podrobnosti ..."
 
-msgid "Developer mode"
-msgstr "Način za razvijalce"
-
 msgid "Device"
 msgstr "Naprava"
 
@@ -949,14 +972,20 @@ msgstr "Naprave"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Neposredna povezava na medmrežje"
 
 msgid "Directory"
 msgstr "Mapa"
-
-msgid "Disable"
-msgstr "Onemogoči"
 
 msgid "Disable duration"
 msgstr ""
@@ -1067,9 +1096,6 @@ msgstr "Uredi podrobnosti skladb ..."
 msgid "Edit..."
 msgstr "Uredi ..."
 
-msgid "Enable"
-msgstr "Omogoči"
-
 msgid "Enable Wii Remote support"
 msgstr "Omogoči podporo Wii Remote"
 
@@ -1139,15 +1165,12 @@ msgstr "Napaka pri brisanju skladb"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "Napaka med nameščanjem skripte"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "Napaka med nalaganjem %1"
 
-msgid "Error opening script archive"
-msgstr "Napaka med odpiranjem arhiva skript"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1161,6 +1184,9 @@ msgstr "Sploh predvajano"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Razen med skladbami na istem albumu ali v isti predlogi CUE"
+
+msgid "Export to folders"
+msgstr ""
 
 msgid "Extras"
 msgstr "Dodatki"
@@ -1201,11 +1227,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Priljubljene skladbe"
 
-msgid "Fetch Missing Covers"
-msgstr "Pridobi manjkajoče ovitke"
-
 msgid "Fetch automatically"
 msgstr "Samodejno pridobi"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr "Napaka med pridobivanjem ovitka"
@@ -1313,11 +1339,11 @@ msgstr "Splošne nastavitve"
 msgid "Genre"
 msgstr "Zvrst"
 
-msgid "Get new scripts"
-msgstr "Dobi nove skripte"
-
 msgid "Getting channels"
 msgstr "Pridobivanje kanalov"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Vnesite ime:"
@@ -1458,15 +1484,6 @@ msgstr "Podrobnosti"
 msgid "Insert..."
 msgstr "Vstavi ..."
 
-msgid "Install from file..."
-msgstr "Namesti iz datoteke ..."
-
-msgid "Install script file"
-msgstr "Namesti datoteko s skripto"
-
-msgid "Install scripts"
-msgstr "Namesti skripte"
-
 msgid "Installed"
 msgstr ""
 
@@ -1475,6 +1492,12 @@ msgstr "Medmrežje"
 
 msgid "Invalid API key"
 msgstr "Neveljaven ključ API"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Neveljavna vrsta"
@@ -1706,6 +1729,12 @@ msgstr "Besedila iz %1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1827,9 +1856,6 @@ msgstr "Moja radijska postaja"
 msgid "My Recommendations"
 msgstr "Moja priporočila"
 
-msgid "My scripts"
-msgstr "Moje skripte"
-
 msgid "Name"
 msgstr "Ime"
 
@@ -1949,6 +1975,10 @@ msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
 msgstr "Pokaži le prve"
+
+#, qt-format
+msgid "Open %1 in browser"
+msgstr ""
 
 msgid "Open &audio CD..."
 msgstr ""
@@ -2176,9 +2206,6 @@ msgstr "Pritisnite gumb Wiiremote"
 msgid "Put songs in a random order"
 msgstr "Razvrsti skladbe naključno"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "Kakovost"
 
@@ -2236,11 +2263,11 @@ msgstr "Osveži kanale"
 msgid "Refresh station list"
 msgstr "Osveži seznam postaj"
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Reggae"
-
-msgid "Reload"
-msgstr "Ponovno naloži"
 
 msgid "Remember Wii remote swing"
 msgstr "Zapomni si Wii remote zamah"
@@ -2365,9 +2392,6 @@ msgstr ""
 msgid "Score"
 msgstr "Rezultat"
 
-msgid "Script Manager"
-msgstr "Upravljalnik skriptov"
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Pošlji podatke o predvajanih skladbah"
 
@@ -2452,9 +2476,6 @@ msgstr "Nastavi vrednost za vse izbrane skladbe ..."
 
 msgid "Settings"
 msgstr "Nastavitve"
-
-msgid "Settings..."
-msgstr "Nastavitve ..."
 
 msgid "Shortcut"
 msgstr "Bližnjica"
@@ -2584,11 +2605,6 @@ msgstr "Soft"
 
 msgid "Soft Rock"
 msgstr "Soft Rock"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr ""
-"Nekaterih datotek ni bilo mogoče namestiti. Skripta morda ne bo delovala "
-"pravilno."
 
 msgid "Song Information"
 msgstr "Podrobnosti o skladbi"
@@ -2736,11 +2752,6 @@ msgid "The \"%1\" command could not be started."
 msgstr "Ukaza \"%1\" ni bilo mogoče zagnati."
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr ""
-"Skripta '%1' je bila spremenjena. Morda jo boste morali ponovno naložiti."
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "Mapa %1 ni veljavna"
 
@@ -2836,9 +2847,6 @@ msgstr "To je naprava MTP, Clementine pa je preveden brez podpore libmtp."
 msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr "To je naprava iPod, Clementine pa je preveden brez podpore libgpod."
 
-msgid "This is not a valid Clementine script file."
-msgstr "To ni veljavna Clementine datoteka s skripto."
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2883,6 +2891,12 @@ msgid "Toggle scrobbling"
 msgstr ""
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3044,13 +3058,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-"Opozorilo: skripte imajo poln dostop do vašega računalnika in vaše glasbe. "
-"Namestite le skripte, ki jim zaupate."
-
 msgid "Wav"
 msgstr "WAV"
 
@@ -3099,6 +3106,15 @@ msgstr "Wii Remote %1: nepovezan"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii Remote %1: šibka baterija (%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "Windows Media Audio"
 
@@ -3119,6 +3135,11 @@ msgstr "Včeraj"
 
 msgid "You are about to download the following albums"
 msgstr "Pravkar boste prejeli naslednje albume"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Spremenite lahko kako so skladbe organizirane v knjižnici"
@@ -3149,6 +3170,14 @@ msgstr ""
 "Wii Remote lahko uporabite kot daljinski upravljalnik v Clementine. Obiščite "
 "<a href=\"http://www.clementine-player.org/wiimote\">Clementine wiki</a> za "
 "več podrobnosti.\n"
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
+msgstr ""
 
 msgid "You love this track"
 msgstr "To je vaša priljubljena skladba"
@@ -3316,6 +3345,73 @@ msgstr "zaustavi"
 #, qt-format
 msgid "track %1"
 msgstr "skladba %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Pridobi manjkajoče ovitke"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "Ste prepričani, da želite namestiti sledeče skripte?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Clementine skripte"
+
+#~ msgid "Developer mode"
+#~ msgstr "Način za razvijalce"
+
+#~ msgid "Disable"
+#~ msgstr "Onemogoči"
+
+#~ msgid "Enable"
+#~ msgstr "Omogoči"
+
+#~ msgid "Error installing script"
+#~ msgstr "Napaka med nameščanjem skripte"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Napaka med odpiranjem arhiva skript"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Dobi nove skripte"
+
+#~ msgid "Install from file..."
+#~ msgstr "Namesti iz datoteke ..."
+
+#~ msgid "Install script file"
+#~ msgstr "Namesti datoteko s skripto"
+
+#~ msgid "Install scripts"
+#~ msgstr "Namesti skripte"
+
+#~ msgid "My scripts"
+#~ msgstr "Moje skripte"
+
+#~ msgid "Reload"
+#~ msgstr "Ponovno naloži"
+
+#~ msgid "Script Manager"
+#~ msgstr "Upravljalnik skriptov"
+
+#~ msgid "Settings..."
+#~ msgstr "Nastavitve ..."
+
+#~ msgid "Some files failed to install.  The script may not work correctly."
+#~ msgstr ""
+#~ "Nekaterih datotek ni bilo mogoče namestiti. Skripta morda ne bo delovala "
+#~ "pravilno."
+
+#~ msgid "The '%1' script was modified, you might have to reload it"
+#~ msgstr ""
+#~ "Skripta '%1' je bila spremenjena. Morda jo boste morali ponovno naložiti."
+
+#~ msgid "This is not a valid Clementine script file."
+#~ msgstr "To ni veljavna Clementine datoteka s skripto."
+
+#~ msgid ""
+#~ "Warning: scripts have full access to your computer and your music.  Only "
+#~ "install scripts that you trust."
+#~ msgstr ""
+#~ "Opozorilo: skripte imajo poln dostop do vašega računalnika in vaše "
+#~ "glasbe. Namestite le skripte, ki jim zaupate."
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 drugih poslušalcev"

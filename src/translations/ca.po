@@ -74,6 +74,10 @@ msgid "%1 tracks"
 msgstr "%1 temes"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1 mòdul Wiimotedev"
 
@@ -158,6 +162,9 @@ msgstr "128k MP3"
 msgid "50 random tracks"
 msgstr "50 pistes aleatòries"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -193,6 +200,15 @@ msgstr "A-Z"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -211,6 +227,9 @@ msgstr "Sobre Qt..."
 
 msgid "Account details"
 msgstr "Detalls del compte"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Acció"
@@ -436,9 +455,6 @@ msgstr "Afegir compressió per evitar el clipping"
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Estas segur de que vols esborrar el \"%1\" preestablert?"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr ""
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr ""
 
@@ -459,6 +475,9 @@ msgstr "Inicials de l'artista"
 
 msgid "Audio format"
 msgstr "Format d'àudio"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "S'està autenticant..."
@@ -483,6 +502,9 @@ msgid "Available"
 msgstr "Disponible"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -655,9 +677,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Visor d'imatges Clementine"
 
-msgid "Clementine scripts"
-msgstr ""
-
 msgid "Clementine was unable to find results for this file"
 msgstr ""
 
@@ -716,6 +735,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Configura la llibreria..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr "Connetar els comandaments remot Wii amb l'acció activar/desactivar"
 
@@ -726,9 +748,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -795,6 +814,13 @@ msgstr ""
 
 #, qt-format
 msgid "Cover art set from %1"
+msgstr ""
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
 msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
@@ -932,9 +958,6 @@ msgstr "Destí"
 msgid "Details..."
 msgstr "Detalls..."
 
-msgid "Developer mode"
-msgstr ""
-
 msgid "Device"
 msgstr "Dispositiu"
 
@@ -953,14 +976,20 @@ msgstr "Dispositius"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr ""
 
 msgid "Directory"
 msgstr "Directori"
-
-msgid "Disable"
-msgstr ""
 
 msgid "Disable duration"
 msgstr ""
@@ -1071,9 +1100,6 @@ msgstr ""
 msgid "Edit..."
 msgstr "Edita..."
 
-msgid "Enable"
-msgstr ""
-
 msgid "Enable Wii Remote support"
 msgstr "Habilitat suport remot Wii"
 
@@ -1143,14 +1169,11 @@ msgstr "Error esborrant cançons"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr ""
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "Error carregant %1"
 
-msgid "Error opening script archive"
+msgid "Error loading di.fm playlist"
 msgstr ""
 
 #, qt-format
@@ -1164,6 +1187,9 @@ msgid "Ever played"
 msgstr ""
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
+msgstr ""
+
+msgid "Export to folders"
 msgstr ""
 
 msgid "Extras"
@@ -1205,11 +1231,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Cançons favorites"
 
-msgid "Fetch Missing Covers"
-msgstr "Cercar caràtules perdudes"
-
 msgid "Fetch automatically"
 msgstr "Cercar automaticament"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr ""
@@ -1317,11 +1343,11 @@ msgstr "Arranjaments generals"
 msgid "Genre"
 msgstr "Gènere"
 
-msgid "Get new scripts"
-msgstr ""
-
 msgid "Getting channels"
 msgstr "Obtenint canals"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Posa-li un nom:"
@@ -1459,15 +1485,6 @@ msgstr "Informació"
 msgid "Insert..."
 msgstr "Insereix..."
 
-msgid "Install from file..."
-msgstr ""
-
-msgid "Install script file"
-msgstr ""
-
-msgid "Install scripts"
-msgstr ""
-
 msgid "Installed"
 msgstr ""
 
@@ -1476,6 +1493,12 @@ msgstr "Internet"
 
 msgid "Invalid API key"
 msgstr "Clau de l'API no vàlida"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Format invàlid"
@@ -1709,6 +1732,12 @@ msgstr ""
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP$ AAC"
 
@@ -1830,9 +1859,6 @@ msgstr "La meva emissora de ràdio"
 msgid "My Recommendations"
 msgstr "Les meves recomanacions"
 
-msgid "My scripts"
-msgstr ""
-
 msgid "Name"
 msgstr "Nom"
 
@@ -1951,6 +1977,10 @@ msgid "Ogg Vorbis"
 msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
+msgstr ""
+
+#, qt-format
+msgid "Open %1 in browser"
 msgstr ""
 
 msgid "Open &audio CD..."
@@ -2179,9 +2209,6 @@ msgstr ""
 msgid "Put songs in a random order"
 msgstr ""
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "Qualitat"
 
@@ -2239,11 +2266,11 @@ msgstr "Actualitzar canals"
 msgid "Refresh station list"
 msgstr ""
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Reggae"
-
-msgid "Reload"
-msgstr ""
 
 msgid "Remember Wii remote swing"
 msgstr ""
@@ -2368,9 +2395,6 @@ msgstr ""
 msgid "Score"
 msgstr ""
 
-msgid "Script Manager"
-msgstr ""
-
 msgid "Scrobble tracks that I listen to"
 msgstr ""
 
@@ -2454,9 +2478,6 @@ msgid "Set value for all selected tracks..."
 msgstr "Estableix valor per totes les pistes seleccionades..."
 
 msgid "Settings"
-msgstr ""
-
-msgid "Settings..."
 msgstr ""
 
 msgid "Shortcut"
@@ -2586,9 +2607,6 @@ msgstr "Suau"
 
 msgid "Soft Rock"
 msgstr "Rock suau"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr ""
 
 msgid "Song Information"
 msgstr ""
@@ -2736,10 +2754,6 @@ msgid "The \"%1\" command could not be started."
 msgstr ""
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr ""
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "El directori %1 bo es vàlid"
 
@@ -2827,9 +2841,6 @@ msgstr ""
 msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr ""
 
-msgid "This is not a valid Clementine script file."
-msgstr ""
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2875,6 +2886,12 @@ msgid "Toggle scrobbling"
 msgstr ""
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3036,11 +3053,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-
 msgid "Wav"
 msgstr "Wav"
 
@@ -3086,6 +3098,15 @@ msgstr "Comandament remot Wii %1: desconnectat"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Comandament remot Wii %1: bateria baixa (%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "Audio Windows Media"
 
@@ -3106,6 +3127,11 @@ msgstr ""
 
 msgid "You are about to download the following albums"
 msgstr "Estàs a punt de descarregar els següents àlbums"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr ""
@@ -3130,6 +3156,14 @@ msgid ""
 "You can use your Wii Remote as a remote control for Clementine.  <a href="
 "\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
 "wiki</a> for more information.\n"
+msgstr ""
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
 msgstr ""
 
 msgid "You love this track"
@@ -3295,6 +3329,9 @@ msgstr "atura"
 #, qt-format
 msgid "track %1"
 msgstr "peça %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Cercar caràtules perdudes"
 
 #~ msgid "%1 total plays"
 #~ msgstr "%1 reproduccions"

@@ -74,6 +74,10 @@ msgid "%1 tracks"
 msgstr "%1 szám"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1: Wiimotedev modul"
 
@@ -158,6 +162,9 @@ msgstr "128k MP3"
 msgid "50 random tracks"
 msgstr "50 véletlen szám"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -191,6 +198,15 @@ msgstr "A-Z"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -209,6 +225,9 @@ msgstr "Qt névjegye..."
 
 msgid "Account details"
 msgstr "Fiók részletek"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Esemény"
@@ -432,9 +451,6 @@ msgstr "Tömörítés engedélyezése a túlvezérlés elkerülése érdekében"
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Biztos benne, hogy törli a \"%1\" beállítást?"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "Biztos telepíted az alábbi parancsfájlokat?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "Biztos vagy benne, hogy visszaállítod ennek a számnak a statisztikáit?"
 
@@ -455,6 +471,9 @@ msgstr "Előadó kezdése"
 
 msgid "Audio format"
 msgstr "Audio formátum"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Hitelesítés…"
@@ -478,6 +497,9 @@ msgid "Available"
 msgstr "Elérhető"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -653,9 +675,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Clementine képmegjelenítő"
 
-msgid "Clementine scripts"
-msgstr "Clementine parancsfájlok"
-
 msgid "Clementine was unable to find results for this file"
 msgstr "Nincsenek találatok ehhez a fájlhoz"
 
@@ -713,6 +732,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Zenetár beállítása..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr ""
 "Wii távvezérlő csatlakoztatása az aktiválás/deaktiválás esemény használatával"
@@ -724,9 +746,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -794,6 +813,13 @@ msgstr "Albumborító nincs beállítva"
 #, qt-format
 msgid "Cover art set from %1"
 msgstr "Albumborító beállítva %1 helyről"
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
+msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
 msgstr "Átúsztatás használata számok automatikus váltásánál"
@@ -930,9 +956,6 @@ msgstr "Cél"
 msgid "Details..."
 msgstr "Részletek…"
 
-msgid "Developer mode"
-msgstr "Fejlesztői mód"
-
 msgid "Device"
 msgstr "Eszköz"
 
@@ -951,14 +974,20 @@ msgstr "Eszközök"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Közvetlen internetkapcsolat"
 
 msgid "Directory"
 msgstr "Mappa"
-
-msgid "Disable"
-msgstr "Letiltás"
 
 msgid "Disable duration"
 msgstr ""
@@ -1069,9 +1098,6 @@ msgstr "Száminformációk szerkesztése"
 msgid "Edit..."
 msgstr "Szerkesztés..."
 
-msgid "Enable"
-msgstr "Engedélyezés"
-
 msgid "Enable Wii Remote support"
 msgstr "Wii távvezérlő támogatás engedélyezése"
 
@@ -1142,15 +1168,12 @@ msgstr "Hiba történt a számok törlése közben"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "Hiba történt a parancsfájl telepítése közben"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "Hiba %1 betöltésekor"
 
-msgid "Error opening script archive"
-msgstr "Hiba történt a parancsfájl archívum megnyitása közben"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1164,6 +1187,9 @@ msgstr "Valaha játszott"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Kivéve az azonos albumon vagy azonos CUE fájlban lévő számok között"
+
+msgid "Export to folders"
+msgstr ""
 
 msgid "Extras"
 msgstr "Extrák"
@@ -1204,11 +1230,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Kedvenc számok"
 
-msgid "Fetch Missing Covers"
-msgstr "A hiányzó borítók letöltése"
-
 msgid "Fetch automatically"
 msgstr "Letöltés automatikusan"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr "Hiba a borító betöltése közben"
@@ -1317,11 +1343,11 @@ msgstr "Általános beállítások"
 msgid "Genre"
 msgstr "Műfaj"
 
-msgid "Get new scripts"
-msgstr "Új parancsfájlok beszerzése"
-
 msgid "Getting channels"
 msgstr "Csatornák betöltése"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Adjon meg egy nevet:"
@@ -1461,15 +1487,6 @@ msgstr "Információ"
 msgid "Insert..."
 msgstr "Beszúrás..."
 
-msgid "Install from file..."
-msgstr "Telepítés fájlból"
-
-msgid "Install script file"
-msgstr "Parancsfájl telepítése"
-
-msgid "Install scripts"
-msgstr "Parancsfájlok telepítése"
-
 msgid "Installed"
 msgstr ""
 
@@ -1478,6 +1495,12 @@ msgstr "Internet"
 
 msgid "Invalid API key"
 msgstr "Érvénytelen API kulcs"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Érvénytelen formátum"
@@ -1710,6 +1733,12 @@ msgstr "%1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1831,9 +1860,6 @@ msgstr "A rádióadóm"
 msgid "My Recommendations"
 msgstr "Ajánlásaim"
 
-msgid "My scripts"
-msgstr "Saját parancsfájljaim"
-
 msgid "Name"
 msgstr "Név"
 
@@ -1953,6 +1979,10 @@ msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
 msgstr "Csak a legelsőt mutassa"
+
+#, qt-format
+msgid "Open %1 in browser"
+msgstr ""
 
 msgid "Open &audio CD..."
 msgstr ""
@@ -2180,9 +2210,6 @@ msgstr "Nyomja meg a Wiiremote gombot"
 msgid "Put songs in a random order"
 msgstr "Számok felvétele véletlenszerű rendezésben"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "Minőség"
 
@@ -2240,11 +2267,11 @@ msgstr "Csatornák frissítése"
 msgid "Refresh station list"
 msgstr "Állomáslista frissítése"
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Reggae"
-
-msgid "Reload"
-msgstr "Újratölt"
 
 msgid "Remember Wii remote swing"
 msgstr "Emlékezzen a Wii távvezérlő mozdulatra"
@@ -2369,9 +2396,6 @@ msgstr ""
 msgid "Score"
 msgstr "Pontszám"
 
-msgid "Script Manager"
-msgstr "Parancsfájlkezelő"
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Az általam hallgatott számok Scrobble funkcióval történő figyelése"
 
@@ -2456,9 +2480,6 @@ msgstr "Érték beállítása minden kiválasztott számnak..."
 
 msgid "Settings"
 msgstr "Beállítások"
-
-msgid "Settings..."
-msgstr "Beállítások..."
 
 msgid "Shortcut"
 msgstr "Billentyűparancs"
@@ -2590,9 +2611,6 @@ msgstr "Lágy"
 
 msgid "Soft Rock"
 msgstr "Lágy Rock"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr "Néhány fájl telepítése meghiúsult. A parancsfájl hibásan működhet."
 
 msgid "Song Information"
 msgstr "Száminformációk"
@@ -2740,10 +2758,6 @@ msgid "The \"%1\" command could not be started."
 msgstr "A \"%1\" parancs nem végrehajtható."
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr "A '%1' parancsfájl módosult, újratöltése javasolt"
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "A %1 mappa érvénytelen"
 
@@ -2839,9 +2853,6 @@ msgstr ""
 "Ez az eszköz egy iPod, de a Clementine libgpod támogatás nélkül lett "
 "fordítva."
 
-msgid "This is not a valid Clementine script file."
-msgstr "Ez nem érvényes Clementine parancsfájl."
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2886,6 +2897,12 @@ msgid "Toggle scrobbling"
 msgstr "Scrobble funkció váltása"
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3047,13 +3064,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-"Figyelmeztetés: a parancsfájloknak teljes hozzáférése van a számítógépedhez "
-"és a zenéidhez. Csak olyan parancsfájlokat telepíts, amikben megbízol."
-
 msgid "Wav"
 msgstr "WAV"
 
@@ -3102,6 +3112,15 @@ msgstr "Wii távvezérlő %1: lekapcsolódva"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii távvezérlő %1: alacsony teleptöltés (%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "Windows Media audio"
 
@@ -3122,6 +3141,11 @@ msgstr "Tegnap"
 
 msgid "You are about to download the following albums"
 msgstr "A következő albumokat készül letölteni"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Megváltoztathatja a számok zenetárban való rendezésének módját."
@@ -3152,6 +3176,14 @@ msgstr ""
 "A Clementine távvezérléshez használhat Wii távvezérlőt is.  Részletekért <a "
 "href=\"http://www.clementine-player.org/wiimote\">tekintse meg a Clementine "
 "wiki oldalát</a>.\n"
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
+msgstr ""
 
 msgid "You love this track"
 msgstr "Kedveled ezt a számot"
@@ -3319,6 +3351,71 @@ msgstr "leállítás"
 #, qt-format
 msgid "track %1"
 msgstr "%1. szám"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "A hiányzó borítók letöltése"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "Biztos telepíted az alábbi parancsfájlokat?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Clementine parancsfájlok"
+
+#~ msgid "Developer mode"
+#~ msgstr "Fejlesztői mód"
+
+#~ msgid "Disable"
+#~ msgstr "Letiltás"
+
+#~ msgid "Enable"
+#~ msgstr "Engedélyezés"
+
+#~ msgid "Error installing script"
+#~ msgstr "Hiba történt a parancsfájl telepítése közben"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Hiba történt a parancsfájl archívum megnyitása közben"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Új parancsfájlok beszerzése"
+
+#~ msgid "Install from file..."
+#~ msgstr "Telepítés fájlból"
+
+#~ msgid "Install script file"
+#~ msgstr "Parancsfájl telepítése"
+
+#~ msgid "Install scripts"
+#~ msgstr "Parancsfájlok telepítése"
+
+#~ msgid "My scripts"
+#~ msgstr "Saját parancsfájljaim"
+
+#~ msgid "Reload"
+#~ msgstr "Újratölt"
+
+#~ msgid "Script Manager"
+#~ msgstr "Parancsfájlkezelő"
+
+#~ msgid "Settings..."
+#~ msgstr "Beállítások..."
+
+#~ msgid "Some files failed to install.  The script may not work correctly."
+#~ msgstr "Néhány fájl telepítése meghiúsult. A parancsfájl hibásan működhet."
+
+#~ msgid "The '%1' script was modified, you might have to reload it"
+#~ msgstr "A '%1' parancsfájl módosult, újratöltése javasolt"
+
+#~ msgid "This is not a valid Clementine script file."
+#~ msgstr "Ez nem érvényes Clementine parancsfájl."
+
+#~ msgid ""
+#~ "Warning: scripts have full access to your computer and your music.  Only "
+#~ "install scripts that you trust."
+#~ msgstr ""
+#~ "Figyelmeztetés: a parancsfájloknak teljes hozzáférése van a "
+#~ "számítógépedhez és a zenéidhez. Csak olyan parancsfájlokat telepíts, "
+#~ "amikben megbízol."
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 hallgató"

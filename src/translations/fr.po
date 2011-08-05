@@ -75,6 +75,10 @@ msgid "%1 tracks"
 msgstr "%1 pistes"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1 : Module wiimotedev"
 
@@ -159,6 +163,9 @@ msgstr "MP3 128k"
 msgid "50 random tracks"
 msgstr "50 pistes aléatoires"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -195,6 +202,15 @@ msgstr "A-Z"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -213,6 +229,9 @@ msgstr "À propos de Qt..."
 
 msgid "Account details"
 msgstr "Détails du compte"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Action"
@@ -441,9 +460,6 @@ msgstr "Appliquer une compression pour prévenir les coupures"
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Êtes-vous sûr de vouloir supprimer la valeur prédéfinie « %1 »"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "Êtes-vous sûr de vouloir installer le(s) script(s) suivant(s) ?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr ""
 "Êtes vous sûr de vouloir réinitialiser les statistiques de ce morceau ?"
@@ -465,6 +481,9 @@ msgstr "Initiale de l'artiste"
 
 msgid "Audio format"
 msgstr "Format audio"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Authentification en cours..."
@@ -489,6 +508,9 @@ msgid "Available"
 msgstr "Disponible"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -663,9 +685,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Visionneur d'images de Clementine"
 
-msgid "Clementine scripts"
-msgstr "Scripts Clementine"
-
 msgid "Clementine was unable to find results for this file"
 msgstr "Clementine n'a pu trouver aucun résultat pour ce fichier"
 
@@ -723,6 +742,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Configurer votre bibliothèque..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr "Connecter Wii Remote en utilisant l'action activer/désactiver"
 
@@ -733,9 +755,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -803,6 +822,13 @@ msgstr "Jaquette non définie"
 #, qt-format
 msgid "Cover art set from %1"
 msgstr "Jaquette définie depuis %1"
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
+msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
 msgstr "Appliquer un fondu lors des changements de piste automatiques"
@@ -939,9 +965,6 @@ msgstr "Destination"
 msgid "Details..."
 msgstr "Détails..."
 
-msgid "Developer mode"
-msgstr "Mode développeur"
-
 msgid "Device"
 msgstr "Périphérique"
 
@@ -960,14 +983,20 @@ msgstr "Périphériques"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Connexion directe à Internet"
 
 msgid "Directory"
 msgstr "Dossier"
-
-msgid "Disable"
-msgstr "Désactiver"
 
 msgid "Disable duration"
 msgstr ""
@@ -1078,9 +1107,6 @@ msgstr "Modifier la description des pistes..."
 msgid "Edit..."
 msgstr "Éditer..."
 
-msgid "Enable"
-msgstr "Activer"
-
 msgid "Enable Wii Remote support"
 msgstr "Activer le support Wii Remote"
 
@@ -1152,15 +1178,12 @@ msgstr "Erreur lors de la suppression des morceaux"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "Erreur durant l'installation du script"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "Erreur lors du chargement de %1"
 
-msgid "Error opening script archive"
-msgstr "Erreur lors de l'ouverture de l'archive du script"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1174,6 +1197,9 @@ msgstr "Déjà joués"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Excepté entre les pistes d'un même album ou d'une même CUE sheet"
+
+msgid "Export to folders"
+msgstr ""
 
 msgid "Extras"
 msgstr "Extras"
@@ -1214,11 +1240,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Pistes favorites"
 
-msgid "Fetch Missing Covers"
-msgstr "Récupérer les jaquettes manquantes"
-
 msgid "Fetch automatically"
 msgstr "Récupérer automatiquement"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr "Erreur lors de la récupération de la jaquette"
@@ -1329,11 +1355,11 @@ msgstr "Configuration générale"
 msgid "Genre"
 msgstr "Genre"
 
-msgid "Get new scripts"
-msgstr "Obtenir de nouveaux scripts"
-
 msgid "Getting channels"
 msgstr "Récupération des canaux"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Donner un nom"
@@ -1475,15 +1501,6 @@ msgstr "Information"
 msgid "Insert..."
 msgstr "Insérer..."
 
-msgid "Install from file..."
-msgstr "Installer à partir d'un fichier..."
-
-msgid "Install script file"
-msgstr "Installer un fichier de script"
-
-msgid "Install scripts"
-msgstr "Installer des scripts"
-
 msgid "Installed"
 msgstr ""
 
@@ -1492,6 +1509,12 @@ msgstr "Internet"
 
 msgid "Invalid API key"
 msgstr "API key invalide"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Format invalide"
@@ -1727,6 +1750,12 @@ msgstr "Paroles récupérées depuis %1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1847,9 +1876,6 @@ msgstr "Ma station de radio"
 
 msgid "My Recommendations"
 msgstr "Mes suggestions"
-
-msgid "My scripts"
-msgstr "Mes scripts"
 
 msgid "Name"
 msgstr "Nom"
@@ -1972,6 +1998,10 @@ msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
 msgstr "Afficher seulement le premier"
+
+#, qt-format
+msgid "Open %1 in browser"
+msgstr ""
 
 msgid "Open &audio CD..."
 msgstr ""
@@ -2199,9 +2229,6 @@ msgstr "Appuyer sur le bouton Wiiremote"
 msgid "Put songs in a random order"
 msgstr "Mettre les morceaux dans un ordre aléatoire"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "Qualité"
 
@@ -2259,11 +2286,11 @@ msgstr "Mettre à jour les canaux"
 msgid "Refresh station list"
 msgstr "Mettre à jour la liste des stations"
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Reggae"
-
-msgid "Reload"
-msgstr "Recharger"
 
 msgid "Remember Wii remote swing"
 msgstr "Mémoriser le mouvement de la Wiimote"
@@ -2388,9 +2415,6 @@ msgstr ""
 msgid "Score"
 msgstr "Score"
 
-msgid "Script Manager"
-msgstr "Gestionnaire de scripts"
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Envoyer les titres des pistes que j'écoute (scrobble)"
 
@@ -2475,9 +2499,6 @@ msgstr "Définir une valeur pour toutes les pistes sélectionnées..."
 
 msgid "Settings"
 msgstr "Configuration"
-
-msgid "Settings..."
-msgstr "Paramètres..."
 
 msgid "Shortcut"
 msgstr "Raccourci"
@@ -2606,11 +2627,6 @@ msgstr "Soft"
 
 msgid "Soft Rock"
 msgstr "Soft Rock"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr ""
-"L'installation de certains fichiers a échouée. Le script ne fonctionnera "
-"peut être pas correctement."
 
 msgid "Song Information"
 msgstr "Informations sur le morceau"
@@ -2758,10 +2774,6 @@ msgid "The \"%1\" command could not be started."
 msgstr "La commande « %1 » ne peut pas être démarrée."
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr "Le script « %1 » a été modifié, vous devrez peut-être le recharger"
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "Le répertoire %1 est invalide"
 
@@ -2861,9 +2873,6 @@ msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr ""
 "Ceci est un iPod, mais vous avez compilé Clementine sans le support libgpod."
 
-msgid "This is not a valid Clementine script file."
-msgstr "Ce script n'est pas un script Clementine valide."
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2909,6 +2918,12 @@ msgid "Toggle scrobbling"
 msgstr "Activer le balayage"
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3070,13 +3085,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-"Attention : les scripts ont un accès complet à votre ordinateur et à votre "
-"musique. N'installez que des scripts sûrs !"
-
 msgid "Wav"
 msgstr "Wav"
 
@@ -3126,6 +3134,15 @@ msgstr "Wiimote %1 : déconnectée"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wiimote %1 : pile faible (%2 %)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "audio Windows Media"
 
@@ -3147,6 +3164,11 @@ msgstr "Hier"
 
 msgid "You are about to download the following albums"
 msgstr "Vous êtes sur le point de télécharger les albums suivants"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr ""
@@ -3180,6 +3202,14 @@ msgstr ""
 "Vous pouvez utiliser Wii Remote comme télécommande pour Clementine. <a href="
 "\"http://www.clementine-player.org/wiimote\">Voir la page sur le wiki de "
 "Clementine</a> pour plus d'information.\n"
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
+msgstr ""
 
 msgid "You love this track"
 msgstr "Vous aimez cette piste"
@@ -3347,6 +3377,72 @@ msgstr "stop"
 #, qt-format
 msgid "track %1"
 msgstr "piste %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Récupérer les jaquettes manquantes"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "Êtes-vous sûr de vouloir installer le(s) script(s) suivant(s) ?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Scripts Clementine"
+
+#~ msgid "Developer mode"
+#~ msgstr "Mode développeur"
+
+#~ msgid "Disable"
+#~ msgstr "Désactiver"
+
+#~ msgid "Enable"
+#~ msgstr "Activer"
+
+#~ msgid "Error installing script"
+#~ msgstr "Erreur durant l'installation du script"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Erreur lors de l'ouverture de l'archive du script"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Obtenir de nouveaux scripts"
+
+#~ msgid "Install from file..."
+#~ msgstr "Installer à partir d'un fichier..."
+
+#~ msgid "Install script file"
+#~ msgstr "Installer un fichier de script"
+
+#~ msgid "Install scripts"
+#~ msgstr "Installer des scripts"
+
+#~ msgid "My scripts"
+#~ msgstr "Mes scripts"
+
+#~ msgid "Reload"
+#~ msgstr "Recharger"
+
+#~ msgid "Script Manager"
+#~ msgstr "Gestionnaire de scripts"
+
+#~ msgid "Settings..."
+#~ msgstr "Paramètres..."
+
+#~ msgid "Some files failed to install.  The script may not work correctly."
+#~ msgstr ""
+#~ "L'installation de certains fichiers a échouée. Le script ne fonctionnera "
+#~ "peut être pas correctement."
+
+#~ msgid "The '%1' script was modified, you might have to reload it"
+#~ msgstr "Le script « %1 » a été modifié, vous devrez peut-être le recharger"
+
+#~ msgid "This is not a valid Clementine script file."
+#~ msgstr "Ce script n'est pas un script Clementine valide."
+
+#~ msgid ""
+#~ "Warning: scripts have full access to your computer and your music.  Only "
+#~ "install scripts that you trust."
+#~ msgstr ""
+#~ "Attention : les scripts ont un accès complet à votre ordinateur et à "
+#~ "votre musique. N'installez que des scripts sûrs !"
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 autres auditeurs"

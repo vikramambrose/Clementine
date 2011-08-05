@@ -76,6 +76,10 @@ msgid "%1 tracks"
 msgstr "%1 spår"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1: Wiimotedev-modul"
 
@@ -160,6 +164,9 @@ msgstr "128k MP3"
 msgid "50 random tracks"
 msgstr "50 slumpmässiga spår"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -193,6 +200,15 @@ msgstr "A-Ö"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -211,6 +227,9 @@ msgstr "Om Qt..."
 
 msgid "Account details"
 msgstr "Kontodetaljer"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Åtgärd"
@@ -434,9 +453,6 @@ msgstr "Tillämpa komprimering för att förhindra distorsion"
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Är du säker på att du vill ta bort förinställningen \"%1\"?"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "Är du säker på att du vill installera följande skript?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "Är du säker på att du vill återställa den här låtens statistik?"
 
@@ -457,6 +473,9 @@ msgstr "Artistens initialer"
 
 msgid "Audio format"
 msgstr "Ljudformat"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Kontrollerar behörighet..."
@@ -480,6 +499,9 @@ msgid "Available"
 msgstr "Tillgängliga"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -654,9 +676,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Clementine-bildvisare"
 
-msgid "Clementine scripts"
-msgstr "Clementine skript"
-
 msgid "Clementine was unable to find results for this file"
 msgstr "Clementine kunde inte hitta resultat för den här filen"
 
@@ -715,6 +734,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Konfigurera biblioteket..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr "Anslut Wii-kontroller med åtgärden aktivera/inaktivera"
 
@@ -725,9 +747,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -794,6 +813,13 @@ msgstr ""
 
 #, qt-format
 msgid "Cover art set from %1"
+msgstr ""
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
 msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
@@ -931,9 +957,6 @@ msgstr "Mål"
 msgid "Details..."
 msgstr "Detaljer..."
 
-msgid "Developer mode"
-msgstr "Utvecklare läge"
-
 msgid "Device"
 msgstr "Enhet"
 
@@ -952,14 +975,20 @@ msgstr "Enheter"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Direkt Internetanslutning"
 
 msgid "Directory"
 msgstr "Katalog"
-
-msgid "Disable"
-msgstr "Inaktivera"
 
 msgid "Disable duration"
 msgstr ""
@@ -1070,9 +1099,6 @@ msgstr "Redigera spår information ..."
 msgid "Edit..."
 msgstr "Redigera..."
 
-msgid "Enable"
-msgstr "Aktivera"
-
 msgid "Enable Wii Remote support"
 msgstr "Aktivera stöd för Wii-kontroll"
 
@@ -1142,15 +1168,12 @@ msgstr "Fel vid borttagning av låtar"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "Fel vid installation av script"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "Fel vid insläsning av %1"
 
-msgid "Error opening script archive"
-msgstr "Fel vid öppning av script arkiv"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1163,6 +1186,9 @@ msgid "Ever played"
 msgstr "Någonsin spelade"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
+msgstr ""
+
+msgid "Export to folders"
 msgstr ""
 
 msgid "Extras"
@@ -1204,11 +1230,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Favoritspår"
 
-msgid "Fetch Missing Covers"
-msgstr "Hämta saknade omslag"
-
 msgid "Fetch automatically"
 msgstr "Hämta automatiskt"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr "Fel vid hämtning av omslag"
@@ -1316,11 +1342,11 @@ msgstr "Allmänna inställningar"
 msgid "Genre"
 msgstr "Genre"
 
-msgid "Get new scripts"
-msgstr "Hämta nya skript"
-
 msgid "Getting channels"
 msgstr "Hämtar kanaler"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Ge den ett namn:"
@@ -1460,15 +1486,6 @@ msgstr "Information"
 msgid "Insert..."
 msgstr "Infoga..."
 
-msgid "Install from file..."
-msgstr "Installera från fil..."
-
-msgid "Install script file"
-msgstr "Installera skript fil"
-
-msgid "Install scripts"
-msgstr "Installera skript"
-
 msgid "Installed"
 msgstr ""
 
@@ -1477,6 +1494,12 @@ msgstr "Internet"
 
 msgid "Invalid API key"
 msgstr "Felaktig API-nyckel"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Ogiltigt format"
@@ -1708,6 +1731,12 @@ msgstr "Låttext från %1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1829,9 +1858,6 @@ msgstr "Min radiostation"
 msgid "My Recommendations"
 msgstr "Mina rekommendationer"
 
-msgid "My scripts"
-msgstr "Mina skript"
-
 msgid "Name"
 msgstr "Namn"
 
@@ -1949,6 +1975,10 @@ msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
 msgstr "Visa endast de första"
+
+#, qt-format
+msgid "Open %1 in browser"
+msgstr ""
 
 msgid "Open &audio CD..."
 msgstr ""
@@ -2176,9 +2206,6 @@ msgstr "Tryck på Wii-kontrollknapp"
 msgid "Put songs in a random order"
 msgstr "Lägg till låtar i slumpmässig ordning"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "Kvalitet"
 
@@ -2236,11 +2263,11 @@ msgstr "Uppdatera kanaler"
 msgid "Refresh station list"
 msgstr "Uppdatera kanallistan"
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Reggae"
-
-msgid "Reload"
-msgstr "Uppdatera"
 
 msgid "Remember Wii remote swing"
 msgstr "Kom ihåg Wii-kontrollens rörelse"
@@ -2365,9 +2392,6 @@ msgstr ""
 msgid "Score"
 msgstr "Poäng"
 
-msgid "Script Manager"
-msgstr "Skripthanterare"
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Skrobbla låtar som jag lyssnar på"
 
@@ -2452,9 +2476,6 @@ msgstr "Ställ in värde för alla valda spår..."
 
 msgid "Settings"
 msgstr "Inställningar"
-
-msgid "Settings..."
-msgstr "Inställningar..."
 
 msgid "Shortcut"
 msgstr "Snabbtangent"
@@ -2583,10 +2604,6 @@ msgstr "Soft"
 
 msgid "Soft Rock"
 msgstr "Soft Rock"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr ""
-"Vissa filer kunde inte installeras. Skriptet fungerar kanske inte korrekt."
 
 msgid "Song Information"
 msgstr "Låtinformation"
@@ -2734,10 +2751,6 @@ msgid "The \"%1\" command could not be started."
 msgstr "Kommandot \"%1\" kunde inte startas."
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr ""
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "Katalogen %1 är inte giltig"
 
@@ -2829,9 +2842,6 @@ msgstr ""
 msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr "Detta är en iPod, men du kompilerade Clementine utan stöd av libgpod."
 
-msgid "This is not a valid Clementine script file."
-msgstr "Detta är inte en giltig Clementine skriptfil."
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2876,6 +2886,12 @@ msgid "Toggle scrobbling"
 msgstr ""
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3037,13 +3053,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-"Varning: skript har full tillgång till din dator och din musik. Installera "
-"endast skript som du litar på."
-
 msgid "Wav"
 msgstr "WAV"
 
@@ -3093,6 +3102,15 @@ msgstr "Wii-kontroll %1: frånkopplad"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii-kontroll %1: låg batterinivå (%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "Windows Media-ljud"
 
@@ -3113,6 +3131,11 @@ msgstr "Igår"
 
 msgid "You are about to download the following albums"
 msgstr "Du är på väg att hämta de följande albumen"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Du kan ändra hur låtarna i biblioteket är organiserade."
@@ -3142,6 +3165,14 @@ msgstr ""
 "Du kan använda din Wii-kontroll som en fjärrkontroll för Clementine. <a href="
 "\"http://www.clementine-player.org/wiimote\">Se sidan på Clementine-wikin</"
 "a> för mer information.\n"
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
+msgstr ""
 
 msgid "You love this track"
 msgstr "Du älskar detta spår"
@@ -3306,6 +3337,68 @@ msgstr "stoppa"
 #, qt-format
 msgid "track %1"
 msgstr "spår %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Hämta saknade omslag"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "Är du säker på att du vill installera följande skript?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Clementine skript"
+
+#~ msgid "Developer mode"
+#~ msgstr "Utvecklare läge"
+
+#~ msgid "Disable"
+#~ msgstr "Inaktivera"
+
+#~ msgid "Enable"
+#~ msgstr "Aktivera"
+
+#~ msgid "Error installing script"
+#~ msgstr "Fel vid installation av script"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Fel vid öppning av script arkiv"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Hämta nya skript"
+
+#~ msgid "Install from file..."
+#~ msgstr "Installera från fil..."
+
+#~ msgid "Install script file"
+#~ msgstr "Installera skript fil"
+
+#~ msgid "Install scripts"
+#~ msgstr "Installera skript"
+
+#~ msgid "My scripts"
+#~ msgstr "Mina skript"
+
+#~ msgid "Reload"
+#~ msgstr "Uppdatera"
+
+#~ msgid "Script Manager"
+#~ msgstr "Skripthanterare"
+
+#~ msgid "Settings..."
+#~ msgstr "Inställningar..."
+
+#~ msgid "Some files failed to install.  The script may not work correctly."
+#~ msgstr ""
+#~ "Vissa filer kunde inte installeras. Skriptet fungerar kanske inte korrekt."
+
+#~ msgid "This is not a valid Clementine script file."
+#~ msgstr "Detta är inte en giltig Clementine skriptfil."
+
+#~ msgid ""
+#~ "Warning: scripts have full access to your computer and your music.  Only "
+#~ "install scripts that you trust."
+#~ msgstr ""
+#~ "Varning: skript har full tillgång till din dator och din musik. "
+#~ "Installera endast skript som du litar på."
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 andra lyssnare"

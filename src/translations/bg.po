@@ -74,6 +74,10 @@ msgid "%1 tracks"
 msgstr "%1 песни"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1:Wiimotedev модул"
 
@@ -158,6 +162,9 @@ msgstr "128k MP3"
 msgid "50 random tracks"
 msgstr "50 случайни песни"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -190,6 +197,15 @@ msgstr "А-Я"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "АИФФ"
 
@@ -208,6 +224,9 @@ msgstr "Относно QT..."
 
 msgid "Account details"
 msgstr "Данни на сметката"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Действие"
@@ -431,9 +450,6 @@ msgstr "Прилагане на компресия за да се предотв
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Сигурни ли сте,че искате да изтриете \"%1\" настройката?"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "Наистина ли ще инсталираш следните скриптове?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "Сигурни ли сте,че иската да нулирате статистиката за тази песен"
 
@@ -454,6 +470,9 @@ msgstr "Инициали на артиста"
 
 msgid "Audio format"
 msgstr "Аудио формат"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Идентифициране…"
@@ -477,6 +496,9 @@ msgid "Available"
 msgstr "Налични"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -651,9 +673,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Клементин мениджър на изображения"
 
-msgid "Clementine scripts"
-msgstr "Clementine скриптове"
-
 msgid "Clementine was unable to find results for this file"
 msgstr "Clementine не намери резултати за този файл"
 
@@ -711,6 +730,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Настройване на библиотека..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr ""
 "Свържете Wii дистанционни с използване на действия активиране/деактивиране"
@@ -722,9 +744,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -792,6 +811,13 @@ msgstr "Обложката не е зададена"
 #, qt-format
 msgid "Cover art set from %1"
 msgstr "Обложката е зададена от %1"
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
+msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
 msgstr "Плавен преход при автоматична смяна на песни"
@@ -928,9 +954,6 @@ msgstr "Местоположение"
 msgid "Details..."
 msgstr "Подробности..."
 
-msgid "Developer mode"
-msgstr "Режим за разработчици"
-
 msgid "Device"
 msgstr "Устройство"
 
@@ -949,14 +972,20 @@ msgstr "Устройства"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Директна връзка към Интернет"
 
 msgid "Directory"
 msgstr "Папка"
-
-msgid "Disable"
-msgstr "Забрани"
 
 msgid "Disable duration"
 msgstr ""
@@ -1067,9 +1096,6 @@ msgstr "Редактиране на информация за песните..."
 msgid "Edit..."
 msgstr "Редактиране..."
 
-msgid "Enable"
-msgstr "Разреши"
-
 msgid "Enable Wii Remote support"
 msgstr "Разреши подръжката на Wii Remote"
 
@@ -1139,15 +1165,12 @@ msgstr "Грешка при изтриване на песни"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "Грешка при инсталиране на скрипта"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "Грешка при зареждане на %1"
 
-msgid "Error opening script archive"
-msgstr "Грешка при отваряне на скрипта"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1161,6 +1184,9 @@ msgstr "Някога пускана"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Освен между песните в един и същи албум или в един и същи CUE лист"
+
+msgid "Export to folders"
+msgstr ""
 
 msgid "Extras"
 msgstr "Допълнения"
@@ -1201,11 +1227,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Любими парчета"
 
-msgid "Fetch Missing Covers"
-msgstr "Сваляне на липсващите обложки"
-
 msgid "Fetch automatically"
 msgstr "Автоматично изтегляне"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr "Грешка по време на свалянето на обложката"
@@ -1313,11 +1339,11 @@ msgstr "Общи настройки"
 msgid "Genre"
 msgstr "Жанр"
 
-msgid "Get new scripts"
-msgstr "Вземи нови скриптове"
-
 msgid "Getting channels"
 msgstr "Получаване на канали"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Въведете име:"
@@ -1459,15 +1485,6 @@ msgstr "Информация"
 msgid "Insert..."
 msgstr "Вмъкване..."
 
-msgid "Install from file..."
-msgstr "Инсталирай от файл..."
-
-msgid "Install script file"
-msgstr "Инсталирай скриптов файл"
-
-msgid "Install scripts"
-msgstr "Инсталирай скриптове"
-
 msgid "Installed"
 msgstr ""
 
@@ -1476,6 +1493,12 @@ msgstr "Интернет"
 
 msgid "Invalid API key"
 msgstr "Невалиден API ключ"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Невалиден формат"
@@ -1710,6 +1733,12 @@ msgstr "Текстове на песни от %1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1831,9 +1860,6 @@ msgstr "Моята Радио Станция"
 msgid "My Recommendations"
 msgstr "Моите Препоръки"
 
-msgid "My scripts"
-msgstr "Моите скриптове"
-
 msgid "Name"
 msgstr "Име"
 
@@ -1954,6 +1980,10 @@ msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
 msgstr "Покажи само първите"
+
+#, qt-format
+msgid "Open %1 in browser"
+msgstr ""
 
 msgid "Open &audio CD..."
 msgstr ""
@@ -2181,9 +2211,6 @@ msgstr "Натиснете бутон на Wiiremote"
 msgid "Put songs in a random order"
 msgstr "Подреди песните по случаен начин"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "Качество"
 
@@ -2241,11 +2268,11 @@ msgstr "Презареди каналите"
 msgid "Refresh station list"
 msgstr "Презареди листа със станциите"
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Реге"
-
-msgid "Reload"
-msgstr "Презареди"
 
 msgid "Remember Wii remote swing"
 msgstr "Запомни Wiiremote суинг"
@@ -2370,9 +2397,6 @@ msgstr ""
 msgid "Score"
 msgstr "Резултат"
 
-msgid "Script Manager"
-msgstr "Скрипт Менаджер"
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Запази песнитемкоито слушам"
 
@@ -2457,9 +2481,6 @@ msgstr "Избери стойност за всички песни"
 
 msgid "Settings"
 msgstr "Настройки"
-
-msgid "Settings..."
-msgstr "Настройки..."
 
 msgid "Shortcut"
 msgstr "Бърз клавиш"
@@ -2588,10 +2609,6 @@ msgstr "Лек"
 
 msgid "Soft Rock"
 msgstr "Лек рок"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr ""
-"Някои файлове не бяха инсталирани. Скриптът може да не функционира правилно."
 
 msgid "Song Information"
 msgstr "Информация за песен"
@@ -2739,10 +2756,6 @@ msgid "The \"%1\" command could not be started."
 msgstr "Командата \"%1\" не може да бъде стартирана"
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr "'%1' скрипт беше променен, затова трябва да го презаредиш"
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "Директорията \"%1\" не е валидна"
 
@@ -2840,9 +2853,6 @@ msgstr ""
 msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr "Това е iPod,но вие сте компилирали Клементин без подръжка за libgpod"
 
-msgid "This is not a valid Clementine script file."
-msgstr "Това не е валиден Clementine скриптов файл."
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2888,6 +2898,12 @@ msgid "Toggle scrobbling"
 msgstr ""
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3049,13 +3065,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-"Внимание:скриптовете имат пълен достъп до твоя компютър и музика. Инсталирай "
-"единствено скриптове на които имаш доверие."
-
 msgid "Wav"
 msgstr "Wav"
 
@@ -3105,6 +3114,15 @@ msgstr "Wii Remote %1: несвързано"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii Remote %1: ниско ниво на батерията (%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "Аудио — Windows Media"
 
@@ -3125,6 +3143,11 @@ msgstr "Вчера"
 
 msgid "You are about to download the following albums"
 msgstr "На път сте да свалите следните албуми"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr ""
@@ -3156,6 +3179,14 @@ msgstr ""
 "Можете да изпозвате Wii Remote като дистанционно за Клементин.<a href="
 "\"http://www.clementine-player.org/wiimote\">Вижте Wiki страницата на "
 "Клементин</a> за повече информация.\n"
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
+msgstr ""
 
 msgid "You love this track"
 msgstr "Харесвате тази песен"
@@ -3323,6 +3354,72 @@ msgstr "Стоп"
 #, qt-format
 msgid "track %1"
 msgstr "песен %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Сваляне на липсващите обложки"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "Наистина ли ще инсталираш следните скриптове?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Clementine скриптове"
+
+#~ msgid "Developer mode"
+#~ msgstr "Режим за разработчици"
+
+#~ msgid "Disable"
+#~ msgstr "Забрани"
+
+#~ msgid "Enable"
+#~ msgstr "Разреши"
+
+#~ msgid "Error installing script"
+#~ msgstr "Грешка при инсталиране на скрипта"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Грешка при отваряне на скрипта"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Вземи нови скриптове"
+
+#~ msgid "Install from file..."
+#~ msgstr "Инсталирай от файл..."
+
+#~ msgid "Install script file"
+#~ msgstr "Инсталирай скриптов файл"
+
+#~ msgid "Install scripts"
+#~ msgstr "Инсталирай скриптове"
+
+#~ msgid "My scripts"
+#~ msgstr "Моите скриптове"
+
+#~ msgid "Reload"
+#~ msgstr "Презареди"
+
+#~ msgid "Script Manager"
+#~ msgstr "Скрипт Менаджер"
+
+#~ msgid "Settings..."
+#~ msgstr "Настройки..."
+
+#~ msgid "Some files failed to install.  The script may not work correctly."
+#~ msgstr ""
+#~ "Някои файлове не бяха инсталирани. Скриптът може да не функционира "
+#~ "правилно."
+
+#~ msgid "The '%1' script was modified, you might have to reload it"
+#~ msgstr "'%1' скрипт беше променен, затова трябва да го презаредиш"
+
+#~ msgid "This is not a valid Clementine script file."
+#~ msgstr "Това не е валиден Clementine скриптов файл."
+
+#~ msgid ""
+#~ "Warning: scripts have full access to your computer and your music.  Only "
+#~ "install scripts that you trust."
+#~ msgstr ""
+#~ "Внимание:скриптовете имат пълен достъп до твоя компютър и музика. "
+#~ "Инсталирай единствено скриптове на които имаш доверие."
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 други слушатели"

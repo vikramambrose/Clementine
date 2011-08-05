@@ -74,6 +74,10 @@ msgid "%1 tracks"
 msgstr "%1 kappaletta"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr ""
 
@@ -158,6 +162,9 @@ msgstr "128k MP3"
 msgid "50 random tracks"
 msgstr "50 satunnaista kappaletta"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -185,6 +192,15 @@ msgstr "A-Ö"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -203,6 +219,9 @@ msgstr "Tietoja - Qt"
 
 msgid "Account details"
 msgstr "Tilin tiedot"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Toiminto"
@@ -426,9 +445,6 @@ msgstr "Lisää vaimennusta äänisignaalin leikkautumisen estämiseksi"
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Haluatko varmasti poistaa asetuksen \"%1\"?"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "Haluatko varmasti asentaa seuraavat skriptit?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "Haluatko varmasti nollata tämän kappaleen tilastotiedot?"
 
@@ -449,6 +465,9 @@ msgstr ""
 
 msgid "Audio format"
 msgstr "Äänimuoto"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Tunnistaudutaan..."
@@ -474,6 +493,9 @@ msgid "Available"
 msgstr "Käytettävissä"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -646,9 +668,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr ""
 
-msgid "Clementine scripts"
-msgstr "Clementine-skriptit"
-
 msgid "Clementine was unable to find results for this file"
 msgstr "Clementine ei löytänyt tuloksia tälle tiedostolle"
 
@@ -706,6 +725,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Kirjaston asetukset..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr ""
 
@@ -716,9 +738,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -781,6 +800,13 @@ msgstr "Kansikuvaa ei ole asetettu"
 
 #, qt-format
 msgid "Cover art set from %1"
+msgstr ""
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
 msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
@@ -918,9 +944,6 @@ msgstr "Kohde"
 msgid "Details..."
 msgstr "Tiedot..."
 
-msgid "Developer mode"
-msgstr "Kehittäjätila"
-
 msgid "Device"
 msgstr "Laite"
 
@@ -939,14 +962,20 @@ msgstr "Laitteet"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Suora internetyhteys"
 
 msgid "Directory"
 msgstr "Kansio"
-
-msgid "Disable"
-msgstr "Poista käytöstä"
 
 msgid "Disable duration"
 msgstr ""
@@ -1057,9 +1086,6 @@ msgstr "Muokkaa kappaleen tietoja..."
 msgid "Edit..."
 msgstr "Muokkaa..."
 
-msgid "Enable"
-msgstr "Ota käyttöön"
-
 msgid "Enable Wii Remote support"
 msgstr "Käytä Wii-ohjainta"
 
@@ -1128,15 +1154,12 @@ msgstr "Virhe kappaleita poistaessa"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "Virhe skriptiä asennettaessa"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr ""
 
-msgid "Error opening script archive"
-msgstr "Virhe skriptiarkistoa avattaessa"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1152,6 +1175,9 @@ msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr ""
 "Älä käytä ristihäivytystä samalla levyllä tai samassa CUE-tiedostossa "
 "oleville kappaleille"
+
+msgid "Export to folders"
+msgstr ""
 
 msgid "Extras"
 msgstr "Extrat"
@@ -1192,11 +1218,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Suosikkikappaleet"
 
-msgid "Fetch Missing Covers"
-msgstr "Nouda puuttuvat kansikuvat"
-
 msgid "Fetch automatically"
 msgstr "Nouda automaattisesti"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr ""
@@ -1304,11 +1330,11 @@ msgstr "Yleiset asetukset"
 msgid "Genre"
 msgstr "Tyylilaji"
 
-msgid "Get new scripts"
-msgstr "Hae uusia skriptejä"
-
 msgid "Getting channels"
 msgstr "Haetaan kanavia"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Anna nimi:"
@@ -1446,15 +1472,6 @@ msgstr ""
 msgid "Insert..."
 msgstr "Lisää..."
 
-msgid "Install from file..."
-msgstr "Asenna tiedostosta..."
-
-msgid "Install script file"
-msgstr "Asenna skriptitiedosto"
-
-msgid "Install scripts"
-msgstr ""
-
 msgid "Installed"
 msgstr ""
 
@@ -1463,6 +1480,12 @@ msgstr "Internet"
 
 msgid "Invalid API key"
 msgstr "Virheellinen API-avain"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Virheellinen muoto"
@@ -1695,6 +1718,12 @@ msgstr "Sanoitukset tarjoaa %1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1817,9 +1846,6 @@ msgstr "Oma radioasemani"
 msgid "My Recommendations"
 msgstr "Omat suositukseni"
 
-msgid "My scripts"
-msgstr ""
-
 msgid "Name"
 msgstr "Nimi"
 
@@ -1937,6 +1963,10 @@ msgid "Ogg Vorbis"
 msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
+msgstr ""
+
+#, qt-format
+msgid "Open %1 in browser"
 msgstr ""
 
 msgid "Open &audio CD..."
@@ -2165,9 +2195,6 @@ msgstr ""
 msgid "Put songs in a random order"
 msgstr "Aseta kappaleet satunnaiseen järjestykseen"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "Laatu"
 
@@ -2225,11 +2252,11 @@ msgstr "Päivitä kanavat"
 msgid "Refresh station list"
 msgstr "Päivitä asemalista"
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Reggae"
-
-msgid "Reload"
-msgstr "Lataa uudelleen"
 
 msgid "Remember Wii remote swing"
 msgstr ""
@@ -2354,9 +2381,6 @@ msgstr ""
 msgid "Score"
 msgstr "Pisteet"
 
-msgid "Script Manager"
-msgstr "Skriptihallinta"
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Lähetä kappaletiedot kuuntelemistani kappaleista"
 
@@ -2441,9 +2465,6 @@ msgstr "Aseta arvo kaikille valituille kappaleille..."
 
 msgid "Settings"
 msgstr "Asetukset"
-
-msgid "Settings..."
-msgstr "Asetukset..."
 
 msgid "Shortcut"
 msgstr "Pikanäppäin"
@@ -2572,9 +2593,6 @@ msgstr "Soft"
 
 msgid "Soft Rock"
 msgstr "Soft Rock"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr ""
 
 msgid "Song Information"
 msgstr "Kappaletiedot"
@@ -2722,10 +2740,6 @@ msgid "The \"%1\" command could not be started."
 msgstr ""
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr ""
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "Kansio %1 ei ole kelvollinen"
 
@@ -2817,9 +2831,6 @@ msgstr ""
 msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr "Kyseessä on iPod, mutta Clementine on käännetty ilman libgpod-tukea."
 
-msgid "This is not a valid Clementine script file."
-msgstr "Virheellinen Clementine-skriptitiedosto."
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2864,6 +2875,12 @@ msgid "Toggle scrobbling"
 msgstr ""
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3025,11 +3042,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-
 msgid "Wav"
 msgstr "Wav"
 
@@ -3079,6 +3091,15 @@ msgstr "Wii-ohjain %1: yhteys katkaistu"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii-ohjain %1: matala lataustaso (%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "Windows Media -ääni"
 
@@ -3099,6 +3120,11 @@ msgstr "Eilen"
 
 msgid "You are about to download the following albums"
 msgstr "Olet aikeissa ladata seuraavat levyt"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Voit vaihtaa tapaa, miten kappaleet järjestetään kirjastossa."
@@ -3129,6 +3155,14 @@ msgid ""
 msgstr ""
 "Voit käyttää Wii-ohjainta kauko-ohjaimena Clementinen hallintaan.  <a href="
 "\"http://www.clementine-player.org/wiimote\">Lisätietoja wiki-sivulla</a>.\n"
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
+msgstr ""
 
 msgid "You love this track"
 msgstr "Tykkäät tästä kappaleesta"
@@ -3290,6 +3324,51 @@ msgstr "pysäytä"
 #, qt-format
 msgid "track %1"
 msgstr "kappale %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Nouda puuttuvat kansikuvat"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "Haluatko varmasti asentaa seuraavat skriptit?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Clementine-skriptit"
+
+#~ msgid "Developer mode"
+#~ msgstr "Kehittäjätila"
+
+#~ msgid "Disable"
+#~ msgstr "Poista käytöstä"
+
+#~ msgid "Enable"
+#~ msgstr "Ota käyttöön"
+
+#~ msgid "Error installing script"
+#~ msgstr "Virhe skriptiä asennettaessa"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Virhe skriptiarkistoa avattaessa"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Hae uusia skriptejä"
+
+#~ msgid "Install from file..."
+#~ msgstr "Asenna tiedostosta..."
+
+#~ msgid "Install script file"
+#~ msgstr "Asenna skriptitiedosto"
+
+#~ msgid "Reload"
+#~ msgstr "Lataa uudelleen"
+
+#~ msgid "Script Manager"
+#~ msgstr "Skriptihallinta"
+
+#~ msgid "Settings..."
+#~ msgstr "Asetukset..."
+
+#~ msgid "This is not a valid Clementine script file."
+#~ msgstr "Virheellinen Clementine-skriptitiedosto."
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 muuta kuuntelijaa"

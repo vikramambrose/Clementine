@@ -74,6 +74,10 @@ msgid "%1 tracks"
 msgstr "%1 parça"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1: Wiimotedev modülü"
 
@@ -158,6 +162,9 @@ msgstr "128k MP3"
 msgid "50 random tracks"
 msgstr "50 rasgele parça"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -190,6 +197,15 @@ msgstr "A-Z"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -208,6 +224,9 @@ msgstr "Qt Hakkında..."
 
 msgid "Account details"
 msgstr "Hesap ayrıntıları"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Eylem"
@@ -431,9 +450,6 @@ msgstr "Kesintiyi engellemek için sıkıştırma uygula"
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "\"%1\" ayarını silmek istediğinizden emin misiniz?"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "Aşağıdaki betikleri yüklemek istediğinize emin misiniz?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "Bu şarkının istatistik bilgisini sıfırlamak istiyor musunuz?"
 
@@ -454,6 +470,9 @@ msgstr "Sanatçının kısaltması"
 
 msgid "Audio format"
 msgstr "Ses biçimi"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Kimlik doğrulaması yapılıyor..."
@@ -477,6 +496,9 @@ msgid "Available"
 msgstr "Mevcut"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -649,9 +671,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Clementine resim görüntüleyici"
 
-msgid "Clementine scripts"
-msgstr "Clementine betikleri"
-
 msgid "Clementine was unable to find results for this file"
 msgstr "Clementine bu dosya için sonuç bulamadı"
 
@@ -709,6 +728,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Kütüphaneyi düzenle..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr "Etkinleştir/pasifleştir eylemiyle Wii kumandasına bağlan"
 
@@ -719,9 +741,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -789,6 +808,13 @@ msgstr "Kapak resmi ayarlanmamış"
 #, qt-format
 msgid "Cover art set from %1"
 msgstr "Kapak resmi %1 adresinden ayarlandı"
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
+msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
 msgstr "Parça değiştirirken otomatik olarak çapraz geçiş yap"
@@ -925,9 +951,6 @@ msgstr "Hedef"
 msgid "Details..."
 msgstr "Detaylar..."
 
-msgid "Developer mode"
-msgstr "Geliştirici kipi"
-
 msgid "Device"
 msgstr "Aygıt"
 
@@ -946,14 +969,20 @@ msgstr "Aygıtlar"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Doğrudan internet bağlantısı"
 
 msgid "Directory"
 msgstr "Dizin"
-
-msgid "Disable"
-msgstr "Pasifleştir"
 
 msgid "Disable duration"
 msgstr ""
@@ -1064,9 +1093,6 @@ msgstr "Parçaların bilgilerini düzenle..."
 msgid "Edit..."
 msgstr "Düzenle..."
 
-msgid "Enable"
-msgstr "Etkinleştir"
-
 msgid "Enable Wii Remote support"
 msgstr "Wii kumanda desteğini etkinleştir"
 
@@ -1136,15 +1162,12 @@ msgstr "Şarkılar silinirken hata"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "Betik indirirken bir hata oluştu"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "%1 yüklenirken hata"
 
-msgid "Error opening script archive"
-msgstr "Betik açılırken bir hata oluştu"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1158,6 +1181,9 @@ msgstr "Önceden çalınmış"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Aynı albümde veya aynı CUE dosyasında bulunan parçalar hariç"
+
+msgid "Export to folders"
+msgstr ""
 
 msgid "Extras"
 msgstr "Ekler"
@@ -1198,11 +1224,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Favori parçalar"
 
-msgid "Fetch Missing Covers"
-msgstr "Eksik Albüm Kapaklarını İndir"
-
 msgid "Fetch automatically"
 msgstr "Otomatik indir"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr "Kapak alınırken bir hata oluştu"
@@ -1310,11 +1336,11 @@ msgstr "Genel ayarlar"
 msgid "Genre"
 msgstr "Tür"
 
-msgid "Get new scripts"
-msgstr "Yeni betik indir"
-
 msgid "Getting channels"
 msgstr "Kanallar alınıyor"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Bir isim verin:"
@@ -1455,15 +1481,6 @@ msgstr "Bilgi"
 msgid "Insert..."
 msgstr "Ekle..."
 
-msgid "Install from file..."
-msgstr "Dosyadan yükle..."
-
-msgid "Install script file"
-msgstr "Betik dosyası yükle"
-
-msgid "Install scripts"
-msgstr "Betik yükle"
-
 msgid "Installed"
 msgstr ""
 
@@ -1472,6 +1489,12 @@ msgstr "Internet"
 
 msgid "Invalid API key"
 msgstr "Geçersiz API anahtarı"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Geçersiz biçim"
@@ -1705,6 +1728,12 @@ msgstr "%1'den şarkı sözleri"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1826,9 +1855,6 @@ msgstr "Radyom"
 msgid "My Recommendations"
 msgstr "Önerdiklerim"
 
-msgid "My scripts"
-msgstr "Betiklerim"
-
 msgid "Name"
 msgstr "İsim"
 
@@ -1948,6 +1974,10 @@ msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
 msgstr "Sadece ilki göster"
+
+#, qt-format
+msgid "Open %1 in browser"
+msgstr ""
 
 msgid "Open &audio CD..."
 msgstr ""
@@ -2175,9 +2205,6 @@ msgstr "Wiiremote düğmesine basın"
 msgid "Put songs in a random order"
 msgstr "Şarkıları rastgele sırala"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "Kalite"
 
@@ -2235,11 +2262,11 @@ msgstr "Kanalları yenile"
 msgid "Refresh station list"
 msgstr "İstasyon listesini yenile"
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Reggae"
-
-msgid "Reload"
-msgstr "Yeniden yükle"
 
 msgid "Remember Wii remote swing"
 msgstr "Wii kumanda sallamayı hatırla"
@@ -2364,9 +2391,6 @@ msgstr ""
 msgid "Score"
 msgstr "Puan"
 
-msgid "Script Manager"
-msgstr "Betik Yöneticisi"
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Dinlediğim parçaları skropla"
 
@@ -2451,9 +2475,6 @@ msgstr "Seçili tüm parçalar için değeri ayarla..."
 
 msgid "Settings"
 msgstr "Ayarlar"
-
-msgid "Settings..."
-msgstr "Ayarlar..."
 
 msgid "Shortcut"
 msgstr "Kısayol"
@@ -2582,10 +2603,6 @@ msgstr "Hafif"
 
 msgid "Soft Rock"
 msgstr "Hafif Rock"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr ""
-"Bazı dosyaları yüklemede başarısız olundu. Betik düzgün çalışmayabilir."
 
 msgid "Song Information"
 msgstr "Şarkı Bilgisi"
@@ -2733,10 +2750,6 @@ msgid "The \"%1\" command could not be started."
 msgstr "\"%1\" komutu başlatılamadı."
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr "'%1' betiği değiştirilmiş, yeniden yüklemeniz gerekebilir."
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "%1 dizini geçersiz"
 
@@ -2823,9 +2836,6 @@ msgstr "Bu bir MTP aygıtı fakat Clementine libmtp desteği olmadan derlenmiş.
 msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr "Bu bir iPod fakat Clementine libgpod desteği olmadan derlenmiş."
 
-msgid "This is not a valid Clementine script file."
-msgstr "Bu geçerli bir Clementine betik dosyası değil."
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2870,6 +2880,12 @@ msgid "Toggle scrobbling"
 msgstr "Skroplamada geçiş yap"
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3031,13 +3047,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-"Uyarı: betikler bilgisayarınızın ve müziklerinizin üzerinde tüm yetkiye "
-"sahiptir. Sadece güvendiğiniz betikleri yükleyin."
-
 msgid "Wav"
 msgstr "Wav"
 
@@ -3087,6 +3096,15 @@ msgstr "Wii Kumanda %1: çıkarıldı"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii Kumanda %1: düşük pil seviyesi (%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "Windows Media audio"
 
@@ -3107,6 +3125,11 @@ msgstr "Dün"
 
 msgid "You are about to download the following albums"
 msgstr "Aşağıdaki albümleri indirmek üzeresiniz"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Kütüphanedeki parçalarını farklı şekilde organize edebilirsiniz."
@@ -3137,6 +3160,14 @@ msgstr ""
 "Wii kumandanızı kullanarak Clementine'ı uzaktan kumanda edebilirsiniz.  Daha "
 "fazla bilgi için <a href=\"http://www.clementine-player.org/wiimote"
 "\">Clementine wikideki ilgili sayfayı</a> ziyaret edin.\n"
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
+msgstr ""
 
 msgid "You love this track"
 msgstr "Bu şarkıyı seviyorsunuz"
@@ -3304,6 +3335,71 @@ msgstr "durdur"
 #, qt-format
 msgid "track %1"
 msgstr "parça %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Eksik Albüm Kapaklarını İndir"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "Aşağıdaki betikleri yüklemek istediğinize emin misiniz?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Clementine betikleri"
+
+#~ msgid "Developer mode"
+#~ msgstr "Geliştirici kipi"
+
+#~ msgid "Disable"
+#~ msgstr "Pasifleştir"
+
+#~ msgid "Enable"
+#~ msgstr "Etkinleştir"
+
+#~ msgid "Error installing script"
+#~ msgstr "Betik indirirken bir hata oluştu"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Betik açılırken bir hata oluştu"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Yeni betik indir"
+
+#~ msgid "Install from file..."
+#~ msgstr "Dosyadan yükle..."
+
+#~ msgid "Install script file"
+#~ msgstr "Betik dosyası yükle"
+
+#~ msgid "Install scripts"
+#~ msgstr "Betik yükle"
+
+#~ msgid "My scripts"
+#~ msgstr "Betiklerim"
+
+#~ msgid "Reload"
+#~ msgstr "Yeniden yükle"
+
+#~ msgid "Script Manager"
+#~ msgstr "Betik Yöneticisi"
+
+#~ msgid "Settings..."
+#~ msgstr "Ayarlar..."
+
+#~ msgid "Some files failed to install.  The script may not work correctly."
+#~ msgstr ""
+#~ "Bazı dosyaları yüklemede başarısız olundu. Betik düzgün çalışmayabilir."
+
+#~ msgid "The '%1' script was modified, you might have to reload it"
+#~ msgstr "'%1' betiği değiştirilmiş, yeniden yüklemeniz gerekebilir."
+
+#~ msgid "This is not a valid Clementine script file."
+#~ msgstr "Bu geçerli bir Clementine betik dosyası değil."
+
+#~ msgid ""
+#~ "Warning: scripts have full access to your computer and your music.  Only "
+#~ "install scripts that you trust."
+#~ msgstr ""
+#~ "Uyarı: betikler bilgisayarınızın ve müziklerinizin üzerinde tüm yetkiye "
+#~ "sahiptir. Sadece güvendiğiniz betikleri yükleyin."
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 başka dinleyici"

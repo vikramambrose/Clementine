@@ -74,6 +74,10 @@ msgid "%1 tracks"
 msgstr "%1 track"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1: mô-đun Wiimotedev"
 
@@ -158,6 +162,9 @@ msgstr "128k MP3"
 msgid "50 random tracks"
 msgstr "50 track ngẫu nhiên"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -191,6 +198,15 @@ msgstr "A-Z"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -209,6 +225,9 @@ msgstr "Giới thiệu về Qt..."
 
 msgid "Account details"
 msgstr "Chi tiết tài khoản"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Hoạt động"
@@ -432,9 +451,6 @@ msgstr "Nén để chặn việc ngắt đoạn"
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Bạn có chắc sẽ xóa thiết lập \"%1\"?"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "Bạn có chắc sẽ cài đặt các lệnh kịch bản sau đây?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "Bạn có chắc muốn thiết đặt lại bộ đếm của bài hát này?"
 
@@ -455,6 +471,9 @@ msgstr "Tên viết tắt của nghệ sĩ"
 
 msgid "Audio format"
 msgstr "Định dạng âm thanh"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Đang xác thực..."
@@ -478,6 +497,9 @@ msgid "Available"
 msgstr "Còn trống"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -650,9 +672,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Bộ xem ảnh Clementine"
 
-msgid "Clementine scripts"
-msgstr "Lệnh kịch bản Clementine"
-
 msgid "Clementine was unable to find results for this file"
 msgstr "Clementine không tìm được kết quả nào cho tập tin này"
 
@@ -710,6 +729,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Cấu hình thư viện..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr "Kết nối Wii Remotes sử dụng thao tác kích hoạt/vô hiệu"
 
@@ -720,9 +742,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -790,6 +809,13 @@ msgstr "Ảnh bìa không được thiết lập"
 #, qt-format
 msgid "Cover art set from %1"
 msgstr "Ảnh bìa được thiết lập từ %1"
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
+msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
 msgstr "Tự động giảm dần âm lượng khi chuyển sang track khác"
@@ -926,9 +952,6 @@ msgstr "Xuất ra"
 msgid "Details..."
 msgstr "Chi tiết..."
 
-msgid "Developer mode"
-msgstr "Chế độ cho người phát triển"
-
 msgid "Device"
 msgstr "Thiết bị"
 
@@ -947,14 +970,20 @@ msgstr "Thiết bị"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Kết nối mạng trực tiếp"
 
 msgid "Directory"
 msgstr "Thư mục"
-
-msgid "Disable"
-msgstr "Vô hiệu hoá"
 
 msgid "Disable duration"
 msgstr ""
@@ -1065,9 +1094,6 @@ msgstr "Chỉnh sửa thông tin các track..."
 msgid "Edit..."
 msgstr "Chỉnh sửa..."
 
-msgid "Enable"
-msgstr "Bật"
-
 msgid "Enable Wii Remote support"
 msgstr "Bật hỗ trợ tay cầm điều khiển Wii"
 
@@ -1137,15 +1163,12 @@ msgstr "Lỗi xóa các bài hát"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "Lỗi cài đặt lệnh kịch bản"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "Lỗi nạp %1"
 
-msgid "Error opening script archive"
-msgstr "Lỗi khi mở lưu trữ lệnh kịch bản"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1161,6 +1184,9 @@ msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr ""
 "Ngoại trừ giữa các track trong album tương tự hoặc trong danh sách CUE tương "
 "tự"
+
+msgid "Export to folders"
+msgstr ""
 
 msgid "Extras"
 msgstr "Hiệu ứng"
@@ -1201,11 +1227,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Các track yêu thích"
 
-msgid "Fetch Missing Covers"
-msgstr "Tải các ảnh bìa còn thiếu"
-
 msgid "Fetch automatically"
 msgstr "Tự động tải"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr "Lỗi khi tải ảnh bìa"
@@ -1314,11 +1340,11 @@ msgstr "Thiết lập chung"
 msgid "Genre"
 msgstr "Thể loại"
 
-msgid "Get new scripts"
-msgstr "Lấy các lệnh kịch bản mới"
-
 msgid "Getting channels"
 msgstr "Đang tải các kênh"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Đặt tên:"
@@ -1459,15 +1485,6 @@ msgstr "Thông tin"
 msgid "Insert..."
 msgstr "Nhập..."
 
-msgid "Install from file..."
-msgstr "Cài đặt từ tập tin..."
-
-msgid "Install script file"
-msgstr "Cài tập tin kịch bản"
-
-msgid "Install scripts"
-msgstr "Cài các tập lệnh kịch bản"
-
 msgid "Installed"
 msgstr ""
 
@@ -1476,6 +1493,12 @@ msgstr "Internet"
 
 msgid "Invalid API key"
 msgstr "Khóa API không hợp lệ"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Định dạng không hợp lệ"
@@ -1707,6 +1730,12 @@ msgstr "Lời bài hát từ %1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1828,9 +1857,6 @@ msgstr "Kênh Ra-đi-ô của tôi"
 msgid "My Recommendations"
 msgstr "Bài nên nghe"
 
-msgid "My scripts"
-msgstr "Các tập lệnh kịch bản của tôi"
-
 msgid "Name"
 msgstr "Tên"
 
@@ -1950,6 +1976,10 @@ msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
 msgstr "Hiện số bài hát đầu tiên"
+
+#, qt-format
+msgid "Open %1 in browser"
+msgstr ""
 
 msgid "Open &audio CD..."
 msgstr ""
@@ -2177,9 +2207,6 @@ msgstr "Ấn vào nút Wiiremote"
 msgid "Put songs in a random order"
 msgstr "Sắp xếp các bài nhạc theo trật tự ngẫu nhiên"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "Chất lượng"
 
@@ -2237,11 +2264,11 @@ msgstr "Làm mới các kênh"
 msgid "Refresh station list"
 msgstr "Làm mới danh sách các trạm"
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Reggae"
-
-msgid "Reload"
-msgstr "Nạp lại"
 
 msgid "Remember Wii remote swing"
 msgstr "Ghi nhớ sự dao động của Wii remote"
@@ -2366,9 +2393,6 @@ msgstr ""
 msgid "Score"
 msgstr "Điểm"
 
-msgid "Script Manager"
-msgstr "Trình quản lý tập lệnh"
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Tự động gửi tên các track tôi nghe"
 
@@ -2453,9 +2477,6 @@ msgstr "Thiết lập giá trị cho tất cả các track đã được chọn.
 
 msgid "Settings"
 msgstr "Thiết lập"
-
-msgid "Settings..."
-msgstr "Thiết lập..."
 
 msgid "Shortcut"
 msgstr "Phím tắt"
@@ -2585,10 +2606,6 @@ msgstr "Soft"
 
 msgid "Soft Rock"
 msgstr "Soft Rock"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr ""
-"Cài đặt thất bại một số tập tin. Có thể lệnh kịch bản đã làm việc không đúng."
 
 msgid "Song Information"
 msgstr "Thông tin bài hát"
@@ -2736,10 +2753,6 @@ msgid "The \"%1\" command could not be started."
 msgstr "Không thể bắt đầu lệnh \"%1\"."
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr "Lệnh kịch bản '%1' đã được chỉnh sửa, hãy nạp lại nó"
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "Thư mục %1 không hợp lệ"
 
@@ -2833,9 +2846,6 @@ msgstr ""
 "Đây là một chiếc iPod, nhưng bạn đã biên dịch Clementine mà không có hỗ trợ "
 "libgpod."
 
-msgid "This is not a valid Clementine script file."
-msgstr "Đây không phải là một tập tin lệnh kịch bản Clementine hợp lệ."
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2880,6 +2890,12 @@ msgid "Toggle scrobbling"
 msgstr "Bật/Tắt Chuyển thông tin bài hát"
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3042,13 +3058,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-"Cảnh báo: các lệnh kịch bản được toàn quyền truy cập vào máy tính và nhạc "
-"của bạn. Chỉ cài đặt khi bạn tin tưởng."
-
 msgid "Wav"
 msgstr "Wav"
 
@@ -3098,6 +3107,15 @@ msgstr "Tay cầm Wii %1: đã ngắt kết nối"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii Remote %1: Pin yếu (%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "Âm thanh Windows Media"
 
@@ -3118,6 +3136,11 @@ msgstr "Ngày hôm qua"
 
 msgid "You are about to download the following albums"
 msgstr "Bạn muốn tải xuống các album sau"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Bạn có thể thay đổi cách tổ chức các bài hát trong thư viện."
@@ -3148,6 +3171,14 @@ msgstr ""
 "Bạn có thể điều khiển Clementine từ xa với Wii Remote.  <a href=\"http://www."
 "clementine-player.org/wiimote\">Xem bài viết trên Clementine wiki<a> để biết "
 "thêm chi tiết.\n"
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
+msgstr ""
 
 msgid "You love this track"
 msgstr "Bạn thích bài hát này"
@@ -3314,6 +3345,72 @@ msgstr "stop"
 #, qt-format
 msgid "track %1"
 msgstr "track %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Tải các ảnh bìa còn thiếu"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "Bạn có chắc sẽ cài đặt các lệnh kịch bản sau đây?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Lệnh kịch bản Clementine"
+
+#~ msgid "Developer mode"
+#~ msgstr "Chế độ cho người phát triển"
+
+#~ msgid "Disable"
+#~ msgstr "Vô hiệu hoá"
+
+#~ msgid "Enable"
+#~ msgstr "Bật"
+
+#~ msgid "Error installing script"
+#~ msgstr "Lỗi cài đặt lệnh kịch bản"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Lỗi khi mở lưu trữ lệnh kịch bản"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Lấy các lệnh kịch bản mới"
+
+#~ msgid "Install from file..."
+#~ msgstr "Cài đặt từ tập tin..."
+
+#~ msgid "Install script file"
+#~ msgstr "Cài tập tin kịch bản"
+
+#~ msgid "Install scripts"
+#~ msgstr "Cài các tập lệnh kịch bản"
+
+#~ msgid "My scripts"
+#~ msgstr "Các tập lệnh kịch bản của tôi"
+
+#~ msgid "Reload"
+#~ msgstr "Nạp lại"
+
+#~ msgid "Script Manager"
+#~ msgstr "Trình quản lý tập lệnh"
+
+#~ msgid "Settings..."
+#~ msgstr "Thiết lập..."
+
+#~ msgid "Some files failed to install.  The script may not work correctly."
+#~ msgstr ""
+#~ "Cài đặt thất bại một số tập tin. Có thể lệnh kịch bản đã làm việc không "
+#~ "đúng."
+
+#~ msgid "The '%1' script was modified, you might have to reload it"
+#~ msgstr "Lệnh kịch bản '%1' đã được chỉnh sửa, hãy nạp lại nó"
+
+#~ msgid "This is not a valid Clementine script file."
+#~ msgstr "Đây không phải là một tập tin lệnh kịch bản Clementine hợp lệ."
+
+#~ msgid ""
+#~ "Warning: scripts have full access to your computer and your music.  Only "
+#~ "install scripts that you trust."
+#~ msgstr ""
+#~ "Cảnh báo: các lệnh kịch bản được toàn quyền truy cập vào máy tính và nhạc "
+#~ "của bạn. Chỉ cài đặt khi bạn tin tưởng."
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 người nghe khác"

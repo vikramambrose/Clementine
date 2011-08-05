@@ -74,6 +74,10 @@ msgid "%1 tracks"
 msgstr "%1 roudenn"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1 : enlugellad wiimotedev"
 
@@ -158,6 +162,9 @@ msgstr "MP3 128k"
 msgid "50 random tracks"
 msgstr "50 roudenn dre zegouezh"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -189,6 +196,15 @@ msgstr "A-Z"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -207,6 +223,9 @@ msgstr "A-zivout Qt..."
 
 msgid "Account details"
 msgstr "Spisadurioù ar c'hont"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Oberiadenn"
@@ -431,9 +450,6 @@ msgstr "Koazhañ a-benn pareañ an troc'hadennoù"
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Ha sur oc'h da gaout c'hoant skarzhan an talvoud raktermenet « %1 »"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "Ha sur oc'h da gaout c'hoant da staliañ ar skript(où)-mañ ?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "Ha sur oc'h da gaout c'hoant da adderaouekaat statistikoù an ton-mañ ?"
 
@@ -454,6 +470,9 @@ msgstr "Lizherennoù-tal an arzour"
 
 msgid "Audio format"
 msgstr "Stumm audio"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Dilesadur..."
@@ -477,6 +496,9 @@ msgid "Available"
 msgstr "Hegerz"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -648,9 +670,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Gweler skeudennoù Clementine"
 
-msgid "Clementine scripts"
-msgstr "Skriptoù Clementine"
-
 msgid "Clementine was unable to find results for this file"
 msgstr "N'eo ket bet gouest Clementine da gavout disoc'hoù evit ar restr-mañ"
 
@@ -708,6 +727,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Kefluniañ al levraoueg..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr "Kennaskañ Wii Remote en ur implij an oberenn aktivañ/diaktivañ"
 
@@ -718,9 +740,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -788,6 +807,13 @@ msgstr "Golo nann diuzet"
 #, qt-format
 msgid "Cover art set from %1"
 msgstr "Golo diuzet adalek %1"
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
+msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
 msgstr "Aplikañ un arveuz pa vez kemmet ar roudenn ez-otomatikel"
@@ -924,9 +950,6 @@ msgstr "Pal"
 msgid "Details..."
 msgstr "Munudoù..."
 
-msgid "Developer mode"
-msgstr "Stumm diorroer"
-
 msgid "Device"
 msgstr "Trobarzhell"
 
@@ -945,14 +968,20 @@ msgstr "Trobarzhelloù"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Liammadenn eeun da Internet"
 
 msgid "Directory"
 msgstr "Doser"
-
-msgid "Disable"
-msgstr "Deweredekaat"
 
 msgid "Disable duration"
 msgstr ""
@@ -1063,9 +1092,6 @@ msgstr "Cheñch diskrivadur ar roudennoù..."
 msgid "Edit..."
 msgstr "Embann..."
 
-msgid "Enable"
-msgstr "Enaouiñ"
-
 msgid "Enable Wii Remote support"
 msgstr "Aktivañ Wii Remote"
 
@@ -1135,15 +1161,12 @@ msgstr "Ur gudenn a zo savet e-kerzh dilamidigezh an tonioù"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "Ur gudenn a zo savet e-kerzh staliadur ar skript"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "Ur gudenn a zo savet e-pad kargadur %1"
 
-msgid "Error opening script archive"
-msgstr "Ur gudenn a zo savet e-pad digoradur diell ar skript"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1156,6 +1179,9 @@ msgid "Ever played"
 msgstr "Bet lennet dija"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
+msgstr ""
+
+msgid "Export to folders"
 msgstr ""
 
 msgid "Extras"
@@ -1197,11 +1223,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Roudennoù karetañ"
 
-msgid "Fetch Missing Covers"
-msgstr "Pellkargañ ar goloioù a vank"
-
 msgid "Fetch automatically"
 msgstr "Pellkargañ ez otomatikel"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr "Ur gudenn a zo savet e-pad pellkargadur ar golo"
@@ -1311,10 +1337,10 @@ msgstr "Kefluniadur hollek"
 msgid "Genre"
 msgstr "Doare"
 
-msgid "Get new scripts"
-msgstr "Kaout skriptoù nevez"
-
 msgid "Getting channels"
+msgstr ""
+
+msgid "Getting streams"
 msgstr ""
 
 msgid "Give it a name:"
@@ -1453,15 +1479,6 @@ msgstr "Titouroù"
 msgid "Insert..."
 msgstr "Enlakaat..."
 
-msgid "Install from file..."
-msgstr ""
-
-msgid "Install script file"
-msgstr ""
-
-msgid "Install scripts"
-msgstr ""
-
 msgid "Installed"
 msgstr ""
 
@@ -1469,6 +1486,12 @@ msgid "Internet"
 msgstr "Internet"
 
 msgid "Invalid API key"
+msgstr ""
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
 msgstr ""
 
 msgid "Invalid format"
@@ -1701,6 +1724,12 @@ msgstr "Komzioù eus %1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1823,9 +1852,6 @@ msgstr ""
 msgid "My Recommendations"
 msgstr ""
 
-msgid "My scripts"
-msgstr "Ma skriptoù"
-
 msgid "Name"
 msgstr "Anv"
 
@@ -1945,6 +1971,10 @@ msgid "Ogg Vorbis"
 msgstr ""
 
 msgid "Only show the first"
+msgstr ""
+
+#, qt-format
+msgid "Open %1 in browser"
 msgstr ""
 
 msgid "Open &audio CD..."
@@ -2173,9 +2203,6 @@ msgstr ""
 msgid "Put songs in a random order"
 msgstr "Lakaat an tonioù en un urzh dre zegouezh"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr ""
 
@@ -2233,10 +2260,10 @@ msgstr ""
 msgid "Refresh station list"
 msgstr ""
 
-msgid "Reggae"
+msgid "Refresh streams"
 msgstr ""
 
-msgid "Reload"
+msgid "Reggae"
 msgstr ""
 
 msgid "Remember Wii remote swing"
@@ -2362,9 +2389,6 @@ msgstr ""
 msgid "Score"
 msgstr ""
 
-msgid "Script Manager"
-msgstr ""
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Scrobble ar roadennoù selaouet ganin"
 
@@ -2448,9 +2472,6 @@ msgid "Set value for all selected tracks..."
 msgstr "Lakaat un talvoud evit an holll roadennoù diuzet"
 
 msgid "Settings"
-msgstr ""
-
-msgid "Settings..."
 msgstr ""
 
 msgid "Shortcut"
@@ -2579,9 +2600,6 @@ msgid "Soft"
 msgstr ""
 
 msgid "Soft Rock"
-msgstr ""
-
-msgid "Some files failed to install.  The script may not work correctly."
 msgstr ""
 
 msgid "Song Information"
@@ -2730,10 +2748,6 @@ msgid "The \"%1\" command could not be started."
 msgstr ""
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr ""
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr ""
 
@@ -2816,9 +2830,6 @@ msgstr ""
 msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr ""
 
-msgid "This is not a valid Clementine script file."
-msgstr ""
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2861,6 +2872,12 @@ msgid "Toggle scrobbling"
 msgstr ""
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3022,11 +3039,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-
 msgid "Wav"
 msgstr "Wav"
 
@@ -3072,6 +3084,15 @@ msgstr ""
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr ""
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr ""
 
@@ -3092,6 +3113,11 @@ msgstr ""
 
 msgid "You are about to download the following albums"
 msgstr "Emaoc'h o vont da pellkargañ an albomoù-mañ"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Tu zo deoc'h kemman an doare ma vo renket an tonioù el levraoueg."
@@ -3114,6 +3140,14 @@ msgid ""
 "You can use your Wii Remote as a remote control for Clementine.  <a href="
 "\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
 "wiki</a> for more information.\n"
+msgstr ""
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
 msgstr ""
 
 msgid "You love this track"
@@ -3276,6 +3310,36 @@ msgstr "paouez"
 #, qt-format
 msgid "track %1"
 msgstr "roadenn %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Pellkargañ ar goloioù a vank"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "Ha sur oc'h da gaout c'hoant da staliañ ar skript(où)-mañ ?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Skriptoù Clementine"
+
+#~ msgid "Developer mode"
+#~ msgstr "Stumm diorroer"
+
+#~ msgid "Disable"
+#~ msgstr "Deweredekaat"
+
+#~ msgid "Enable"
+#~ msgstr "Enaouiñ"
+
+#~ msgid "Error installing script"
+#~ msgstr "Ur gudenn a zo savet e-kerzh staliadur ar skript"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Ur gudenn a zo savet e-pad digoradur diell ar skript"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Kaout skriptoù nevez"
+
+#~ msgid "My scripts"
+#~ msgstr "Ma skriptoù"
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 selaouer all"

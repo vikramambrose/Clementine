@@ -74,6 +74,10 @@ msgid "%1 tracks"
 msgstr "%1 кампазіцый"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1: модуль Wiimotedev"
 
@@ -158,6 +162,9 @@ msgstr "128к MP3"
 msgid "50 random tracks"
 msgstr "50 выпадковых трэкаў"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -186,6 +193,15 @@ msgstr "A-Z"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr ""
 
@@ -204,6 +220,9 @@ msgstr "Пра Qt..."
 
 msgid "Account details"
 msgstr "Дэталі ўліковага запісу"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Дзеянне"
@@ -427,9 +446,6 @@ msgstr "Ужыць кампрэсію для прадухілення скажэ
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Вы сапраўды жадаеце выдаліць настройку \"%1\"?"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr ""
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr ""
 
@@ -450,6 +466,9 @@ msgstr "Ініцыялы выканаўца"
 
 msgid "Audio format"
 msgstr "Фармат аўдыё"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Аўтэнтыфікацыя..."
@@ -473,6 +492,9 @@ msgid "Available"
 msgstr "Даступна"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -643,9 +665,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Прагляд малюнкаў у Clementine"
 
-msgid "Clementine scripts"
-msgstr ""
-
 msgid "Clementine was unable to find results for this file"
 msgstr ""
 
@@ -703,6 +722,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Наладзіць калекцыю..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr "Падключыць пульт Wii выкарыстоўваючы актывацыю/дэактывацыю"
 
@@ -713,9 +735,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -782,6 +801,13 @@ msgstr ""
 
 #, qt-format
 msgid "Cover art set from %1"
+msgstr ""
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
 msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
@@ -919,9 +945,6 @@ msgstr "Прызначэнне"
 msgid "Details..."
 msgstr "Падрабязнасьці..."
 
-msgid "Developer mode"
-msgstr ""
-
 msgid "Device"
 msgstr "Прылада"
 
@@ -940,14 +963,20 @@ msgstr "Прылады"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr ""
 
 msgid "Directory"
 msgstr "Каталёг"
-
-msgid "Disable"
-msgstr ""
 
 msgid "Disable duration"
 msgstr ""
@@ -1058,9 +1087,6 @@ msgstr ""
 msgid "Edit..."
 msgstr ""
 
-msgid "Enable"
-msgstr ""
-
 msgid "Enable Wii Remote support"
 msgstr ""
 
@@ -1128,14 +1154,11 @@ msgstr ""
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr ""
-
 #, qt-format
 msgid "Error loading %1"
 msgstr ""
 
-msgid "Error opening script archive"
+msgid "Error loading di.fm playlist"
 msgstr ""
 
 #, qt-format
@@ -1149,6 +1172,9 @@ msgid "Ever played"
 msgstr ""
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
+msgstr ""
+
+msgid "Export to folders"
 msgstr ""
 
 msgid "Extras"
@@ -1190,10 +1216,10 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr ""
 
-msgid "Fetch Missing Covers"
+msgid "Fetch automatically"
 msgstr ""
 
-msgid "Fetch automatically"
+msgid "Fetch completed"
 msgstr ""
 
 msgid "Fetching cover error"
@@ -1300,10 +1326,10 @@ msgstr ""
 msgid "Genre"
 msgstr ""
 
-msgid "Get new scripts"
+msgid "Getting channels"
 msgstr ""
 
-msgid "Getting channels"
+msgid "Getting streams"
 msgstr ""
 
 msgid "Give it a name:"
@@ -1440,15 +1466,6 @@ msgstr ""
 msgid "Insert..."
 msgstr ""
 
-msgid "Install from file..."
-msgstr ""
-
-msgid "Install script file"
-msgstr ""
-
-msgid "Install scripts"
-msgstr ""
-
 msgid "Installed"
 msgstr ""
 
@@ -1456,6 +1473,12 @@ msgid "Internet"
 msgstr ""
 
 msgid "Invalid API key"
+msgstr ""
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
 msgstr ""
 
 msgid "Invalid format"
@@ -1688,6 +1711,12 @@ msgstr ""
 msgid "MP3"
 msgstr ""
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr ""
 
@@ -1809,9 +1838,6 @@ msgstr ""
 msgid "My Recommendations"
 msgstr ""
 
-msgid "My scripts"
-msgstr ""
-
 msgid "Name"
 msgstr ""
 
@@ -1928,6 +1954,10 @@ msgid "Ogg Vorbis"
 msgstr ""
 
 msgid "Only show the first"
+msgstr ""
+
+#, qt-format
+msgid "Open %1 in browser"
 msgstr ""
 
 msgid "Open &audio CD..."
@@ -2156,9 +2186,6 @@ msgstr ""
 msgid "Put songs in a random order"
 msgstr ""
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr ""
 
@@ -2216,10 +2243,10 @@ msgstr ""
 msgid "Refresh station list"
 msgstr ""
 
-msgid "Reggae"
+msgid "Refresh streams"
 msgstr ""
 
-msgid "Reload"
+msgid "Reggae"
 msgstr ""
 
 msgid "Remember Wii remote swing"
@@ -2345,9 +2372,6 @@ msgstr ""
 msgid "Score"
 msgstr ""
 
-msgid "Script Manager"
-msgstr ""
-
 msgid "Scrobble tracks that I listen to"
 msgstr ""
 
@@ -2431,9 +2455,6 @@ msgid "Set value for all selected tracks..."
 msgstr ""
 
 msgid "Settings"
-msgstr ""
-
-msgid "Settings..."
 msgstr ""
 
 msgid "Shortcut"
@@ -2562,9 +2583,6 @@ msgid "Soft"
 msgstr ""
 
 msgid "Soft Rock"
-msgstr ""
-
-msgid "Some files failed to install.  The script may not work correctly."
 msgstr ""
 
 msgid "Song Information"
@@ -2713,10 +2731,6 @@ msgid "The \"%1\" command could not be started."
 msgstr ""
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr ""
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr ""
 
@@ -2797,9 +2811,6 @@ msgstr ""
 msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr ""
 
-msgid "This is not a valid Clementine script file."
-msgstr ""
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2842,6 +2853,12 @@ msgid "Toggle scrobbling"
 msgstr ""
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3003,11 +3020,6 @@ msgstr ""
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-
 msgid "Wav"
 msgstr ""
 
@@ -3053,6 +3065,15 @@ msgstr ""
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr ""
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr ""
 
@@ -3072,6 +3093,11 @@ msgid "Yesterday"
 msgstr ""
 
 msgid "You are about to download the following albums"
+msgstr ""
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
@@ -3094,6 +3120,14 @@ msgid ""
 "You can use your Wii Remote as a remote control for Clementine.  <a href="
 "\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
 "wiki</a> for more information.\n"
+msgstr ""
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
 msgstr ""
 
 msgid "You love this track"

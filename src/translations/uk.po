@@ -11,14 +11,14 @@ msgstr ""
 "PO-Revision-Date: 2011-04-10 01:28+0000\n"
 "Last-Translator: Sergiy Gavrylov <sergiovana@bigmir.net>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: uk\n"
 "X-Launchpad-Export-Date: 2011-04-11 05:09+0000\n"
 "X-Generator: Launchpad (build 12735)\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: uk_UA\n"
 "X-Source-Language: en_US\n"
 
@@ -94,15 +94,15 @@ msgstr "%L1 інших слухачів"
 msgid "%L1 total plays"
 msgstr "%L1 прослуховувань загалом"
 
-#, c-format
+#, c-format, qt-plural-format
 msgid "%n failed"
 msgstr "%n з помилкою"
 
-#, c-format
+#, c-format, qt-plural-format
 msgid "%n finished"
 msgstr "%n завершено"
 
-#, c-format
+#, c-format, qt-plural-format
 msgid "%n remaining"
 msgstr "%n залишилось"
 
@@ -167,6 +167,9 @@ msgstr "128k MP3"
 msgid "50 random tracks"
 msgstr "50 випадкових доріжок"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -202,6 +205,15 @@ msgstr "A-Z"
 msgid "AAC"
 msgstr "AAC"
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -220,6 +232,9 @@ msgstr "Про Qt..."
 
 msgid "Account details"
 msgstr "Параметри облікового запису"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Дія"
@@ -459,9 +474,6 @@ msgstr "Застосувати стиснення для запобігання 
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Ви дійсно хочите вилучити задане \"%1\"?"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "Впевнені, що бажаєте встановити наступні скрипти?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "Впевнені, що бажаєте скинути статистику цієї композиції?"
 
@@ -482,6 +494,9 @@ msgstr "Ініціали виконавця"
 
 msgid "Audio format"
 msgstr "Аудіо-формат"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Автентифікація..."
@@ -638,9 +653,6 @@ msgstr "Класична"
 msgid "Clear"
 msgstr "Очистити"
 
-msgid "Clear Console"
-msgstr ""
-
 msgid "Clear playlist"
 msgstr "Очистити список відтворення"
 
@@ -692,9 +704,6 @@ msgstr ""
 
 msgid "Clementine image viewer"
 msgstr "Переглядач зображень Clementine"
-
-msgid "Clementine scripts"
-msgstr "Скрипти Clementine"
 
 msgid "Clementine was unable to find results for this file"
 msgstr "Clementine не зміг здобути результатів для цього файлу"
@@ -756,6 +765,9 @@ msgstr "Налаштування Spotify..."
 msgid "Configure library..."
 msgstr "Налаштування фонотеки..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr "Під’єднати Wii Remotes через дію активувати/деактивувати"
 
@@ -769,9 +781,6 @@ msgstr "З’єднання зі Spotify"
 #, fuzzy
 msgid "Constant bitrate"
 msgstr "Постійна щільність потоку"
-
-msgid "Context:"
-msgstr ""
 
 msgid "Convert all music"
 msgstr "Конвертувати всю музику"
@@ -841,6 +850,9 @@ msgstr "Обкладинку встановлено з %1"
 
 #, qt-format
 msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
 msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
@@ -980,9 +992,6 @@ msgstr "Призначення"
 msgid "Details..."
 msgstr "Детальніше..."
 
-msgid "Developer mode"
-msgstr "Режим розробника"
-
 msgid "Device"
 msgstr "Пристрій"
 
@@ -1002,14 +1011,20 @@ msgstr "Пристрої"
 msgid "Did you mean"
 msgstr "Ви мали на увазі"
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Пряме з'єднання з Інтернет"
 
 msgid "Directory"
 msgstr "Тека"
-
-msgid "Disable"
-msgstr "Вимкнути"
 
 msgid "Disable duration"
 msgstr ""
@@ -1123,10 +1138,6 @@ msgstr "Редагувати дані про доріжки..."
 msgid "Edit..."
 msgstr "Змінити..."
 
-#, fuzzy
-msgid "Enable"
-msgstr "Увімкнути"
-
 msgid "Enable Wii Remote support"
 msgstr "Увімкнути підтримку Wii Remote"
 
@@ -1198,15 +1209,12 @@ msgstr "Помилка вилучення композицій"
 msgid "Error downloading Spotify plugin"
 msgstr "Помилка завантаження плагіну Spotify"
 
-msgid "Error installing script"
-msgstr "Помилка встановлення скрипту"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "Помилка завантаження %1"
 
-msgid "Error opening script archive"
-msgstr "Помилка при розкритті архіву скрипту"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1221,6 +1229,9 @@ msgstr "Будь-коли відтворений"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Крім як між треками на одному альбомі, або в тому ж CUE листі"
+
+msgid "Export to folders"
+msgstr ""
 
 msgid "Extras"
 msgstr "Додатково"
@@ -1261,9 +1272,6 @@ msgstr "Швидко"
 
 msgid "Favourite tracks"
 msgstr "Улюблені композиції"
-
-msgid "Fetch Missing Covers"
-msgstr "Знайти обкладинки, яких бракує"
 
 msgid "Fetch automatically"
 msgstr "Шукати автоматично"
@@ -1382,11 +1390,11 @@ msgstr "Загальні налаштування"
 msgid "Genre"
 msgstr "Жанр"
 
-msgid "Get new scripts"
-msgstr "Отримати нові скрипти"
-
 msgid "Getting channels"
 msgstr "Отримання каналів"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Дати назву:"
@@ -1532,15 +1540,6 @@ msgstr "Інформація"
 msgid "Insert..."
 msgstr "Вставити..."
 
-msgid "Install from file..."
-msgstr "Встановити з файлу..."
-
-msgid "Install script file"
-msgstr "Встановити файл скрипту"
-
-msgid "Install scripts"
-msgstr "Встановити скрипти"
-
 #, fuzzy
 msgid "Installed"
 msgstr "Встановлено"
@@ -1550,6 +1549,12 @@ msgstr "Інтернет"
 
 msgid "Invalid API key"
 msgstr "Неправильний ключ API"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Не чинний формат"
@@ -1782,6 +1787,12 @@ msgstr "Текст пісні з %1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1908,9 +1919,6 @@ msgstr "Моя радіостанція"
 msgid "My Recommendations"
 msgstr "Мої рекомендації"
 
-msgid "My scripts"
-msgstr "Мої скрипти"
-
 msgid "Name"
 msgstr "Назва"
 
@@ -2031,6 +2039,10 @@ msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
 msgstr "Показувати лише перший"
+
+#, qt-format
+msgid "Open %1 in browser"
+msgstr ""
 
 #, fuzzy
 msgid "Open &audio CD..."
@@ -2264,10 +2276,6 @@ msgstr "Натиснути кнопку Wiiremote"
 msgid "Put songs in a random order"
 msgstr "Виводити композиції у випадковому порядку"
 
-#, fuzzy
-msgid "Python console"
-msgstr "Консоль Python"
-
 msgid "Quality"
 msgstr "Якість"
 
@@ -2325,11 +2333,11 @@ msgstr "Оновити канали"
 msgid "Refresh station list"
 msgstr "Оновити список станцій"
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Реґґі"
-
-msgid "Reload"
-msgstr "Оновити"
 
 msgid "Remember Wii remote swing"
 msgstr "Пам’ятати рухи в Wii remote"
@@ -2454,9 +2462,6 @@ msgstr ""
 msgid "Score"
 msgstr "Рахунок"
 
-msgid "Script Manager"
-msgstr "Керування скриптами"
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Скробблити доріжки, які я слухаю"
 
@@ -2544,9 +2549,6 @@ msgstr "Встановити значення для всіх вибраних �
 
 msgid "Settings"
 msgstr "Налаштування"
-
-msgid "Settings..."
-msgstr "Налаштування..."
 
 msgid "Shortcut"
 msgstr "Комбінація клавіш"
@@ -2675,9 +2677,6 @@ msgstr "Легка"
 
 msgid "Soft Rock"
 msgstr "Легкий рок"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr "Не вдалося встановити деякі файли. Скрипт може працювати з помилками."
 
 msgid "Song Information"
 msgstr "Про композицію"
@@ -2835,10 +2834,6 @@ msgid "The \"%1\" command could not be started."
 msgstr "Команда \"%1\" не може бути виконана"
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr "Скрипт '%1' було змінено, можливо його потрібно перезавантажити"
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "Тека %1 не чинна"
 
@@ -2931,9 +2926,6 @@ msgstr "Це пристрій MTP, але ви скомпілювали Clementi
 msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr ""
 "Це пристрій iPod, але ви скомпілювали Clementine без підтримки libgpod."
-
-msgid "This is not a valid Clementine script file."
-msgstr "Це не є коректним файлом скрипту Clementine."
 
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
@@ -3161,13 +3153,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr "WMA"
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-"Попередження: скрипти мають повний доступ до вашого комп’ютера та вашої "
-"музики. Встановлюйте тільки ті скрипти, котрим довіряєте."
-
 msgid "Wav"
 msgstr "Wav"
 
@@ -3217,6 +3202,15 @@ msgstr "Wii Remote %1: від’єднано"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii Remote %1: низький заряд батареї (%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "Windows Media audio"
 
@@ -3238,6 +3232,11 @@ msgstr "Вчора"
 
 msgid "You are about to download the following albums"
 msgstr "Ви збираєтеся завантажити такі альбоми"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Ви можете змінити спосіб упорядкування композицій у фонотеці."
@@ -3268,6 +3267,14 @@ msgstr ""
 "Можете використовувати Wii Remote для віддаленого керування Clementine.  <a "
 "href=\"http://www.clementine-player.org/wiimote\">Детальніше, на сторінці "
 "вікі Clementine</a>.\n"
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
+msgstr ""
 
 msgid "You love this track"
 msgstr "Вам подобається ця композиція"
@@ -3330,7 +3337,7 @@ msgstr "Z-A"
 msgid "Zero"
 msgstr "Zero"
 
-#, c-format
+#, c-format, qt-plural-format
 msgid "add %n songs"
 msgstr "додати %n композицій"
 
@@ -3421,7 +3428,7 @@ msgstr "параметри"
 msgid "press enter"
 msgstr ""
 
-#, c-format
+#, c-format, qt-plural-format
 msgid "remove %n songs"
 msgstr "вилучити %n композицій"
 
@@ -3440,6 +3447,76 @@ msgstr "зупинити"
 #, qt-format
 msgid "track %1"
 msgstr "доріжка %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Знайти обкладинки, яких бракує"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "Впевнені, що бажаєте встановити наступні скрипти?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Скрипти Clementine"
+
+#~ msgid "Developer mode"
+#~ msgstr "Режим розробника"
+
+#~ msgid "Disable"
+#~ msgstr "Вимкнути"
+
+#, fuzzy
+#~ msgid "Enable"
+#~ msgstr "Увімкнути"
+
+#~ msgid "Error installing script"
+#~ msgstr "Помилка встановлення скрипту"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Помилка при розкритті архіву скрипту"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Отримати нові скрипти"
+
+#~ msgid "Install from file..."
+#~ msgstr "Встановити з файлу..."
+
+#~ msgid "Install script file"
+#~ msgstr "Встановити файл скрипту"
+
+#~ msgid "Install scripts"
+#~ msgstr "Встановити скрипти"
+
+#~ msgid "My scripts"
+#~ msgstr "Мої скрипти"
+
+#, fuzzy
+#~ msgid "Python console"
+#~ msgstr "Консоль Python"
+
+#~ msgid "Reload"
+#~ msgstr "Оновити"
+
+#~ msgid "Script Manager"
+#~ msgstr "Керування скриптами"
+
+#~ msgid "Settings..."
+#~ msgstr "Налаштування..."
+
+#~ msgid "Some files failed to install.  The script may not work correctly."
+#~ msgstr ""
+#~ "Не вдалося встановити деякі файли. Скрипт може працювати з помилками."
+
+#~ msgid "The '%1' script was modified, you might have to reload it"
+#~ msgstr "Скрипт '%1' було змінено, можливо його потрібно перезавантажити"
+
+#~ msgid "This is not a valid Clementine script file."
+#~ msgstr "Це не є коректним файлом скрипту Clementine."
+
+#~ msgid ""
+#~ "Warning: scripts have full access to your computer and your music.  Only "
+#~ "install scripts that you trust."
+#~ msgstr ""
+#~ "Попередження: скрипти мають повний доступ до вашого комп’ютера та вашої "
+#~ "музики. Встановлюйте тільки ті скрипти, котрим довіряєте."
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 інших слухачів"

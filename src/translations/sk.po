@@ -75,6 +75,10 @@ msgid "%1 tracks"
 msgstr "%1 skladieb"
 
 #, qt-format
+msgid "%1 transferred"
+msgstr ""
+
+#, qt-format
 msgid "%1: Wiimotedev module"
 msgstr "%1: Wiimotedev modul"
 
@@ -159,6 +163,9 @@ msgstr "128k MP3"
 msgid "50 random tracks"
 msgstr "50 náhodých piesní"
 
+msgid "<a href=\"http://www.di.fm/premium/\">Upgrade to Premium now</a>"
+msgstr ""
+
 msgid ""
 "<p>Tokens start with %, for example: %artist %album %title </p>\n"
 "\n"
@@ -191,6 +198,15 @@ msgstr "A-Z"
 msgid "AAC"
 msgstr ""
 
+msgid "AAC 128k (Premium only)"
+msgstr ""
+
+msgid "AAC 32k"
+msgstr ""
+
+msgid "AAC 64k (Premium only)"
+msgstr ""
+
 msgid "AIFF"
 msgstr "AIFF"
 
@@ -209,6 +225,9 @@ msgstr "O Qt.."
 
 msgid "Account details"
 msgstr "Detaily účtu"
+
+msgid "Account details (Premium)"
+msgstr ""
 
 msgid "Action"
 msgstr "Akcia"
@@ -432,9 +451,6 @@ msgstr "Použiť kompresiu na zabránenie odrezávania"
 msgid "Are you sure you want to delete the \"%1\" preset?"
 msgstr "Ste si istý, že chcete vymazať predvoľbu \"%1\"?"
 
-msgid "Are you sure you want to install the following scripts?"
-msgstr "Ste si istý, že chcete nainštalovať nasledujúce skripty?"
-
 msgid "Are you sure you want to reset this song's statistics?"
 msgstr "Ste si istý, že chcete zresetovať štatistiky tejto piesne?"
 
@@ -455,6 +471,9 @@ msgstr "Interprétov prvotný"
 
 msgid "Audio format"
 msgstr "Audio formát"
+
+msgid "Audio type"
+msgstr ""
 
 msgid "Authenticating..."
 msgstr "Autentifikácia..."
@@ -478,6 +497,9 @@ msgid "Available"
 msgstr "K dispozícii"
 
 msgid "Average bitrate"
+msgstr ""
+
+msgid "Average image size"
 msgstr ""
 
 msgid "BPM"
@@ -650,9 +672,6 @@ msgstr ""
 msgid "Clementine image viewer"
 msgstr "Clementine prehliadač obrázkov"
 
-msgid "Clementine scripts"
-msgstr "Clementine skripty"
-
 msgid "Clementine was unable to find results for this file"
 msgstr "Clementine nebol schopný nájsť výsledky pre tento súbor"
 
@@ -710,6 +729,9 @@ msgstr ""
 msgid "Configure library..."
 msgstr "Nastaviť zbierku..."
 
+msgid "Configure..."
+msgstr ""
+
 msgid "Connect Wii Remotes using active/deactive action"
 msgstr "Pripojiť Wii diaľkové použitím akcie aktivovať/deaktivovať"
 
@@ -720,9 +742,6 @@ msgid "Connecting to Spotify"
 msgstr ""
 
 msgid "Constant bitrate"
-msgstr ""
-
-msgid "Context:"
 msgstr ""
 
 msgid "Convert all music"
@@ -790,6 +809,13 @@ msgstr "Obal nenastavený"
 #, qt-format
 msgid "Cover art set from %1"
 msgstr "Obal nastavený z %1"
+
+#, qt-format
+msgid "Covers from %1"
+msgstr ""
+
+msgid "Covers..."
+msgstr ""
 
 msgid "Cross-fade when changing tracks automatically"
 msgstr "Prelínať keď sa zmení skladba automaticky"
@@ -926,9 +952,6 @@ msgstr "Cieľ"
 msgid "Details..."
 msgstr "Podrobnosti..."
 
-msgid "Developer mode"
-msgstr "Vývojársky režim"
-
 msgid "Device"
 msgstr "Zariadenie"
 
@@ -947,14 +970,20 @@ msgstr "Zariadenia"
 msgid "Did you mean"
 msgstr ""
 
+msgid "Digitally Imported"
+msgstr ""
+
+msgid "Digitally Imported password"
+msgstr ""
+
+msgid "Digitally Imported username"
+msgstr ""
+
 msgid "Direct internet connection"
 msgstr "Priame pripojenie na internet"
 
 msgid "Directory"
 msgstr "Priečinok"
-
-msgid "Disable"
-msgstr "Zakázať"
 
 msgid "Disable duration"
 msgstr ""
@@ -1065,9 +1094,6 @@ msgstr "Upraviť informácie o skladbách"
 msgid "Edit..."
 msgstr "Upraviť..."
 
-msgid "Enable"
-msgstr "Povoliť"
-
 msgid "Enable Wii Remote support"
 msgstr "Povoliť podporu Wii diaľkového"
 
@@ -1137,15 +1163,12 @@ msgstr "Chyba pri vymazávaní piesní"
 msgid "Error downloading Spotify plugin"
 msgstr ""
 
-msgid "Error installing script"
-msgstr "Chyba pri inštalácii skriptu"
-
 #, qt-format
 msgid "Error loading %1"
 msgstr "Chyba pri načítavaní %1"
 
-msgid "Error opening script archive"
-msgstr "Chyba pri otváraní archívu skriptu"
+msgid "Error loading di.fm playlist"
+msgstr ""
 
 #, qt-format
 msgid "Error processing %1: %2"
@@ -1159,6 +1182,9 @@ msgstr "Vždy hrané"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Nezoslabovať medzi skladbami z rovnakého albumu"
+
+msgid "Export to folders"
+msgstr ""
 
 msgid "Extras"
 msgstr "Bonusy"
@@ -1199,11 +1225,11 @@ msgstr ""
 msgid "Favourite tracks"
 msgstr "Obľúbené skladby"
 
-msgid "Fetch Missing Covers"
-msgstr "Získať chýbajúce obaly"
-
 msgid "Fetch automatically"
 msgstr "Získavať automaticky"
+
+msgid "Fetch completed"
+msgstr ""
 
 msgid "Fetching cover error"
 msgstr "Chyba pri získavaní obalu"
@@ -1311,11 +1337,11 @@ msgstr "Všeobecné nastavenia"
 msgid "Genre"
 msgstr "Žáner"
 
-msgid "Get new scripts"
-msgstr "Získať nové skripty"
-
 msgid "Getting channels"
 msgstr "Preberanie kanálov"
+
+msgid "Getting streams"
+msgstr ""
 
 msgid "Give it a name:"
 msgstr "Pomenujte:"
@@ -1455,15 +1481,6 @@ msgstr "Informácie"
 msgid "Insert..."
 msgstr "Vložiť..."
 
-msgid "Install from file..."
-msgstr "Inštalovať zo súboru..."
-
-msgid "Install script file"
-msgstr "Inštalovať súbor skriptu"
-
-msgid "Install scripts"
-msgstr "Inštalovať skripty"
-
 msgid "Installed"
 msgstr ""
 
@@ -1472,6 +1489,12 @@ msgstr "Internet"
 
 msgid "Invalid API key"
 msgstr "Neplatný API kľúč"
+
+msgid "Invalid SKY.fm username or password"
+msgstr ""
+
+msgid "Invalid di.fm username or password"
+msgstr ""
 
 msgid "Invalid format"
 msgstr "Neplatný formát"
@@ -1704,6 +1727,12 @@ msgstr "Texty z %1"
 msgid "MP3"
 msgstr "MP3"
 
+msgid "MP3 256k (Premium only)"
+msgstr ""
+
+msgid "MP3 96k"
+msgstr ""
+
 msgid "MP4 AAC"
 msgstr "MP4 AAC"
 
@@ -1825,9 +1854,6 @@ msgstr "Moja rádio stanica"
 msgid "My Recommendations"
 msgstr "Moje odporúčania"
 
-msgid "My scripts"
-msgstr "Moje skripty"
-
 msgid "Name"
 msgstr "Názov"
 
@@ -1946,6 +1972,10 @@ msgstr "Ogg Vorbis"
 
 msgid "Only show the first"
 msgstr "Iba prvé zobraziť"
+
+#, qt-format
+msgid "Open %1 in browser"
+msgstr ""
 
 msgid "Open &audio CD..."
 msgstr ""
@@ -2173,9 +2203,6 @@ msgstr "Stlač tlačidlo na Wiiremote"
 msgid "Put songs in a random order"
 msgstr "Vložiť piesne v náhodnom poradí"
 
-msgid "Python console"
-msgstr ""
-
 msgid "Quality"
 msgstr "Kvalita"
 
@@ -2233,11 +2260,11 @@ msgstr "Obnoviť kanály"
 msgid "Refresh station list"
 msgstr "Obnoviť zoznam staníc"
 
+msgid "Refresh streams"
+msgstr ""
+
 msgid "Reggae"
 msgstr "Reggae"
-
-msgid "Reload"
-msgstr "Znovu načítať"
 
 msgid "Remember Wii remote swing"
 msgstr "Pamätať si kývnutie Wii diaľkového"
@@ -2362,9 +2389,6 @@ msgstr ""
 msgid "Score"
 msgstr "Skóre"
 
-msgid "Script Manager"
-msgstr "Správca skriptov"
-
 msgid "Scrobble tracks that I listen to"
 msgstr "Skroblovať skladby, ktoré počúvam"
 
@@ -2449,9 +2473,6 @@ msgstr "Nastaviť hodnotu pre všetky vybraté skladby..."
 
 msgid "Settings"
 msgstr "Nastavenia"
-
-msgid "Settings..."
-msgstr "Nastavenia..."
 
 msgid "Shortcut"
 msgstr "Skratka"
@@ -2580,10 +2601,6 @@ msgstr "Soft"
 
 msgid "Soft Rock"
 msgstr "Soft Rock"
-
-msgid "Some files failed to install.  The script may not work correctly."
-msgstr ""
-"Zlyhala inštalácia niektorých súborov. Skript možno nebude pracovať správne."
 
 msgid "Song Information"
 msgstr "Informácie o piesni"
@@ -2731,10 +2748,6 @@ msgid "The \"%1\" command could not be started."
 msgstr "Príkaz \"%1\" nemohol začať."
 
 #, qt-format
-msgid "The '%1' script was modified, you might have to reload it"
-msgstr "Skript '%1' bol upravený, možno ho treba znovu načítať"
-
-#, qt-format
 msgid "The directory %1 is not valid"
 msgstr "Priečinok %1 nieje platný"
 
@@ -2831,9 +2844,6 @@ msgid "This is an iPod, but you compiled Clementine without libgpod support."
 msgstr ""
 "Toto síce je iPod, ale skompilovali ste Clementine bez podpory libgpod."
 
-msgid "This is not a valid Clementine script file."
-msgstr "Toto nieje platný súbor Clementine skriptu."
-
 msgid ""
 "This is the first time you have connected this device.  Clementine will now "
 "scan the device to find music files - this may take some time."
@@ -2878,6 +2888,12 @@ msgid "Toggle scrobbling"
 msgstr "Prepnúť skroblovanie"
 
 msgid "Toggle visibility for the pretty on-screen-display"
+msgstr ""
+
+msgid "Total bytes transferred"
+msgstr ""
+
+msgid "Total network requests made"
 msgstr ""
 
 msgid "Track"
@@ -3039,13 +3055,6 @@ msgstr "WAV"
 msgid "WMA"
 msgstr ""
 
-msgid ""
-"Warning: scripts have full access to your computer and your music.  Only "
-"install scripts that you trust."
-msgstr ""
-"Varovanie: skripty majú plný prístup k vášmu počítaču a vašej hudbe. "
-"Inštalujte iba skripty, ktorím dôverujete."
-
 msgid "Wav"
 msgstr "Wav"
 
@@ -3094,6 +3103,15 @@ msgstr "Wii diaľkové %1: odpojené"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii diaľkové %1: slabá baterka (%2%)"
 
+msgid "Windows Media 128k (Premium only)"
+msgstr ""
+
+msgid "Windows Media 40k"
+msgstr ""
+
+msgid "Windows Media 64k (Premium only)"
+msgstr ""
+
 msgid "Windows Media audio"
 msgstr "WMa"
 
@@ -3114,6 +3132,11 @@ msgstr "Včera"
 
 msgid "You are about to download the following albums"
 msgstr "Chystáte sa stiahnuť nasledujúce albumy"
+
+msgid ""
+"You can <b>listen for free</b> without an account, but Premium members can "
+"listen to <b>higher quality</b> streams without advertisements."
+msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Môžete zmeniť spôsob, ktorým sú piesne v zbierke organizované."
@@ -3143,6 +3166,14 @@ msgstr ""
 "Môžete použiť vaše Wii diaľkové ako diaľkový ovládač pre Clementine.  <a "
 "href=\"http://www.clementine-player.org/wiimote\">Pozrite si stránku na "
 "Clementine wiki</a> pre viac informácií.\n"
+
+msgid ""
+"You have selected a Premium-only audio type but do not have any account "
+"details entered"
+msgstr ""
+
+msgid "You have selected an invalid audio type setting"
+msgstr ""
 
 msgid "You love this track"
 msgstr "Milujete túto pieseň"
@@ -3310,6 +3341,72 @@ msgstr "zastaviť"
 #, qt-format
 msgid "track %1"
 msgstr "skladba %1"
+
+#~ msgid "Fetch Missing Covers"
+#~ msgstr "Získať chýbajúce obaly"
+
+#~ msgid "Are you sure you want to install the following scripts?"
+#~ msgstr "Ste si istý, že chcete nainštalovať nasledujúce skripty?"
+
+#~ msgid "Clementine scripts"
+#~ msgstr "Clementine skripty"
+
+#~ msgid "Developer mode"
+#~ msgstr "Vývojársky režim"
+
+#~ msgid "Disable"
+#~ msgstr "Zakázať"
+
+#~ msgid "Enable"
+#~ msgstr "Povoliť"
+
+#~ msgid "Error installing script"
+#~ msgstr "Chyba pri inštalácii skriptu"
+
+#~ msgid "Error opening script archive"
+#~ msgstr "Chyba pri otváraní archívu skriptu"
+
+#~ msgid "Get new scripts"
+#~ msgstr "Získať nové skripty"
+
+#~ msgid "Install from file..."
+#~ msgstr "Inštalovať zo súboru..."
+
+#~ msgid "Install script file"
+#~ msgstr "Inštalovať súbor skriptu"
+
+#~ msgid "Install scripts"
+#~ msgstr "Inštalovať skripty"
+
+#~ msgid "My scripts"
+#~ msgstr "Moje skripty"
+
+#~ msgid "Reload"
+#~ msgstr "Znovu načítať"
+
+#~ msgid "Script Manager"
+#~ msgstr "Správca skriptov"
+
+#~ msgid "Settings..."
+#~ msgstr "Nastavenia..."
+
+#~ msgid "Some files failed to install.  The script may not work correctly."
+#~ msgstr ""
+#~ "Zlyhala inštalácia niektorých súborov. Skript možno nebude pracovať "
+#~ "správne."
+
+#~ msgid "The '%1' script was modified, you might have to reload it"
+#~ msgstr "Skript '%1' bol upravený, možno ho treba znovu načítať"
+
+#~ msgid "This is not a valid Clementine script file."
+#~ msgstr "Toto nieje platný súbor Clementine skriptu."
+
+#~ msgid ""
+#~ "Warning: scripts have full access to your computer and your music.  Only "
+#~ "install scripts that you trust."
+#~ msgstr ""
+#~ "Varovanie: skripty majú plný prístup k vášmu počítaču a vašej hudbe. "
+#~ "Inštalujte iba skripty, ktorím dôverujete."
 
 #~ msgid "%1 other listeners"
 #~ msgstr "%1 ďalších poslucháčov"
