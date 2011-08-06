@@ -1188,6 +1188,9 @@ msgstr ""
 "Ngoại trừ giữa các track trong album tương tự hoặc trong danh sách CUE tương "
 "tự"
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3285,6 +3288,9 @@ msgstr ""
 msgid "disc %1"
 msgstr "đĩa %1"
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr "không chứa"
 
@@ -3339,7 +3345,10 @@ msgstr "on"
 msgid "options"
 msgstr "options"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

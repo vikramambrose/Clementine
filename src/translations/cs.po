@@ -1189,6 +1189,9 @@ msgstr "Přehrané skladby"
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Kromě mezistop na tom samém albu nebo v tom samém listu CUE"
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3284,6 +3287,9 @@ msgstr ""
 msgid "disc %1"
 msgstr "Disk %1"
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr "Neobsahuje"
 
@@ -3338,7 +3344,10 @@ msgstr "Na"
 msgid "options"
 msgstr "Volby"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

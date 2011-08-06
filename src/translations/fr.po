@@ -1201,6 +1201,9 @@ msgstr "Déjà joués"
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Excepté entre les pistes d'un même album ou d'une même CUE sheet"
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3317,6 +3320,9 @@ msgstr ""
 msgid "disc %1"
 msgstr "CD %1"
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr "ne contient pas"
 
@@ -3371,7 +3377,10 @@ msgstr "sur"
 msgid "options"
 msgstr "options"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

@@ -1201,6 +1201,9 @@ msgstr "Ενίοτε έπαιξαν"
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Εκτός μεταξύ δύο κομματιών στο ίδιο άλμπουμ ή στο ίδιο φύλλο CUE"
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3310,6 +3313,9 @@ msgstr ""
 msgid "disc %1"
 msgstr "δίσκος %1"
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr "δεν περιέχει"
 
@@ -3364,7 +3370,10 @@ msgstr "σε"
 msgid "options"
 msgstr "επιλογές"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

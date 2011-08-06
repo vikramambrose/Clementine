@@ -1190,6 +1190,9 @@ msgstr "Totdeauna redat"
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Excepție între piesele de pe același album sau în aceeași filă CUE"
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3252,6 +3255,9 @@ msgstr ""
 msgid "disc %1"
 msgstr "disc %1"
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr ""
 
@@ -3306,7 +3312,10 @@ msgstr ""
 msgid "options"
 msgstr "opțiuni"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

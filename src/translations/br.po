@@ -1184,6 +1184,9 @@ msgstr "Bet lennet dija"
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr ""
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3250,6 +3253,9 @@ msgstr ""
 msgid "disc %1"
 msgstr "pladenn %1"
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr "n'en deus ket"
 
@@ -3304,7 +3310,10 @@ msgstr "war"
 msgid "options"
 msgstr "dibarzhioù"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

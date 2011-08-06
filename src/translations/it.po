@@ -1194,6 +1194,9 @@ msgstr "Mai riprodotte"
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Ad eccezione delle tracce dello stesso album o dello stesso CUE sheet"
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3307,6 +3310,9 @@ msgstr ""
 msgid "disc %1"
 msgstr "disco %1"
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr "non contiene"
 
@@ -3361,7 +3367,10 @@ msgstr "il"
 msgid "options"
 msgstr "opzioni"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

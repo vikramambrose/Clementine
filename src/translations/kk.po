@@ -1163,6 +1163,9 @@ msgstr ""
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr ""
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3216,6 +3219,9 @@ msgstr ""
 msgid "disc %1"
 msgstr ""
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr ""
 
@@ -3270,7 +3276,10 @@ msgstr ""
 msgid "options"
 msgstr "опциялар"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

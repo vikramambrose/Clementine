@@ -1185,6 +1185,9 @@ msgstr "Önceden çalınmış"
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Aynı albümde veya aynı CUE dosyasında bulunan parçalar hariç"
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3275,6 +3278,9 @@ msgstr ""
 msgid "disc %1"
 msgstr "disk %1"
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr "şunu içermiyor"
 
@@ -3329,7 +3335,10 @@ msgstr "açık"
 msgid "options"
 msgstr "seçenekler"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

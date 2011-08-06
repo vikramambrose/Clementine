@@ -1191,6 +1191,9 @@ msgstr "Valaha játszott"
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Kivéve az azonos albumon vagy azonos CUE fájlban lévő számok között"
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3291,6 +3294,9 @@ msgstr ""
 msgid "disc %1"
 msgstr "%1. lemez"
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr "nem tartalmazza"
 
@@ -3345,7 +3351,10 @@ msgstr "ezen"
 msgid "options"
 msgstr "beállítások"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

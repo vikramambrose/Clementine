@@ -41,7 +41,9 @@ ExportCoversDialog::DialogResult ExportCoversDialog::Exec() {
 
   // restore last accepted settings
   ui_->fileName->setText(s.value("fileName", "cover").toString());
-  ui_->overwrite->setChecked(s.value("overwrite", false).toBool());
+  ui_->doNotOverwrite->setChecked(s.value("overwrite", OverwriteMode_None).toInt() == OverwriteMode_None);
+  ui_->overwriteAll->setChecked(s.value("overwrite", OverwriteMode_All).toInt() == OverwriteMode_All);
+  ui_->overwriteSmaller->setChecked(s.value("overwrite", OverwriteMode_Smaller).toInt() == OverwriteMode_Smaller);
   ui_->forceSize->setChecked(s.value("forceSize", false).toBool());
   ui_->width->setText(s.value("width", "").toString());
   ui_->height->setText(s.value("height", "").toString());
@@ -52,7 +54,11 @@ ExportCoversDialog::DialogResult ExportCoversDialog::Exec() {
 
   if(exec() != QDialog::Rejected) {
     QString fileName = ui_->fileName->text();
-    bool overwrite = ui_->overwrite->isChecked();
+    int overwrite = ui_->doNotOverwrite->isChecked()
+                      ? OverwriteMode_None
+                      : (ui_->overwriteAll->isChecked()
+                           ? OverwriteMode_All
+                           : OverwriteMode_Smaller);
     bool forceSize = ui_->forceSize->isChecked();
     QString width = ui_->width->text();
     QString height = ui_->height->text();

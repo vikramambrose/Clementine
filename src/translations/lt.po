@@ -1189,6 +1189,9 @@ msgstr "Bet kada grota"
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Išskyrus tarp takelių tame pačiame albume arba tame pačiame CUE lape"
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3279,6 +3282,9 @@ msgstr ""
 msgid "disc %1"
 msgstr "diskas %1"
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr "neturi"
 
@@ -3333,7 +3339,10 @@ msgstr "iš"
 msgid "options"
 msgstr "parinktys"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

@@ -1191,6 +1191,9 @@ msgstr "Någonsin spelade"
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr ""
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3277,6 +3280,9 @@ msgstr ""
 msgid "disc %1"
 msgstr "skiva %1"
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr "som inte innehåller"
 
@@ -3331,7 +3337,10 @@ msgstr "på"
 msgid "options"
 msgstr "alternativ"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

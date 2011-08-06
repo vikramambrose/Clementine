@@ -1188,6 +1188,9 @@ msgstr "Някога пускана"
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Освен между песните в един и същи албум или в един и същи CUE лист"
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3294,6 +3297,9 @@ msgstr ""
 msgid "disc %1"
 msgstr "диск %1"
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr "не съдържа"
 
@@ -3348,7 +3354,10 @@ msgstr "вкл."
 msgid "options"
 msgstr "опции"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

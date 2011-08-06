@@ -1193,6 +1193,9 @@ msgstr "Ooit afgespeeld"
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr "Behalve tussen nummers van hetzelfde album of in dezelfde CUE sheet"
 
+msgid "Existing covers:"
+msgstr ""
+
 msgid "Export covers"
 msgstr ""
 
@@ -3302,6 +3305,9 @@ msgstr ""
 msgid "disc %1"
 msgstr "schijf %1"
 
+msgid "do not overwrite"
+msgstr ""
+
 msgid "does not contain"
 msgstr "bevat niet"
 
@@ -3356,7 +3362,10 @@ msgstr "aan"
 msgid "options"
 msgstr "opties"
 
-msgid "overwrite existing covers"
+msgid "overwrite all"
+msgstr ""
+
+msgid "overwrite smaller ones only"
 msgstr ""
 
 msgid "press enter"

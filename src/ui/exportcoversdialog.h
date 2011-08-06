@@ -30,6 +30,12 @@ class ExportCoversDialog : public QDialog {
   ExportCoversDialog(QWidget* parent = 0);
   ~ExportCoversDialog();
 
+  enum OverwriteMode {
+    OverwriteMode_None = 0,
+    OverwriteMode_All = 1,
+    OverwriteMode_Smaller = 2
+  };
+
   struct DialogResult {
     QString fileName_;
     bool overwrite_;
