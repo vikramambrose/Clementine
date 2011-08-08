@@ -27,7 +27,7 @@
 
 const char* TinySongProvider::kApiKey = "ef686f8dbdc5278558bc2f9a04912ae7";
 const char* TinySongProvider::kMetadataUrl = "http://tinysong.com/b/";
-const char* TinySongProvider::kTweetUrl = "https://twitter.com/share";
+const char* TinySongProvider::kTweetUrl = "https://twitter.com/intent/tweet";
 
 TinySongProvider::TinySongProvider()
     : network_(new NetworkAccessManager) {
@@ -76,8 +76,10 @@ void TinySongProvider::FetchedInfo() {
   QString url = map["Url"].toString();
   QString title = map["SongName"].toString();
 
+  QString tweet = "From Clementine: " + url;
+
   QUrl tweet_url(kTweetUrl);
-  tweet_url.addQueryItem("url", url);
+  tweet_url.addQueryItem("text", tweet);
 
   CollapsibleInfoPane::Data data;
   data.id_ = "tinysong/url";
