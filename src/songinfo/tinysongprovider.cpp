@@ -77,7 +77,9 @@ void TinySongProvider::FetchedInfo() {
   xml_writer.writeStartElement("div");
     xml_writer.writeStartElement("a");
     xml_writer.writeAttribute("href", tweet_url.toString());
-    xml_writer.writeCharacters("Tweet!");
+      xml_writer.writeStartElement("img");
+      xml_writer.writeAttribute("src", ":/tweetn.png");
+      xml_writer.writeEndElement();
     xml_writer.writeEndElement();
   xml_writer.writeEndElement();
 

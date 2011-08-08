@@ -343,5 +343,6 @@
         <file>providers/digitallyimported.png</file>
         <file>providers/skyfm.png</file>
         <file>providers/digitallyimported-32.png</file>
+        <file>tweetn.png</file>
     </qresource>
 </RCC>
