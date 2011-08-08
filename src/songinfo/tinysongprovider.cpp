@@ -78,6 +78,7 @@ void TinySongProvider::FetchedInfo() {
     xml_writer.writeStartElement("a");
     xml_writer.writeAttribute("href", tweet_url.toString());
     xml_writer.writeCharacters("Tweet!");
+    xml_writer.writeEndElement();
   xml_writer.writeEndElement();
 
   SongInfoTextView* widget = new SongInfoTextView;
