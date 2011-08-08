@@ -3,6 +3,7 @@
 #include <qjson/parser.h>
 
 #include <QNetworkReply>
+#include <QXmlStreamWriter>
 
 #include "core/network.h"
 #include "songinfotextview.h"
@@ -55,16 +56,23 @@ void TinySongProvider::FetchedInfo() {
 
   QVariantMap map = result.toMap();
   QString url = map["Url"].toString();
-
+  QString title = map["SongName"].toString();
 
   CollapsibleInfoPane::Data data;
   data.id_ = "tinysong/url";
   data.title_ = "TinySong";
   data.type_ = CollapsibleInfoPane::Data::Type_PlayCounts;
 
+  QString html;
+  QXmlStreamWriter xml_writer(&html);
+  xml_writer.writeStartElement("a");
+  xml_writer.writeAttribute("href", url);
+  xml_writer.writeCharacters(title);
+  xml_writer.writeEndElement();
+
   SongInfoTextView* widget = new SongInfoTextView;
   data.contents_ = widget;
-  widget->SetHtml(url);
+  widget->SetHtml(html);
 
   emit InfoReady(id, data);
 }
