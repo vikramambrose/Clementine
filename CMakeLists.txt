@@ -67,6 +67,7 @@ pkg_check_modules(INDICATEQT indicate-qt)
 pkg_check_modules(ARCHIVE libarchive)
 pkg_check_modules(SPOTIFY libspotify>=0.0.8)
 pkg_check_modules(CDIO libcdio)
+pkg_check_modules(QJSON QJson)
 
 if (WIN32)
   find_package(ZLIB REQUIRED)
@@ -151,6 +152,7 @@ include_directories(${GSTREAMER_INCLUDE_DIRS})
 include_directories(${GLIB_INCLUDE_DIRS})
 include_directories(${GLIBCONFIG_INCLUDE_DIRS})
 include_directories(${LIBXML_INCLUDE_DIRS})
+include_directories(${QJSON_INCLUDE_DIRS})
 include_directories("3rdparty/universalchardet")
 
 # Remove GLU and GL from the link line - they're not really required

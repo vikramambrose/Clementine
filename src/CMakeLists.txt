@@ -217,6 +217,7 @@ set(SOURCES
   songinfo/songinfotextview.cpp
   songinfo/songinfoview.cpp
   songinfo/songplaystats.cpp
+  songinfo/tinysongprovider.cpp
   songinfo/ultimatelyricsprovider.cpp
   songinfo/ultimatelyricsreader.cpp
 
@@ -428,6 +429,7 @@ set(HEADERS
   songinfo/songinfotextview.h
   songinfo/songinfoview.h
   songinfo/songplaystats.h
+  songinfo/tinysongprovider.h
   songinfo/ultimatelyricsprovider.h
   songinfo/ultimatelyricsreader.h
 
@@ -972,6 +974,7 @@ target_link_libraries(clementine_lib
   ${QTIOCOMPRESSOR_LIBRARIES}
   ${CMAKE_THREAD_LIBS_INIT}
   ${CDIO_LIBRARIES}
+  ${QJSON_LIBRARIES}
   dl
   z
 )

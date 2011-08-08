@@ -18,6 +18,7 @@
 #include "config.h"
 #include "songinfoprovider.h"
 #include "songinfoview.h"
+#include "tinysongprovider.h"
 #include "ultimatelyricsprovider.h"
 #include "ultimatelyricsreader.h"
 
@@ -45,6 +46,8 @@ SongInfoView::SongInfoView(QWidget* parent)
   QFutureWatcher<ProviderList>* watcher = new QFutureWatcher<ProviderList>(this);
   watcher->setFuture(future);
   connect(watcher, SIGNAL(finished()), SLOT(UltimateLyricsParsed()));
+
+  fetcher_->AddProvider(new TinySongProvider);
 
 #ifdef HAVE_LIBLASTFM
   fetcher_->AddProvider(new LastfmTrackInfoProvider);
