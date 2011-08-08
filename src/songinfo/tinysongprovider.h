@@ -27,6 +27,7 @@ class TinySongProvider : public SongInfoProvider {
 
   static const char* kApiKey;
   static const char* kMetadataUrl;
+  static const char* kTweetUrl;
 };
 
 #endif

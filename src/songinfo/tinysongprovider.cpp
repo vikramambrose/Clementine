@@ -10,6 +10,7 @@
 
 const char* TinySongProvider::kApiKey = "ef686f8dbdc5278558bc2f9a04912ae7";
 const char* TinySongProvider::kMetadataUrl = "http://tinysong.com/b/";
+const char* TinySongProvider::kTweetUrl = "https://twitter.com/share";
 
 TinySongProvider::TinySongProvider()
     : network_(new NetworkAccessManager) {
@@ -58,6 +59,9 @@ void TinySongProvider::FetchedInfo() {
   QString url = map["Url"].toString();
   QString title = map["SongName"].toString();
 
+  QUrl tweet_url(kTweetUrl);
+  tweet_url.addQueryItem("url", url);
+
   CollapsibleInfoPane::Data data;
   data.id_ = "tinysong/url";
   data.title_ = "TinySong";
@@ -68,6 +72,12 @@ void TinySongProvider::FetchedInfo() {
   xml_writer.writeStartElement("a");
   xml_writer.writeAttribute("href", url);
   xml_writer.writeCharacters(title);
+  xml_writer.writeEndElement();
+
+  xml_writer.writeStartElement("div");
+    xml_writer.writeStartElement("a");
+    xml_writer.writeAttribute("href", tweet_url.toString());
+    xml_writer.writeCharacters("Tweet!");
   xml_writer.writeEndElement();
 
   SongInfoTextView* widget = new SongInfoTextView;
