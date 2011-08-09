@@ -54,11 +54,11 @@ ExportCoversDialog::DialogResult ExportCoversDialog::Exec() {
 
   if(exec() != QDialog::Rejected) {
     QString fileName = ui_->fileName->text();
-    int overwrite = ui_->doNotOverwrite->isChecked()
-                      ? OverwriteMode_None
-                      : (ui_->overwriteAll->isChecked()
-                           ? OverwriteMode_All
-                           : OverwriteMode_Smaller);
+    OverwriteMode overwrite = ui_->doNotOverwrite->isChecked()
+                                ? OverwriteMode_None
+                                  : (ui_->overwriteAll->isChecked()
+                                       ? OverwriteMode_All
+                                       : OverwriteMode_Smaller);
     bool forceSize = ui_->forceSize->isChecked();
     QString width = ui_->width->text();
     QString height = ui_->height->text();
@@ -71,6 +71,9 @@ ExportCoversDialog::DialogResult ExportCoversDialog::Exec() {
 
     result.fileName_ = fileName;
     result.overwrite_ = overwrite;
+    result.forceSize_ = forceSize;
+    result.width_ = width.toInt();
+    result.height_ = height.toInt();
   }
 
   return result;

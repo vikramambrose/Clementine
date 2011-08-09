@@ -575,9 +575,9 @@ void AlbumCoverManager::ExportCovers() {
                               ? "jpg"
                               : extension);
 
-    // we're handling overwrite as remove + copy; we remove
+    // we're handling overwrite as remove + copy - we remove
     // the old file first
-    if(result.overwrite_ && QFile::exists(new_file)) {
+    if(result.overwrite_ != ExportCoversDialog::OverwriteMode_None && QFile::exists(new_file)) {
       // make sure we can remove the old file
       if(!QFile::remove(new_file)) {
         bad++;

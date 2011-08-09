@@ -38,7 +38,10 @@ class ExportCoversDialog : public QDialog {
 
   struct DialogResult {
     QString fileName_;
-    bool overwrite_;
+    OverwriteMode overwrite_;
+    bool forceSize_;
+    int width_;
+    int height_;
   };
 
   DialogResult Exec();
