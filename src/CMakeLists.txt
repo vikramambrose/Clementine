@@ -193,6 +193,7 @@ set(SOURCES
   playlistparsers/xspfparser.cpp
 
   resolvers/libraryresolver.cpp
+  resolvers/songresolver.cpp
 
   smartplaylists/generator.cpp
   smartplaylists/generatorinserter.cpp
@@ -407,6 +408,7 @@ set(HEADERS
 
   resolvers/libraryresolver.h
   resolvers/resolver.h
+  resolvers/songresolver.h
 
   smartplaylists/generator.h
   smartplaylists/generatorinserter.h
