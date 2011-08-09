@@ -27,6 +27,8 @@ QString GetMusicDirectory();
 
 bool MigrateLegacyConfigFiles();
 
+QString CheckOAuth();
+
 }  // namespace mac
 
 #endif

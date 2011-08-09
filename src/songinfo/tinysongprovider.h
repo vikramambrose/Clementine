@@ -37,8 +37,12 @@ class TinySongProvider : public SongInfoProvider {
 
  private slots:
   void FetchedInfo();
+  void OAuthChecker();
+  void FetchRefreshTokenFinished();
 
  private:
+  void FetchRefreshToken(const QString& auth_code);
+
   QMap<QNetworkReply*, int> requests_;
   NetworkAccessManager* network_;
 

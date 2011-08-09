@@ -242,6 +242,24 @@ void MacMain() {
   #endif
 }
 
+QString CheckOAuth() {
+  NSArray* windows = (NSArray*) CGWindowListCopyWindowInfo(
+      kCGWindowListExcludeDesktopElements,
+      kCGNullWindowID);
+  for (int i = 0; i < [windows count]; ++i) {
+    NSDictionary* window_dict = (NSDictionary*)[windows objectAtIndex:i];
+    NSLog(@"%@", window_dict);
+    NSObject* value = (NSObject*)[window_dict objectForKey:(NSString*)kCGWindowName];
+    if (value) {
+      QString window_name = QString::fromUtf8([((NSString*)value) UTF8String]);
+      if (window_name.startsWith("Success code=")) {
+        return window_name;
+      }
+    }
+  }
+  return QString::null;
+}
+
 void SetShortcutHandler(MacGlobalShortcutBackend* handler) {
   [NSApp SetShortcutHandler: handler];
 }

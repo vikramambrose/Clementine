@@ -18,10 +18,14 @@
 #include "tinysongprovider.h"
 
 #include <qjson/parser.h>
+#include <qjson/serializer.h>
 
 #include <QNetworkReply>
+#include <QTimer>
 #include <QXmlStreamWriter>
 
+#include "core/logging.h"
+#include "core/mac_startup.h"
 #include "core/network.h"
 #include "songinfotextview.h"
 
@@ -102,9 +106,70 @@ void TinySongProvider::FetchedInfo() {
     xml_writer.writeEndElement();
   xml_writer.writeEndElement();
 
+  xml_writer.writeStartElement("div");
+    xml_writer.writeStartElement("a");
+    xml_writer.writeAttribute("href", 
+      "https://accounts.google.com/o/oauth2/auth"
+      "?client_id=679260893280.apps.googleusercontent.com"
+      "&redirect_uri=urn:ietf:wg:oauth:2.0:oob"
+      "&scope=https://www.google.com/m8/feeds/"
+      "&response_type=code");
+    xml_writer.writeCharacters("Google OAuth");
+    xml_writer.writeEndElement();
+  xml_writer.writeEndElement();
+
   SongInfoTextView* widget = new SongInfoTextView;
   data.contents_ = widget;
   widget->SetHtml(html);
 
+  QTimer* timer = new QTimer();
+  timer->setInterval(1000);
+  timer->start();
+  connect(timer, SIGNAL(timeout()), SLOT(OAuthChecker()));
+
   emit InfoReady(id, data);
+}
+
+void TinySongProvider::OAuthChecker() {
+  QString success_code = mac::CheckOAuth();
+  if (!success_code.isEmpty()) {
+    qLog(Debug) << success_code;
+    static_cast<QTimer*>(sender())->stop();
+    QString auth_code = success_code.split('=')[1];
+    FetchRefreshToken(auth_code);
+  }
+}
+
+void TinySongProvider::FetchRefreshToken(const QString& auth_code) {
+  QUrl url("https://accounts.google.com/o/oauth2/token");
+  QString post_data;
+  post_data += "client_id=679260893280.apps.googleusercontent.com";
+  post_data += "&client_secret=l3cWb8efUZsrBI4wmY3uKl6i";
+  post_data += "&code=" + auth_code;
+  post_data += "&redirect_uri=urn:ietf:wg:oauth:2.0:oob";
+  post_data += "&grant_type=authorization_code";
+
+  QNetworkRequest req(url);
+  QNetworkReply* reply = network_->post(req, post_data.toUtf8());
+  connect(reply, SIGNAL(finished()), SLOT(FetchRefreshTokenFinished()));
+}
+
+void TinySongProvider::FetchRefreshTokenFinished() {
+  qLog(Debug) << Q_FUNC_INFO;
+  QNetworkReply* reply = qobject_cast<QNetworkReply*>(sender());
+  Q_ASSERT(reply);
+  reply->deleteLater();
+
+  QJson::Parser parser;
+  bool ok = false;
+  QVariant result = parser.parse(reply, &ok);
+  qLog(Debug) << result;
+  if (!ok) {
+    qLog(Warning) << "Could not parse json from Google oauth";
+    return;
+  }
+
+  QVariantMap map = result.toMap();
+  QString access_token = map["access_token"].toString();
+  qLog(Debug) << access_token;
 }
