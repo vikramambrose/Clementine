@@ -144,6 +144,9 @@ msgstr "(különbözik több számnál)"
 msgid "...and all the Amarok contributors"
 msgstr "...és az összes Amarok közreműködő"
 
+msgid "0000; "
+msgstr ""
+
 msgid "0:00:00"
 msgstr "0:00:00"
 

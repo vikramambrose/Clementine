@@ -144,6 +144,9 @@ msgstr "(khác nhau qua nhiều bài hát)"
 msgid "...and all the Amarok contributors"
 msgstr "...và tất cả cộng tác viên của Amarok"
 
+msgid "0000; "
+msgstr ""
+
 msgid "0:00:00"
 msgstr "0:00:00"
 

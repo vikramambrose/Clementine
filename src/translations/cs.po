@@ -146,6 +146,9 @@ msgstr "(liší se u jednotlivých písniček)"
 msgid "...and all the Amarok contributors"
 msgstr "...a všichni ti, kdož přispěli vývoji přehrávače Amarok"
 
+msgid "0000; "
+msgstr ""
+
 msgid "0:00:00"
 msgstr "0:00:00"
 

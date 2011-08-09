@@ -144,6 +144,9 @@ msgstr ""
 msgid "...and all the Amarok contributors"
 msgstr "...e a todos os que contribuíron con Amarok"
 
+msgid "0000; "
+msgstr ""
+
 msgid "0:00:00"
 msgstr "0:00:00"
 

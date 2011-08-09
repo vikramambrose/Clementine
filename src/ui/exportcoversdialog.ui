@@ -173,7 +173,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="width"/>
+      <widget class="QLineEdit" name="width">
+       <property name="inputMask">
+        <string>0000; </string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QLabel" name="heightLabel">
@@ -183,7 +187,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="height"/>
+      <widget class="QLineEdit" name="height">
+       <property name="inputMask">
+        <string>0000; </string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>

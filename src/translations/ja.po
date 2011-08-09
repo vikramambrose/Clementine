@@ -144,6 +144,9 @@ msgstr "(複数の曲で一致しません)"
 msgid "...and all the Amarok contributors"
 msgstr "...および Amarok に貢献したすべての人々"
 
+msgid "0000; "
+msgstr ""
+
 msgid "0:00:00"
 msgstr "0:00:00"
 

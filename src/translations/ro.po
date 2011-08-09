@@ -144,6 +144,9 @@ msgstr "(diferit în cadrul mai multor melodii)"
 msgid "...and all the Amarok contributors"
 msgstr "...și tuturor contribuitorilor Amarok"
 
+msgid "0000; "
+msgstr ""
+
 msgid "0:00:00"
 msgstr "0:00:00"
 

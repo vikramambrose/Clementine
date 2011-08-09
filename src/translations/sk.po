@@ -145,6 +145,9 @@ msgstr "(odlišné naprieč mnohými piesňami)"
 msgid "...and all the Amarok contributors"
 msgstr "...a všetkým prispievateľom Amaroku"
 
+msgid "0000; "
+msgstr ""
+
 msgid "0:00:00"
 msgstr "0:00:00"
 
