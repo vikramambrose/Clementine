@@ -539,8 +539,7 @@ void AlbumCoverManager::ExportCovers() {
 
   ExportCoversDialog::DialogResult result = export_covers_dialog_->Exec();
 
-  // cancelled?
-  if(result.fileName_.isEmpty()) {
+  if(result.cancelled_) {
     return;
   }
 
@@ -555,51 +554,25 @@ void AlbumCoverManager::ExportCovers() {
   for (int i = 0; i < album_count; i++) {
     QListWidgetItem* item = ui_->albums->item(i);
 
-    // ignore hidden and coverless albums
-    if (item->isHidden() || item->icon().cacheKey() == no_cover_icon_.cacheKey())
+    // skip hidden and coverless albums
+    if (item->isHidden() || item->icon().cacheKey() == no_cover_icon_.cacheKey()) {
+      bad++;
       continue;
+    }
 
     Song song = ItemAsSong(item);
     QString cover_path = song.CoverPath();
 
     // manually unset
     if(cover_path.isEmpty()) {
+      bad++;
       continue;
     }
 
-    QString dir = song.url().toLocalFile().section('/', 0, -2);
-    QString extension = cover_path.section('.', -1);
-
-    QString new_file = dir + '/' + result.fileName_ + '.' +
-                           (cover_path == Song::kEmbeddedCover
-                              ? "jpg"
-                              : extension);
-
-    // we're handling overwrite as remove + copy - we remove
-    // the old file first
-    if(result.overwrite_ != ExportCoversDialog::OverwriteMode_None && QFile::exists(new_file)) {
-      // make sure we can remove the old file
-      if(!QFile::remove(new_file)) {
-        bad++;
-        continue;
-      }
-    }
-
-    // an embedded cover
-    if(cover_path == Song::kEmbeddedCover) {
-
-      QImage embedded = Song::LoadEmbeddedArt(song.url().toLocalFile());
-      if(!embedded.save(new_file)) {
-        bad++;
-      }
-
-   // automatic or manual cover, available in an image file
+    if(result.RequiresCoverProcessing()) {
+      bad += ProcessAndExportCover(result, song);
     } else {
-
-      if(!QFile::copy(cover_path, new_file)) {
-        bad++;
-      }
-
+      bad += ExportCover(result, song);
     }
 
     UpdateExportStatus(i, bad, album_count);
@@ -610,6 +583,125 @@ void AlbumCoverManager::ExportCovers() {
 
   progress_bar_->hide();
   EnableCoversButtons();
+}
+
+// Exports a single album cover using a "save QImage to file" approach.
+// For performance reasons this method will be invoked only if loading
+// and in memory processing of images is necessary for current settings
+// which means that:
+// - either the force size flag is being used
+// - or the "overwrite smaller" mode is used
+// In all other cases, the faster ExportCover() method will be used.
+int AlbumCoverManager::ProcessAndExportCover(const ExportCoversDialog::DialogResult& result,
+                                             const Song& song) {
+  QString cover_path = song.CoverPath();
+
+  // either embedded or disk - the one we'll export for the current album
+  QImage cover;
+
+  QImage embedded_cover;
+  QImage disk_cover;
+
+  // load embedded cover if any
+  if(song.has_embedded_cover()) {
+    embedded_cover = Song::LoadEmbeddedArt(song.url().toLocalFile());
+
+    if(embedded_cover.isNull()) {
+      return 1;
+    }
+
+    cover = embedded_cover;
+
+  }
+
+  // load a file cover which iss mandatory if there's no embedded cover
+  disk_cover.load(cover_path);
+
+  if(embedded_cover.isNull()) {
+    if(disk_cover.isNull()) {
+      return 1;
+    }
+
+    cover = disk_cover;
+
+  }
+
+  // rescale if necessary
+  if(result.IsSizeForced()) {
+    cover = cover.scaled(QSize(result.width_, result.height_), Qt::IgnoreAspectRatio);
+  }
+
+  QString dir = song.url().toLocalFile().section('/', 0, -2);
+  QString extension = cover_path.section('.', -1);
+
+  QString new_file = dir + '/' + result.fileName_ + '.' +
+                         (cover_path == Song::kEmbeddedCover
+                            ? "jpg"
+                            : extension);
+
+  // we're handling overwrite as remove + copy so we need to delete the old file first
+  if(QFile::exists(new_file) && result.overwrite_ != ExportCoversDialog::OverwriteMode_None) {
+
+    // if the mode is "overwrite smaller" then skip the cover if a bigger one
+    // is already available in the folder
+    if(result.overwrite_ == ExportCoversDialog::OverwriteMode_Smaller) {
+      QImage existing;
+      existing.load(new_file);
+
+      if(existing.isNull() || existing.size().height() >= cover.size().height()
+           || existing.size().width() >= cover.size().width()) {
+
+        return 1;
+
+      }
+    }
+
+    if(!QFile::remove(new_file)) {
+      return 1;
+    }
+  }
+
+  return !cover.save(new_file);
+}
+
+// Exports a single album cover using a "copy file" approach.
+int AlbumCoverManager::ExportCover(const ExportCoversDialog::DialogResult& result,
+                                   const Song& song) {
+  QString cover_path = song.CoverPath();
+
+  QString dir = song.url().toLocalFile().section('/', 0, -2);
+  QString extension = cover_path.section('.', -1);
+
+  QString new_file = dir + '/' + result.fileName_ + '.' +
+                         (cover_path == Song::kEmbeddedCover
+                            ? "jpg"
+                            : extension);
+
+  // we're handling overwrite as remove + copy so we need to delete the old file first
+  if(result.overwrite_ != ExportCoversDialog::OverwriteMode_None && QFile::exists(new_file)) {
+    if(!QFile::remove(new_file)) {
+      return 1;
+    }
+  }
+
+  // an embedded cover
+  if(cover_path == Song::kEmbeddedCover) {
+
+    QImage embedded = Song::LoadEmbeddedArt(song.url().toLocalFile());
+    if(!embedded.save(new_file)) {
+      return 1;
+    }
+
+ // automatic or manual cover, available in an image file
+  } else {
+
+    if(!QFile::copy(cover_path, new_file)) {
+      return 1;
+    }
+
+  }
+
+  return 0;
 }
 
 void AlbumCoverManager::UpdateCoverInList(QListWidgetItem* item, const QString& cover) {

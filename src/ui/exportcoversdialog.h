@@ -37,11 +37,21 @@ class ExportCoversDialog : public QDialog {
   };
 
   struct DialogResult {
+    bool cancelled_;
+
     QString fileName_;
     OverwriteMode overwrite_;
     bool forceSize_;
     int width_;
     int height_;
+
+    bool IsSizeForced() const {
+      return forceSize_ && width_ > 0 && height_ > 0;
+    }
+
+    bool RequiresCoverProcessing() const {
+      return IsSizeForced() || overwrite_ == OverwriteMode_Smaller;
+    }
   };
 
   DialogResult Exec();

@@ -51,8 +51,9 @@ ExportCoversDialog::DialogResult ExportCoversDialog::Exec() {
   ForceSizeToggled(ui_->forceSize->checkState());
 
   DialogResult result = DialogResult();
+  result.cancelled_ = (exec() == QDialog::Rejected);
 
-  if(exec() != QDialog::Rejected) {
+  if(!result.cancelled_) {
     QString fileName = ui_->fileName->text();
     OverwriteMode overwrite = ui_->doNotOverwrite->isChecked()
                                 ? OverwriteMode_None

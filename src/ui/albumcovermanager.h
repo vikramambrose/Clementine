@@ -28,6 +28,7 @@
 #include "core/song.h"
 #include "covers/albumcoverloader.h"
 #include "covers/coversearchstatistics.h"
+#include "ui/exportcoversdialog.h"
 
 class AlbumCoverChoiceController;
 class AlbumCoverFetcher;
@@ -84,9 +85,14 @@ class AlbumCoverManager : public QMainWindow {
   void CoverImageLoaded(quint64 id, const QImage& image);
   void UpdateFilter();
   void FetchAlbumCovers();
-  void ExportCovers();
   void AlbumCoverFetched(quint64 id, const QImage& image,
                          const CoverSearchStatistics& statistics);
+
+  void ExportCovers();
+  int ProcessAndExportCover(const ExportCoversDialog::DialogResult& result,
+                            const Song& song);
+  int ExportCover(const ExportCoversDialog::DialogResult& result,
+                  const Song& song);
 
   void LoadCoverFromFile();
   void SaveCoverToFile();
