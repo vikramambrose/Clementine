@@ -16,6 +16,7 @@
 */
 
 #include <cdio/cdio.h>
+#include <QFileInfo>
 #include <QMutex>
 #include <QThread>
 #include <QWaitCondition>
@@ -76,7 +77,6 @@ QString CddaLister::MakeFriendlyName(const QString& id) {
     return QString(cd_info.psz_model);
   }
   cdio_destroy(cdio);
-  return QString();
   return QString("CD (") + id + ")";
 }
 
@@ -92,14 +92,29 @@ void CddaLister::UpdateDeviceFreeSpace(const QString&) {
 }
 
 void CddaLister::Init() {
+  cdio_init();
+#ifdef Q_OS_DARWIN
+  if (!cdio_have_driver(DRIVER_OSX)) {
+    qLog(Error) << "libcdio was compiled without support for OS X!";
+  }
+#endif
   char **devices = cdio_get_devices(DRIVER_DEVICE);
   if (!devices) {
+    qLog(Debug) << "No CD devices found";
     return;
   }
   for (; *devices != NULL; ++devices) {
-    if (strcmp("/dev/cdrom", *devices) == 0)
-      continue;
     QString device(*devices);
+    QFileInfo device_info(device);
+    if (device_info.isSymLink())
+      continue;
+#ifdef Q_OS_DARWIN
+    // Every track is detected as a separate device on Darwin. The raw disk looks
+    // like /dev/rdisk1
+    if (!device.contains(QRegExp("^/dev/rdisk[0-9]$"))) {
+      continue;
+    }
+#endif
     devices_list_ << device;
     emit DeviceAdded(device);
   }
