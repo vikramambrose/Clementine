@@ -25,6 +25,7 @@
 #include <IOKit/IOCFPlugin.h>
 #include <IOKit/usb/IOUSBLib.h>
 #include <IOKit/storage/IOMedia.h>
+#include <IOKit/storage/IOCDMedia.h>
 
 #import <AppKit/NSWorkspace.h>
 #import <Foundation/NSAutoreleasePool.h>
@@ -335,6 +336,16 @@ void MacDeviceLister::DiskAddedCallback(DADiskRef disk, void* context) {
   MacDeviceLister* me = reinterpret_cast<MacDeviceLister*>(context);
 
   NSDictionary* properties = (NSDictionary*)DADiskCopyDescription(disk);
+
+  NSString* kind = [properties objectForKey:(NSString*)kDADiskDescriptionMediaKindKey];
+  if (kind && strcmp([kind UTF8String], kIOCDMediaClass) == 0) {
+    // CD inserted.
+    QString bsd_name = QString::fromAscii(DADiskGetBSDName(disk));
+    me->cd_devices_ << bsd_name;
+    emit me->DeviceAdded(bsd_name);
+    return;
+  }
+
   NSURL* volume_path = 
       [[properties objectForKey:(NSString*)kDADiskDescriptionVolumePathKey] copy];
 
@@ -371,9 +382,16 @@ void MacDeviceLister::DiskRemovedCallback(DADiskRef disk, void* context) {
   MacDeviceLister* me = reinterpret_cast<MacDeviceLister*>(context);
   // We cannot access the USB tree when the disk is removed but we still get
   // the BSD disk name.
+
+  QString bsd_name = QString::fromAscii(DADiskGetBSDName(disk));
+  if (me->cd_devices_.remove(bsd_name)) {
+    emit me->DeviceRemoved(bsd_name);
+    return;
+  }
+
   for (QMap<QString, QString>::iterator it = me->current_devices_.begin();
        it != me->current_devices_.end(); ++it) {
-    if (it.value() == QString::fromLocal8Bit(DADiskGetBSDName(disk))) {
+    if (it.value() == bsd_name) {
       emit me->DeviceRemoved(it.key());
       me->current_devices_.erase(it);
       break;
@@ -583,7 +601,7 @@ void MacDeviceLister::USBDeviceRemovedCallback(void* refcon, io_iterator_t it) {
       device.product = QString::fromUtf8([product UTF8String]);
       device.vendor_id = [vendor_id unsignedShortValue];
       device.product_id = [product_id unsignedShortValue];
-
+  
       me->RemovedMTPDevice(serial);
     }
   }
@@ -611,6 +629,10 @@ bool IsMTPSerial(const QString& serial) {
   return serial.startsWith("MTP");
 }
 
+bool MacDeviceLister::IsCDDevice(const QString& serial) const {
+  return cd_devices_.contains(serial);
+}
+
 QString MacDeviceLister::MakeFriendlyName(const QString& serial) {
   if (IsMTPSerial(serial)) {
     const MTPDevice& device = mtp_devices_[serial];
@@ -620,12 +642,25 @@ QString MacDeviceLister::MakeFriendlyName(const QString& serial) {
       return device.vendor + " " + device.product;
     }
   }
-  QString bsd_name = current_devices_[serial];
+
+  QString bsd_name = IsCDDevice(serial) ? *cd_devices_.find(serial) : current_devices_[serial];
   DASessionRef session = DASessionCreate(kCFAllocatorDefault);
   DADiskRef disk = DADiskCreateFromBSDName(
       kCFAllocatorDefault, session, bsd_name.toAscii().constData());
 
   io_object_t device = DADiskCopyIOMedia(disk);
+
+  if (IsCDDevice(serial)) {
+    NSDictionary* properties = (NSDictionary*)DADiskCopyDescription(disk);
+    NSLog(@"%@", properties);
+
+    NSString* device_name = (NSString*)[properties objectForKey:(NSString*)kDADiskDescriptionMediaNameKey];
+
+    CFRelease(disk);
+    CFRelease(session);
+    return QString::fromUtf8([device_name UTF8String]);
+  }
+
   QString vendor = GetUSBRegistryEntryString(device, CFSTR(kUSBVendorString));
   QString product = GetUSBRegistryEntryString(device, CFSTR(kUSBProductString));
   IOObjectRelease(device);
@@ -651,6 +686,10 @@ QList<QUrl> MacDeviceLister::MakeDeviceUrls(const QString& serial) {
     url.addQueryItem("product_id", QString::number(device.product_id));
     url.addQueryItem("quirks", QString::number(device.quirks));
     return QList<QUrl>() << url;
+  }
+
+  if (IsCDDevice(serial)) {
+    return QList<QUrl>() << QString("cdda:///dev/r" + serial);
   }
 
   QString bsd_name = current_devices_[serial];
@@ -679,6 +718,11 @@ QVariantList MacDeviceLister::DeviceIcons(const QString& serial) {
   if (IsMTPSerial(serial)) {
     return QVariantList();
   }
+
+  if (IsCDDevice(serial)) {
+    return QVariantList() << "media-optical";
+  }
+
   QString bsd_name = current_devices_[serial];
   DASessionRef session = DASessionCreate(kCFAllocatorDefault);
   DADiskRef disk = DADiskCreateFromBSDName(
@@ -778,6 +822,10 @@ quint64 MacDeviceLister::DeviceFreeSpace(const QString& serial){
 }
 
 QVariantMap MacDeviceLister::DeviceHardwareInfo(const QString& serial){return QVariantMap();}
+
+bool MacDeviceLister::AskForScan(const QString& serial) const {
+  return !IsCDDevice(serial);
+}
 
 void MacDeviceLister::UnmountDevice(const QString& serial) {
   if (IsMTPSerial(serial)) return;

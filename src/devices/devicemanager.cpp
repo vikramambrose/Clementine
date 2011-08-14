@@ -188,7 +188,8 @@ DeviceManager::DeviceManager(BackgroundThread<Database>* database,
   connected_devices_model_ = new DeviceStateFilterModel(this);
   connected_devices_model_->setSourceModel(this);
 
-#ifdef HAVE_AUDIOCD
+  // CD devices are detected via the DiskArbitration framework instead on Darwin.
+#if defined(HAVE_AUDIOCD) && !defined(Q_OS_DARWIN)
   AddLister(new CddaLister);
 #endif
 #ifdef HAVE_DEVICEKIT
@@ -318,7 +319,7 @@ QVariant DeviceManager::data(const QModelIndex& index, int role) const {
         if (info.database_id_ == -1 &&
             !info.BestBackend()->lister_->DeviceNeedsMount(info.BestBackend()->unique_id_)) {
 
-          if (info.BestBackend()->lister_->AskForScan()) {
+          if (info.BestBackend()->lister_->AskForScan(info.BestBackend()->unique_id_)) {
             boost::scoped_ptr<QMessageBox> dialog(new QMessageBox(
                 QMessageBox::Information, tr("Connect device"),
                 tr("This is the first time you have connected this device.  Clementine will now scan the device to find music files - this may take some time."),

@@ -4,6 +4,7 @@
 #include "devicelister.h"
 
 #include <QMutex>
+#include <QSet>
 #include <QThread>
 
 #include <DiskArbitration/DADisk.h>
@@ -23,6 +24,7 @@ class MacDeviceLister : public DeviceLister {
   virtual quint64 DeviceCapacity(const QString& id);
   virtual quint64 DeviceFreeSpace(const QString& id);
   virtual QVariantMap DeviceHardwareInfo(const QString& id);
+  virtual bool AskForScan(const QString& serial) const;
   virtual QString MakeFriendlyName(const QString& id);
   virtual QList<QUrl> MakeDeviceUrls(const QString& id);
 
@@ -64,11 +66,14 @@ class MacDeviceLister : public DeviceLister {
   quint64 GetFreeSpace(const QUrl& url);
   quint64 GetCapacity(const QUrl& url);
 
+  bool IsCDDevice(const QString& serial) const;
+
   DASessionRef loop_session_;
   CFRunLoopRef run_loop_;
 
   QMap<QString, QString> current_devices_;
   QMap<QString, MTPDevice> mtp_devices_;
+  QSet<QString> cd_devices_;
 
   QMutex libmtp_mutex_;
 
