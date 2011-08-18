@@ -143,7 +143,7 @@ struct Connection::Private : public gloox::ConnectionListener,
 };
 
 const char* Connection::Private::kDefaultServer = "talk.google.com";
-const char* Connection::Private::kDefaultJIDResource = "tomahawkxrmeagent";
+const char* Connection::Private::kDefaultJIDResource = "clementine";
 const char* Connection::Private::kDefaultJIDHost = "gmail.com";
 
 
@@ -301,10 +301,12 @@ bool Connection::Connect() {
   d->client_->setPresence(gloox::Presence::Available, 1);
 
   // Tomahawk support
-  d->client_->disco()->addFeature("tomahawk:player");
-  gloox::Capabilities* caps = new gloox::Capabilities;
+  d->client_->disco()->addFeature("tomahawk:sip:v1");
+  d->client_->disco()->addFeature("http://www.tomhawk-player.org/sip/transports");
+  gloox::Capabilities* caps = new gloox::Capabilities(d->client_->disco());
   caps->setNode("http://tomahawk-player.org/");
-  d->client_->presence().addExtension(caps);
+  d->client_->addPresenceExtension(caps);
+  qDebug() << caps->tag()->xml().c_str();
 
   //d->client_->setSASLMechanisms(gloox::SaslMechGoogleToken);
 
