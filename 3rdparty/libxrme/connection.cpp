@@ -577,22 +577,17 @@ void Connection::Private::handleDiscoError(
 
 void Connection::Private::handleMessage(const gloox::Message& message, gloox::MessageSession* session) {
   qDebug() << Q_FUNC_INFO << message.tag()->xml().c_str();
-  const std::string body = message.body();
-  qDebug() << body.c_str();
-
-  QJson::Parser parser;
-  bool ok = false;
-  QVariant result = parser.parse(QByteArray::fromRawData(body.data(), body.size()), &ok);
-  if (ok) {
-    qDebug() << result;
-
-    emit parent_->TomahawkSIPReceived(result);
-  }
 }
 
 bool Connection::Private::handleIq(const gloox::IQ& iq) {
+  qDebug() << Q_FUNC_INFO;
   gloox::Tag* xrme = iq.tag()->findChild("xrme");
   if (!xrme) {
+    gloox::Tag* tomahawk = iq.tag()->findChild("tomahawk");
+    if (tomahawk) {
+      qDebug() << tomahawk->xml().c_str();
+      return true;
+    }
     return false;
   }
 

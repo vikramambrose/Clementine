@@ -51,8 +51,9 @@ RemoteSettingsPage::RemoteSettingsPage(SettingsDialog* dialog)
 }
 
 QString RemoteSettingsPage::DefaultAgentName() {
-  return QString("%1 on %2").arg(QCoreApplication::applicationName(),
-                                 QHostInfo::localHostName());
+  return "Clementine Mac 0.8";
+  //return QString("%1 on %2").arg(QCoreApplication::applicationName(),
+  //                               QHostInfo::localHostName());
 }
 
 RemoteSettingsPage::~RemoteSettingsPage() {
