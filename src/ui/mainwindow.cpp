@@ -1435,33 +1435,38 @@ void MainWindow::EditTagDialogAccepted() {
 
   // This is really lame but we don't know what rows have changed
   ui_->playlist->view()->update();
+
+  playlists_->current()->Save();
 }
 
 void MainWindow::RenumberTracks() {
-  QModelIndexList indexes=ui_->playlist->view()->selectionModel()->selection().indexes();
-  int track=1;
+  QModelIndexList indexes =
+      ui_->playlist->view()->selectionModel()->selection().indexes();
+  int track = 1;
 
   // Get the index list in order
   qStableSort(indexes);
 
   // if first selected song has a track number set, start from that offset
-  if (indexes.size()) {
-    Song first_song=playlists_->current()->item_at(indexes[0].row())->Metadata();
-    if (int first_track = first_song.track())
-      track = first_track;
+  if (!indexes.isEmpty()) {
+    const Song first_song = playlists_->current()->item_at(indexes[0].row())->Metadata();
+
+    if (first_song.track() > 0)
+      track = first_song.track();
   }
 
   foreach (const QModelIndex& index, indexes) {
     if (index.column() != 0)
       continue;
 
-    int row = playlists_->current()->proxy()->mapToSource(index).row();
+    const QModelIndex source_index = playlists_->current()->proxy()->mapToSource(index);
+    int row = source_index.row();
     Song song = playlists_->current()->item_at(row)->Metadata();
 
     if (song.IsEditable()) {
       song.set_track(track);
       QFuture<bool> future = song.BackgroundSave();
-      ModelFutureWatcher<bool>* watcher = new ModelFutureWatcher<bool>(index, this);
+      ModelFutureWatcher<bool>* watcher = new ModelFutureWatcher<bool>(source_index, this);
       watcher->setFuture(future);
       connect(watcher, SIGNAL(finished()), SLOT(SongSaveComplete()));
     }
@@ -1487,12 +1492,13 @@ void MainWindow::SelectionSetValue() {
     if (index.column() != 0)
       continue;
 
-    int row = playlists_->current()->proxy()->mapToSource(index).row();
+    const QModelIndex source_index = playlists_->current()->proxy()->mapToSource(index);
+    int row = source_index.row();
     Song song = playlists_->current()->item_at(row)->Metadata();
 
     if (Playlist::set_column_value(song, column, column_value)) {
       QFuture<bool> future = song.BackgroundSave();
-      ModelFutureWatcher<bool>* watcher = new ModelFutureWatcher<bool>(index, this);
+      ModelFutureWatcher<bool>* watcher = new ModelFutureWatcher<bool>(source_index, this);
       watcher->setFuture(future);
       connect(watcher, SIGNAL(finished()), SLOT(SongSaveComplete()));
     }
