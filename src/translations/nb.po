@@ -1465,6 +1465,9 @@ msgstr "Inkludér cover i meldingen"
 msgid "Include all songs"
 msgstr ""
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr ""
 
@@ -2384,6 +2387,11 @@ msgid "Scrobble tracks that I listen to"
 msgstr "Fortell last.fm om sangene jeg har lyttet til"
 
 msgid "Search"
+msgstr ""
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
 msgstr ""
 
 msgid "Search Icecast stations"
@@ -3332,6 +3340,9 @@ msgstr ""
 
 msgid "stop"
 msgstr "stopp"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

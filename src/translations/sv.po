@@ -1487,6 +1487,9 @@ msgstr "Inkludera albumomslag i notifieringen"
 msgid "Include all songs"
 msgstr "Inkludera alla spår"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Öka volymen med 4%"
 
@@ -2407,6 +2410,11 @@ msgstr "Skrobbla låtar som jag lyssnar på"
 
 msgid "Search"
 msgstr "Sök"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Leta efter stationer på Icecast"
@@ -3380,6 +3388,9 @@ msgstr "som börjar med"
 
 msgid "stop"
 msgstr "stoppa"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

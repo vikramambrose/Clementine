@@ -1500,6 +1500,9 @@ msgstr "Incluir carátula en la notificación"
 msgid "Include all songs"
 msgstr "Incluir todas las canciones"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Incrementar el volumen en 4%"
 
@@ -2426,6 +2429,11 @@ msgstr "Enviar las pistas que reproduzco"
 
 msgid "Search"
 msgstr "Buscar"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Buscar estaciones Icecast"
@@ -3410,6 +3418,9 @@ msgstr "comienza con"
 
 msgid "stop"
 msgstr "detener"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

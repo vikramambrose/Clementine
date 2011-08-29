@@ -1455,6 +1455,9 @@ msgstr ""
 msgid "Include all songs"
 msgstr "包含所有的歌曲"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "以 4% 为单位增大音量"
 
@@ -2375,6 +2378,11 @@ msgstr ""
 
 msgid "Search"
 msgstr "搜索"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr ""
@@ -3321,6 +3329,9 @@ msgstr "起始为"
 
 msgid "stop"
 msgstr "停止"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

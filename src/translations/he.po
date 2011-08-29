@@ -1470,6 +1470,9 @@ msgstr "אומנות אלבום בתוך ההתראה"
 msgid "Include all songs"
 msgstr "כלול את כל השירים"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "הגבר את עוצמת השמע ב־%4"
 
@@ -2391,6 +2394,11 @@ msgstr "עדכן את הפרופיל עם הרצועות הנשמעות"
 
 msgid "Search"
 msgstr "חיפוש"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "חיפוש תחנות Icecast"
@@ -3354,6 +3362,9 @@ msgstr "מתחיל ב־"
 
 msgid "stop"
 msgstr "הפסקה"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

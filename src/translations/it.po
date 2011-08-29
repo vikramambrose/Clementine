@@ -1495,6 +1495,9 @@ msgstr "Includi copertina nella notifica"
 msgid "Include all songs"
 msgstr "Includi tutti i brani"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Aumenta il volume del 4%"
 
@@ -2420,6 +2423,11 @@ msgstr "Scrobbling delle tracce ascoltate"
 
 msgid "Search"
 msgstr "Cerca"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Cerca le stazioni Icecast"
@@ -3410,6 +3418,9 @@ msgstr "comincia con"
 
 msgid "stop"
 msgstr "ferma"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

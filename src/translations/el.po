@@ -1499,6 +1499,9 @@ msgstr "Εμφάνιση του άλμπουμ (εικόνα) στην ειδο�
 msgid "Include all songs"
 msgstr "Συμπερίληψη όλων των τραγουδιών"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Αύξηση της έντασης ήχου κατά 4%"
 
@@ -2425,6 +2428,11 @@ msgstr "Κάνε \"srobble\" τα κομμάτια που ακούω"
 
 msgid "Search"
 msgstr "Αναζήτηση"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Αναζήτηση σταθμών Icecast"
@@ -3413,6 +3421,9 @@ msgstr "αρχίζει με"
 
 msgid "stop"
 msgstr "διακοπή"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

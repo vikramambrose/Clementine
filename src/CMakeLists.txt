@@ -96,6 +96,7 @@ set(SOURCES
   covers/albumcoverloader.cpp
   covers/amazoncoverprovider.cpp
   covers/artloader.cpp
+  covers/coverexportrunnable.cpp
   covers/coverprovider.cpp
   covers/coverproviders.cpp
   covers/coversearchstatistics.cpp
@@ -338,6 +339,7 @@ set(HEADERS
   covers/albumcoverloader.h
   covers/amazoncoverprovider.h
   covers/artloader.h
+  covers/coverexportrunnable.h
   covers/coverprovider.h
   covers/coverproviders.h
   covers/coversearchstatisticsdialog.h

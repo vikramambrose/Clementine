@@ -1488,6 +1488,9 @@ msgstr "Includeți album de artă în notificare"
 msgid "Include all songs"
 msgstr "Includeți toate melodiile"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Crește volumul cu 4%"
 
@@ -2408,6 +2411,11 @@ msgid "Scrobble tracks that I listen to"
 msgstr ""
 
 msgid "Search"
+msgstr ""
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
 msgstr ""
 
 msgid "Search Icecast stations"
@@ -3354,6 +3362,9 @@ msgid "starts with"
 msgstr "începând cu"
 
 msgid "stop"
+msgstr ""
+
+msgid "track"
 msgstr ""
 
 #, qt-format

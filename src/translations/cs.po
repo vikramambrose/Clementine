@@ -1485,6 +1485,9 @@ msgstr "Zahrnout do oznámení i obal alba"
 msgid "Include all songs"
 msgstr "Zahrnout všechny písničky"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Zvýšit hlasitost o 4%"
 
@@ -2409,6 +2412,11 @@ msgstr "Odesílat informace o přehrávaných skladbách."
 
 msgid "Search"
 msgstr "Hledat"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Hledat stanice s Icecastem"
@@ -3387,6 +3395,9 @@ msgstr "Začíná na"
 
 msgid "stop"
 msgstr "Zastavit"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

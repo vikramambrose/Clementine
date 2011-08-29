@@ -15,50 +15,38 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef ALBUMCOVEREXPORTER_H
-#define ALBUMCOVEREXPORTER_H
+#ifndef COVEREXPORTRUNNABLE_H
+#define COVEREXPORTRUNNABLE_H
 
-#include "coverexportrunnable.h"
 #include "core/song.h"
 #include "ui/exportcoversdialog.h"
 
 #include <QObject>
-#include <QQueue>
-#include <QTimer>
+#include <QRunnable>
 
-class QThreadPool;
-
-class AlbumCoverExporter : public QObject {
-  Q_OBJECT
+class CoverExportRunnable : public QObject, public QRunnable {
+ Q_OBJECT
 
  public:
-  AlbumCoverExporter(const ExportCoversDialog::DialogResult& dialog_result,
-                     QObject* parent = 0);
-  virtual ~AlbumCoverExporter() {}
+  CoverExportRunnable(const ExportCoversDialog::DialogResult& dialog_result,
+                      const Song& song);
+  virtual ~CoverExportRunnable() {}
 
-  static const int kMaxConcurrentRequests;
-
-  void AddExportRequest(Song song);
-  void StartExporting();
-
-  int request_count() { return requests_.size(); }
+  void run();
 
  signals:
-  void AlbumCoversExportUpdate(int exported, int skipped, int all);
-
- private slots:
   void CoverExported();
   void CoverSkipped();
 
  private:
+  void EmitCoverExported();
+  void EmitCoverSkipped();
+
+  void ProcessAndExportCover();
+  void ExportCover();
+
   ExportCoversDialog::DialogResult dialog_result_;
-
-  QQueue<CoverExportRunnable*> requests_;
-  QThreadPool* thread_pool_;
-
-  int exported_;
-  int skipped_;
-  int all_;
+  Song song_;
 };
 
-#endif  // ALBUMCOVEREXPORTER_H
+#endif  // COVEREXPORTRUNNABLE_H

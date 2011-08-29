@@ -1494,6 +1494,9 @@ msgstr "Albumhoes in de notificatie weergeven"
 msgid "Include all songs"
 msgstr "Voeg alles toe"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Volume met 4% verhogen"
 
@@ -2419,6 +2422,11 @@ msgstr "Scrobble de tracks waar ik naar luister"
 
 msgid "Search"
 msgstr "Zoeken"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Icecast stations doorzoeken"
@@ -3405,6 +3413,9 @@ msgstr "begint met"
 
 msgid "stop"
 msgstr "stoppen"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

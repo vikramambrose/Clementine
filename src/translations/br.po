@@ -1480,6 +1480,9 @@ msgstr "Diskouez an albom er gemenadenn"
 msgid "Include all songs"
 msgstr "Ouzhpennañ an holl tonioù"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Uhelaat ar volum eus 4%"
 
@@ -2404,6 +2407,11 @@ msgstr "Scrobble ar roadennoù selaouet ganin"
 
 msgid "Search"
 msgstr "Klask"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr ""
@@ -3353,6 +3361,9 @@ msgstr "a grog gant"
 
 msgid "stop"
 msgstr "paouez"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

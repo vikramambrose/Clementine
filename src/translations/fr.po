@@ -1502,6 +1502,9 @@ msgstr "Inclure la jaquette de l'abum dans la fenêtre de notification"
 msgid "Include all songs"
 msgstr "Inclure tous les morceaux"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Augmenter le volume de 4%"
 
@@ -2430,6 +2433,11 @@ msgstr "Envoyer les titres des pistes que j'écoute (scrobble)"
 
 msgid "Search"
 msgstr "Recherche"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Rechercher des stations Icecast"
@@ -3420,6 +3428,9 @@ msgstr "commence par"
 
 msgid "stop"
 msgstr "stop"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

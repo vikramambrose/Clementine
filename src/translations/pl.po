@@ -1487,6 +1487,9 @@ msgstr "Dołącz okładkę albumu"
 msgid "Include all songs"
 msgstr "Dołączaj wszystkie utwory"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Zwiększ głośność o 4%"
 
@@ -2412,6 +2415,11 @@ msgstr "Wysyłaj informacje o utworach, których słucham"
 
 msgid "Search"
 msgstr "Szukaj"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Przeszukaj stacje Icecast"
@@ -3393,6 +3401,9 @@ msgstr "zaczyna się na"
 
 msgid "stop"
 msgstr "zatrzymaj"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

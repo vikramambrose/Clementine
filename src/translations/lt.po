@@ -1485,6 +1485,9 @@ msgstr "Rodyti albumo paveikslus pranešime"
 msgid "Include all songs"
 msgstr "Įtraukti visas dainas"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Pagarsinti 4%"
 
@@ -2409,6 +2412,11 @@ msgstr "Pateikti klausomų takelių informaciją"
 
 msgid "Search"
 msgstr "Ieškoti"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Ieškoti Icecast stočių"
@@ -3382,6 +3390,9 @@ msgstr "prasideda iš"
 
 msgid "stop"
 msgstr "stabdyti"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

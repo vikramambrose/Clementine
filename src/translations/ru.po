@@ -1485,6 +1485,9 @@ msgstr "Показывать обложку альбома в уведомлен
 msgid "Include all songs"
 msgstr "Включить все песни"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Увеличить громкость на 4%"
 
@@ -2408,6 +2411,11 @@ msgstr "Скробблить треки, которые я слушаю"
 
 msgid "Search"
 msgstr "Искать"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Искать станции Icecast"
@@ -3386,6 +3394,9 @@ msgstr "начинается на"
 
 msgid "stop"
 msgstr "Остановить"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

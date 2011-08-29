@@ -1486,6 +1486,9 @@ msgstr "Kèm theo ảnh bìa album vào các thông báo"
 msgid "Include all songs"
 msgstr "Gồm tất cả bài hát"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Tăng âm lượng thêm 4%"
 
@@ -2408,6 +2411,11 @@ msgstr "Tự động gửi tên các track tôi nghe"
 
 msgid "Search"
 msgstr "Tìm kiếm"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Tìm kiếm trên Icecast"
@@ -3388,6 +3396,9 @@ msgstr "bắt đầu với"
 
 msgid "stop"
 msgstr "stop"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

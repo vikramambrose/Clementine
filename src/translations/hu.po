@@ -1488,6 +1488,9 @@ msgstr "Albumborító megjelenítése az értesítésben"
 msgid "Include all songs"
 msgstr "Vegyen bele minden számot"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Hangerő növelése 4%-kal"
 
@@ -2411,6 +2414,11 @@ msgstr "Az általam hallgatott számok Scrobble funkcióval történő figyelés
 
 msgid "Search"
 msgstr "Keresés"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Icecast állomások keresése"
@@ -3394,6 +3402,9 @@ msgstr "kezdődik"
 
 msgid "stop"
 msgstr "leállítás"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

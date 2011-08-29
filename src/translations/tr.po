@@ -1482,6 +1482,9 @@ msgstr "Bildirimde albüm resimlendirmesini göster"
 msgid "Include all songs"
 msgstr "Tüm şarkıları içer"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Ses seviyesini 4% arttır"
 
@@ -2406,6 +2409,11 @@ msgstr "Dinlediğim parçaları skropla"
 
 msgid "Search"
 msgstr "Ara"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Icecast istasyonları ara"
@@ -3378,6 +3386,9 @@ msgstr "şununla başlıyor"
 
 msgid "stop"
 msgstr "durdur"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

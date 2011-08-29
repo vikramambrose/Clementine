@@ -1490,6 +1490,9 @@ msgstr "Cover in der Benachrichtigung anzeigen"
 msgid "Include all songs"
 msgstr "Alle Stück einbeziehen"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Lautstärke um 4% erhöhen"
 
@@ -2414,6 +2417,11 @@ msgstr "Stücke die ich höre \"scrobbeln\""
 
 msgid "Search"
 msgstr "Suche"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Suche nach Icecast Sendern"
@@ -3403,6 +3411,9 @@ msgstr "beginnt mit"
 
 msgid "stop"
 msgstr "Anhalten"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

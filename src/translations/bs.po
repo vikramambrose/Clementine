@@ -1470,6 +1470,9 @@ msgstr ""
 msgid "Include all songs"
 msgstr ""
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr ""
 
@@ -2389,6 +2392,11 @@ msgid "Scrobble tracks that I listen to"
 msgstr ""
 
 msgid "Search"
+msgstr ""
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
 msgstr ""
 
 msgid "Search Icecast stations"
@@ -3335,6 +3343,9 @@ msgid "starts with"
 msgstr ""
 
 msgid "stop"
+msgstr ""
+
+msgid "track"
 msgstr ""
 
 #, qt-format

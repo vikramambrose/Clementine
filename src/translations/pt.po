@@ -1490,6 +1490,9 @@ msgstr "Incluir a capa do álbum na notificação"
 msgid "Include all songs"
 msgstr "Incluir todas as músicas"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Aumentar o volume em 4%"
 
@@ -2415,6 +2418,11 @@ msgstr "Enviar as músicas que eu oiço"
 
 msgid "Search"
 msgstr "Pesquisar"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Procurar estações Icecast"
@@ -3401,6 +3409,9 @@ msgstr "inicia com"
 
 msgid "stop"
 msgstr "parar"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

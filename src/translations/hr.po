@@ -1487,6 +1487,9 @@ msgstr "Prikaži omot albuma u obavijesti"
 msgid "Include all songs"
 msgstr "Obuhvati sve pjesme"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "Pojačaj glasnoću zvuka za 4%"
 
@@ -2409,6 +2412,11 @@ msgstr "Scrobblaj pjesmu koju slušam"
 
 msgid "Search"
 msgstr "Traži"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Pretražite Icecast stanice"
@@ -3388,6 +3396,9 @@ msgstr "započnite sa"
 
 msgid "stop"
 msgstr "zaustavi"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"

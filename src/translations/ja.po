@@ -1476,6 +1476,9 @@ msgstr "通知にアルバム アートを含める"
 msgid "Include all songs"
 msgstr "すべての曲を読み込む"
 
+msgid "Include:"
+msgstr ""
+
 msgid "Increase the volume by 4%"
 msgstr "音量を 4% 上げます"
 
@@ -2399,6 +2402,11 @@ msgstr "聴取するトラックを Scrobble する"
 
 msgid "Search"
 msgstr "検索"
+
+msgid ""
+"Search <b>ALL THE THINGS</b> in your library, connected devices and on the "
+"Internet."
+msgstr ""
 
 msgid "Search Icecast stations"
 msgstr "Icecast 局の検索"
@@ -3367,6 +3375,9 @@ msgstr "次で始まる"
 
 msgid "stop"
 msgstr "停止"
+
+msgid "track"
+msgstr ""
 
 #, qt-format
 msgid "track %1"
