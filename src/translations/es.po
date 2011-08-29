@@ -1377,9 +1377,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "Proporciona un nombre:"
 
-msgid "Global Shortcuts"
-msgstr "Accesos rápidos globales"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2168,9 +2165,6 @@ msgstr "Búsqueda en la lista"
 msgid "Playlist type"
 msgstr "Tipo de lista de reproducción"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr ""
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2606,6 +2600,9 @@ msgstr "Mezclar lista de reproducción"
 
 msgid "Sign out"
 msgstr "Cerrar sesión"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "Artistas Similares"
@@ -3141,6 +3138,9 @@ msgstr "Wiimote %1: desconectado"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wiimote %1: batería baja (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3171,15 +3171,25 @@ msgstr "Ayer"
 msgid "You are about to download the following albums"
 msgstr "Estas a punto de descargar los siguientes álbumes"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr ""
 "Tu puedes cambiar el modo en que las canciones de la colección son "
 "organizadas."
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3208,6 +3218,9 @@ msgstr ""
 "Puedes usar tu Wiimote como un mando a distancia para Clementine. <a href="
 "\"http://www.clementine-player.org/wiimote\">Visita la página en el wiki de "
 "Clementine</a> para más información.\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3268,6 +3281,9 @@ msgstr "Sus flujos de radio"
 #, qt-format
 msgid "Your scrobbles: %1"
 msgstr "Sus scrobbles: %1"
+
+msgid "Your username or password was incorrect."
+msgstr ""
 
 msgid "Z-A"
 msgstr "Z-A"
@@ -3401,6 +3417,9 @@ msgstr "Pista %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "Accesos rápidos globales"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Descargar las portadas que faltan"

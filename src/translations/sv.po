@@ -1367,9 +1367,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "Ge den ett namn:"
 
-msgid "Global Shortcuts"
-msgstr "Globala snabbtangenter"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2149,9 +2146,6 @@ msgstr "Sök i spellistan"
 msgid "Playlist type"
 msgstr "Spellistetyp"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr ""
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2587,6 +2581,9 @@ msgstr "Blanda spellistan"
 
 msgid "Sign out"
 msgstr "Logga ut"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "Liknande artister"
@@ -3118,6 +3115,9 @@ msgstr "Wii-kontroll %1: frånkopplad"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii-kontroll %1: låg batterinivå (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3148,13 +3148,23 @@ msgstr "Igår"
 msgid "You are about to download the following albums"
 msgstr "Du är på väg att hämta de följande albumen"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Du kan ändra hur låtarna i biblioteket är organiserade."
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3181,6 +3191,9 @@ msgstr ""
 "Du kan använda din Wii-kontroll som en fjärrkontroll för Clementine. <a href="
 "\"http://www.clementine-player.org/wiimote\">Se sidan på Clementine-wikin</"
 "a> för mer information.\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3238,6 +3251,9 @@ msgstr "Dina radioströmmar"
 #, qt-format
 msgid "Your scrobbles: %1"
 msgstr "Dina skrobblingar: %1"
+
+msgid "Your username or password was incorrect."
+msgstr ""
 
 msgid "Z-A"
 msgstr "Ö-A"
@@ -3371,6 +3387,9 @@ msgstr "spår %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "Globala snabbtangenter"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Hämta saknade omslag"

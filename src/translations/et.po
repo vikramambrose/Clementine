@@ -1338,9 +1338,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "Anna sellele nimi:"
 
-msgid "Global Shortcuts"
-msgstr "Globaalsed kiirklahvid"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2116,9 +2113,6 @@ msgstr ""
 msgid "Playlist type"
 msgstr ""
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr ""
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2554,6 +2548,9 @@ msgstr "Sega esitusnimistu"
 
 msgid "Sign out"
 msgstr "Logi välja"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "Sarnased esitajad"
@@ -3068,6 +3065,9 @@ msgstr ""
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr ""
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3098,12 +3098,22 @@ msgstr "Eile"
 msgid "You are about to download the following albums"
 msgstr ""
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
+msgstr ""
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
 msgstr ""
 
 msgid ""
@@ -3123,6 +3133,9 @@ msgid ""
 "You can use your Wii Remote as a remote control for Clementine.  <a href="
 "\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
 "wiki</a> for more information.\n"
+msgstr ""
+
+msgid "You do not have a Spotify Premium account."
 msgstr ""
 
 msgid ""
@@ -3177,6 +3190,9 @@ msgstr ""
 
 #, qt-format
 msgid "Your scrobbles: %1"
+msgstr ""
+
+msgid "Your username or password was incorrect."
 msgstr ""
 
 msgid "Z-A"
@@ -3311,6 +3327,9 @@ msgstr ""
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "Globaalsed kiirklahvid"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Tõmba puuduvad kaanepildid"

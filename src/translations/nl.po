@@ -1370,9 +1370,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "Geef het een naam:"
 
-msgid "Global Shortcuts"
-msgstr "Algemene sneltoetsen"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2161,9 +2158,6 @@ msgstr "Zoeken in afspeellijst"
 msgid "Playlist type"
 msgstr "Afspeellijst type"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr "Vul het lege vakje in om in te loggen bij Last.fm"
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2599,6 +2593,9 @@ msgstr "Afspeellijst schudden"
 
 msgid "Sign out"
 msgstr "Afmelden"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "Vergelijkbare artiesten"
@@ -3139,6 +3136,9 @@ msgstr "Wii Remote %1: verbinding verbroken"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii Remote %1: lage accuspanning (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3169,15 +3169,25 @@ msgstr "Gisteren"
 msgid "You are about to download the following albums"
 msgstr "U staat op het punt de volgende albums te downloaden"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr ""
 "U kunt de manier waarop de nummers in de bibliotheek worden gesorteerd "
 "aanpassen."
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3204,6 +3214,9 @@ msgstr ""
 "U kan uw Wii Remote gebruiken als afstandsbediening voor Clementine. <a href="
 "\"http://www.clementine-player.org/wiimote\">Neem een kijkje op de "
 "Clementine wikipagina</a> voor meer informatie.\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3263,6 +3276,9 @@ msgstr "Uw radiostreams"
 #, qt-format
 msgid "Your scrobbles: %1"
 msgstr "Uw scrobbles: %1"
+
+msgid "Your username or password was incorrect."
+msgstr ""
 
 msgid "Z-A"
 msgstr "Z-A"
@@ -3396,6 +3412,12 @@ msgstr "track %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Please fill in the blanks to login into Last.fm"
+#~ msgstr "Vul het lege vakje in om in te loggen bij Last.fm"
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "Algemene sneltoetsen"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Ontbrekende hoezen ophalen"

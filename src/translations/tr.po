@@ -1361,9 +1361,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "Bir isim verin:"
 
-msgid "Global Shortcuts"
-msgstr "Genel Kısayollar"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2148,9 +2145,6 @@ msgstr "Çalma listesinde ara"
 msgid "Playlist type"
 msgstr "Çalma listesi türü"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr "Last.fm'e giriş yapmak için lütfen boşlukları doldurun"
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2586,6 +2580,9 @@ msgstr "Çalma listesini karıştır"
 
 msgid "Sign out"
 msgstr "Çıkış yap"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "Benzer sanatçılar"
@@ -3112,6 +3109,9 @@ msgstr "Wii Kumanda %1: çıkarıldı"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii Kumanda %1: düşük pil seviyesi (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3142,13 +3142,23 @@ msgstr "Dün"
 msgid "You are about to download the following albums"
 msgstr "Aşağıdaki albümleri indirmek üzeresiniz"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Kütüphanedeki parçalarını farklı şekilde organize edebilirsiniz."
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3176,6 +3186,9 @@ msgstr ""
 "Wii kumandanızı kullanarak Clementine'ı uzaktan kumanda edebilirsiniz.  Daha "
 "fazla bilgi için <a href=\"http://www.clementine-player.org/wiimote"
 "\">Clementine wikideki ilgili sayfayı</a> ziyaret edin.\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3236,6 +3249,9 @@ msgstr "Radyo yayın akışlarınız"
 #, qt-format
 msgid "Your scrobbles: %1"
 msgstr "Skroplarınız: %1"
+
+msgid "Your username or password was incorrect."
+msgstr ""
 
 msgid "Z-A"
 msgstr "Z-A"
@@ -3369,6 +3385,12 @@ msgstr "parça %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Please fill in the blanks to login into Last.fm"
+#~ msgstr "Last.fm'e giriş yapmak için lütfen boşlukları doldurun"
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "Genel Kısayollar"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Eksik Albüm Kapaklarını İndir"

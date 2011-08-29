@@ -1354,9 +1354,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "שם עבור הפריט:"
 
-msgid "Global Shortcuts"
-msgstr "קיצורי מקשים גלובאליים"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2133,9 +2130,6 @@ msgstr "חיפוש ברשימת ההשמעה"
 msgid "Playlist type"
 msgstr "סוג רשימת ההשמעה"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr ""
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2571,6 +2565,9 @@ msgstr "ערבוב רשימת־ההשמעה"
 
 msgid "Sign out"
 msgstr "התנתקות"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "אמנים דומים"
@@ -3092,6 +3089,9 @@ msgstr "Wii Remote %1: מנותק"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii Remote %1: סוללה חלשה (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3122,13 +3122,23 @@ msgstr "אתמול"
 msgid "You are about to download the following albums"
 msgstr "אתה עומד להוריד את האלבומים הבאים"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "ניתן לשנות את הדרך שבה השירים מסודרים בספרייה שלך."
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3155,6 +3165,9 @@ msgstr ""
 "ניתן להשתמש ב-Wii Remote כשלט רחוק ל-Clementine. <a href=\"http://www."
 "clementine-player.org/wiimote\">ניתן לקרוא את העמוד בויקי של Clementine</a> "
 "לקבלת מידע נוסף.\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3212,6 +3225,9 @@ msgstr "רדיו המדיות הזורמות שלך"
 #, qt-format
 msgid "Your scrobbles: %1"
 msgstr "ה-scrobbles שלך: %1"
+
+msgid "Your username or password was incorrect."
+msgstr ""
 
 msgid "Z-A"
 msgstr "Z-A"
@@ -3345,6 +3361,9 @@ msgstr "רצועה %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "קיצורי מקשים גלובאליים"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "מצא עטיפות חסרות"

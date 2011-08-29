@@ -1366,9 +1366,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "Nadaj nazwę:"
 
-msgid "Global Shortcuts"
-msgstr "Globalne skróty klawiszowe"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2154,9 +2151,6 @@ msgstr "Przeszukuj listę odtwarzania"
 msgid "Playlist type"
 msgstr "Typ listy odtwarzania"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr ""
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2592,6 +2586,9 @@ msgstr "Wymieszaj listę odtwarzania"
 
 msgid "Sign out"
 msgstr "Wyloguj"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "Podobni wykonawcy"
@@ -3125,6 +3122,9 @@ msgstr "Wii Remote %1: rozłączony"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii Remote %1: niski poziom baterii (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3155,13 +3155,23 @@ msgstr "Wczoraj"
 msgid "You are about to download the following albums"
 msgstr "Zaraz pobierzesz następujące albumy"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Możesz zmienić sposób w jaki prezentowane są utwory w bibliotece."
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3189,6 +3199,9 @@ msgstr ""
 "Kontrolera Wii Remote można używać jako zdalnego sterowania w Clementine. <a "
 "href=\"http://www.clementine-player.org/wiimote\"> Zobacz stronę wiki "
 "Clementine</a> w celu uzyskania dalszych informacji.\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3251,6 +3264,9 @@ msgstr "Twoje strumienie radiowe"
 #, qt-format
 msgid "Your scrobbles: %1"
 msgstr "Przesłane utwory: %1"
+
+msgid "Your username or password was incorrect."
+msgstr ""
 
 msgid "Z-A"
 msgstr "Z-A"
@@ -3384,6 +3400,9 @@ msgstr "utwór %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "Globalne skróty klawiszowe"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Pobierz brakujące okładki"

@@ -89,10 +89,7 @@ class AlbumCoverManager : public QMainWindow {
                          const CoverSearchStatistics& statistics);
 
   void ExportCovers();
-  int ProcessAndExportCover(const ExportCoversDialog::DialogResult& result,
-                            const Song& song);
-  int ExportCover(const ExportCoversDialog::DialogResult& result,
-                  const Song& song);
+  void UpdateExportStatus(int exported, int bad, int count);
 
   void LoadCoverFromFile();
   void SaveCoverToFile();
@@ -145,7 +142,6 @@ class AlbumCoverManager : public QMainWindow {
   void CancelRequests();
 
   void UpdateFetchStatus();
-  void UpdateExportStatus(int current, int bad, int count);
 
   bool ShouldHide(const QListWidgetItem& item, const QString& filter, HideCovers hide) const;
   void SaveAndSetCover(QListWidgetItem* item, const QImage& image);

@@ -1367,9 +1367,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "Upišite naziv streama"
 
-msgid "Global Shortcuts"
-msgstr "Globalni prečaci"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2151,9 +2148,6 @@ msgstr "Pretraživanje popisa izvođenja"
 msgid "Playlist type"
 msgstr "Tip Popisa izvođenja"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr "Molim popunite polja da bi se mogli spojiti na Last.fm"
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2589,6 +2583,9 @@ msgstr "Izmješajte popis izvođenja"
 
 msgid "Sign out"
 msgstr "Odjavi se"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "Slični izvođači"
@@ -3122,6 +3119,9 @@ msgstr "Wii Daljinski Upravljač %1: odspojen"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii Daljinski Upravljač %1: baterija  nisko (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3152,13 +3152,23 @@ msgstr "Jučer"
 msgid "You are about to download the following albums"
 msgstr "Preuzeti ćete sljedeće albume"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Možete promijeniti način na koji su pjesme organizirane u zbirci."
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3186,6 +3196,9 @@ msgstr ""
 "Možete koristiti vaš Wii Daljinski Upravljač za daljinsko upravljanje sa "
 "Clementine. <a href=\"http://www.clementine-player.org/wiimote\">Za više "
 "informacija pogledajte Clementine wiki</a> stranicu.\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3246,6 +3259,9 @@ msgstr "Vaši radio streamovi"
 #, qt-format
 msgid "Your scrobbles: %1"
 msgstr "Vaši scrobbles: %1"
+
+msgid "Your username or password was incorrect."
+msgstr ""
 
 msgid "Z-A"
 msgstr "Z-A"
@@ -3379,6 +3395,12 @@ msgstr "pjesma %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Please fill in the blanks to login into Last.fm"
+#~ msgstr "Molim popunite polja da bi se mogli spojiti na Last.fm"
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "Globalni prečaci"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Dohvati prazan omot"

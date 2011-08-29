@@ -1358,9 +1358,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "名前を付けてください:"
 
-msgid "Global Shortcuts"
-msgstr "グローバル ショートカット"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2141,9 +2138,6 @@ msgstr "プレイリスト検索"
 msgid "Playlist type"
 msgstr "プレイリストの種類"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr ""
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2579,6 +2573,9 @@ msgstr "プレイリストのシャッフル"
 
 msgid "Sign out"
 msgstr "サインアウト"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "テイストの似たアーティスト"
@@ -3104,6 +3101,9 @@ msgstr "Wii Remote %1: 切断されました"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii Remote %1: バッテリーが少なくなりました (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3134,13 +3134,23 @@ msgstr "昨日"
 msgid "You are about to download the following albums"
 msgstr "以下のアルバムをダウンロードしようとしています"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "ライブラリの曲が整理される方法を変更できます。"
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3168,6 +3178,9 @@ msgstr ""
 "Clementine のリモート コントロールとして Wii Remote を使用できます。詳細は<a "
 "href=\"http://www.clementine-player.org/wiimote\">Clementine wiki のページを"
 "ご覧ください</a>。\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3225,6 +3238,9 @@ msgstr "あなたのラジオ ストリーム"
 #, qt-format
 msgid "Your scrobbles: %1"
 msgstr "Scrobble 回数: %1"
+
+msgid "Your username or password was incorrect."
+msgstr ""
 
 msgid "Z-A"
 msgstr "Z-A"
@@ -3358,6 +3374,9 @@ msgstr "トラック %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "グローバル ショートカット"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "見つからないカバーのフェッチ"

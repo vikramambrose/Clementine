@@ -1364,9 +1364,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "Назвать:"
 
-msgid "Global Shortcuts"
-msgstr "Глобальные комбинации клавиш"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2150,9 +2147,6 @@ msgstr "Поиск по списку воспроизведения"
 msgid "Playlist type"
 msgstr "Тип плейлиста"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr "Заполните, пожалуйста, поля для входа на Last.fm"
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2588,6 +2582,9 @@ msgstr "Перемешать список воспроизведения"
 
 msgid "Sign out"
 msgstr "Выйти"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "Похожие исполнители"
@@ -3123,6 +3120,9 @@ msgstr "Пульт Wii Remote %1: отсоединено"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Пульт Wii Remote %1: низкий заряд батареи (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3153,13 +3153,23 @@ msgstr "Вчера"
 msgid "You are about to download the following albums"
 msgstr "Вы собираетесь скачать следующие альбомы"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Вы можете выбрать способ сортировки композиций в коллекции"
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3187,6 +3197,9 @@ msgstr ""
 "Вы можете использовать пульт Wii для дистанционного управления Clementine. "
 "<a href=\"http://www.clementine-player.org/wiimote\">Смотри раздел на wiki-"
 "странице Clementine</a> для более подробной информации.\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3244,6 +3257,9 @@ msgstr "Ваши потоки радио"
 #, qt-format
 msgid "Your scrobbles: %1"
 msgstr "Ваш скробблинг: %1"
+
+msgid "Your username or password was incorrect."
+msgstr ""
 
 msgid "Z-A"
 msgstr "Z-A"
@@ -3377,6 +3393,12 @@ msgstr "композиция %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Please fill in the blanks to login into Last.fm"
+#~ msgstr "Заполните, пожалуйста, поля для входа на Last.fm"
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "Глобальные комбинации клавиш"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Выберите пропущенные обложки"

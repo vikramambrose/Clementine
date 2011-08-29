@@ -1341,9 +1341,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "給它一個名字："
 
-msgid "Global Shortcuts"
-msgstr "全域快速鍵"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2119,9 +2116,6 @@ msgstr "播放清單搜尋"
 msgid "Playlist type"
 msgstr ""
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr ""
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2557,6 +2551,9 @@ msgstr "隨機排列播放清單"
 
 msgid "Sign out"
 msgstr "登出"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr ""
@@ -3071,6 +3068,9 @@ msgstr ""
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr ""
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3101,13 +3101,23 @@ msgstr ""
 msgid "You are about to download the following albums"
 msgstr "你將要下載以下專輯"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "你可以改變的歌曲庫中的組織形式."
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3128,6 +3138,9 @@ msgid ""
 "You can use your Wii Remote as a remote control for Clementine.  <a href="
 "\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
 "wiki</a> for more information.\n"
+msgstr ""
+
+msgid "You do not have a Spotify Premium account."
 msgstr ""
 
 msgid ""
@@ -3182,6 +3195,9 @@ msgstr "你的電台"
 
 #, qt-format
 msgid "Your scrobbles: %1"
+msgstr ""
+
+msgid "Your username or password was incorrect."
 msgstr ""
 
 msgid "Z-A"
@@ -3316,6 +3332,9 @@ msgstr "歌曲 %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "全域快速鍵"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "取得未有的封面"

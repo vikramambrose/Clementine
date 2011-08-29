@@ -1368,9 +1368,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "Adjon meg egy nevet:"
 
-msgid "Global Shortcuts"
-msgstr "Globális billentyűparancsok"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2153,9 +2150,6 @@ msgstr "Keresés a lejátszási listán"
 msgid "Playlist type"
 msgstr "Lejátszási lista típus"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr "A Last.fm-re való bejelentkezéshez töltsd ki az üres helyeket"
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2594,6 +2588,9 @@ msgstr "Lejátszási lista véletlenszerűen"
 
 msgid "Sign out"
 msgstr "Kijelentkezés"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "Hasonló előadók"
@@ -3128,6 +3125,9 @@ msgstr "Wii távvezérlő %1: lekapcsolódva"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii távvezérlő %1: alacsony teleptöltés (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3158,13 +3158,23 @@ msgstr "Tegnap"
 msgid "You are about to download the following albums"
 msgstr "A következő albumokat készül letölteni"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Megváltoztathatja a számok zenetárban való rendezésének módját."
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3192,6 +3202,9 @@ msgstr ""
 "A Clementine távvezérléshez használhat Wii távvezérlőt is.  Részletekért <a "
 "href=\"http://www.clementine-player.org/wiimote\">tekintse meg a Clementine "
 "wiki oldalát</a>.\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3252,6 +3265,9 @@ msgstr "Az ön rádió adatfolyamai"
 #, qt-format
 msgid "Your scrobbles: %1"
 msgstr "Scrobblejaid: %1"
+
+msgid "Your username or password was incorrect."
+msgstr ""
 
 msgid "Z-A"
 msgstr "Z-A"
@@ -3385,6 +3401,12 @@ msgstr "%1. szám"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Please fill in the blanks to login into Last.fm"
+#~ msgstr "A Last.fm-re való bejelentkezéshez töltsd ki az üres helyeket"
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "Globális billentyűparancsok"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "A hiányzó borítók letöltése"

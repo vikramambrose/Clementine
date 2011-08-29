@@ -1362,9 +1362,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "Pomenujte:"
 
-msgid "Global Shortcuts"
-msgstr "Globálne skratky"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2146,9 +2143,6 @@ msgstr "Hľadanie v playliste"
 msgid "Playlist type"
 msgstr "Typ playlistu"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr "Prosím vyplňte políčka pre prihlásenie na Last.fm"
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2584,6 +2578,9 @@ msgstr "Zamiešať playlist"
 
 msgid "Sign out"
 msgstr "Odhlásiť"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "Podobní interpréti"
@@ -3119,6 +3116,9 @@ msgstr "Wii diaľkové %1: odpojené"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii diaľkové %1: slabá baterka (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3149,13 +3149,23 @@ msgstr "Včera"
 msgid "You are about to download the following albums"
 msgstr "Chystáte sa stiahnuť nasledujúce albumy"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Môžete zmeniť spôsob, ktorým sú piesne v zbierke organizované."
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3182,6 +3192,9 @@ msgstr ""
 "Môžete použiť vaše Wii diaľkové ako diaľkový ovládač pre Clementine.  <a "
 "href=\"http://www.clementine-player.org/wiimote\">Pozrite si stránku na "
 "Clementine wiki</a> pre viac informácií.\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3242,6 +3255,9 @@ msgstr "Vaše rádio streamy"
 #, qt-format
 msgid "Your scrobbles: %1"
 msgstr "Skroblujete: %1"
+
+msgid "Your username or password was incorrect."
+msgstr ""
 
 msgid "Z-A"
 msgstr "Z-A"
@@ -3375,6 +3391,12 @@ msgstr "skladba %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Please fill in the blanks to login into Last.fm"
+#~ msgstr "Prosím vyplňte políčka pre prihlásenie na Last.fm"
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "Globálne skratky"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Získať chýbajúce obaly"

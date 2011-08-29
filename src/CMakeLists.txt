@@ -90,6 +90,7 @@ set(SOURCES
   core/urlhandler.cpp
   core/utilities.cpp
 
+  covers/albumcoverexporter.cpp
   covers/albumcoverfetcher.cpp
   covers/albumcoverfetchersearch.cpp
   covers/albumcoverloader.cpp
@@ -324,6 +325,7 @@ set(HEADERS
   core/taskmanager.h
   core/urlhandler.h
 
+  covers/albumcoverexporter.h
   covers/albumcoverfetcher.h
   covers/albumcoverfetchersearch.h
   covers/albumcoverloader.h

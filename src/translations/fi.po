@@ -1355,9 +1355,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "Anna nimi:"
 
-msgid "Global Shortcuts"
-msgstr "Yleiset pikanäppäimet"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2138,9 +2135,6 @@ msgstr "Etsi soittolistalta"
 msgid "Playlist type"
 msgstr "Soittolistan tyyppi"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr ""
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2576,6 +2570,9 @@ msgstr "Sekoita soittolista"
 
 msgid "Sign out"
 msgstr "Kirjaudu ulos"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "Samankaltaisia esittäjiä"
@@ -3107,6 +3104,9 @@ msgstr "Wii-ohjain %1: yhteys katkaistu"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii-ohjain %1: matala lataustaso (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3137,13 +3137,23 @@ msgstr "Eilen"
 msgid "You are about to download the following albums"
 msgstr "Olet aikeissa ladata seuraavat levyt"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr "Voit vaihtaa tapaa, miten kappaleet järjestetään kirjastossa."
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3171,6 +3181,9 @@ msgid ""
 msgstr ""
 "Voit käyttää Wii-ohjainta kauko-ohjaimena Clementinen hallintaan.  <a href="
 "\"http://www.clementine-player.org/wiimote\">Lisätietoja wiki-sivulla</a>.\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3224,6 +3237,9 @@ msgstr "Omat radioasemat"
 
 #, qt-format
 msgid "Your scrobbles: %1"
+msgstr ""
+
+msgid "Your username or password was incorrect."
 msgstr ""
 
 msgid "Z-A"
@@ -3358,6 +3374,9 @@ msgstr "kappale %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "Yleiset pikanäppäimet"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Nouda puuttuvat kansikuvat"

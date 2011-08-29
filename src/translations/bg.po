@@ -1364,9 +1364,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "Въведете име:"
 
-msgid "Global Shortcuts"
-msgstr "Глобални клавишни комбинации"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2154,9 +2151,6 @@ msgstr "Търсене в плейлиста"
 msgid "Playlist type"
 msgstr "Тип на плейлиста"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr ""
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2592,6 +2586,9 @@ msgstr "Разбъркване на списъка с песни"
 
 msgid "Sign out"
 msgstr "Изход"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "Подобни изпълнители"
@@ -3130,6 +3127,9 @@ msgstr "Wii Remote %1: несвързано"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Wii Remote %1: ниско ниво на батерията (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3160,14 +3160,24 @@ msgstr "Вчера"
 msgid "You are about to download the following albums"
 msgstr "На път сте да свалите следните албуми"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr ""
 "Можете да промените начина, по-който песните в библиотеката са организирани."
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3195,6 +3205,9 @@ msgstr ""
 "Можете да изпозвате Wii Remote като дистанционно за Клементин.<a href="
 "\"http://www.clementine-player.org/wiimote\">Вижте Wiki страницата на "
 "Клементин</a> за повече информация.\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3255,6 +3268,9 @@ msgstr "Вашите радио потоци"
 #, qt-format
 msgid "Your scrobbles: %1"
 msgstr "Вашите слушания: %1"
+
+msgid "Your username or password was incorrect."
+msgstr ""
 
 msgid "Z-A"
 msgstr "Я-А"
@@ -3388,6 +3404,9 @@ msgstr "песен %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "Глобални клавишни комбинации"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Сваляне на липсващите обложки"

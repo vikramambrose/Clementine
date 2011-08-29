@@ -1378,9 +1378,6 @@ msgstr ""
 msgid "Give it a name:"
 msgstr "Δώστε του ένα όνομα:"
 
-msgid "Global Shortcuts"
-msgstr "Καθολικές συντομεύσεις"
-
 msgid "Go to next playlist tab"
 msgstr ""
 
@@ -2165,9 +2162,6 @@ msgstr "Αναζήτηση στη λίστα αναπαραγωγής"
 msgid "Playlist type"
 msgstr "Τύπος λίστας αναπαραγωγής"
 
-msgid "Please fill in the blanks to login into Last.fm"
-msgstr ""
-
 msgid "Plugin status:"
 msgstr ""
 
@@ -2605,6 +2599,9 @@ msgstr "Ανακάτεμα λίστας"
 
 msgid "Sign out"
 msgstr "Αποσύνδεση"
+
+msgid "Signing in..."
+msgstr ""
 
 msgid "Similar artists"
 msgstr "Παρόμοιοι καλλιτέχνες"
@@ -3145,6 +3142,9 @@ msgstr "Χειριστήριο Wii %1: αποσυνδέθηκε"
 msgid "Wii Remote %1: low battery (%2%)"
 msgstr "Χειριστήριο Wii %1: χαμηλή μπαταρία (%2%)"
 
+msgid "Wiimotedev"
+msgstr ""
+
 msgid "Windows Media 128k (Premium only)"
 msgstr ""
 
@@ -3175,14 +3175,24 @@ msgstr "Χθες"
 msgid "You are about to download the following albums"
 msgstr "Πρόκειτε να \"κατεβάσετε\" τα παρακάτω άλμπουμ"
 
-msgid ""
-"You can <b>listen for free</b> without an account, but Premium members can "
-"listen to <b>higher quality</b> streams without advertisements."
+msgid "You are not signed in."
+msgstr ""
+
+#, qt-format
+msgid "You are signed in as %1."
+msgstr ""
+
+msgid "You are signed in."
 msgstr ""
 
 msgid "You can change the way the songs in the library are organised."
 msgstr ""
 "Μπορείς να αλλάξεις τον τρόπο οργάνωσης των τραγουδιών στην βιβλιοθήκη."
+
+msgid ""
+"You can listen for free without an account, but Premium members can listen "
+"to higher quality streams without advertisements."
+msgstr ""
 
 msgid ""
 "You can listen to Magnatune songs for free without an account.  Purchasing a "
@@ -3210,6 +3220,9 @@ msgstr ""
 "Μπορείτε να χρησιμοποιήσετε χειριστήριο Wii σαν τηλεχειριστήριο για τον "
 "Clementine.  <a href=\"http://www.clementine-player.org/wiimote\">Δείτε την "
 "σχετική σελίδα στο wiki του Clementine</a> για περισσότερες πληροφορίες.\n"
+
+msgid "You do not have a Spotify Premium account."
+msgstr ""
 
 msgid ""
 "You have selected a Premium-only audio type but do not have any account "
@@ -3271,6 +3284,9 @@ msgstr "Οι ροές ραδιοφώνου σας"
 #, qt-format
 msgid "Your scrobbles: %1"
 msgstr "Τα scrobbles σου: %1"
+
+msgid "Your username or password was incorrect."
+msgstr ""
 
 msgid "Z-A"
 msgstr "Ω-Α"
@@ -3404,6 +3420,9 @@ msgstr "κομμάτι %1"
 
 msgid "width:"
 msgstr ""
+
+#~ msgid "Global Shortcuts"
+#~ msgstr "Καθολικές συντομεύσεις"
 
 #~ msgid "Fetch Missing Covers"
 #~ msgstr "Κατέβασμα εξώφυλλων που λείπουν"
