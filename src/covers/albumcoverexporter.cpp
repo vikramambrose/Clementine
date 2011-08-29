@@ -22,7 +22,7 @@
 #include <QFile>
 #include <QThreadPool>
 
-const int AlbumCoverExporter::kMaxConcurrentRequests = 5;
+const int AlbumCoverExporter::kMaxConcurrentRequests = 3;
 
 AlbumCoverExporter::AlbumCoverExporter(const ExportCoversDialog::DialogResult& dialog_result,
                                        QObject* parent)
@@ -50,8 +50,6 @@ void AlbumCoverExporter::StartExporting() {
 
     thread_pool_->start(runnable);
   }
-
-  thread_pool_->waitForDone();
 }
 
 void AlbumCoverExporter::CoverExported() {
