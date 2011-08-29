@@ -15,25 +15,17 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SONGMIMEDATA_H
-#define SONGMIMEDATA_H
+#ifndef GLOBALSEARCHSORTMODEL_H
+#define GLOBALSEARCHSORTMODEL_H
 
-#include <QMimeData>
+#include <QSortFilterProxyModel>
 
-#include "core/mimedata.h"
-#include "core/song.h"
-
-class LibraryBackendInterface;
-
-class SongMimeData : public MimeData {
-  Q_OBJECT
-
+class GlobalSearchSortModel : public QSortFilterProxyModel {
 public:
-  SongMimeData()
-    : backend(NULL) {}
+  GlobalSearchSortModel(QObject* parent = 0);
 
-  LibraryBackendInterface* backend;
-  SongList songs;
+protected:
+  bool lessThan(const QModelIndex& left, const QModelIndex& right) const;
 };
 
-#endif // SONGMIMEDATA_H
+#endif // GLOBALSEARCHSORTMODEL_H

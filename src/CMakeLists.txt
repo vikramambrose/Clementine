@@ -116,6 +116,13 @@ set(SOURCES
   engines/gstenginepipeline.cpp
   engines/gstelementdeleter.cpp
 
+  globalsearch/globalsearch.cpp
+  globalsearch/globalsearchitemdelegate.cpp
+  globalsearch/globalsearchsortmodel.cpp
+  globalsearch/globalsearchwidget.cpp
+  globalsearch/librarysearchprovider.cpp
+  globalsearch/searchprovider.cpp
+
   internet/digitallyimportedservice.cpp
   internet/digitallyimportedservicebase.cpp
   internet/digitallyimportedsettingspage.cpp
@@ -350,6 +357,11 @@ set(HEADERS
   engines/gstenginepipeline.h
   engines/gstelementdeleter.h
 
+  globalsearch/librarysearchprovider.h
+  globalsearch/globalsearch.h
+  globalsearch/globalsearchwidget.h
+  globalsearch/searchprovider.h
+
   internet/digitallyimportedservicebase.h
   internet/digitallyimportedsettingspage.h
   internet/icecastbackend.h
@@ -512,6 +524,8 @@ set(UI
 
   devices/deviceproperties.ui
 
+  globalsearch/globalsearchwidget.ui
+
   internet/digitallyimportedsettingspage.ui
   internet/icecastfilterwidget.ui
   internet/internetviewcontainer.ui
@@ -662,6 +676,7 @@ endif(HAVE_LIBLASTFM)
 
 if(HAVE_SPOTIFY)
   list(APPEND SOURCES
+    globalsearch/spotifysearchprovider.cpp
     internet/spotifyblobdownloader.cpp
     internet/spotifysearchplaylisttype.cpp
     internet/spotifyserver.cpp
@@ -671,6 +686,7 @@ if(HAVE_SPOTIFY)
     resolvers/spotifyresolver.cpp
   )
   list(APPEND HEADERS
+    globalsearch/spotifysearchprovider.h
     internet/spotifyblobdownloader.h
     internet/spotifyserver.h
     internet/spotifyservice.h

@@ -15,25 +15,37 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef SONGMIMEDATA_H
-#define SONGMIMEDATA_H
+#ifndef LIBRARYSEARCHPROVIDER_H
+#define LIBRARYSEARCHPROVIDER_H
 
-#include <QMimeData>
+#include "searchprovider.h"
+#include "core/backgroundthread.h"
 
-#include "core/mimedata.h"
-#include "core/song.h"
-
+class AlbumCoverLoader;
 class LibraryBackendInterface;
 
-class SongMimeData : public MimeData {
+
+class LibrarySearchProvider : public BlockingSearchProvider {
   Q_OBJECT
 
 public:
-  SongMimeData()
-    : backend(NULL) {}
+  LibrarySearchProvider(LibraryBackendInterface* backend, const QString& name,
+                        const QIcon& icon, QObject* parent = 0);
 
-  LibraryBackendInterface* backend;
-  SongList songs;
+  void LoadArtAsync(int id, const Result& result);
+  void LoadTracksAsync(int id, const Result& result);
+
+protected:
+  ResultList Search(int id, const QString& query);
+
+private slots:
+  void AlbumArtLoaded(quint64 id, const QImage& image);
+
+private:
+  LibraryBackendInterface* backend_;
+
+  BackgroundThread<AlbumCoverLoader>* cover_loader_;
+  QMap<quint64, int> cover_loader_tasks_;
 };
 
-#endif // SONGMIMEDATA_H
+#endif // LIBRARYSEARCHPROVIDER_H
