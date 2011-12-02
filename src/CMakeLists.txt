@@ -240,6 +240,12 @@ set(SOURCES
   songinfo/ultimatelyricsprovider.cpp
   songinfo/ultimatelyricsreader.cpp
 
+  speechrecognition/endpointer.cc
+  speechrecognition/energy_endpointer.cc
+  speechrecognition/energy_endpointer_params.cc
+  speechrecognition/speechrecognition.cpp
+  speechrecognition/speechrecognitionpipeline.cpp
+
   transcoder/transcodedialog.cpp
   transcoder/transcoder.cpp
   transcoder/transcoderoptionsaac.cpp
@@ -469,6 +475,9 @@ set(HEADERS
   songinfo/songplaystats.h
   songinfo/ultimatelyricsprovider.h
   songinfo/ultimatelyricsreader.h
+
+  speechrecognition/speechrecognition.h
+  speechrecognition/speechrecognitionpipeline.h
 
   transcoder/transcodedialog.h
   transcoder/transcoder.h

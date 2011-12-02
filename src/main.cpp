@@ -58,6 +58,8 @@
 #include "version.h"
 #include "widgets/osd.h"
 
+#include "speechrecognition/speechrecognition.h"
+
 #include "qtsingleapplication.h"
 #include "qtsinglecoreapplication.h"
 
@@ -424,6 +426,9 @@ int main(int argc, char *argv[]) {
 #endif
   QObject::connect(&a, SIGNAL(messageReceived(QByteArray)), &w, SLOT(CommandlineOptionsReceived(QByteArray)));
   w.CommandlineOptionsReceived(options);
+
+  SpeechRecognition* recog = new SpeechRecognition(reinterpret_cast<GstEngine*>(player.engine()));
+  recog->Start();
 
   int ret = a.exec();
 
