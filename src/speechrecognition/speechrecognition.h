@@ -42,6 +42,12 @@ public:
   static const int kEndpointerEstimationTimeMs;
   static const int kEndpointerFrameSizeSamples;
 
+  static const float kUpSmoothingFactor;
+  static const float kDownSmoothingFactor;
+  static const float kAudioMeterMaxDb;
+  static const float kAudioMeterMinDb;
+  static const float kAudioMeterDbRange;
+
   struct Hypothesis {
     QString utterance;
     qreal confidence;
@@ -64,6 +70,7 @@ public:
   void Cancel();
 
 signals:
+  void AudioLevelChanged(float audio_level);
   void Finished(Result result, const Hypotheses& hypotheses);
 
 private slots:
@@ -83,6 +90,8 @@ private:
   QByteArray buffered_raw_data_;
   speech_input::Endpointer endpointer_;
   int num_samples_recorded_;
+
+  float audio_level_;
 };
 
 #endif // SPEECHRECOGNITION_H

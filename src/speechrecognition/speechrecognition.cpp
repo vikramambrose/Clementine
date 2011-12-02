@@ -37,6 +37,19 @@ const char* SpeechRecognition::kUrl =
 const int SpeechRecognition::kEndpointerEstimationTimeMs = 300;
 const int SpeechRecognition::kEndpointerFrameSizeSamples = 320;
 
+// The following constants are related to the volume level indicator shown in
+// the UI for recorded audio.
+// Multiplier used when new volume is greater than previous level.
+const float SpeechRecognition::kUpSmoothingFactor = 1.0f;
+// Multiplier used when new volume is lesser than previous level.
+const float SpeechRecognition::kDownSmoothingFactor = 0.7f;
+// RMS dB value of a maximum (unclipped) sine wave for int16 samples.
+const float SpeechRecognition::kAudioMeterMaxDb = 90.31f;
+// This value corresponds to RMS dB for int16 with 6 most-significant-bits = 0.
+// Values lower than this will display as empty level-meter.
+const float SpeechRecognition::kAudioMeterMinDb = 30.0f;
+const float SpeechRecognition::kAudioMeterDbRange = kAudioMeterMaxDb - kAudioMeterMinDb;
+
 
 SpeechRecognition::SpeechRecognition(GstEngine* engine, QObject* parent)
   : QObject(parent),
@@ -44,7 +57,8 @@ SpeechRecognition::SpeechRecognition(GstEngine* engine, QObject* parent)
     pipeline_(new SpeechRecognitionPipeline(engine, this)),
     reply_(NULL),
     endpointer_(SpeechRecognitionPipeline::kBitrate),
-    num_samples_recorded_(0)
+    num_samples_recorded_(0),
+    audio_level_(0)
 {
   endpointer_.set_speech_input_complete_silence_length(kUsecPerSec / 2);
   endpointer_.set_long_speech_input_complete_silence_length(kUsecPerSec);
@@ -159,6 +173,21 @@ void SpeechRecognition::PipelineNewRawData(const QByteArray& data) {
       // processing.
       break;
     }
+
+    // Calculate the input volume to show in the UI, smoothing towards the new
+    // level.
+    float level = (rms - kAudioMeterMinDb) /
+        (kAudioMeterDbRange / kAudioMeterRangeMaxUnclipped);
+    level = qBound(0.0f, level, 1.0f);
+
+    if (level > audio_level_) {
+      audio_level_ += (level - audio_level_) * kUpSmoothingFactor;
+    } else {
+      audio_level_ += (level - audio_level_) * kDownSmoothingFactor;
+    }
+
+    emit AudioLevelChanged(audio_level_);
+
 
     if (endpointer_.speech_input_complete()) {
       qLog(Debug) << "Speech complete";
