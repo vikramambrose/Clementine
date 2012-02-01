@@ -188,7 +188,6 @@ class MainWindow : public QMainWindow, public PlatformInterface {
   void VolumeWheelEvent(int delta);
   void ToggleShowHide();
 
-  void Seeked(qlonglong microseconds);
   void UpdateTrackPosition();
 
   void LastFMButtonVisibilityChanged(bool value);
