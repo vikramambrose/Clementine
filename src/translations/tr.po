@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clementine\n"
 "Report-Msgid-Bugs-To: H. İbrahim Güngör <ibrahim@pardus.org.tr>\n"
-"POT-Creation-Date: 2011-03-14 10:16+0000\n"
-"PO-Revision-Date: 2011-03-16 14:36+0000\n"
+"POT-Creation-Date: 2011-03-25 22:01+0000\n"
+"PO-Revision-Date: 2011-03-23 15:33+0000\n"
 "Last-Translator: Ekrem Kocadere <ekocadere@hotmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
-"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-03-17 05:15+0000\n"
+"Language: tr\n"
+"X-Launchpad-Export-Date: 2011-03-26 05:46+0000\n"
 "X-Generator: Launchpad (build 12559)\n"
 
 msgid " ms"
@@ -82,15 +82,15 @@ msgstr "%1 parça"
 msgid "%1: Wiimotedev module"
 msgstr "%1: Wiimotedev modülü"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n failed"
 msgstr "%n başarısız"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n finished"
 msgstr "%n tamamlandı"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n remaining"
 msgstr "%n kalan"
 
@@ -188,11 +188,11 @@ msgstr "ALL GLORY TO THE HYPNOTOAD"
 msgid "About %1"
 msgstr "%1 Hakkında"
 
-msgid "About Clementine..."
-msgstr "Clementine Hakkında..."
-
 msgid "About Qt..."
 msgstr "Qt Hakkında..."
+
+msgid "About Ultimate Player..."
+msgstr ""
 
 msgid "Account details"
 msgstr "Hesap ayrıntıları"
@@ -530,9 +530,6 @@ msgstr "Clementine Hatası"
 msgid "Clementine Orange"
 msgstr "Clementine Turuncu"
 
-msgid "Clementine Visualization"
-msgstr "Clementine Görselliği"
-
 msgid ""
 "Clementine can automatically convert the music you copy to this device into "
 "a format that it can play."
@@ -547,9 +544,6 @@ msgstr ""
 "Clementine Android telefon tarafından uzaktan kontrol edilebilir. Bu "
 "özelliği etkinleştirmek için telefonunuzda yapılandırılan Google hesabınızla "
 "oturum açın."
-
-msgid "Clementine can show a message when the track changes."
-msgstr "Parça değiştiğinde Clementine bir ileti gösterebilir."
 
 msgid ""
 "Clementine could not load any projectM visualisations.  Check that you have "
@@ -940,8 +934,8 @@ msgstr "Wii kumanda desteğini etkinleştir"
 msgid "Enable equalizer"
 msgstr "Ekolayzırı etkinleştir"
 
-msgid "Enable shortcuts only when Clementine is focused"
-msgstr "Kısayolları sadece Clementine odaktayken etkinleştir"
+msgid "Enable shortcuts only when Ultimate Player is focused"
+msgstr ""
 
 msgid "Enter a name for the new playlist"
 msgstr "Yeni çalma listesi için isim girin"
@@ -2445,11 +2439,9 @@ msgid "The site you requested is not an image!"
 msgstr "İstediğiniz site bir resim değil!"
 
 msgid ""
-"The version of Clementine you've just updated to requires a full library "
-"rescan because of the new features listed below:"
+"The version of Ultimate Player you've just updated to requires a full "
+"library rescan because of the new features listed below:<ul>"
 msgstr ""
-"Güncellediğiniz Clementine sürümü, aşağıda listelenen yeni özellikler "
-"nedeniyle kitaplığınızın baştan taranmasını gerektiriyor:"
 
 msgid "There was a problem fetching the metadata from Magnatune"
 msgstr "Magnatude servisinden veri alınırken hata oluştu"
@@ -2568,6 +2560,15 @@ msgstr "URI"
 msgid "URL(s)"
 msgstr "URL(ler)"
 
+msgid "Ultimate Player"
+msgstr ""
+
+msgid "Ultimate Player Visualization"
+msgstr ""
+
+msgid "Ultimate Player can show a message when the track changes."
+msgstr ""
+
 #, qt-format
 msgid "Unable to download %1 (%2)"
 msgstr "%1 indirilemedi (%2)"
@@ -2584,8 +2585,8 @@ msgstr "Albüm kapağını çıkar"
 msgid "Update changed library folders"
 msgstr "Değişen kütüphane klasörlerini güncelle"
 
-msgid "Update the library when Clementine starts"
-msgstr "Clementine başladığında kütüphaneyi güncelle"
+msgid "Update the library when Ultimate Player starts"
+msgstr ""
 
 #, qt-format
 msgid "Updating %1"
@@ -2679,8 +2680,8 @@ msgstr ""
 msgid "Wav"
 msgstr "Wav"
 
-msgid "When Clementine starts"
-msgstr "Clementine başladığında"
+msgid "When Ultimate Player starts"
+msgstr ""
 
 msgid ""
 "When looking for album art Clementine will first look for picture files that "
@@ -2722,9 +2723,6 @@ msgstr "Wii Kumanda %1: düşük pil seviyesi (%2%)"
 msgid "Windows Media audio"
 msgstr "Windows Media audio"
 
-msgid "Would you like to run a full rescan right now?"
-msgstr ""
-
 msgid "Year"
 msgstr "Yıl"
 
@@ -2759,13 +2757,10 @@ msgstr ""
 "font-weight:600;\">ücretli aboneler</span> Last.fm radyosunu dinleyebilir."
 
 msgid ""
-"You can use your Wii Remote as a remote control for Clementine.  <a href="
-"\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
-"wiki</a> for more information.\n"
+"You can use your Wii Remote as a remote control for Ultimate Player.  <a "
+"href=\"http://www.clementine-player.org/wiimote\">See the page on the wiki</"
+"a> for more information.\n"
 msgstr ""
-"Wii kumandanızı kullanarak Clementine'ı uzaktan kumanda edebilirsiniz.  Daha "
-"fazla bilgi için <a href=\"http://www.clementine-player.org/wiimote"
-"\">Clementine wikideki ilgili sayfayı</a> ziyaret edin.\n"
 
 msgid "You love this track"
 msgstr "Bu şarkıyı seviyorsunuz"
@@ -2779,8 +2774,8 @@ msgstr ""
 "ve \"<span style=\" font-style:italic;\">Yardımcı aygıtlara erişimi "
 "etkinleştir</span>\" seçeneğini açın."
 
-msgid "You will need to restart Clementine if you change the language."
-msgstr "Dili değiştirdiyseniz programı yeniden başlatmanız gerekmektedir."
+msgid "You will need to restart Ultimate Player if you change the language."
+msgstr ""
 
 msgid "Your Google credentials were incorrect"
 msgstr "Google hesap bilgileriniz doğru değil"
@@ -2816,7 +2811,7 @@ msgstr "Z-A"
 msgid "Zero"
 msgstr "Sıfır"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "add %n songs"
 msgstr "%n şarkıyı ekle"
 
@@ -2875,7 +2870,7 @@ msgstr "açık"
 msgid "options"
 msgstr "seçenekler"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "remove %n songs"
 msgstr "%n şarkıyı kaldır"
 
@@ -2894,6 +2889,43 @@ msgstr "durdur"
 #, qt-format
 msgid "track %1"
 msgstr "parça %1"
+
+#~ msgid "Clementine Visualization"
+#~ msgstr "Clementine Görselliği"
+
+#~ msgid "Update the library when Clementine starts"
+#~ msgstr "Clementine başladığında kütüphaneyi güncelle"
+
+#~ msgid "Enable shortcuts only when Clementine is focused"
+#~ msgstr "Kısayolları sadece Clementine odaktayken etkinleştir"
+
+#~ msgid ""
+#~ "You can use your Wii Remote as a remote control for Clementine.  <a href="
+#~ "\"http://www.clementine-player.org/wiimote\">See the page on the "
+#~ "Clementine wiki</a> for more information.\n"
+#~ msgstr ""
+#~ "Wii kumandanızı kullanarak Clementine'ı uzaktan kumanda edebilirsiniz.  "
+#~ "Daha fazla bilgi için <a href=\"http://www.clementine-player.org/wiimote"
+#~ "\">Clementine wikideki ilgili sayfayı</a> ziyaret edin.\n"
+
+#~ msgid "Clementine can show a message when the track changes."
+#~ msgstr "Parça değiştiğinde Clementine bir ileti gösterebilir."
+
+#~ msgid "When Clementine starts"
+#~ msgstr "Clementine başladığında"
+
+#~ msgid "You will need to restart Clementine if you change the language."
+#~ msgstr "Dili değiştirdiyseniz programı yeniden başlatmanız gerekmektedir."
+
+#~ msgid ""
+#~ "The version of Clementine you've just updated to requires a full library "
+#~ "rescan because of the new features listed below:<ul>"
+#~ msgstr ""
+#~ "Güncellediğiniz Clementine sürümü, aşağıda listelenen yeni özellikler "
+#~ "nedeniyle kitaplığınızın baştan taranmasını gerektiriyor:<ul>"
+
+#~ msgid "About Clementine..."
+#~ msgstr "Clementine Hakkında..."
 
 #~ msgid "Hide %1"
 #~ msgstr "Gizle %1"

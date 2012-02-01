@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-14 10:16+0000\n"
-"PO-Revision-Date: 2011-03-09 09:33+0000\n"
+"POT-Creation-Date: 2011-03-25 22:01+0000\n"
+"PO-Revision-Date: 2011-03-23 03:51+0000\n"
 "Last-Translator: Pavel Maleev <Unknown>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
-"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-03-15 05:12+0000\n"
+"Language: ru\n"
+"X-Launchpad-Export-Date: 2011-03-26 05:46+0000\n"
 "X-Generator: Launchpad (build 12559)\n"
 
 msgid " ms"
@@ -81,15 +81,15 @@ msgstr "%1 композиций"
 msgid "%1: Wiimotedev module"
 msgstr "%1: модуль Wiimotedev"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n failed"
 msgstr "%n с ошибкой"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n finished"
 msgstr "%n завершено"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n remaining"
 msgstr "%n осталось"
 
@@ -188,11 +188,11 @@ msgstr ""
 msgid "About %1"
 msgstr "О «%1»"
 
-msgid "About Clementine..."
-msgstr "О программе Clementine..."
-
 msgid "About Qt..."
 msgstr "О Qt..."
+
+msgid "About Ultimate Player..."
+msgstr ""
 
 msgid "Account details"
 msgstr "Детали учётной записи"
@@ -532,9 +532,6 @@ msgstr "Ошибка Clementine"
 msgid "Clementine Orange"
 msgstr "Оранжевый Clementine"
 
-msgid "Clementine Visualization"
-msgstr "Визуализация Clementine"
-
 msgid ""
 "Clementine can automatically convert the music you copy to this device into "
 "a format that it can play."
@@ -546,9 +543,9 @@ msgid ""
 "Clementine can be controlled remotely by an Android phone.  To enable this "
 "feature log in with the same Google account that is configured on your phone."
 msgstr ""
-
-msgid "Clementine can show a message when the track changes."
-msgstr "Clementine может показывать сообщения при смене дорожки."
+"Clementine может удаленно управляться телефоном с ОС Android. Для "
+"активирования этой функции зайдите под тем же аккаунтом Google , что и на "
+"телефоне."
 
 msgid ""
 "Clementine could not load any projectM visualisations.  Check that you have "
@@ -595,7 +592,7 @@ msgid "Complete tags automatically"
 msgstr "Автоматически заполнять тэги"
 
 msgid "Complete tags automatically..."
-msgstr ""
+msgstr "Заполнить теги автоматически..."
 
 msgid "Composer"
 msgstr "Композитор"
@@ -847,7 +844,7 @@ msgid "Display the on-screen-display"
 msgstr "Показывать экранное уведомление"
 
 msgid "Do a full library rescan"
-msgstr ""
+msgstr "Пересканировать музыкальную коллекцию"
 
 msgid "Do not convert any music"
 msgstr "Не конвертировать любую музыку"
@@ -940,8 +937,8 @@ msgstr "Включить поддержку пульта Wii"
 msgid "Enable equalizer"
 msgstr "Включить эквалайзер"
 
-msgid "Enable shortcuts only when Clementine is focused"
-msgstr "Разрешить горячие клавиши только когда окно программы активно"
+msgid "Enable shortcuts only when Ultimate Player is focused"
+msgstr ""
 
 msgid "Enter a name for the new playlist"
 msgstr "Введите имя для списка воспроизведения"
@@ -1235,6 +1232,8 @@ msgid ""
 "If you use the remote on more than one computer, this name will help you "
 "choose which one to connect to on your phone."
 msgstr ""
+"Если вы используете функцию удаленного управления больше чем на одном "
+"компьютере, это имя поможет выбрать к какому подключиться с телефона."
 
 msgid "Ignore \"The\" in artist names"
 msgstr "Игнорировать \"The\" в имени исполнителя"
@@ -2442,8 +2441,8 @@ msgid "The site you requested is not an image!"
 msgstr "Запрошенный вами ссылка не является изображением!"
 
 msgid ""
-"The version of Clementine you've just updated to requires a full library "
-"rescan because of the new features listed below:"
+"The version of Ultimate Player you've just updated to requires a full "
+"library rescan because of the new features listed below:<ul>"
 msgstr ""
 
 msgid "There was a problem fetching the metadata from Magnatune"
@@ -2572,6 +2571,15 @@ msgstr "URI"
 msgid "URL(s)"
 msgstr "URL(s)"
 
+msgid "Ultimate Player"
+msgstr ""
+
+msgid "Ultimate Player Visualization"
+msgstr ""
+
+msgid "Ultimate Player can show a message when the track changes."
+msgstr ""
+
 #, qt-format
 msgid "Unable to download %1 (%2)"
 msgstr "Невозможно загрузить %1 (%2)"
@@ -2588,8 +2596,8 @@ msgstr "Удалить обложку"
 msgid "Update changed library folders"
 msgstr "Обновить измененные папки музыкальной коллекции"
 
-msgid "Update the library when Clementine starts"
-msgstr "Обновлять коллекцию при старте Clementine"
+msgid "Update the library when Ultimate Player starts"
+msgstr ""
 
 #, qt-format
 msgid "Updating %1"
@@ -2683,8 +2691,8 @@ msgstr ""
 msgid "Wav"
 msgstr "Wav"
 
-msgid "When Clementine starts"
-msgstr "При запуске Clementine"
+msgid "When Ultimate Player starts"
+msgstr ""
 
 msgid ""
 "When looking for album art Clementine will first look for picture files that "
@@ -2726,9 +2734,6 @@ msgstr "Пульт Wii Remote %1: низкий заряд батареи (%2%)"
 msgid "Windows Media audio"
 msgstr "Windows Media"
 
-msgid "Would you like to run a full rescan right now?"
-msgstr ""
-
 msgid "Year"
 msgstr "Год"
 
@@ -2763,13 +2768,10 @@ msgstr ""
 "Clementine."
 
 msgid ""
-"You can use your Wii Remote as a remote control for Clementine.  <a href="
-"\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
-"wiki</a> for more information.\n"
+"You can use your Wii Remote as a remote control for Ultimate Player.  <a "
+"href=\"http://www.clementine-player.org/wiimote\">See the page on the wiki</"
+"a> for more information.\n"
 msgstr ""
-"Вы можете использовать пульт Wii для дистанционного управления Clementine. "
-"<a href=\"http://www.clementine-player.org/wiimote\">Смотри раздел на wiki-"
-"странице Clementine</a> для более подробной информации.\n"
 
 msgid "You love this track"
 msgstr "Вам нравится эта композиция"
@@ -2783,8 +2785,8 @@ msgstr ""
 "функцию \"Разрешить доступ для вспомогательных  устройств\" для "
 "использования глобальных горячих клавиш в Clementine"
 
-msgid "You will need to restart Clementine if you change the language."
-msgstr "После смены языка потребуется перезапуск"
+msgid "You will need to restart Ultimate Player if you change the language."
+msgstr ""
 
 msgid "Your Google credentials were incorrect"
 msgstr ""
@@ -2817,7 +2819,7 @@ msgstr "Z-A"
 msgid "Zero"
 msgstr "По-умолчанию"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "add %n songs"
 msgstr "добавить %n композиций"
 
@@ -2876,7 +2878,7 @@ msgstr "на"
 msgid "options"
 msgstr "настройки"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "remove %n songs"
 msgstr "удалить %n композиций"
 
@@ -2895,6 +2897,36 @@ msgstr "Остановить"
 #, qt-format
 msgid "track %1"
 msgstr "композиция %1"
+
+#~ msgid "Clementine Visualization"
+#~ msgstr "Визуализация Clementine"
+
+#~ msgid "Update the library when Clementine starts"
+#~ msgstr "Обновлять коллекцию при старте Clementine"
+
+#~ msgid "Enable shortcuts only when Clementine is focused"
+#~ msgstr "Разрешить горячие клавиши только когда окно программы активно"
+
+#~ msgid ""
+#~ "You can use your Wii Remote as a remote control for Clementine.  <a href="
+#~ "\"http://www.clementine-player.org/wiimote\">See the page on the "
+#~ "Clementine wiki</a> for more information.\n"
+#~ msgstr ""
+#~ "Вы можете использовать пульт Wii для дистанционного управления "
+#~ "Clementine. <a href=\"http://www.clementine-player.org/wiimote\">Смотри "
+#~ "раздел на wiki-странице Clementine</a> для более подробной информации.\n"
+
+#~ msgid "Clementine can show a message when the track changes."
+#~ msgstr "Clementine может показывать сообщения при смене дорожки."
+
+#~ msgid "When Clementine starts"
+#~ msgstr "При запуске Clementine"
+
+#~ msgid "You will need to restart Clementine if you change the language."
+#~ msgstr "После смены языка потребуется перезапуск"
+
+#~ msgid "About Clementine..."
+#~ msgstr "О программе Clementine..."
 
 #~ msgid "Hide..."
 #~ msgstr "Скрыть..."

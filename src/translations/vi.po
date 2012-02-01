@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clementine\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-03-14 10:16+0000\n"
-"PO-Revision-Date: 2011-03-15 09:42+0000\n"
+"POT-Creation-Date: 2011-03-25 22:01+0000\n"
+"PO-Revision-Date: 2011-03-25 13:37+0000\n"
 "Last-Translator: Lê Trường An <xinemdungkhoc1@gmail.com>\n"
 "Language-Team: Vietnamese <vi@li.org>\n"
-"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-03-16 05:03+0000\n"
+"Language: vi\n"
+"X-Launchpad-Export-Date: 2011-03-26 05:47+0000\n"
 "X-Generator: Launchpad (build 12559)\n"
 
 msgid " ms"
@@ -82,15 +82,15 @@ msgstr "%1 track"
 msgid "%1: Wiimotedev module"
 msgstr "%1: mô-đun Wiimotedev"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n failed"
 msgstr "%n thất bại"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n finished"
 msgstr "%n kết thúc"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n remaining"
 msgstr "còn lại %n"
 
@@ -183,17 +183,17 @@ msgid "AIFF"
 msgstr "AIFF"
 
 msgid "ALL GLORY TO THE HYPNOTOAD"
-msgstr ""
+msgstr "ALL GLORY TO THE HYPNOTOAD"
 
 #, qt-format
 msgid "About %1"
 msgstr "Giới thiệu về %1"
 
-msgid "About Clementine..."
-msgstr "Giới thiệu về Clementine..."
-
 msgid "About Qt..."
 msgstr "Giới thiệu về Qt..."
+
+msgid "About Ultimate Player..."
+msgstr ""
 
 msgid "Account details"
 msgstr "Chi tiết tài khoản"
@@ -241,7 +241,7 @@ msgid "Add stream..."
 msgstr "Thêm luồng..."
 
 msgid "Add to another playlist"
-msgstr ""
+msgstr "Thêm vào danh sách khác"
 
 msgid "Add to playlist"
 msgstr "Thêm vào danh sách"
@@ -477,13 +477,13 @@ msgid "Change font size..."
 msgstr "Đổi kích cỡ phông chữ..."
 
 msgid "Change repeat mode"
-msgstr ""
+msgstr "Thay đổi chế độ lặp lại"
 
 msgid "Change shortcut..."
 msgstr "Đổi phím tắt..."
 
 msgid "Change shuffle mode"
-msgstr ""
+msgstr "Thay đổi chế độ phát ngẫu nhiên"
 
 msgid "Change the language"
 msgstr "Đổi ngôn ngữ"
@@ -531,9 +531,6 @@ msgstr "Lỗi Clementine"
 msgid "Clementine Orange"
 msgstr "Clementine Orange"
 
-msgid "Clementine Visualization"
-msgstr "Hiệu ứng hình ảnh ảo Clementine"
-
 msgid ""
 "Clementine can automatically convert the music you copy to this device into "
 "a format that it can play."
@@ -548,9 +545,6 @@ msgstr ""
 "Clementine có thể được điều khiển từ xa bằng điện thoại Android. Để bật tính "
 "năng này bạn phải đăng nhập bằng tài khoản Google được thiết lập trên điện "
 "thoại của bạn."
-
-msgid "Clementine can show a message when the track changes."
-msgstr "Clementine hiển thị một tin nhắn khi bài hát thay đổi."
 
 msgid ""
 "Clementine could not load any projectM visualisations.  Check that you have "
@@ -893,7 +887,7 @@ msgid "Downloading Magnatune catalogue"
 msgstr "Tải mục lục Magnatune"
 
 msgid "Downloading metadata"
-msgstr ""
+msgstr "Đang tải siêu dữ liệu"
 
 msgid "Drag to reposition"
 msgstr "Kéo để xác định lại vị trí"
@@ -941,8 +935,8 @@ msgstr "Bật hỗ trợ tay cầm điều khiển Wii"
 msgid "Enable equalizer"
 msgstr "Bật bộ cân chỉnh âm"
 
-msgid "Enable shortcuts only when Clementine is focused"
-msgstr "Bật các phím tắt chỉ khi cửa sổ Clementine đang được chọn"
+msgid "Enable shortcuts only when Ultimate Player is focused"
+msgstr ""
 
 msgid "Enter a name for the new playlist"
 msgstr "Nhập tên cho danh sách mới"
@@ -1002,6 +996,7 @@ msgstr "Chưa bao giờ được phát"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
 msgstr ""
+"Ngoại trừ giữa các track trong album tương tự hoặc trong bảng CUE tương tự"
 
 msgid "Extras"
 msgstr "Hiệu ứng"
@@ -1089,7 +1084,7 @@ msgstr ""
 "Tìm bài hát trong thư viện của bạn phù hợp với tiêu chuẩn mà bạn chỉ định."
 
 msgid "Fingerprinting song"
-msgstr ""
+msgstr "Dấu ấn bài hát"
 
 msgid "Finish"
 msgstr "Hoàn tất"
@@ -1166,7 +1161,7 @@ msgid "Got %1 covers out of %2 (%3 failed)"
 msgstr "Đã tải %1 ảnh bìa trong số %2 (thất bại %3)"
 
 msgid "Grey out non existent songs in my playlists"
-msgstr ""
+msgstr "Loại bỏ những bài hát không tồn tại khỏi các danh sách"
 
 msgid "Group Library by..."
 msgstr "Nhóm Thư viện theo..."
@@ -1224,7 +1219,7 @@ msgid "Icons on top"
 msgstr "Biểu tượng ở trên cùng"
 
 msgid "Identifying song"
-msgstr ""
+msgstr "Đang nhận diện bài hát"
 
 msgid ""
 "If you continue, this device will work slowly and songs copied to it may not "
@@ -1629,7 +1624,7 @@ msgid "Network"
 msgstr "Network"
 
 msgid "Network Proxy"
-msgstr "Mạng lưới Proxy"
+msgstr "Network Proxy"
 
 msgid "Never"
 msgstr "Chưa bao giờ"
@@ -1638,7 +1633,7 @@ msgid "Never played"
 msgstr "Chưa bao giờ phát"
 
 msgid "Never start playing"
-msgstr "Không phát khi khởi động"
+msgstr "Không tự phát nhạc khi khởi động"
 
 msgid "New playlist"
 msgstr "Danh sách mới"
@@ -1659,7 +1654,7 @@ msgid "Next"
 msgstr "Tiếp theo"
 
 msgid "Next track"
-msgstr "Bài hát tiếp theo"
+msgstr "Track tiếp theo"
 
 msgid "No analyzer"
 msgstr "Không phân tích"
@@ -1692,7 +1687,7 @@ msgid "Not enough members"
 msgstr "Chưa đủ thành viên"
 
 msgid "Not enough neighbors"
-msgstr "Chưa đủ hàng xóm"
+msgstr "Chưa đủ những người lân cận"
 
 msgid "Not mounted - double click to mount"
 msgstr "Chưa gắn vào - nhấp đúp chuột để gắn vào"
@@ -1933,7 +1928,7 @@ msgid "Queue Manager"
 msgstr "Trình quản lý danh sách chờ"
 
 msgid "Queue selected tracks"
-msgstr "Xếp bài nhạc đã chọn vào danh sách chờ"
+msgstr "Xếp các track đã chọn vào danh sách chờ"
 
 msgid "Queue track"
 msgstr "Track chờ phát"
@@ -2213,6 +2208,7 @@ msgstr "Hiện một hộp thông báo trên màn hình"
 
 msgid "Show a notification when I change the repeat/shuffle mode"
 msgstr ""
+"Hiện một bảng thông báo khi tôi thay đổi chế độ lặp lại/phát ngẫu nhiên"
 
 msgid "Show a notification when I change the volume"
 msgstr "Hiện thông báo khi thay đổi âm lượng"
@@ -2445,11 +2441,9 @@ msgid "The site you requested is not an image!"
 msgstr "Trang bạn đã yêu cầu không phải là một tấm ảnh!"
 
 msgid ""
-"The version of Clementine you've just updated to requires a full library "
-"rescan because of the new features listed below:"
+"The version of Ultimate Player you've just updated to requires a full "
+"library rescan because of the new features listed below:<ul>"
 msgstr ""
-"Phiên bản Clementine bạn vừa cập nhật yêu cầu quét thư viện vì các tính năng "
-"mới được liệt kê bên dưới:"
 
 msgid "There was a problem fetching the metadata from Magnatune"
 msgstr "Có vấn đề khi lấy siêu dữ liệu từ Magnatune"
@@ -2574,6 +2568,15 @@ msgstr "URI"
 msgid "URL(s)"
 msgstr "URL(s)"
 
+msgid "Ultimate Player"
+msgstr ""
+
+msgid "Ultimate Player Visualization"
+msgstr ""
+
+msgid "Ultimate Player can show a message when the track changes."
+msgstr ""
+
 #, qt-format
 msgid "Unable to download %1 (%2)"
 msgstr "Không thể tải về %1 (%2)"
@@ -2590,8 +2593,8 @@ msgstr "Bỏ thiết đặt ảnh bìa"
 msgid "Update changed library folders"
 msgstr "Cập nhập thư mục thư viện đã thay đổi"
 
-msgid "Update the library when Clementine starts"
-msgstr "Cập nhật thư viện khi Clementine khởi động"
+msgid "Update the library when Ultimate Player starts"
+msgstr ""
 
 #, qt-format
 msgid "Updating %1"
@@ -2686,8 +2689,8 @@ msgstr ""
 msgid "Wav"
 msgstr "Wav"
 
-msgid "When Clementine starts"
-msgstr "Khi Clementine khởi động"
+msgid "When Ultimate Player starts"
+msgstr ""
 
 msgid ""
 "When looking for album art Clementine will first look for picture files that "
@@ -2729,9 +2732,6 @@ msgstr "Wii Remote %1: Pin yếu (%2%)"
 msgid "Windows Media audio"
 msgstr "Âm thanh Windows Media"
 
-msgid "Would you like to run a full rescan right now?"
-msgstr ""
-
 msgid "Year"
 msgstr "Năm"
 
@@ -2766,13 +2766,10 @@ msgstr ""
 "thể lấy dữ liệu kênh ra-đi-ô Last.fm từ Clementine."
 
 msgid ""
-"You can use your Wii Remote as a remote control for Clementine.  <a href="
-"\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
-"wiki</a> for more information.\n"
+"You can use your Wii Remote as a remote control for Ultimate Player.  <a "
+"href=\"http://www.clementine-player.org/wiimote\">See the page on the wiki</"
+"a> for more information.\n"
 msgstr ""
-"Bạn có thể điều khiển Clementine từ xa với Wii Remote.  <a href=\"http://www."
-"clementine-player.org/wiimote\">Xem bài viết trên Clementin wiki<a> để biết "
-"thêm chi tiết.\n"
 
 msgid "You love this track"
 msgstr "Bạn thích bài hát này"
@@ -2786,8 +2783,8 @@ msgstr ""
 "Cho phép truy cập vào thiết bị</span>\" để sử dụng toàn bộ phím tắt trong "
 "Clementine."
 
-msgid "You will need to restart Clementine if you change the language."
-msgstr "Bạn cần khởi động lại Clementine nếu bạn thay đổi ngôn ngữ."
+msgid "You will need to restart Ultimate Player if you change the language."
+msgstr ""
 
 msgid "Your Google credentials were incorrect"
 msgstr "Thông tin tài khoản Google của bạn không đúng"
@@ -2796,13 +2793,15 @@ msgid "Your Last.fm credentials were incorrect"
 msgstr "Chứng thư Last.fm của bạn không đúng"
 
 msgid "Your Magnatune credentials were incorrect"
-msgstr ""
+msgstr "Thông tin tài khoản Magnatune không đúng"
 
 msgid ""
 "Your gstreamer installation is missing the 'ofa' plugin.  This is required "
 "for automatic tag fetching.  Try installing the 'gstreamer-plugins-bad' "
 "package."
 msgstr ""
+"Gstreamer bị thiếu trình cắm thêm 'ofa'. Trình cắm này cần cho việc tự động "
+"tải thẻ. Hãy thử cài đặt lại gói 'gstreamer-plugins-bad'."
 
 msgid "Your library is empty!"
 msgstr "Thư viện của bạn trống rỗng!"
@@ -2820,7 +2819,7 @@ msgstr "Z-A"
 msgid "Zero"
 msgstr "Zero"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "add %n songs"
 msgstr "và %n bài hát"
 
@@ -2879,7 +2878,7 @@ msgstr "on"
 msgid "options"
 msgstr "options"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "remove %n songs"
 msgstr "xóa %n bài hát"
 
@@ -2898,6 +2897,46 @@ msgstr "stop"
 #, qt-format
 msgid "track %1"
 msgstr "track %1"
+
+#~ msgid "Clementine Visualization"
+#~ msgstr "Hiệu ứng hình ảnh ảo Clementine"
+
+#~ msgid "Update the library when Clementine starts"
+#~ msgstr "Cập nhật thư viện khi Clementine khởi động"
+
+#~ msgid "Enable shortcuts only when Clementine is focused"
+#~ msgstr "Bật các phím tắt chỉ khi cửa sổ Clementine đang được chọn"
+
+#~ msgid ""
+#~ "You can use your Wii Remote as a remote control for Clementine.  <a href="
+#~ "\"http://www.clementine-player.org/wiimote\">See the page on the "
+#~ "Clementine wiki</a> for more information.\n"
+#~ msgstr ""
+#~ "Bạn có thể điều khiển Clementine từ xa với Wii Remote.  <a href=\"http://"
+#~ "www.clementine-player.org/wiimote\">Xem bài viết trên Clementin wiki<a> "
+#~ "để biết thêm chi tiết.\n"
+
+#~ msgid "Clementine can show a message when the track changes."
+#~ msgstr "Clementine hiển thị một tin nhắn khi bài hát thay đổi."
+
+#~ msgid "When Clementine starts"
+#~ msgstr "Khi Clementine khởi động"
+
+#~ msgid "You will need to restart Clementine if you change the language."
+#~ msgstr "Bạn cần khởi động lại Clementine nếu bạn thay đổi ngôn ngữ."
+
+#~ msgid ""
+#~ "The version of Clementine you've just updated to requires a full library "
+#~ "rescan because of the new features listed below:<ul>"
+#~ msgstr ""
+#~ "Phiên bản Clementine bạn vừa cập nhật yêu cầu quét thư viện vì các tính "
+#~ "năng mới được liệt kê bên dưới:<ul>"
+
+#~ msgid "About Clementine..."
+#~ msgstr "Giới thiệu về Clementine..."
+
+#~ msgid "Would you like to run a full rescan right now?"
+#~ msgstr "Bạn có muốn quét lại toàn bộ ngay không?"
 
 #~ msgid "Generating audio fingerprint and fetching results..."
 #~ msgstr "Tạo dấu hiệu cho âm thanh và lấy kết quả..."

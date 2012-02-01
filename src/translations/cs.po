@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-14 10:16+0000\n"
-"PO-Revision-Date: 2011-03-15 20:19+0000\n"
+"POT-Creation-Date: 2011-03-25 22:01+0000\n"
+"PO-Revision-Date: 2011-03-23 18:03+0000\n"
 "Last-Translator: fri <pavelfric@seznam.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
-"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-03-16 05:03+0000\n"
+"Language: cs\n"
+"X-Launchpad-Export-Date: 2011-03-26 05:44+0000\n"
 "X-Generator: Launchpad (build 12559)\n"
 "X-Language: cs_CZ\n"
 
@@ -84,15 +84,15 @@ msgstr "%1 skladeb"
 msgid "%1: Wiimotedev module"
 msgstr "%1: modul Wiimotedev"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n failed"
 msgstr "nepodařilo se %n"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n finished"
 msgstr "dokončeno %n"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n remaining"
 msgstr "zůstávají %n"
 
@@ -192,11 +192,11 @@ msgstr "VŠECHNU SLÁVU ŽÁBĚ"
 msgid "About %1"
 msgstr "O %1"
 
-msgid "About Clementine..."
-msgstr "O Clementine..."
-
 msgid "About Qt..."
 msgstr "O Qt..."
+
+msgid "About Ultimate Player..."
+msgstr ""
 
 msgid "Account details"
 msgstr "Podrobnosti o účtu"
@@ -244,7 +244,7 @@ msgid "Add stream..."
 msgstr "Přidat proud..."
 
 msgid "Add to another playlist"
-msgstr ""
+msgstr "Přidat do jiného seznamu skladeb"
 
 msgid "Add to playlist"
 msgstr "Přidat do seznamu skladeb"
@@ -480,13 +480,13 @@ msgid "Change font size..."
 msgstr "Změnit velikost písma..."
 
 msgid "Change repeat mode"
-msgstr ""
+msgstr "Změnit režim opakování"
 
 msgid "Change shortcut..."
 msgstr "Změnit klávesovou zkratku..."
 
 msgid "Change shuffle mode"
-msgstr ""
+msgstr "Změnit režim míchání"
 
 msgid "Change the language"
 msgstr "Změnit jazyk"
@@ -534,9 +534,6 @@ msgstr "Chyba v Clemetine"
 msgid "Clementine Orange"
 msgstr "Pomerančová Clementine"
 
-msgid "Clementine Visualization"
-msgstr "Vizualizace Clementine"
-
 msgid ""
 "Clementine can automatically convert the music you copy to this device into "
 "a format that it can play."
@@ -551,9 +548,6 @@ msgstr ""
 "Clementine je možné ovládat dálkově telefonem s operačním systémem Android. "
 "Pro povolení této vlastnosti se přihlaste se stejným účtem Google, který je "
 "nastaven na vašem telefonu."
-
-msgid "Clementine can show a message when the track changes."
-msgstr "Clementine může při změně skladby zobrazit zprávu."
 
 msgid ""
 "Clementine could not load any projectM visualisations.  Check that you have "
@@ -944,8 +938,8 @@ msgstr "Povolit podporu dálkového ovládání Wii"
 msgid "Enable equalizer"
 msgstr "Povolit ekvalizér"
 
-msgid "Enable shortcuts only when Clementine is focused"
-msgstr "Povolit zkratky jen když je Clementine zaměřena"
+msgid "Enable shortcuts only when Ultimate Player is focused"
+msgstr ""
 
 msgid "Enter a name for the new playlist"
 msgstr "Zadejte název pro nový seznam skladeb"
@@ -1168,7 +1162,7 @@ msgid "Got %1 covers out of %2 (%3 failed)"
 msgstr "Získáno %1 obalů z %2 (%3 nezískáno)"
 
 msgid "Grey out non existent songs in my playlists"
-msgstr ""
+msgstr "Nechat zešedivět neexistující písničky v mých seznamech skladeb"
 
 msgid "Group Library by..."
 msgstr "Roztřídit hudební knihovnu podle..."
@@ -2215,7 +2209,7 @@ msgid "Show a native desktop notification"
 msgstr "Používat systémová oznámení"
 
 msgid "Show a notification when I change the repeat/shuffle mode"
-msgstr ""
+msgstr "Při změně režimu opakování/míchání ukázat oznámení"
 
 msgid "Show a notification when I change the volume"
 msgstr "Ukázat oznámení při změně hlasitosti"
@@ -2448,11 +2442,9 @@ msgid "The site you requested is not an image!"
 msgstr "Požadovaná stránka není obrázek!"
 
 msgid ""
-"The version of Clementine you've just updated to requires a full library "
-"rescan because of the new features listed below:"
+"The version of Ultimate Player you've just updated to requires a full "
+"library rescan because of the new features listed below:<ul>"
 msgstr ""
-"Verze Clementine, na již jste právě povýšil, vyžaduje kvůli novým "
-"vlastnostem uvedeným níže úplné znovuprohledání knihovny:"
 
 msgid "There was a problem fetching the metadata from Magnatune"
 msgstr "Při stahování metadat z Magnatune se vyskytly potíže."
@@ -2577,6 +2569,15 @@ msgstr "URI"
 msgid "URL(s)"
 msgstr "Adresa (URL)"
 
+msgid "Ultimate Player"
+msgstr ""
+
+msgid "Ultimate Player Visualization"
+msgstr ""
+
+msgid "Ultimate Player can show a message when the track changes."
+msgstr ""
+
 #, qt-format
 msgid "Unable to download %1 (%2)"
 msgstr "Nepodařilo se stáhnout %1 (%2)"
@@ -2593,8 +2594,8 @@ msgstr "Odebrat obal"
 msgid "Update changed library folders"
 msgstr "Obnovit změněné knihovní složky"
 
-msgid "Update the library when Clementine starts"
-msgstr "Při spuštění Clementine obnovit hudební knihovnu"
+msgid "Update the library when Ultimate Player starts"
+msgstr ""
 
 #, qt-format
 msgid "Updating %1"
@@ -2688,8 +2689,8 @@ msgstr ""
 msgid "Wav"
 msgstr "WAV"
 
-msgid "When Clementine starts"
-msgstr "Při spuštění Clementine"
+msgid "When Ultimate Player starts"
+msgstr ""
 
 msgid ""
 "When looking for album art Clementine will first look for picture files that "
@@ -2731,9 +2732,6 @@ msgstr "Wii Remote %1: nízká hladina baterie (%2%)"
 msgid "Windows Media audio"
 msgstr "Windows Media Audio"
 
-msgid "Would you like to run a full rescan right now?"
-msgstr ""
-
 msgid "Year"
 msgstr "Rok"
 
@@ -2768,13 +2766,10 @@ msgstr ""
 "span>."
 
 msgid ""
-"You can use your Wii Remote as a remote control for Clementine.  <a href="
-"\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
-"wiki</a> for more information.\n"
+"You can use your Wii Remote as a remote control for Ultimate Player.  <a "
+"href=\"http://www.clementine-player.org/wiimote\">See the page on the wiki</"
+"a> for more information.\n"
 msgstr ""
-"Clementime lze ovládat dálkovým ovladačem od Wii. Pro více informací "
-"navštivte <a href=\"http://www.clementine-player.org/wiimote\">Clementine "
-"wiki</a>.\n"
 
 msgid "You love this track"
 msgstr "Tato skladba patří mezi vaše oblíbené"
@@ -2788,17 +2783,17 @@ msgstr ""
 "otevřít nastavení systému a zapnout \"<span style=\" font-style:italic;"
 "\">Povolit přístup pro podpůrná zařízení</span>\"."
 
-msgid "You will need to restart Clementine if you change the language."
-msgstr "Pokud změníte jazyk, budete muset Clementine spustit znovu."
+msgid "You will need to restart Ultimate Player if you change the language."
+msgstr ""
 
 msgid "Your Google credentials were incorrect"
-msgstr "Vaše osobní doklady u Google byly nesprávné"
+msgstr "Vaše přihlašovací údaje ke Google byly nesprávné"
 
 msgid "Your Last.fm credentials were incorrect"
 msgstr "Vaše přihlašovací údaje k Last.fm byly nesprávné"
 
 msgid "Your Magnatune credentials were incorrect"
-msgstr ""
+msgstr "Vaše přihlašovací údaje k Magnatune byly nesprávné"
 
 msgid ""
 "Your gstreamer installation is missing the 'ofa' plugin.  This is required "
@@ -2825,7 +2820,7 @@ msgstr "Z-A"
 msgid "Zero"
 msgstr "Vynulovat"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "add %n songs"
 msgstr "přidat %n písniček"
 
@@ -2884,7 +2879,7 @@ msgstr "Na"
 msgid "options"
 msgstr "Volby"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "remove %n songs"
 msgstr "odstranit %n písniček"
 
@@ -2903,6 +2898,46 @@ msgstr "Zastavit"
 #, qt-format
 msgid "track %1"
 msgstr "Skladba %1"
+
+#~ msgid "Clementine Visualization"
+#~ msgstr "Vizualizace Clementine"
+
+#~ msgid "Update the library when Clementine starts"
+#~ msgstr "Při spuštění Clementine obnovit hudební knihovnu"
+
+#~ msgid "Enable shortcuts only when Clementine is focused"
+#~ msgstr "Povolit zkratky jen když je Clementine zaměřena"
+
+#~ msgid ""
+#~ "You can use your Wii Remote as a remote control for Clementine.  <a href="
+#~ "\"http://www.clementine-player.org/wiimote\">See the page on the "
+#~ "Clementine wiki</a> for more information.\n"
+#~ msgstr ""
+#~ "Clementime lze ovládat dálkovým ovladačem od Wii. Pro více informací "
+#~ "navštivte <a href=\"http://www.clementine-player.org/wiimote\">Clementine "
+#~ "wiki</a>.\n"
+
+#~ msgid "Clementine can show a message when the track changes."
+#~ msgstr "Clementine může při změně skladby zobrazit zprávu."
+
+#~ msgid "When Clementine starts"
+#~ msgstr "Při spuštění Clementine"
+
+#~ msgid "You will need to restart Clementine if you change the language."
+#~ msgstr "Pokud změníte jazyk, budete muset Clementine spustit znovu."
+
+#~ msgid ""
+#~ "The version of Clementine you've just updated to requires a full library "
+#~ "rescan because of the new features listed below:<ul>"
+#~ msgstr ""
+#~ "Verze Clementine, na již jste právě povýšil, vyžaduje kvůli novým "
+#~ "vlastnostem uvedeným níže úplné znovuprohledání knihovny:<ul>"
+
+#~ msgid "About Clementine..."
+#~ msgstr "O Clementine..."
+
+#~ msgid "Would you like to run a full rescan right now?"
+#~ msgstr "Chcete spustit toto úplné nové prohledání hned teď?"
 
 #~ msgid "&Show tray icon"
 #~ msgstr "Zobrazit ikonu v &systémovém panelu"

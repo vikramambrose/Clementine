@@ -31,7 +31,7 @@
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>You can use your Wii Remote as a remote control for Clementine.  &lt;a href=&quot;http://www.clementine-player.org/wiimote&quot;&gt;See the page on the Clementine wiki&lt;/a&gt; for more information.
+      <string>You can use your Wii Remote as a remote control for Ultimate Player.  &lt;a href=&quot;http://www.clementine-player.org/wiimote&quot;&gt;See the page on the wiki&lt;/a&gt; for more information.
 </string>
      </property>
      <property name="wordWrap">
@@ -71,7 +71,7 @@
       <item>
        <widget class="QCheckBox" name="wiimotedev_focus">
         <property name="text">
-         <string>Enable shortcuts only when Clementine is focused</string>
+         <string>Enable shortcuts only when Ultimate Player is focused</string>
         </property>
        </widget>
       </item>

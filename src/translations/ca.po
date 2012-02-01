@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clementine\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-03-14 10:16+0000\n"
-"PO-Revision-Date: 2011-02-15 15:43+0000\n"
-"Last-Translator: David Planella <david.planella@ubuntu.com>\n"
+"POT-Creation-Date: 2011-03-25 22:01+0000\n"
+"PO-Revision-Date: 2011-03-19 23:15+0000\n"
+"Last-Translator: Pau Capó <Unknown>\n"
 "Language-Team: Catalan <ca@li.org>\n"
-"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-03-15 05:10+0000\n"
+"Language: ca\n"
+"X-Launchpad-Export-Date: 2011-03-26 05:44+0000\n"
 "X-Generator: Launchpad (build 12559)\n"
 
 msgid " ms"
@@ -82,15 +82,15 @@ msgstr "%1 temes"
 msgid "%1: Wiimotedev module"
 msgstr "%1 mòdul Wiimotedev"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n failed"
 msgstr "%n han fallat"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n finished"
 msgstr "%n han acabat"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n remaining"
 msgstr "%n restants"
 
@@ -98,7 +98,7 @@ msgid "&Align text"
 msgstr ""
 
 msgid "&Center"
-msgstr ""
+msgstr "&Centre"
 
 msgid "&Custom"
 msgstr "Personalitzades"
@@ -114,7 +114,7 @@ msgid "&Hide..."
 msgstr "Amaga..."
 
 msgid "&Left"
-msgstr ""
+msgstr "&Esquerra"
 
 msgid "&None"
 msgstr "&Cap"
@@ -123,7 +123,7 @@ msgid "&Quit"
 msgstr "&Abandona"
 
 msgid "&Right"
-msgstr ""
+msgstr "&Dreta"
 
 msgid "&Stretch columns to fit window"
 msgstr ""
@@ -158,8 +158,8 @@ msgid ""
 "<p>If you surround sections of text that contain a token with curly-braces, "
 "that section will be hidden if the token is empty.</p>"
 msgstr ""
-"<p>Les fitxes de reemplaçament comencen amb %, per exemple: %artist %album "
-"%title </p>\n"
+"<p>Les fitxes de reemplaçament comencen amb %, per exemple: %artist %album %"
+"title </p>\n"
 "\n"
 "<p>Si demarqueu entre claus una secció de text que contingui una fitxa de "
 "remplaçament, aquesta secció no es mostrarà si la fitxa de remplaçament es "
@@ -191,11 +191,11 @@ msgstr ""
 msgid "About %1"
 msgstr "Sobre %1"
 
-msgid "About Clementine..."
-msgstr "Sobre Clementine..."
-
 msgid "About Qt..."
 msgstr "Sobre Qt..."
+
+msgid "About Ultimate Player..."
+msgstr ""
 
 msgid "Account details"
 msgstr "Detalls del compte"
@@ -288,7 +288,7 @@ msgid "Album artist"
 msgstr "Artista de l'àlbum"
 
 msgid "Album info on jamendo.com..."
-msgstr ""
+msgstr "Informació de l'àlbum a la cua"
 
 msgid "Albumartist"
 msgstr "Artista de l'àlbum"
@@ -322,7 +322,7 @@ msgid "All the translators"
 msgstr ""
 
 msgid "All tracks"
-msgstr ""
+msgstr "Totes les pistes"
 
 msgid "Alongside the originals"
 msgstr "Al costat dels originals"
@@ -387,7 +387,7 @@ msgid "Artist"
 msgstr "Artista"
 
 msgid "Artist info"
-msgstr ""
+msgstr "Informació del artista"
 
 msgid "Artist radio"
 msgstr "Radio de l'artista"
@@ -539,9 +539,6 @@ msgstr "Error de Clementine"
 msgid "Clementine Orange"
 msgstr "Taronja Clementine"
 
-msgid "Clementine Visualization"
-msgstr "Visualització de Clementine"
-
 msgid ""
 "Clementine can automatically convert the music you copy to this device into "
 "a format that it can play."
@@ -553,9 +550,6 @@ msgid ""
 "Clementine can be controlled remotely by an Android phone.  To enable this "
 "feature log in with the same Google account that is configured on your phone."
 msgstr ""
-
-msgid "Clementine can show a message when the track changes."
-msgstr "Clementine pot mostrar un missatge quan canvia de pista"
 
 msgid ""
 "Clementine could not load any projectM visualisations.  Check that you have "
@@ -947,8 +941,8 @@ msgstr "Habilitat suport remot Wii"
 msgid "Enable equalizer"
 msgstr "Habilitar l'equalitzador"
 
-msgid "Enable shortcuts only when Clementine is focused"
-msgstr "Habilitar les dreceres només quan Clementine tengui el focus"
+msgid "Enable shortcuts only when Ultimate Player is focused"
+msgstr ""
 
 msgid "Enter a name for the new playlist"
 msgstr "Introduïu un nom per la nova llista de reproducció"
@@ -2445,8 +2439,8 @@ msgid "The site you requested is not an image!"
 msgstr ""
 
 msgid ""
-"The version of Clementine you've just updated to requires a full library "
-"rescan because of the new features listed below:"
+"The version of Ultimate Player you've just updated to requires a full "
+"library rescan because of the new features listed below:<ul>"
 msgstr ""
 
 msgid "There was a problem fetching the metadata from Magnatune"
@@ -2572,6 +2566,15 @@ msgstr "URI"
 msgid "URL(s)"
 msgstr "URL(s)"
 
+msgid "Ultimate Player"
+msgstr ""
+
+msgid "Ultimate Player Visualization"
+msgstr ""
+
+msgid "Ultimate Player can show a message when the track changes."
+msgstr ""
+
 #, qt-format
 msgid "Unable to download %1 (%2)"
 msgstr "No es pot descarregar %1 (%2)"
@@ -2588,8 +2591,8 @@ msgstr ""
 msgid "Update changed library folders"
 msgstr ""
 
-msgid "Update the library when Clementine starts"
-msgstr "Actualitza la llibreria quan Clementine arranqui"
+msgid "Update the library when Ultimate Player starts"
+msgstr ""
 
 #, qt-format
 msgid "Updating %1"
@@ -2681,8 +2684,8 @@ msgstr ""
 msgid "Wav"
 msgstr "Wav"
 
-msgid "When Clementine starts"
-msgstr "Quan s'inicia Clementine"
+msgid "When Ultimate Player starts"
+msgstr ""
 
 msgid ""
 "When looking for album art Clementine will first look for picture files that "
@@ -2720,9 +2723,6 @@ msgstr "Comandament remot Wii %1: bateria baixa (%2%)"
 msgid "Windows Media audio"
 msgstr "Audio Windows Media"
 
-msgid "Would you like to run a full rescan right now?"
-msgstr ""
-
 msgid "Year"
 msgstr "Any"
 
@@ -2755,9 +2755,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"You can use your Wii Remote as a remote control for Clementine.  <a href="
-"\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
-"wiki</a> for more information.\n"
+"You can use your Wii Remote as a remote control for Ultimate Player.  <a "
+"href=\"http://www.clementine-player.org/wiimote\">See the page on the wiki</"
+"a> for more information.\n"
 msgstr ""
 
 msgid "You love this track"
@@ -2772,8 +2772,8 @@ msgstr ""
 "font-style:italic;\">Habilita l'accés per dispositivos d'ajuda </ span>\", "
 "per utilitzar dreceres globals a Clementine."
 
-msgid "You will need to restart Clementine if you change the language."
-msgstr "Si canvies la llengua, tindràs que re-iniciar Clementine"
+msgid "You will need to restart Ultimate Player if you change the language."
+msgstr ""
 
 msgid "Your Google credentials were incorrect"
 msgstr ""
@@ -2806,7 +2806,7 @@ msgstr ""
 msgid "Zero"
 msgstr "Zero"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "add %n songs"
 msgstr "afegeix %n cançons"
 
@@ -2865,7 +2865,7 @@ msgstr ""
 msgid "options"
 msgstr "opcions"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "remove %n songs"
 msgstr "elimina %n cançons"
 
@@ -2884,6 +2884,27 @@ msgstr "atura"
 #, qt-format
 msgid "track %1"
 msgstr "peça %1"
+
+#~ msgid "Clementine Visualization"
+#~ msgstr "Visualització de Clementine"
+
+#~ msgid "Update the library when Clementine starts"
+#~ msgstr "Actualitza la llibreria quan Clementine arranqui"
+
+#~ msgid "Enable shortcuts only when Clementine is focused"
+#~ msgstr "Habilitar les dreceres només quan Clementine tengui el focus"
+
+#~ msgid "Clementine can show a message when the track changes."
+#~ msgstr "Clementine pot mostrar un missatge quan canvia de pista"
+
+#~ msgid "When Clementine starts"
+#~ msgstr "Quan s'inicia Clementine"
+
+#~ msgid "You will need to restart Clementine if you change the language."
+#~ msgstr "Si canvies la llengua, tindràs que re-iniciar Clementine"
+
+#~ msgid "About Clementine..."
+#~ msgstr "Sobre Clementine..."
 
 #~ msgid "ASF"
 #~ msgstr "ASF"

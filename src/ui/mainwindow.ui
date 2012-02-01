@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Clementine</string>
+   <string>Ultimate Player</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../../data/data.qrc">
@@ -390,7 +390,7 @@
      <x>0</x>
      <y>0</y>
      <width>1131</width>
-     <height>25</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_music">
@@ -440,6 +440,9 @@
     <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menu_extras">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="title">
      <string>Extras</string>
     </property>
@@ -598,7 +601,7 @@
   </action>
   <action name="action_about">
    <property name="text">
-    <string>About Clementine...</string>
+    <string>About Ultimate Player...</string>
    </property>
    <property name="shortcut">
     <string>F1</string>
@@ -642,8 +645,14 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string comment="Label for button to enable/disable rain background sound.">Rain</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
    </property>
   </action>
   <action name="action_hypnotoad">

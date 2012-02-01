@@ -120,7 +120,7 @@
      <item>
       <widget class="QStackedWidget" name="stacked_widget">
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="playback_page">
         <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -422,7 +422,7 @@
          <item>
           <widget class="QGroupBox" name="startup_group_">
            <property name="title">
-            <string>When Clementine starts</string>
+            <string>When Ultimate Player starts</string>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_8">
             <item>
@@ -582,7 +582,7 @@
             <item>
              <widget class="QLabel" name="label_10">
               <property name="text">
-               <string>You will need to restart Clementine if you change the language.</string>
+               <string>You will need to restart Ultimate Player if you change the language.</string>
               </property>
              </widget>
             </item>
@@ -743,7 +743,7 @@
          <item>
           <widget class="QLabel" name="label_2">
            <property name="text">
-            <string>Clementine can show a message when the track changes.</string>
+            <string>Ultimate Player can show a message when the track changes.</string>
            </property>
           </widget>
          </item>

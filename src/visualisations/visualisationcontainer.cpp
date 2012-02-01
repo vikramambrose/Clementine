@@ -67,7 +67,7 @@ VisualisationContainer::VisualisationContainer(QWidget *parent)
 }
 
 void VisualisationContainer::Init() {
-  setWindowTitle(tr("Clementine Visualization"));
+  setWindowTitle(tr("Ultimate Player Visualization"));
   setWindowIcon(QIcon(":/icon.png"));
 
   // Set up the graphics view

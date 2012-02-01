@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clementine\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-03-14 10:16+0000\n"
-"PO-Revision-Date: 2011-03-14 13:03+0000\n"
+"POT-Creation-Date: 2011-03-25 22:01+0000\n"
+"PO-Revision-Date: 2011-03-23 16:06+0000\n"
 "Last-Translator: George Karavasilev <kokoto_java@yahoo.com>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
-"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-03-15 05:10+0000\n"
+"Language: bg\n"
+"X-Launchpad-Export-Date: 2011-03-26 05:44+0000\n"
 "X-Generator: Launchpad (build 12559)\n"
 
 msgid " ms"
@@ -82,15 +82,15 @@ msgstr "%1 песни"
 msgid "%1: Wiimotedev module"
 msgstr "%1:Wiimotedev модул"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n failed"
 msgstr "%n неуспешно"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n finished"
 msgstr "%n завършено"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n remaining"
 msgstr "%n оставащо"
 
@@ -188,11 +188,11 @@ msgstr "Славният хипножабок!"
 msgid "About %1"
 msgstr "Относно %1"
 
-msgid "About Clementine..."
-msgstr "Относно Clementine..."
-
 msgid "About Qt..."
 msgstr "Относно QT..."
+
+msgid "About Ultimate Player..."
+msgstr ""
 
 msgid "Account details"
 msgstr "Данни на сметката"
@@ -240,7 +240,7 @@ msgid "Add stream..."
 msgstr "Добавяне на поток..."
 
 msgid "Add to another playlist"
-msgstr ""
+msgstr "Добави в друг плейлист"
 
 msgid "Add to playlist"
 msgstr "Добавяне към списъка с песни"
@@ -467,7 +467,7 @@ msgid "Buttons"
 msgstr "Бутони"
 
 msgid "CUE sheet support"
-msgstr ""
+msgstr "Поддръжка на CUE листове"
 
 msgid "Change cover art"
 msgstr "Смени обложката"
@@ -476,13 +476,13 @@ msgid "Change font size..."
 msgstr "Смени размера на щрифта"
 
 msgid "Change repeat mode"
-msgstr ""
+msgstr "Смени режим повторение"
 
 msgid "Change shortcut..."
 msgstr "Промяна на бърз клавиш..."
 
 msgid "Change shuffle mode"
-msgstr ""
+msgstr "Смени режим разбъркване"
 
 msgid "Change the language"
 msgstr "Промяна на езика"
@@ -532,9 +532,6 @@ msgstr "Грешка в Клементин"
 msgid "Clementine Orange"
 msgstr "Портокал Клементин"
 
-msgid "Clementine Visualization"
-msgstr "Клементин Визуализация"
-
 msgid ""
 "Clementine can automatically convert the music you copy to this device into "
 "a format that it can play."
@@ -549,9 +546,6 @@ msgstr ""
 "Клементин може да бъде контролиран дистанционно посредством телефон с "
 "Android. За да разрешите тази функция влезте с Google акаунта, с който вашия "
 "телефон е конфигуриран."
-
-msgid "Clementine can show a message when the track changes."
-msgstr "Клементин може да известява когато се сменя песен"
 
 msgid ""
 "Clementine could not load any projectM visualisations.  Check that you have "
@@ -943,8 +937,8 @@ msgstr "Разреши подръжката на Wii Remote"
 msgid "Enable equalizer"
 msgstr "Разреши еквалазйзера"
 
-msgid "Enable shortcuts only when Clementine is focused"
-msgstr "Разреши бързите клавиши,само когато Клемнтин е активен прозорец"
+msgid "Enable shortcuts only when Ultimate Player is focused"
+msgstr ""
 
 msgid "Enter a name for the new playlist"
 msgstr "Въведи име на новият плейлист"
@@ -1003,7 +997,7 @@ msgid "Ever played"
 msgstr "Някога пускана"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
-msgstr ""
+msgstr "Освен между песните в един и същи албум или в един и същи CUE лист"
 
 msgid "Extras"
 msgstr "Допълнения"
@@ -1090,7 +1084,7 @@ msgid "Find songs in your library that match the criteria you specify."
 msgstr "Намери песни в библиотеката, които спазват вашият критерия"
 
 msgid "Fingerprinting song"
-msgstr ""
+msgstr "Подпечатване на песента"
 
 msgid "Finish"
 msgstr "Край"
@@ -1167,7 +1161,7 @@ msgid "Got %1 covers out of %2 (%3 failed)"
 msgstr "Успешно изтегляне на %1 от общо %2 обложки (неуспешно на %3)"
 
 msgid "Grey out non existent songs in my playlists"
-msgstr ""
+msgstr "Посиви песните, които не съществуват в моят плейлист"
 
 msgid "Group Library by..."
 msgstr "Групиране на Библиотеката по..."
@@ -1205,7 +1199,7 @@ msgstr ""
 
 #, qt-format
 msgid "High (%1 fps)"
-msgstr ""
+msgstr "Високо (%1 fps)"
 
 msgid "High (1024x1024)"
 msgstr "Високо (1024x1024)"
@@ -1226,7 +1220,7 @@ msgid "Icons on top"
 msgstr "Иконите отгоре"
 
 msgid "Identifying song"
-msgstr ""
+msgstr "Идентифициране на песента"
 
 msgid ""
 "If you continue, this device will work slowly and songs copied to it may not "
@@ -1430,7 +1424,7 @@ msgid "Library advanced grouping"
 msgstr "Разширено групиране на Библиотеката"
 
 msgid "Library rescan notice"
-msgstr ""
+msgstr "Известие за повторно сканиране на библиотеката"
 
 msgid "Library search"
 msgstr "Търсене в библиотеката"
@@ -1494,7 +1488,7 @@ msgstr "Любима"
 
 #, qt-format
 msgid "Low (%1 fps)"
-msgstr ""
+msgstr "Ниско (%1 fps)"
 
 msgid "Low (15 fps)"
 msgstr "Ниско (15 fps)"
@@ -1544,7 +1538,7 @@ msgstr "Съвпадане на един или повече терминала 
 
 #, qt-format
 msgid "Medium (%1 fps)"
-msgstr ""
+msgstr "Средно (%1 fps)"
 
 msgid "Medium (25 fps)"
 msgstr "Средно (25 fps)"
@@ -2218,7 +2212,7 @@ msgid "Show a native desktop notification"
 msgstr "Показване подразбираща се за системата нотификация"
 
 msgid "Show a notification when I change the repeat/shuffle mode"
-msgstr ""
+msgstr "Покажи уведомления когато превключа между режим разбъркано/случайно"
 
 msgid "Show a notification when I change the volume"
 msgstr "Показване на нотификация,кога променя звука"
@@ -2399,7 +2393,7 @@ msgstr "Резюме"
 
 #, qt-format
 msgid "Super high (%1 fps)"
-msgstr ""
+msgstr "Много високо (%1 fps)"
 
 msgid "Super high (60 fps)"
 msgstr "Много високо (60 fps)"
@@ -2451,11 +2445,9 @@ msgid "The site you requested is not an image!"
 msgstr "Сайта, който предоставихте не е изображение!"
 
 msgid ""
-"The version of Clementine you've just updated to requires a full library "
-"rescan because of the new features listed below:"
+"The version of Ultimate Player you've just updated to requires a full "
+"library rescan because of the new features listed below:<ul>"
 msgstr ""
-"Версията на Clementine, която току що обновихте изисква пълно повторно "
-"сканиране на библиотеката, заради следните нови функции:"
 
 msgid "There was a problem fetching the metadata from Magnatune"
 msgstr "Имаше проблем с изтеглянето на метаданните от Magnatune"
@@ -2585,6 +2577,15 @@ msgstr "URI"
 msgid "URL(s)"
 msgstr "URL-и"
 
+msgid "Ultimate Player"
+msgstr ""
+
+msgid "Ultimate Player Visualization"
+msgstr ""
+
+msgid "Ultimate Player can show a message when the track changes."
+msgstr ""
+
 #, qt-format
 msgid "Unable to download %1 (%2)"
 msgstr "Неуспешно сваляне %1 (%2)"
@@ -2601,8 +2602,8 @@ msgstr "Махни обложката"
 msgid "Update changed library folders"
 msgstr "Обнови папките с промени в библиотеката"
 
-msgid "Update the library when Clementine starts"
-msgstr "Обновявай библиотеката,когато Клементин се стартира"
+msgid "Update the library when Ultimate Player starts"
+msgstr ""
 
 #, qt-format
 msgid "Updating %1"
@@ -2696,8 +2697,8 @@ msgstr ""
 msgid "Wav"
 msgstr "Wav"
 
-msgid "When Clementine starts"
-msgstr "Когато Клементин се стартира"
+msgid "When Ultimate Player starts"
+msgstr ""
 
 msgid ""
 "When looking for album art Clementine will first look for picture files that "
@@ -2739,9 +2740,6 @@ msgstr "Wii Remote %1: ниско ниво на батерията (%2%)"
 msgid "Windows Media audio"
 msgstr "Аудио — Windows Media"
 
-msgid "Would you like to run a full rescan right now?"
-msgstr ""
-
 msgid "Year"
 msgstr "Година"
 
@@ -2777,13 +2775,10 @@ msgstr ""
 "\">хора с платени акаунти</span> могат да слушат Last.fm радио от Клементин."
 
 msgid ""
-"You can use your Wii Remote as a remote control for Clementine.  <a href="
-"\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
-"wiki</a> for more information.\n"
+"You can use your Wii Remote as a remote control for Ultimate Player.  <a "
+"href=\"http://www.clementine-player.org/wiimote\">See the page on the wiki</"
+"a> for more information.\n"
 msgstr ""
-"Можете да изпозвате Wii Remote като дистанционно за Клементин.<a href="
-"\"http://www.clementine-player.org/wiimote\">Вижте Wiki страницата на "
-"Клементин</a> за повече информация.\n"
 
 msgid "You love this track"
 msgstr "Харесвате тази песен"
@@ -2797,8 +2792,8 @@ msgstr ""
 "style:italic;\">Разрешаване на достъп на асистиращи устройства</span>\" за "
 "да изпозлвате глобалните клавишни комбинации в Клементин."
 
-msgid "You will need to restart Clementine if you change the language."
-msgstr "Трябва да рестартирате Клементин, ако смените езика."
+msgid "You will need to restart Ultimate Player if you change the language."
+msgstr ""
 
 msgid "Your Google credentials were incorrect"
 msgstr "Данните ви за вход в Google бяха грешни"
@@ -2807,7 +2802,7 @@ msgid "Your Last.fm credentials were incorrect"
 msgstr "Вашите Last.fm данни са грешни"
 
 msgid "Your Magnatune credentials were incorrect"
-msgstr ""
+msgstr "Вашите данни за достъп за Magnatune бяха грешни"
 
 msgid ""
 "Your gstreamer installation is missing the 'ofa' plugin.  This is required "
@@ -2834,7 +2829,7 @@ msgstr "Я-А"
 msgid "Zero"
 msgstr "Нула"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "add %n songs"
 msgstr "добавете %n песни"
 
@@ -2893,7 +2888,7 @@ msgstr "вкл."
 msgid "options"
 msgstr "опции"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "remove %n songs"
 msgstr "премахване на %n песни"
 
@@ -2912,6 +2907,46 @@ msgstr "Стоп"
 #, qt-format
 msgid "track %1"
 msgstr "песен %1"
+
+#~ msgid "Clementine Visualization"
+#~ msgstr "Клементин Визуализация"
+
+#~ msgid "Update the library when Clementine starts"
+#~ msgstr "Обновявай библиотеката,когато Клементин се стартира"
+
+#~ msgid "Enable shortcuts only when Clementine is focused"
+#~ msgstr "Разреши бързите клавиши,само когато Клемнтин е активен прозорец"
+
+#~ msgid ""
+#~ "You can use your Wii Remote as a remote control for Clementine.  <a href="
+#~ "\"http://www.clementine-player.org/wiimote\">See the page on the "
+#~ "Clementine wiki</a> for more information.\n"
+#~ msgstr ""
+#~ "Можете да изпозвате Wii Remote като дистанционно за Клементин.<a href="
+#~ "\"http://www.clementine-player.org/wiimote\">Вижте Wiki страницата на "
+#~ "Клементин</a> за повече информация.\n"
+
+#~ msgid "Clementine can show a message when the track changes."
+#~ msgstr "Клементин може да известява когато се сменя песен"
+
+#~ msgid "When Clementine starts"
+#~ msgstr "Когато Клементин се стартира"
+
+#~ msgid "You will need to restart Clementine if you change the language."
+#~ msgstr "Трябва да рестартирате Клементин, ако смените езика."
+
+#~ msgid ""
+#~ "The version of Clementine you've just updated to requires a full library "
+#~ "rescan because of the new features listed below:<ul>"
+#~ msgstr ""
+#~ "Версията на Clementine, която току що обновихте изисква пълно повторно "
+#~ "сканиране на библиотеката, заради следните нови функции:<ul>"
+
+#~ msgid "About Clementine..."
+#~ msgstr "Относно Clementine..."
+
+#~ msgid "Would you like to run a full rescan right now?"
+#~ msgstr "Искате ли да изпълните пълно повторно сканиране сега?"
 
 #~ msgid "Couldn't load the last.fm radio station: %1"
 #~ msgstr "Не може да бъде заредена last.fm радио станция: %1"

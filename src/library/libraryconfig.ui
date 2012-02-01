@@ -78,7 +78,7 @@
       <item>
        <widget class="QCheckBox" name="startup_scan">
         <property name="text">
-         <string>Update the library when Clementine starts</string>
+         <string>Update the library when Ultimate Player starts</string>
         </property>
        </widget>
       </item>

@@ -1836,12 +1836,14 @@ void MainWindow::CheckFullRescanRevisions() {
 
   // if we have any...
   if(!reasons.isEmpty()) {
-    QString message = tr("The version of Clementine you've just updated to requires a full library rescan "
-                         "because of the new features listed below:") + "<ul>";
+    QString message = tr("The version of Ultimate Player you've just updated to requires a full library rescan "
+                         "because of the new features listed below:"
+                         "<ul>");
     foreach(const QString& reason, reasons) {
       message += ("<li>" + reason + "</li>");
     }
-    message += "</ul>" + tr("Would you like to run a full rescan right now?");
+    message += "</ul>"
+               "Would you like to run a full rescan right now?";
 
     if(QMessageBox::question(this, tr("Library rescan notice"),
                              message, QMessageBox::Yes, QMessageBox::No) == QMessageBox::Yes) {

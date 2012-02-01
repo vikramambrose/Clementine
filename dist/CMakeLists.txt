@@ -26,17 +26,15 @@ endif(EXISTS /etc/lsb-release)
 option(INSTALL_UBUNTU_ICONS "Install the Ubuntu themed monochrome panel icons" ${INSTALL_UBUNTU_ICONS_DEFAULT})
 
 if (NOT APPLE)
-  install(FILES clementine_64.png
+  install(FILES ultimate-player.png
     DESTINATION share/icons/hicolor/64x64/apps/
-    RENAME application-x-clementine.png
   )
 
   install(FILES ../data/icon.svg
     DESTINATION share/icons/hicolor/scalable/apps/
-    RENAME application-x-clementine.svg
   )
 
-  install(FILES clementine.desktop
+  install(FILES ultimate-player.desktop
     DESTINATION share/applications
   )
 

@@ -78,7 +78,7 @@ QToolButton {
         <item>
          <widget class="QLabel" name="song_title">
           <property name="text">
-           <string>Clementine</string>
+           <string>Ultimate Player</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>

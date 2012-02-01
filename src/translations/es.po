@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-14 10:16+0000\n"
-"PO-Revision-Date: 2011-03-13 23:10+0000\n"
-"Last-Translator: Fitoschido <fitoschido@gmail.com>\n"
+"POT-Creation-Date: 2011-03-25 22:01+0000\n"
+"PO-Revision-Date: 2011-03-24 17:29+0000\n"
+"Last-Translator: Arno <arnaud.bienner@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-03-15 05:13+0000\n"
+"Language: \n"
+"X-Launchpad-Export-Date: 2011-03-26 05:46+0000\n"
 "X-Generator: Launchpad (build 12559)\n"
 "X-Language: es_ES\n"
 
@@ -83,15 +83,15 @@ msgstr "%1 pistas"
 msgid "%1: Wiimotedev module"
 msgstr "%1: Módulo Wiimotedev"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n failed"
 msgstr "%n falló"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n finished"
 msgstr "%n completado(s)"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n remaining"
 msgstr "%n pendiente(s)"
 
@@ -188,17 +188,17 @@ msgid "AIFF"
 msgstr "AIFF"
 
 msgid "ALL GLORY TO THE HYPNOTOAD"
-msgstr ""
+msgstr "ALABEMOS TODOS AL HIPNOSAPO"
 
 #, qt-format
 msgid "About %1"
 msgstr "Acerca de %1"
 
-msgid "About Clementine..."
-msgstr "Acerca de Clementine..."
-
 msgid "About Qt..."
 msgstr "Acerca de Qt..."
+
+msgid "About Ultimate Player..."
+msgstr ""
 
 msgid "Account details"
 msgstr "Detalles de la cuenta"
@@ -246,7 +246,7 @@ msgid "Add stream..."
 msgstr "Añadir flujo..."
 
 msgid "Add to another playlist"
-msgstr ""
+msgstr "Añadir a otra lista de reproducción"
 
 msgid "Add to playlist"
 msgstr "Añadir a la lista de reproducción"
@@ -391,7 +391,7 @@ msgid "Artist"
 msgstr "Artista"
 
 msgid "Artist info"
-msgstr "Información del artista"
+msgstr "Info del artista"
 
 msgid "Artist radio"
 msgstr "Radio del artista"
@@ -486,13 +486,13 @@ msgid "Change font size..."
 msgstr "Cambiar tamaño de la letra"
 
 msgid "Change repeat mode"
-msgstr ""
+msgstr "Cambiar modo de repetición"
 
 msgid "Change shortcut..."
 msgstr "Cambiar combinación de teclas"
 
 msgid "Change shuffle mode"
-msgstr ""
+msgstr "Cambiar modo aleatorio"
 
 msgid "Change the language"
 msgstr "Cambiar el idioma"
@@ -543,9 +543,6 @@ msgstr "Error de Clementine"
 msgid "Clementine Orange"
 msgstr "Naranja Clementine"
 
-msgid "Clementine Visualization"
-msgstr "Visualización de Clementine"
-
 msgid ""
 "Clementine can automatically convert the music you copy to this device into "
 "a format that it can play."
@@ -560,9 +557,6 @@ msgstr ""
 "Clementine puede controlarse de manera remota mediante un teléfono Android. "
 "Para habilitar esta funcionalidad, inicie sesión con la misma cuenta de "
 "Google que tiene configurada en su teléfono."
-
-msgid "Clementine can show a message when the track changes."
-msgstr "Clementine puede mostrar un mensaje cuando la pista cambie."
 
 msgid ""
 "Clementine could not load any projectM visualisations.  Check that you have "
@@ -652,8 +646,8 @@ msgid ""
 "Could not create the GStreamer element \"%1\" - make sure you have all the "
 "required GStreamer plugins installed"
 msgstr ""
-"No se pudo crear el elemento «%1» de GStreamer. Asegúrese de tener "
-"instalados todos los complementos necesarios de GStreamer."
+"No se pudo crear el elemento «%1» de GStreamer. Asegúrese de tener instalados "
+"todos los complementos necesarios de GStreamer."
 
 #, qt-format
 msgid ""
@@ -954,8 +948,8 @@ msgstr "Habilitar soporte para Wiimote"
 msgid "Enable equalizer"
 msgstr "Habilitar el ecualizador"
 
-msgid "Enable shortcuts only when Clementine is focused"
-msgstr "Activar atajos solo cuando Clementine tenga el foco"
+msgid "Enable shortcuts only when Ultimate Player is focused"
+msgstr ""
 
 msgid "Enter a name for the new playlist"
 msgstr "Ingrese un nombre para la nueva lista de reproducción"
@@ -1180,7 +1174,7 @@ msgid "Got %1 covers out of %2 (%3 failed)"
 msgstr "Se obtuvieron %1 portadas de %2 (%3 fallaron)"
 
 msgid "Grey out non existent songs in my playlists"
-msgstr ""
+msgstr "Oscurecer canciones inexistentes de mis listas de reproducción"
 
 msgid "Group Library by..."
 msgstr "Agrupar Colección por..."
@@ -2232,7 +2226,7 @@ msgid "Show a native desktop notification"
 msgstr "Mostrar la notificacion propia del escritorio"
 
 msgid "Show a notification when I change the repeat/shuffle mode"
-msgstr ""
+msgstr "Mostrar notificación cuando cambie entre los modos repetir/aleatorio"
 
 msgid "Show a notification when I change the volume"
 msgstr "Mostrar una notificación cuando cambio el volúmen"
@@ -2342,7 +2336,7 @@ msgid "Song Information"
 msgstr "Información de la canción"
 
 msgid "Song info"
-msgstr "Información de la canción"
+msgstr "Info de la canción"
 
 msgid "Sonogram"
 msgstr "Sonograma"
@@ -2466,12 +2460,9 @@ msgid "The site you requested is not an image!"
 msgstr "¡La dirección que ha indicado no es una imagen!"
 
 msgid ""
-"The version of Clementine you've just updated to requires a full library "
-"rescan because of the new features listed below:"
+"The version of Ultimate Player you've just updated to requires a full "
+"library rescan because of the new features listed below:<ul>"
 msgstr ""
-"La versión de Clementina a la que se acaba de actualizar requiere un re-"
-"escaneo completo de la biblioteca debido a las nuevas características "
-"listadas a continuación:"
 
 msgid "There was a problem fetching the metadata from Magnatune"
 msgstr "Hubo un problema obteniendo los metadatos desde Magnatune"
@@ -2598,6 +2589,15 @@ msgstr "URI"
 msgid "URL(s)"
 msgstr "URL(s)"
 
+msgid "Ultimate Player"
+msgstr ""
+
+msgid "Ultimate Player Visualization"
+msgstr ""
+
+msgid "Ultimate Player can show a message when the track changes."
+msgstr ""
+
 #, qt-format
 msgid "Unable to download %1 (%2)"
 msgstr "Imposible descargar %1 (%2)"
@@ -2614,8 +2614,8 @@ msgstr "Quitar portada"
 msgid "Update changed library folders"
 msgstr "Actualizar carpetas de la colección modificadas"
 
-msgid "Update the library when Clementine starts"
-msgstr "Actualizar la colección cuando Clementine inicia"
+msgid "Update the library when Ultimate Player starts"
+msgstr ""
 
 #, qt-format
 msgid "Updating %1"
@@ -2709,8 +2709,8 @@ msgstr ""
 msgid "Wav"
 msgstr "Wav"
 
-msgid "When Clementine starts"
-msgstr "Cuando Clementine inicia"
+msgid "When Ultimate Player starts"
+msgstr ""
 
 msgid ""
 "When looking for album art Clementine will first look for picture files that "
@@ -2752,9 +2752,6 @@ msgstr "Wiimote %1: batería baja (%2%)"
 msgid "Windows Media audio"
 msgstr "Audio de Windows Media"
 
-msgid "Would you like to run a full rescan right now?"
-msgstr ""
-
 msgid "Year"
 msgstr "Año"
 
@@ -2792,13 +2789,10 @@ msgstr ""
 "pueden escuchar la radio de Last.fm desde Clementine."
 
 msgid ""
-"You can use your Wii Remote as a remote control for Clementine.  <a href="
-"\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
-"wiki</a> for more information.\n"
+"You can use your Wii Remote as a remote control for Ultimate Player.  <a "
+"href=\"http://www.clementine-player.org/wiimote\">See the page on the wiki</"
+"a> for more information.\n"
 msgstr ""
-"Puedes usar tu Wiimote como un mando a distancia para Clementine. <a href="
-"\"http://www.clementine-player.org/wiimote\">Visita la página en el wiki de "
-"Clementine</a> para más información.\n"
 
 msgid "You love this track"
 msgstr "Amas esta canción"
@@ -2812,8 +2806,8 @@ msgstr ""
 "style: italic;\">Activar acceso para dispositivos de asistencia</span>\" "
 "para utilizar los atajos de teclado globales en Clementine."
 
-msgid "You will need to restart Clementine if you change the language."
-msgstr "Necesitaras reiniciar Clementine si cambias el idioma."
+msgid "You will need to restart Ultimate Player if you change the language."
+msgstr ""
 
 msgid "Your Google credentials were incorrect"
 msgstr "Sus credenciales de Google son incorrectos."
@@ -2822,7 +2816,7 @@ msgid "Your Last.fm credentials were incorrect"
 msgstr "Sus credenciales de Last.fm fueron incorrectas"
 
 msgid "Your Magnatune credentials were incorrect"
-msgstr ""
+msgstr "Sus credenciales de Magnatune son incorrectas"
 
 msgid ""
 "Your gstreamer installation is missing the 'ofa' plugin.  This is required "
@@ -2849,7 +2843,7 @@ msgstr "Z-A"
 msgid "Zero"
 msgstr "Cero"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "add %n songs"
 msgstr "añadir %n pistas"
 
@@ -2908,7 +2902,7 @@ msgstr "en"
 msgid "options"
 msgstr "opciones"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "remove %n songs"
 msgstr "remover %n pistas"
 
@@ -2927,6 +2921,47 @@ msgstr "detener"
 #, qt-format
 msgid "track %1"
 msgstr "Pista %1"
+
+#~ msgid "Clementine Visualization"
+#~ msgstr "Visualización de Clementine"
+
+#~ msgid "Update the library when Clementine starts"
+#~ msgstr "Actualizar la colección cuando Clementine inicia"
+
+#~ msgid "Enable shortcuts only when Clementine is focused"
+#~ msgstr "Activar atajos solo cuando Clementine tenga el foco"
+
+#~ msgid ""
+#~ "You can use your Wii Remote as a remote control for Clementine.  <a href="
+#~ "\"http://www.clementine-player.org/wiimote\">See the page on the "
+#~ "Clementine wiki</a> for more information.\n"
+#~ msgstr ""
+#~ "Puedes usar tu Wiimote como un mando a distancia para Clementine. <a href="
+#~ "\"http://www.clementine-player.org/wiimote\">Visita la página en el wiki "
+#~ "de Clementine</a> para más información.\n"
+
+#~ msgid "Clementine can show a message when the track changes."
+#~ msgstr "Clementine puede mostrar un mensaje cuando la pista cambie."
+
+#~ msgid "When Clementine starts"
+#~ msgstr "Cuando Clementine inicia"
+
+#~ msgid "You will need to restart Clementine if you change the language."
+#~ msgstr "Necesitaras reiniciar Clementine si cambias el idioma."
+
+#~ msgid ""
+#~ "The version of Clementine you've just updated to requires a full library "
+#~ "rescan because of the new features listed below:<ul>"
+#~ msgstr ""
+#~ "La versión de Clementina a la que se acaba de actualizar requiere un re-"
+#~ "escaneo completo de la biblioteca debido a las nuevas características "
+#~ "listadas a continuación:<ul>"
+
+#~ msgid "About Clementine..."
+#~ msgstr "Acerca de Clementine..."
+
+#~ msgid "Would you like to run a full rescan right now?"
+#~ msgstr "¿Quiere ejecutar ahora un re-escaneo completo?"
 
 #~ msgid "&Show tray icon"
 #~ msgstr "&Mostrar icono de la bandeja"

@@ -154,10 +154,10 @@ int main(int argc, char *argv[]) {
   }
 #endif
 
-  QCoreApplication::setApplicationName("Clementine");
+  QCoreApplication::setApplicationName("Ultimate Player");
   QCoreApplication::setApplicationVersion(CLEMENTINE_VERSION_DISPLAY);
-  QCoreApplication::setOrganizationName("Clementine");
-  QCoreApplication::setOrganizationDomain("clementine-player.org");
+  QCoreApplication::setOrganizationName("Ultimate Player");
+  QCoreApplication::setOrganizationDomain("ultimateedition.info");
 
 #ifdef Q_OS_DARWIN
   // Must happen after QCoreApplication::setOrganizationName().
@@ -226,7 +226,7 @@ int main(int argc, char *argv[]) {
 
     if (a.isRunning()) {
       if (options.is_empty()) {
-        qDebug() << "Clementine is already running - activating existing window";
+        qDebug() << "Ultimate Player is already running - activating existing window";
       }
       if (a.sendMessage(options.Serialize(), 5000)) {
         return 0;

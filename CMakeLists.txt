@@ -24,7 +24,7 @@ if (LINUX)
       set(HAVE_DEVICEKIT ON)
     endif(ENABLE_DEVICEKIT)
 
-    option(ENABLE_WIIMOTEDEV "Enable Wii remote support in Clementine" ON)
+    option(ENABLE_WIIMOTEDEV "Enable Wii remote support in Ultimate Player" ON)
   endif(ENABLE_DBUS)
 endif (LINUX)
 
@@ -170,12 +170,12 @@ option(ENABLE_IMOBILEDEVICE "iPod Touch, iPhone, iPad support" ON)
 option(ENABLE_LIBMTP "MTP support" ON)
 option(ENABLE_GIO "GIO backend" ON)
 option(ENABLE_VISUALISATIONS "Use libprojectm visualisations" ON)
-option(BUNDLE_PROJECTM_PRESETS "Install Clementine's own copies of libprojectm presets - disable this if you want to use a system package instead" ON)
-option(ENABLE_SOUNDMENU "Add Clementine to the Gnome sound menu" ON)
+option(BUNDLE_PROJECTM_PRESETS "Install Ultimate Player's own copies of libprojectm presets - disable this if you want to use a system package instead" ON)
+option(ENABLE_SOUNDMENU "Add Ultimate Player to the Gnome sound menu" ON)
 option(ENABLE_LIBLASTFM "Use liblastfm for fetching song info, scrobbling and radio streams" ON)
-option(ENABLE_SCRIPTING_ARCHIVES "Enable support for loading scripts from archives (.clem or .tar.gz files)" OFF)
+option(ENABLE_SCRIPTING_ARCHIVES "Enable support for loading scripts from archives (.ups or .tar.gz files)" OFF)
 option(ENABLE_SCRIPTING_PYTHON "Enable python scripting" OFF)
-option(ENABLE_REMOTE "Enable support for using remote controls with Clementine" OFF)
+option(ENABLE_REMOTE "Enable support for using remote controls with Ultimate Player" OFF)
 
 if(ENABLE_LIBGPOD AND LIBGPOD_FOUND)
   set(HAVE_LIBGPOD ON)
@@ -216,7 +216,7 @@ endif(ENABLE_WIIMOTEDEV AND HAVE_DBUS)
 if(ENABLE_VISUALISATIONS)
   # When/if upstream accepts our patches then these options can be used to link
   # to system installed projectM instead.
-  option(USE_SYSTEM_PROJECTM "Don't set this option unless your system projectM library has been compiled with the Clementine patches in 3rdparty" OFF)
+  option(USE_SYSTEM_PROJECTM "Don't set this option unless your system projectM library has been compiled with the Ultimate Players patches in 3rdparty" OFF)
   if(USE_SYSTEM_PROJECTM)
     pkg_check_modules(LIBPROJECTM libprojectM)
   else(USE_SYSTEM_PROJECTM)
@@ -255,7 +255,7 @@ endif(STATIC_SQLITE)
 
 # When/if upstream accepts our patches then these options can be used to link
 # to system installed qtsingleapplication instead.
-option(USE_SYSTEM_QTSINGLEAPPLICATION "Don't set this option unless your system QtSingleApplication library has been compiled with the Clementine patches in 3rdparty" OFF)
+option(USE_SYSTEM_QTSINGLEAPPLICATION "Don't set this option unless your system QtSingleApplication library has been compiled with the Ultimate Players patches in 3rdparty" OFF)
 if(USE_SYSTEM_QTSINGLEAPPLICATION)
   find_path(QTSINGLEAPPLICATION_INCLUDE_DIRS qtsingleapplication.h PATH_SUFFIXES QtSolutions)
   find_library(QTSINGLEAPPLICATION_LIBRARIES QtSolutions_SingleApplication-2.6)
@@ -278,7 +278,7 @@ endif(NOT QTIOCOMPRESSOR_INCLUDE_DIRS OR NOT QTIOCOMPRESSOR_LIBRARIES)
 
 # When/if upstream accepts our or reimplement our patches then these options can be
 # used to link to system installed qxt instead.
-option(USE_SYSTEM_QXT "Don't set this option unless your system Qxt library has been compiled with the Clementine patches in 3rdparty" OFF)
+option(USE_SYSTEM_QXT "Don't set this option unless your system Qxt library has been compiled with the Ultimate Players patches in 3rdparty" OFF)
 if (USE_SYSTEM_QXT)
   find_path(QXTCORE_INCLUDE_DIRS qxtglobal.h PATH_SUFFIXES QxtCore)
   find_path(QXTGUI_INCLUDE_DIRS qxtglobalshortcut.h PATH_SUFFIXES QxtGui)
@@ -303,6 +303,18 @@ if(NOT ECHONEST_INCLUDE_DIRS OR NOT ECHONEST_LIBRARIES)
   set(ECHONEST_LIBRARIES echonest)
 endif(NOT ECHONEST_INCLUDE_DIRS OR NOT ECHONEST_LIBRARIES)
 
+# Use system gmock if it's available
+# We need to look for both gmock and gtest
+find_path(GMOCK_INCLUDE_DIRS gmock/gmock.h)
+find_library(GMOCK_LIBRARIES gmock)
+if(GMOCK_INCLUDE_DIRS)
+  find_path(GTEST_INCLUDE_DIRS gtest/gtest.h)
+  find_library(GTEST_LIBRARIES gtest)
+  if(GTEST_INCLUDE_DIRS)
+    set(USE_SYSTEM_GMOCK 1)
+    set(GMOCK_LIBRARIES ${GMOCK_LIBRARIES} ${GTEST_LIBRARIES})
+  endif(GTEST_INCLUDE_DIRS)
+endif(GMOCK_INCLUDE_DIRS)
 
 # Subdirectories
 add_subdirectory(src)

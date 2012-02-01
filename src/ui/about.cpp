@@ -21,7 +21,7 @@
 #include <QCoreApplication>
 #include <QPushButton>
 
-const char* About::kUrl = "http://www.clementine-player.org/";
+const char* About::kUrl = "http://www.ultimate edition.info/";
 
 About::About(QWidget *parent)
   : QDialog(parent)
@@ -38,6 +38,7 @@ About::About(QWidget *parent)
   ui_.title->setFont(title_font);
 
   authors_ << Person("David Sansome", "me@davidsansome.com")
+           << Person("TheeMahn", "theemahn@ultimateedition.info")
            << Person("John Maguire", "john.maguire@gmail.com")
            << Person(QString::fromUtf8("Paweł Bara"), "keirangtp@gmail.com")
            << Person("Arnaud Bienner", "arnaud.bienner@gmail.com");

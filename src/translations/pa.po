@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clementine\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-03-14 10:16+0000\n"
+"POT-Creation-Date: 2011-03-25 22:01+0000\n"
 "PO-Revision-Date: 2011-03-09 07:23+0000\n"
 "Last-Translator: Harmanpreet Singh Gill <Unknown>\n"
 "Language-Team: Punjabi <pa@li.org>\n"
-"Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-03-15 05:12+0000\n"
+"Language: pa\n"
+"X-Launchpad-Export-Date: 2011-03-26 05:46+0000\n"
 "X-Generator: Launchpad (build 12559)\n"
 
 msgid " ms"
@@ -82,15 +82,15 @@ msgstr ""
 msgid "%1: Wiimotedev module"
 msgstr ""
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n failed"
 msgstr ""
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n finished"
 msgstr ""
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n remaining"
 msgstr ""
 
@@ -181,10 +181,10 @@ msgstr ""
 msgid "About %1"
 msgstr ""
 
-msgid "About Clementine..."
+msgid "About Qt..."
 msgstr ""
 
-msgid "About Qt..."
+msgid "About Ultimate Player..."
 msgstr ""
 
 msgid "Account details"
@@ -523,9 +523,6 @@ msgstr ""
 msgid "Clementine Orange"
 msgstr ""
 
-msgid "Clementine Visualization"
-msgstr ""
-
 msgid ""
 "Clementine can automatically convert the music you copy to this device into "
 "a format that it can play."
@@ -534,9 +531,6 @@ msgstr ""
 msgid ""
 "Clementine can be controlled remotely by an Android phone.  To enable this "
 "feature log in with the same Google account that is configured on your phone."
-msgstr ""
-
-msgid "Clementine can show a message when the track changes."
 msgstr ""
 
 msgid ""
@@ -920,7 +914,7 @@ msgstr ""
 msgid "Enable equalizer"
 msgstr ""
 
-msgid "Enable shortcuts only when Clementine is focused"
+msgid "Enable shortcuts only when Ultimate Player is focused"
 msgstr ""
 
 msgid "Enter a name for the new playlist"
@@ -2408,8 +2402,8 @@ msgid "The site you requested is not an image!"
 msgstr ""
 
 msgid ""
-"The version of Clementine you've just updated to requires a full library "
-"rescan because of the new features listed below:"
+"The version of Ultimate Player you've just updated to requires a full "
+"library rescan because of the new features listed below:<ul>"
 msgstr ""
 
 msgid "There was a problem fetching the metadata from Magnatune"
@@ -2525,6 +2519,15 @@ msgstr ""
 msgid "URL(s)"
 msgstr ""
 
+msgid "Ultimate Player"
+msgstr ""
+
+msgid "Ultimate Player Visualization"
+msgstr ""
+
+msgid "Ultimate Player can show a message when the track changes."
+msgstr ""
+
 #, qt-format
 msgid "Unable to download %1 (%2)"
 msgstr ""
@@ -2541,7 +2544,7 @@ msgstr ""
 msgid "Update changed library folders"
 msgstr ""
 
-msgid "Update the library when Clementine starts"
+msgid "Update the library when Ultimate Player starts"
 msgstr ""
 
 #, qt-format
@@ -2634,7 +2637,7 @@ msgstr ""
 msgid "Wav"
 msgstr ""
 
-msgid "When Clementine starts"
+msgid "When Ultimate Player starts"
 msgstr ""
 
 msgid ""
@@ -2673,9 +2676,6 @@ msgstr ""
 msgid "Windows Media audio"
 msgstr ""
 
-msgid "Would you like to run a full rescan right now?"
-msgstr ""
-
 msgid "Year"
 msgstr ""
 
@@ -2705,9 +2705,9 @@ msgid ""
 msgstr ""
 
 msgid ""
-"You can use your Wii Remote as a remote control for Clementine.  <a href="
-"\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
-"wiki</a> for more information.\n"
+"You can use your Wii Remote as a remote control for Ultimate Player.  <a "
+"href=\"http://www.clementine-player.org/wiimote\">See the page on the wiki</"
+"a> for more information.\n"
 msgstr ""
 
 msgid "You love this track"
@@ -2719,7 +2719,7 @@ msgid ""
 "shortcuts in Clementine."
 msgstr ""
 
-msgid "You will need to restart Clementine if you change the language."
+msgid "You will need to restart Ultimate Player if you change the language."
 msgstr ""
 
 msgid "Your Google credentials were incorrect"
@@ -2753,7 +2753,7 @@ msgstr ""
 msgid "Zero"
 msgstr ""
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "add %n songs"
 msgstr ""
 
@@ -2812,7 +2812,7 @@ msgstr ""
 msgid "options"
 msgstr ""
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "remove %n songs"
 msgstr ""
 

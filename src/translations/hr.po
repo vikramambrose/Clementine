@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clementine\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-03-14 10:16+0000\n"
-"PO-Revision-Date: 2011-03-14 10:39+0000\n"
+"POT-Creation-Date: 2011-03-25 22:01+0000\n"
+"PO-Revision-Date: 2011-03-24 20:50+0000\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
-"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-03-15 05:13+0000\n"
+"Language: hr\n"
+"X-Launchpad-Export-Date: 2011-03-26 05:46+0000\n"
 "X-Generator: Launchpad (build 12559)\n"
 "X-Poedit-Country: CROATIA\n"
 "X-Poedit-Language: Croatian\n"
@@ -84,15 +84,15 @@ msgstr "%1 pjesme"
 msgid "%1: Wiimotedev module"
 msgstr "%1: Wiimotedev module"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n failed"
 msgstr "%n nije uspjelo"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n finished"
 msgstr "%n završeno"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n remaining"
 msgstr "%n preostalo"
 
@@ -191,11 +191,11 @@ msgstr "SVA SLAVA HYPNOTOADU!"
 msgid "About %1"
 msgstr "O %1"
 
-msgid "About Clementine..."
-msgstr "O Clementine..."
-
 msgid "About Qt..."
 msgstr "O Qt..."
+
+msgid "About Ultimate Player..."
+msgstr ""
 
 msgid "Account details"
 msgstr "Detalji računa"
@@ -243,7 +243,7 @@ msgid "Add stream..."
 msgstr "Dodajte stream..."
 
 msgid "Add to another playlist"
-msgstr ""
+msgstr "Dodajte na drugi popis izvođenja"
 
 msgid "Add to playlist"
 msgstr "Dodajte u popis izvođenja"
@@ -479,13 +479,13 @@ msgid "Change font size..."
 msgstr "Promijeni veličinu slova..."
 
 msgid "Change repeat mode"
-msgstr ""
+msgstr "promjenu načina ponavljanja"
 
 msgid "Change shortcut..."
 msgstr "Promijeni prečac..."
 
 msgid "Change shuffle mode"
-msgstr ""
+msgstr "Promijenite naizmjenični mod"
 
 msgid "Change the language"
 msgstr "Promijeni jezik"
@@ -535,9 +535,6 @@ msgstr "Clementine pogreška"
 msgid "Clementine Orange"
 msgstr "Clementine narančasto"
 
-msgid "Clementine Visualization"
-msgstr "Clementine Vizualizacija"
-
 msgid ""
 "Clementine can automatically convert the music you copy to this device into "
 "a format that it can play."
@@ -552,9 +549,6 @@ msgstr ""
 "Clementine može biti upravljan daljinskim putem sa Android telefonom. Da "
 "omogućite ovu funkciju prijavite se na isti Google račun na koji je "
 "konfiguriran vaš telefon."
-
-msgid "Clementine can show a message when the track changes."
-msgstr "Clementine može prikazati poruku kada se pjesma mijenja."
 
 msgid ""
 "Clementine could not load any projectM visualisations.  Check that you have "
@@ -947,8 +941,8 @@ msgstr "Omogući podršku Wii Daljinskog Upravljanja"
 msgid "Enable equalizer"
 msgstr "Omogući ekvilajzer"
 
-msgid "Enable shortcuts only when Clementine is focused"
-msgstr "Omogući prečac samo ako je Clementine fokusiran"
+msgid "Enable shortcuts only when Ultimate Player is focused"
+msgstr ""
 
 msgid "Enter a name for the new playlist"
 msgstr "Unesite naziv za novi popis izvođenja"
@@ -1170,7 +1164,7 @@ msgid "Got %1 covers out of %2 (%3 failed)"
 msgstr "Dohvaćen %1 omot iz %2 (%3 nedohvaćeno)"
 
 msgid "Grey out non existent songs in my playlists"
-msgstr ""
+msgstr "Posivi pjesme kojih nema na popisu izvođenja"
 
 msgid "Group Library by..."
 msgstr "Grupiraj zbirku po..."
@@ -1207,7 +1201,7 @@ msgstr "Informacije o Hardweru samo su dostupne dok je uređaj spojen"
 
 #, qt-format
 msgid "High (%1 fps)"
-msgstr ""
+msgstr "Puno (%1 fps)"
 
 msgid "High (1024x1024)"
 msgstr "Visoka (1024x1024)"
@@ -1492,7 +1486,7 @@ msgstr "Sviđa mi se"
 
 #, qt-format
 msgid "Low (%1 fps)"
-msgstr ""
+msgstr "Malo (%1 fps)"
 
 msgid "Low (15 fps)"
 msgstr "Malo (15 fps)"
@@ -1542,7 +1536,7 @@ msgstr "Jedan ili više uvjeta za pretragu se mora podudarati (OR)"
 
 #, qt-format
 msgid "Medium (%1 fps)"
-msgstr ""
+msgstr "Srednje (%1 fps)"
 
 msgid "Medium (25 fps)"
 msgstr "Srednje (25 fps)"
@@ -2215,7 +2209,7 @@ msgid "Show a native desktop notification"
 msgstr "Prikaži nativnu desktop obavijest"
 
 msgid "Show a notification when I change the repeat/shuffle mode"
-msgstr ""
+msgstr "Prikaži obavijest kada promijenim mod ponavljanja ili naizmjenični mod"
 
 msgid "Show a notification when I change the volume"
 msgstr "Prikaži obavijest kada promijenite glasnoću zvuka"
@@ -2395,7 +2389,7 @@ msgstr "Sažetak"
 
 #, qt-format
 msgid "Super high (%1 fps)"
-msgstr ""
+msgstr "Super visoko (%1 fps)"
 
 msgid "Super high (60 fps)"
 msgstr "Super visoko (60 fps)"
@@ -2447,11 +2441,9 @@ msgid "The site you requested is not an image!"
 msgstr "Stranica koju ste zahtjevali nije slika!"
 
 msgid ""
-"The version of Clementine you've just updated to requires a full library "
-"rescan because of the new features listed below:"
+"The version of Ultimate Player you've just updated to requires a full "
+"library rescan because of the new features listed below:<ul>"
 msgstr ""
-"Verzija Clementine-a koji ste upravo nadogradili zahtjeva kompletnu pretragu "
-"zbirke zbog novih mogućnosti navedenih ispod:"
 
 msgid "There was a problem fetching the metadata from Magnatune"
 msgstr "Dogodio se problem u preuzimanju podataka iz Magnatune"
@@ -2577,6 +2569,15 @@ msgstr "URI"
 msgid "URL(s)"
 msgstr "URL(s)"
 
+msgid "Ultimate Player"
+msgstr ""
+
+msgid "Ultimate Player Visualization"
+msgstr ""
+
+msgid "Ultimate Player can show a message when the track changes."
+msgstr ""
+
 #, qt-format
 msgid "Unable to download %1 (%2)"
 msgstr "Nemoguće je preuzeti %1 (%2)"
@@ -2593,8 +2594,8 @@ msgstr "Uklonite omot"
 msgid "Update changed library folders"
 msgstr "Ažurirajte promjene u mapi zbirke"
 
-msgid "Update the library when Clementine starts"
-msgstr "Ažuriraj zbirku kada se Clementine pokrene"
+msgid "Update the library when Ultimate Player starts"
+msgstr ""
 
 #, qt-format
 msgid "Updating %1"
@@ -2688,8 +2689,8 @@ msgstr ""
 msgid "Wav"
 msgstr "Wav"
 
-msgid "When Clementine starts"
-msgstr "Kada je Clementine pokrenut"
+msgid "When Ultimate Player starts"
+msgstr ""
 
 msgid ""
 "When looking for album art Clementine will first look for picture files that "
@@ -2731,9 +2732,6 @@ msgstr "Wii Daljinski Upravljač %1: baterija  nisko (%2%)"
 msgid "Windows Media audio"
 msgstr "Windows Media audio"
 
-msgid "Would you like to run a full rescan right now?"
-msgstr ""
-
 msgid "Year"
 msgstr "Godina"
 
@@ -2768,13 +2766,10 @@ msgstr ""
 "\">pretplatnici</span> mogu slušati streamove Last.fm radia iz Clementine."
 
 msgid ""
-"You can use your Wii Remote as a remote control for Clementine.  <a href="
-"\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
-"wiki</a> for more information.\n"
+"You can use your Wii Remote as a remote control for Ultimate Player.  <a "
+"href=\"http://www.clementine-player.org/wiimote\">See the page on the wiki</"
+"a> for more information.\n"
 msgstr ""
-"Možete koristiti vaš Wii Daljinski Upravljač za daljinsko upravljanje sa "
-"Clementine. <a href=\"http://www.clementine-player.org/wiimote\">Za više "
-"informacija pogledajte Clementine wiki</a> stranicu.\n"
 
 msgid "You love this track"
 msgstr "Sviđa vam se ova pjesma"
@@ -2788,17 +2783,17 @@ msgstr ""
 "italic;\">Omogući pristup za pomoćne uređaje</span>\" da koriste globalne "
 "prečace u Clementine"
 
-msgid "You will need to restart Clementine if you change the language."
-msgstr "Morate ponovo pokrenuti Clementine ako mijenjate jezik."
+msgid "You will need to restart Ultimate Player if you change the language."
+msgstr ""
 
 msgid "Your Google credentials were incorrect"
-msgstr "Vaša Google akreditacija je pogrešna"
+msgstr "Vaši Google pristupni podaci su pogrešni"
 
 msgid "Your Last.fm credentials were incorrect"
-msgstr "Vaša Last.fm akreditacija je netočna"
+msgstr "Vaši Last.fm pristupni podaci su pogrešni"
 
 msgid "Your Magnatune credentials were incorrect"
-msgstr ""
+msgstr "Vaši Magnatune pristupni podaci su pogrešni"
 
 msgid ""
 "Your gstreamer installation is missing the 'ofa' plugin.  This is required "
@@ -2825,7 +2820,7 @@ msgstr "Z-A"
 msgid "Zero"
 msgstr "Nula"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "add %n songs"
 msgstr "dodajte %n pjesama"
 
@@ -2884,7 +2879,7 @@ msgstr "na"
 msgid "options"
 msgstr "opcije"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "remove %n songs"
 msgstr "premjesti %n pjesama"
 
@@ -2898,11 +2893,51 @@ msgid "starts with"
 msgstr "započnite sa"
 
 msgid "stop"
-msgstr ""
+msgstr "zaustavi"
 
 #, qt-format
 msgid "track %1"
 msgstr "pjesma %1"
+
+#~ msgid "Clementine Visualization"
+#~ msgstr "Clementine Vizualizacija"
+
+#~ msgid "Update the library when Clementine starts"
+#~ msgstr "Ažuriraj zbirku kada se Clementine pokrene"
+
+#~ msgid "Enable shortcuts only when Clementine is focused"
+#~ msgstr "Omogući prečac samo ako je Clementine fokusiran"
+
+#~ msgid ""
+#~ "You can use your Wii Remote as a remote control for Clementine.  <a href="
+#~ "\"http://www.clementine-player.org/wiimote\">See the page on the "
+#~ "Clementine wiki</a> for more information.\n"
+#~ msgstr ""
+#~ "Možete koristiti vaš Wii Daljinski Upravljač za daljinsko upravljanje sa "
+#~ "Clementine. <a href=\"http://www.clementine-player.org/wiimote\">Za više "
+#~ "informacija pogledajte Clementine wiki</a> stranicu.\n"
+
+#~ msgid "Clementine can show a message when the track changes."
+#~ msgstr "Clementine može prikazati poruku kada se pjesma mijenja."
+
+#~ msgid "When Clementine starts"
+#~ msgstr "Kada je Clementine pokrenut"
+
+#~ msgid "You will need to restart Clementine if you change the language."
+#~ msgstr "Morate ponovo pokrenuti Clementine ako mijenjate jezik."
+
+#~ msgid ""
+#~ "The version of Clementine you've just updated to requires a full library "
+#~ "rescan because of the new features listed below:<ul>"
+#~ msgstr ""
+#~ "Verzija Clementine-a koji ste upravo nadogradili zahtjeva kompletnu "
+#~ "pretragu zbirke zbog novih mogućnosti navedenih ispod:<ul>"
+
+#~ msgid "About Clementine..."
+#~ msgstr "O Clementine..."
+
+#~ msgid "Would you like to run a full rescan right now?"
+#~ msgstr "Želite li pokrenuti ponovnu potpunu prtetragu odmah?"
 
 #~ msgid "Editing %n tracks"
 #~ msgstr "uređivanje %n pjesama"

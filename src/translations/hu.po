@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clementine\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-03-14 10:16+0000\n"
-"PO-Revision-Date: 2011-03-15 20:36+0000\n"
-"Last-Translator: Gergely Szarka <szarka.honved@gmail.com>\n"
+"POT-Creation-Date: 2011-03-25 22:01+0000\n"
+"PO-Revision-Date: 2011-03-23 21:45+0000\n"
+"Last-Translator: ntomka <Unknown>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
-"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-03-16 05:03+0000\n"
+"Language: hu\n"
+"X-Launchpad-Export-Date: 2011-03-26 05:45+0000\n"
 "X-Generator: Launchpad (build 12559)\n"
 
 msgid " ms"
@@ -82,15 +82,15 @@ msgstr "%1 szám"
 msgid "%1: Wiimotedev module"
 msgstr "%1: Wiimotedev modul"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n failed"
 msgstr "%n meghiúsult"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n finished"
 msgstr "%n befejezve"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n remaining"
 msgstr "%n hátralévő"
 
@@ -189,11 +189,11 @@ msgstr "MINDEN DICSŐSÉG A HYPNOTOADÉ!"
 msgid "About %1"
 msgstr "A(z) %1 névjegye"
 
-msgid "About Clementine..."
-msgstr "A Clementine névjegye"
-
 msgid "About Qt..."
 msgstr "Qt névjegye..."
+
+msgid "About Ultimate Player..."
+msgstr ""
 
 msgid "Account details"
 msgstr "Fiók részletek"
@@ -241,7 +241,7 @@ msgid "Add stream..."
 msgstr "Adatfolyam hozzáadása..."
 
 msgid "Add to another playlist"
-msgstr ""
+msgstr "Hozzáadás másik lejátszási listához"
 
 msgid "Add to playlist"
 msgstr "Hozzáadás a lejátszási listához"
@@ -477,13 +477,13 @@ msgid "Change font size..."
 msgstr "Betűméret megváltoztatása..."
 
 msgid "Change repeat mode"
-msgstr ""
+msgstr "Ismétlési mód megváltoztatása"
 
 msgid "Change shortcut..."
 msgstr "Billentyűparancs módosítása..."
 
 msgid "Change shuffle mode"
-msgstr ""
+msgstr "Véletlenszerű lejátszási mód megváltoztatása"
 
 msgid "Change the language"
 msgstr "Nyelv váltása"
@@ -534,9 +534,6 @@ msgstr "Clementine hiba"
 msgid "Clementine Orange"
 msgstr "Clementine Narancs"
 
-msgid "Clementine Visualization"
-msgstr "Clementine Megjelenítés"
-
 msgid ""
 "Clementine can automatically convert the music you copy to this device into "
 "a format that it can play."
@@ -551,9 +548,6 @@ msgstr ""
 "A Clementine irányítható távolról egy Androidos telefon segítségével. Ehhez "
 "a funkcióhoz be kell jelentkezned abba a Google fiókba, amelyet a "
 "telefonodon is használsz."
-
-msgid "Clementine can show a message when the track changes."
-msgstr "A Clementine felbukkanó üzenetben tudja jelezni, ha számot vált."
 
 msgid ""
 "Clementine could not load any projectM visualisations.  Check that you have "
@@ -945,9 +939,8 @@ msgstr "Wii távvezérlő támogatás engedélyezése"
 msgid "Enable equalizer"
 msgstr "Hangszínszabályzó engedélyezése"
 
-msgid "Enable shortcuts only when Clementine is focused"
+msgid "Enable shortcuts only when Ultimate Player is focused"
 msgstr ""
-"Gyorsbillentyűk engedélyezése csak akkor, ha a Clementine fókuszba kerül"
 
 msgid "Enter a name for the new playlist"
 msgstr "Adjon nevet az új lejátszási listának"
@@ -1006,7 +999,7 @@ msgid "Ever played"
 msgstr "Valaha játszott"
 
 msgid "Except between tracks on the same album or in the same CUE sheet"
-msgstr ""
+msgstr "Kivéve az azonos albumon vagy azonos CUE fájlban lévő számok között"
 
 msgid "Extras"
 msgstr "Extrák"
@@ -1094,7 +1087,7 @@ msgstr ""
 "Azon számok megkeresése, melyek kielégítik az általad megadott feltételeket."
 
 msgid "Fingerprinting song"
-msgstr ""
+msgstr "Ujjlenyomat generálása a számhoz"
 
 msgid "Finish"
 msgstr "Befejez"
@@ -1171,7 +1164,7 @@ msgid "Got %1 covers out of %2 (%3 failed)"
 msgstr "%1 borító a %2-ból/ből letöltve (%3 sikertelen)"
 
 msgid "Grey out non existent songs in my playlists"
-msgstr ""
+msgstr "Nem létező számok szürke színnel jelölése a lejátszási listákon"
 
 msgid "Group Library by..."
 msgstr "Zenetár csoportosítása..."
@@ -2220,6 +2213,8 @@ msgstr "Rendszer alapértelmezett értesítés mutatása"
 
 msgid "Show a notification when I change the repeat/shuffle mode"
 msgstr ""
+"Értesítés mutatása, ha megváltoztatom az ismétlési/véletlenszerű lejátszási "
+"módot"
 
 msgid "Show a notification when I change the volume"
 msgstr "Hangerő változtatásakor értesítés megjelenítése"
@@ -2451,11 +2446,9 @@ msgid "The site you requested is not an image!"
 msgstr "A kért oldal nem egy kép!"
 
 msgid ""
-"The version of Clementine you've just updated to requires a full library "
-"rescan because of the new features listed below:"
+"The version of Ultimate Player you've just updated to requires a full "
+"library rescan because of the new features listed below:<ul>"
 msgstr ""
-"A Clementine most frissült verziójának szüksége van a teljes zenetár "
-"újraolvasására az alább sorolt új funkciók használatához:"
 
 msgid "There was a problem fetching the metadata from Magnatune"
 msgstr "Hiba lépett fel az adatok Magnatuneról való letöltése közben"
@@ -2583,6 +2576,15 @@ msgstr "URI"
 msgid "URL(s)"
 msgstr "URL(-ek)"
 
+msgid "Ultimate Player"
+msgstr ""
+
+msgid "Ultimate Player Visualization"
+msgstr ""
+
+msgid "Ultimate Player can show a message when the track changes."
+msgstr ""
+
 #, qt-format
 msgid "Unable to download %1 (%2)"
 msgstr "%1 (%2) nem letölthető"
@@ -2599,8 +2601,8 @@ msgstr "Borító törlése"
 msgid "Update changed library folders"
 msgstr "Megváltozott zenetárbeli könyvtárak frissítése"
 
-msgid "Update the library when Clementine starts"
-msgstr "Zenetár frissítése a Clementine indításakor"
+msgid "Update the library when Ultimate Player starts"
+msgstr ""
 
 #, qt-format
 msgid "Updating %1"
@@ -2694,8 +2696,8 @@ msgstr ""
 msgid "Wav"
 msgstr "WAV"
 
-msgid "When Clementine starts"
-msgstr "Amikor a Clementine elindul"
+msgid "When Ultimate Player starts"
+msgstr ""
 
 msgid ""
 "When looking for album art Clementine will first look for picture files that "
@@ -2736,9 +2738,6 @@ msgstr "Wii távvezérlő %1: alacsony teleptöltés (%2%)"
 msgid "Windows Media audio"
 msgstr "Windows Media audio"
 
-msgid "Would you like to run a full rescan right now?"
-msgstr ""
-
 msgid "Year"
 msgstr "Év"
 
@@ -2773,13 +2772,10 @@ msgstr ""
 "Clementineből."
 
 msgid ""
-"You can use your Wii Remote as a remote control for Clementine.  <a href="
-"\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
-"wiki</a> for more information.\n"
+"You can use your Wii Remote as a remote control for Ultimate Player.  <a "
+"href=\"http://www.clementine-player.org/wiimote\">See the page on the wiki</"
+"a> for more information.\n"
 msgstr ""
-"A Clementine távvezérléshez használhat Wii távvezérlőt is.  Részletekért <a "
-"href=\"http://www.clementine-player.org/wiimote\">tekintse meg a Clementine "
-"wiki oldalát</a>.\n"
 
 msgid "You love this track"
 msgstr "Kedveled ezt a számot"
@@ -2793,8 +2789,8 @@ msgstr ""
 "italic;\">Hozzáférés engedélyezése kisegítő eszközökhöz</span>\" opciót a "
 "globális billentyűparancsok használatához."
 
-msgid "You will need to restart Clementine if you change the language."
-msgstr "A nyelv megváltoztatásához újra kell indítania a Clementinet."
+msgid "You will need to restart Ultimate Player if you change the language."
+msgstr ""
 
 msgid "Your Google credentials were incorrect"
 msgstr "A Google fiókadataid hibásan lettek megadva"
@@ -2803,7 +2799,7 @@ msgid "Your Last.fm credentials were incorrect"
 msgstr "A Last.fm előfizetési adatai hibásak"
 
 msgid "Your Magnatune credentials were incorrect"
-msgstr ""
+msgstr "A Magnatune bejelentkezési adataid nem megfelelőek"
 
 msgid ""
 "Your gstreamer installation is missing the 'ofa' plugin.  This is required "
@@ -2830,7 +2826,7 @@ msgstr "Z-A"
 msgid "Zero"
 msgstr "Nulla"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "add %n songs"
 msgstr "%n szám felvétele"
 
@@ -2889,7 +2885,7 @@ msgstr "ezen"
 msgid "options"
 msgstr "beállítások"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "remove %n songs"
 msgstr "%n szám eltávolítása"
 
@@ -2908,6 +2904,47 @@ msgstr "leállítás"
 #, qt-format
 msgid "track %1"
 msgstr "%1. szám"
+
+#~ msgid "Clementine Visualization"
+#~ msgstr "Clementine Megjelenítés"
+
+#~ msgid "Update the library when Clementine starts"
+#~ msgstr "Zenetár frissítése a Clementine indításakor"
+
+#~ msgid "Enable shortcuts only when Clementine is focused"
+#~ msgstr ""
+#~ "Gyorsbillentyűk engedélyezése csak akkor, ha a Clementine fókuszba kerül"
+
+#~ msgid ""
+#~ "You can use your Wii Remote as a remote control for Clementine.  <a href="
+#~ "\"http://www.clementine-player.org/wiimote\">See the page on the "
+#~ "Clementine wiki</a> for more information.\n"
+#~ msgstr ""
+#~ "A Clementine távvezérléshez használhat Wii távvezérlőt is.  Részletekért "
+#~ "<a href=\"http://www.clementine-player.org/wiimote\">tekintse meg a "
+#~ "Clementine wiki oldalát</a>.\n"
+
+#~ msgid "Clementine can show a message when the track changes."
+#~ msgstr "A Clementine felbukkanó üzenetben tudja jelezni, ha számot vált."
+
+#~ msgid "When Clementine starts"
+#~ msgstr "Amikor a Clementine elindul"
+
+#~ msgid "You will need to restart Clementine if you change the language."
+#~ msgstr "A nyelv megváltoztatásához újra kell indítania a Clementinet."
+
+#~ msgid ""
+#~ "The version of Clementine you've just updated to requires a full library "
+#~ "rescan because of the new features listed below:<ul>"
+#~ msgstr ""
+#~ "A Clementine most frissült verziójának szüksége van a teljes zenetár "
+#~ "újraolvasására az alább sorolt új funkciók használatához:<ul>"
+
+#~ msgid "About Clementine..."
+#~ msgstr "A Clementine névjegye"
+
+#~ msgid "Would you like to run a full rescan right now?"
+#~ msgstr "Akarsz futtatni egy teljes újraolvasást most?"
 
 #~ msgid "ASF"
 #~ msgstr "ASF"

@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: clementine\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-03-14 10:16+0000\n"
+"POT-Creation-Date: 2011-03-25 22:01+0000\n"
 "PO-Revision-Date: 2011-02-15 15:55+0000\n"
 "Last-Translator: Ofir Klinger <klinger.ofir@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
-"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-03-15 05:11+0000\n"
+"Language: he\n"
+"X-Launchpad-Export-Date: 2011-03-26 05:45+0000\n"
 "X-Generator: Launchpad (build 12559)\n"
 
 msgid " ms"
@@ -82,15 +82,15 @@ msgstr "%1 רצועות"
 msgid "%1: Wiimotedev module"
 msgstr "%1: המודול Wiimotedev"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n failed"
 msgstr "%n נכשל"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n finished"
 msgstr "%n הסתיים"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n remaining"
 msgstr "%n נותר"
 
@@ -187,11 +187,11 @@ msgstr ""
 msgid "About %1"
 msgstr "בערך %1"
 
-msgid "About Clementine..."
-msgstr "על אודות Clementine..."
-
 msgid "About Qt..."
 msgstr "על אודות Qt..."
+
+msgid "About Ultimate Player..."
+msgstr ""
 
 msgid "Account details"
 msgstr "פרטי החשבון"
@@ -529,9 +529,6 @@ msgstr "שגיאה ב-Clementine"
 msgid "Clementine Orange"
 msgstr "כתום קלמנטינה"
 
-msgid "Clementine Visualization"
-msgstr "אפקטים חזותיים של Clementine"
-
 msgid ""
 "Clementine can automatically convert the music you copy to this device into "
 "a format that it can play."
@@ -543,9 +540,6 @@ msgid ""
 "Clementine can be controlled remotely by an Android phone.  To enable this "
 "feature log in with the same Google account that is configured on your phone."
 msgstr ""
-
-msgid "Clementine can show a message when the track changes."
-msgstr "Clementine יכול להציג הודעה כשהרצועה משתנה."
 
 msgid ""
 "Clementine could not load any projectM visualisations.  Check that you have "
@@ -935,8 +929,8 @@ msgstr "אפשר תמיכה ב-Wii Remote"
 msgid "Enable equalizer"
 msgstr "אפשור אקולייזר"
 
-msgid "Enable shortcuts only when Clementine is focused"
-msgstr "אפשר קיצורי מקלדת רק כאשר Clementine נמצא בפוקוס"
+msgid "Enable shortcuts only when Ultimate Player is focused"
+msgstr ""
 
 msgid "Enter a name for the new playlist"
 msgstr "הזן שם עבור רשימת ההשמעה החדשה"
@@ -2428,8 +2422,8 @@ msgid "The site you requested is not an image!"
 msgstr ""
 
 msgid ""
-"The version of Clementine you've just updated to requires a full library "
-"rescan because of the new features listed below:"
+"The version of Ultimate Player you've just updated to requires a full "
+"library rescan because of the new features listed below:<ul>"
 msgstr ""
 
 msgid "There was a problem fetching the metadata from Magnatune"
@@ -2549,6 +2543,15 @@ msgstr "URI"
 msgid "URL(s)"
 msgstr "URL(s)"
 
+msgid "Ultimate Player"
+msgstr ""
+
+msgid "Ultimate Player Visualization"
+msgstr ""
+
+msgid "Ultimate Player can show a message when the track changes."
+msgstr ""
+
 #, qt-format
 msgid "Unable to download %1 (%2)"
 msgstr "לא ניתן להוריד %1 (%2)"
@@ -2565,8 +2568,8 @@ msgstr "הסרת עטיפה"
 msgid "Update changed library folders"
 msgstr ""
 
-msgid "Update the library when Clementine starts"
-msgstr "עדכון הספרייה בזמן הפעלת Clementine"
+msgid "Update the library when Ultimate Player starts"
+msgstr ""
 
 #, qt-format
 msgid "Updating %1"
@@ -2658,8 +2661,8 @@ msgstr ""
 msgid "Wav"
 msgstr "Wav"
 
-msgid "When Clementine starts"
-msgstr "בהפעלת Clementine"
+msgid "When Ultimate Player starts"
+msgstr ""
 
 msgid ""
 "When looking for album art Clementine will first look for picture files that "
@@ -2700,9 +2703,6 @@ msgstr "Wii Remote %1: סוללה חלשה (%2%)"
 msgid "Windows Media audio"
 msgstr "שמע של Windows Media"
 
-msgid "Would you like to run a full rescan right now?"
-msgstr ""
-
 msgid "Year"
 msgstr "שנה"
 
@@ -2736,13 +2736,10 @@ msgstr ""
 "בתשלום</span> מאפשרת להזרים מ-Clementine לרדיו שב־Last.fm."
 
 msgid ""
-"You can use your Wii Remote as a remote control for Clementine.  <a href="
-"\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
-"wiki</a> for more information.\n"
+"You can use your Wii Remote as a remote control for Ultimate Player.  <a "
+"href=\"http://www.clementine-player.org/wiimote\">See the page on the wiki</"
+"a> for more information.\n"
 msgstr ""
-"ניתן להשתמש ב-Wii Remote כשלט רחוק ל-Clementine. <a href=\"http://www."
-"clementine-player.org/wiimote\">ניתן לקרוא את העמוד בויקי של Clementine</a> "
-"לקבלת מידע נוסף.\n"
 
 msgid "You love this track"
 msgstr "אתה אוהב את הרצועה הזו"
@@ -2756,8 +2753,8 @@ msgstr ""
 "italic;\">אפשר גישה להתקני עזר</span>\" על מנת להשתמש בקיצורי דרך גלובאליים "
 "ב-Clementine."
 
-msgid "You will need to restart Clementine if you change the language."
-msgstr "יש להפעיל מחדש את Clementine לאחר שינוי שפה."
+msgid "You will need to restart Ultimate Player if you change the language."
+msgstr ""
 
 msgid "Your Google credentials were incorrect"
 msgstr ""
@@ -2790,7 +2787,7 @@ msgstr "Z-A"
 msgid "Zero"
 msgstr "אפס"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "add %n songs"
 msgstr "הוסף %n שירים"
 
@@ -2849,7 +2846,7 @@ msgstr "ב־"
 msgid "options"
 msgstr "אפשרויות"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "remove %n songs"
 msgstr "הסרת %n שירים"
 
@@ -2868,6 +2865,36 @@ msgstr "הפסקה"
 #, qt-format
 msgid "track %1"
 msgstr "רצועה %1"
+
+#~ msgid "Clementine Visualization"
+#~ msgstr "אפקטים חזותיים של Clementine"
+
+#~ msgid "Update the library when Clementine starts"
+#~ msgstr "עדכון הספרייה בזמן הפעלת Clementine"
+
+#~ msgid "Enable shortcuts only when Clementine is focused"
+#~ msgstr "אפשר קיצורי מקלדת רק כאשר Clementine נמצא בפוקוס"
+
+#~ msgid ""
+#~ "You can use your Wii Remote as a remote control for Clementine.  <a href="
+#~ "\"http://www.clementine-player.org/wiimote\">See the page on the "
+#~ "Clementine wiki</a> for more information.\n"
+#~ msgstr ""
+#~ "ניתן להשתמש ב-Wii Remote כשלט רחוק ל-Clementine. <a href=\"http://www."
+#~ "clementine-player.org/wiimote\">ניתן לקרוא את העמוד בויקי של Clementine</"
+#~ "a> לקבלת מידע נוסף.\n"
+
+#~ msgid "Clementine can show a message when the track changes."
+#~ msgstr "Clementine יכול להציג הודעה כשהרצועה משתנה."
+
+#~ msgid "When Clementine starts"
+#~ msgstr "בהפעלת Clementine"
+
+#~ msgid "You will need to restart Clementine if you change the language."
+#~ msgstr "יש להפעיל מחדש את Clementine לאחר שינוי שפה."
+
+#~ msgid "About Clementine..."
+#~ msgstr "על אודות Clementine..."
 
 #~ msgid "Add as new playlist..."
 #~ msgstr "הוספה כרשימת השמעה חדשה..."

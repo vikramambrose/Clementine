@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-14 10:16+0000\n"
-"PO-Revision-Date: 2011-03-16 18:05+0000\n"
+"POT-Creation-Date: 2011-03-25 22:01+0000\n"
+"PO-Revision-Date: 2011-03-23 22:39+0000\n"
 "Last-Translator: Paweł Bara <Unknown>\n"
 "Language-Team: Polish <>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-03-17 05:14+0000\n"
+"Language: \n"
+"X-Launchpad-Export-Date: 2011-03-26 05:46+0000\n"
 "X-Generator: Launchpad (build 12559)\n"
 "X-Language: pl_PL\n"
 
@@ -82,15 +82,15 @@ msgstr "%1 ścieżek"
 msgid "%1: Wiimotedev module"
 msgstr "%1: moduł Wiimotedev"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n failed"
 msgstr "%n nieudane"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n finished"
 msgstr "%n zakończone"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "%n remaining"
 msgstr "pozostało %n"
 
@@ -190,11 +190,11 @@ msgstr "CHWAŁA TOBIE HYPNOROPUCHO"
 msgid "About %1"
 msgstr "O programie %1"
 
-msgid "About Clementine..."
-msgstr "O Clementine..."
-
 msgid "About Qt..."
 msgstr "O Qt..."
+
+msgid "About Ultimate Player..."
+msgstr ""
 
 msgid "Account details"
 msgstr "Szczegóły konta"
@@ -242,7 +242,7 @@ msgid "Add stream..."
 msgstr "Dodaj strumień..."
 
 msgid "Add to another playlist"
-msgstr ""
+msgstr "Dodaj do innej listy odtwarzania"
 
 msgid "Add to playlist"
 msgstr "Dodaj do listy odtwarzania"
@@ -478,13 +478,13 @@ msgid "Change font size..."
 msgstr "Zmień wielkość czcionki..."
 
 msgid "Change repeat mode"
-msgstr ""
+msgstr "Zmień tryb powtarzania utworów"
 
 msgid "Change shortcut..."
 msgstr "Zmień skrót..."
 
 msgid "Change shuffle mode"
-msgstr ""
+msgstr "Zmień tryb losowania utworów"
 
 msgid "Change the language"
 msgstr "Zmień język"
@@ -534,9 +534,6 @@ msgstr "Błąd Clementine"
 msgid "Clementine Orange"
 msgstr "Pomarańczowy Clementine"
 
-msgid "Clementine Visualization"
-msgstr "Wizualizacja Clementine"
-
 msgid ""
 "Clementine can automatically convert the music you copy to this device into "
 "a format that it can play."
@@ -551,9 +548,6 @@ msgstr ""
 "Clementine można sterować zdalnie za pomocą telefonu z systemem Android. Aby "
 "włączyć tę funkcję, zaloguj się do tego samego konta Google, które jest "
 "skonfigurowane na twoim telefonie."
-
-msgid "Clementine can show a message when the track changes."
-msgstr "Clementine może pokazywać powiadomienia, gdy zmienia się utwór."
 
 msgid ""
 "Clementine could not load any projectM visualisations.  Check that you have "
@@ -945,8 +939,8 @@ msgstr "Włącz obsługę urządzeń Wii Remote"
 msgid "Enable equalizer"
 msgstr "Włącz korektor dźwięku"
 
-msgid "Enable shortcuts only when Clementine is focused"
-msgstr "Włącz skróty tylko, gdy Clementine jest aktywny"
+msgid "Enable shortcuts only when Ultimate Player is focused"
+msgstr ""
 
 msgid "Enter a name for the new playlist"
 msgstr "Wprowadź nazwę nowej listy odtwarzania"
@@ -1169,7 +1163,7 @@ msgid "Got %1 covers out of %2 (%3 failed)"
 msgstr "Uzyskano %1 okładek z %2 (%3 nieudane)"
 
 msgid "Grey out non existent songs in my playlists"
-msgstr ""
+msgstr "Usunięte utwory zostaną wyszarzone w listach odtwarzania"
 
 msgid "Group Library by..."
 msgstr "Grupuj bibliotekę według..."
@@ -2218,7 +2212,7 @@ msgid "Show a native desktop notification"
 msgstr "Pokaż natywne powiadomienia środowiska graficznego"
 
 msgid "Show a notification when I change the repeat/shuffle mode"
-msgstr ""
+msgstr "Pokaż powiadomienie, gdy zmieniam tryb powtarzania / losowania utworów"
 
 msgid "Show a notification when I change the volume"
 msgstr "Pokaż powiadomienie, gdy zmieniam głośność"
@@ -2452,11 +2446,9 @@ msgid "The site you requested is not an image!"
 msgstr "Wybrany adres nie jest obrazem!"
 
 msgid ""
-"The version of Clementine you've just updated to requires a full library "
-"rescan because of the new features listed below:"
+"The version of Ultimate Player you've just updated to requires a full "
+"library rescan because of the new features listed below:<ul>"
 msgstr ""
-"Wersja do której właśnie zaktualizowano odtwarzacz Clementine wymaga "
-"odświeżenia całej biblioteki. Wynika to z wprowadzenia następujących zmian:"
 
 msgid "There was a problem fetching the metadata from Magnatune"
 msgstr "Wystąpił problem podczas pobierania metadanych z Magnatune"
@@ -2581,6 +2573,15 @@ msgstr "URI"
 msgid "URL(s)"
 msgstr "URL"
 
+msgid "Ultimate Player"
+msgstr ""
+
+msgid "Ultimate Player Visualization"
+msgstr ""
+
+msgid "Ultimate Player can show a message when the track changes."
+msgstr ""
+
 #, qt-format
 msgid "Unable to download %1 (%2)"
 msgstr "Nie udało się pobrać %1 (%2)"
@@ -2597,8 +2598,8 @@ msgstr "Usuń okładkę"
 msgid "Update changed library folders"
 msgstr "Odśwież zmienione katalogi biblioteki"
 
-msgid "Update the library when Clementine starts"
-msgstr "Odświeżaj bibliotekę przy uruchomieniu Clementine"
+msgid "Update the library when Ultimate Player starts"
+msgstr ""
 
 #, qt-format
 msgid "Updating %1"
@@ -2692,8 +2693,8 @@ msgstr ""
 msgid "Wav"
 msgstr "Wav"
 
-msgid "When Clementine starts"
-msgstr "Podczas startu Clementine"
+msgid "When Ultimate Player starts"
+msgstr ""
 
 msgid ""
 "When looking for album art Clementine will first look for picture files that "
@@ -2735,9 +2736,6 @@ msgstr "Wii Remote %1: niski poziom baterii (%2%)"
 msgid "Windows Media audio"
 msgstr "Windows Media audio"
 
-msgid "Would you like to run a full rescan right now?"
-msgstr ""
-
 msgid "Year"
 msgstr "Rok"
 
@@ -2772,13 +2770,10 @@ msgstr ""
 "za pomocą Clementine."
 
 msgid ""
-"You can use your Wii Remote as a remote control for Clementine.  <a href="
-"\"http://www.clementine-player.org/wiimote\">See the page on the Clementine "
-"wiki</a> for more information.\n"
+"You can use your Wii Remote as a remote control for Ultimate Player.  <a "
+"href=\"http://www.clementine-player.org/wiimote\">See the page on the wiki</"
+"a> for more information.\n"
 msgstr ""
-"Kontrolera Wii Remote można używać jako zdalnego sterowania w Clementine. <a "
-"href=\"http://www.clementine-player.org/wiimote\"> Zobacz stronę wiki "
-"Clementine</a> w celu uzyskania dalszych informacji.\n"
 
 msgid "You love this track"
 msgstr "Kochasz tę ścieżkę"
@@ -2792,19 +2787,17 @@ msgstr ""
 "italic;\">Włącz dostęp do urządzeń wspomagających</span>\", by używać "
 "skrótów globalnych w Clementine."
 
-msgid "You will need to restart Clementine if you change the language."
+msgid "You will need to restart Ultimate Player if you change the language."
 msgstr ""
-"Jeśli zmieniałeś ustawienia językowe, będziesz musiał zrestartować "
-"Clementine."
 
 msgid "Your Google credentials were incorrect"
 msgstr "Niepoprawne dane konta Google"
 
 msgid "Your Last.fm credentials were incorrect"
-msgstr "Twoje dane Last.fm są niepoprawne"
+msgstr "Niepoprawne dane konta last.fm"
 
 msgid "Your Magnatune credentials were incorrect"
-msgstr ""
+msgstr "Niepoprawne dane konta Magnatune"
 
 msgid ""
 "Your gstreamer installation is missing the 'ofa' plugin.  This is required "
@@ -2831,7 +2824,7 @@ msgstr "Z-A"
 msgid "Zero"
 msgstr "Zero"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "add %n songs"
 msgstr "dodaj %n utworów"
 
@@ -2890,7 +2883,7 @@ msgstr "w dniu"
 msgid "options"
 msgstr "opcje"
 
-#, c-format, qt-plural-format
+#, c-format
 msgid "remove %n songs"
 msgstr "usuń %n utworów"
 
@@ -2909,6 +2902,49 @@ msgstr "zatrzymaj"
 #, qt-format
 msgid "track %1"
 msgstr "utwór %1"
+
+#~ msgid "Clementine Visualization"
+#~ msgstr "Wizualizacja Clementine"
+
+#~ msgid "Update the library when Clementine starts"
+#~ msgstr "Odświeżaj bibliotekę przy uruchomieniu Clementine"
+
+#~ msgid "Enable shortcuts only when Clementine is focused"
+#~ msgstr "Włącz skróty tylko, gdy Clementine jest aktywny"
+
+#~ msgid ""
+#~ "You can use your Wii Remote as a remote control for Clementine.  <a href="
+#~ "\"http://www.clementine-player.org/wiimote\">See the page on the "
+#~ "Clementine wiki</a> for more information.\n"
+#~ msgstr ""
+#~ "Kontrolera Wii Remote można używać jako zdalnego sterowania w Clementine. "
+#~ "<a href=\"http://www.clementine-player.org/wiimote\"> Zobacz stronę wiki "
+#~ "Clementine</a> w celu uzyskania dalszych informacji.\n"
+
+#~ msgid "Clementine can show a message when the track changes."
+#~ msgstr "Clementine może pokazywać powiadomienia, gdy zmienia się utwór."
+
+#~ msgid "When Clementine starts"
+#~ msgstr "Podczas startu Clementine"
+
+#~ msgid "You will need to restart Clementine if you change the language."
+#~ msgstr ""
+#~ "Jeśli zmieniałeś ustawienia językowe, będziesz musiał zrestartować "
+#~ "Clementine."
+
+#~ msgid ""
+#~ "The version of Clementine you've just updated to requires a full library "
+#~ "rescan because of the new features listed below:<ul>"
+#~ msgstr ""
+#~ "Wersja do której właśnie zaktualizowano odtwarzacz Clementine wymaga "
+#~ "odświeżenia całej biblioteki. Wynika to z wprowadzeniem następujących "
+#~ "zmian:<ul>"
+
+#~ msgid "About Clementine..."
+#~ msgstr "O Clementine..."
+
+#~ msgid "Would you like to run a full rescan right now?"
+#~ msgstr "Czy chcesz teraz rozpocząć odświeżanie biblioteki?"
 
 #~ msgid "&Show tray icon"
 #~ msgstr "&Pokaż ikonę w trayu"
