@@ -1,0 +1,11 @@
+import qbs.base 1.0
+
+Project {
+  moduleSearchPaths: "./cubes"
+  references: [
+    "ext/clementine-tagreader/clementine-tagreader.qbs",
+    "ext/libclementine-common/libclementine-common.qbs",
+    "ext/libclementine-tagreader/libclementine-tagreader.qbs",
+  ]
+}
+
