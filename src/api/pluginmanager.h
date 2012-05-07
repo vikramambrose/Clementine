@@ -15,8 +15,8 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef APIMANAGER_H
-#define APIMANAGER_H
+#ifndef PLUGINMANAGER_H
+#define PLUGINMANAGER_H
 
 #include "availableplugin.h"
 
@@ -36,12 +36,12 @@ namespace clementine {
 class QFileSystemWatcher;
 class QTimer;
 
-class ApiManager : public QObject {
+class PluginManager : public QObject {
   Q_OBJECT
 
 public:
-  ApiManager(Application* app);
-  ~ApiManager();
+  PluginManager(Application* app);
+  ~PluginManager();
 
   static const char* kSettingsGroup;
   static const char* kIniFileName;
@@ -80,4 +80,4 @@ private:
   QTimer* rescan_timer_;
 };
 
-#endif // APIMANAGER_H
+#endif // PLUGINMANAGER_H

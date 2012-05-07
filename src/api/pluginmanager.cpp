@@ -15,10 +15,10 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "apimanager.h"
 #include "availableplugin.h"
 #include "config.h"
 #include "language.h"
+#include "pluginmanager.h"
 #include "core/logging.h"
 #include "core/utilities.h"
 
@@ -35,11 +35,11 @@
 
 #include <clementine/Clementine>
 
-const char* ApiManager::kSettingsGroup = "Plugins";
-const char* ApiManager::kIniFileName = "clementine-plugin.ini";
-const char* ApiManager::kIniSettingsGroup = "ClementinePlugin";
+const char* PluginManager::kSettingsGroup = "Plugins";
+const char* PluginManager::kIniFileName = "clementine-plugin.ini";
+const char* PluginManager::kIniSettingsGroup = "ClementinePlugin";
 
-ApiManager::ApiManager(Application* app)
+PluginManager::PluginManager(Application* app)
   : app_(app),
     clementine_(new clementine::Clementine(app)),
     watcher_(new QFileSystemWatcher(this)),
@@ -81,15 +81,15 @@ ApiManager::ApiManager(Application* app)
   qLog(Debug) << "Plugin search paths:" << search_paths_;
 }
 
-ApiManager::~ApiManager() {
+PluginManager::~PluginManager() {
   delete clementine_;
 }
 
-void ApiManager::AddLanguage(clementine::Language* language) {
+void PluginManager::AddLanguage(clementine::Language* language) {
   languages_[language->name()] = language;
 }
 
-void ApiManager::Init() {
+void PluginManager::Init() {
   // Load settings
   LoadSettings();
 
@@ -102,21 +102,21 @@ void ApiManager::Init() {
   }
 }
 
-void ApiManager::LoadSettings() {
+void PluginManager::LoadSettings() {
   QSettings s;
   s.beginGroup(kSettingsGroup);
   enabled_plugins_ = QSet<QString>::fromList(
       s.value("enabled_plugins").toStringList());
 }
 
-void ApiManager::SaveSettings() const {
+void PluginManager::SaveSettings() const {
   QSettings s;
   s.beginGroup(kSettingsGroup);
   s.setValue("enabled_plugins",
       QVariant::fromValue<QStringList>(enabled_plugins_.toList()));
 }
 
-void ApiManager::MaybeAutoEnable(const clementine::AvailablePlugin& info) {
+void PluginManager::MaybeAutoEnable(const clementine::AvailablePlugin& info) {
   if (loaded_plugins_.contains(info.id_)) {
     // Already loaded
     return;
@@ -136,7 +136,7 @@ void ApiManager::MaybeAutoEnable(const clementine::AvailablePlugin& info) {
   //}
 }
 
-QMap<QString, clementine::AvailablePlugin> ApiManager::LoadAllPluginInfo() const {
+QMap<QString, clementine::AvailablePlugin> PluginManager::LoadAllPluginInfo() const {
   QMap<QString, clementine::AvailablePlugin> ret;
 
   foreach (const QString& search_path, search_paths_) {
@@ -178,11 +178,11 @@ QMap<QString, clementine::AvailablePlugin> ApiManager::LoadAllPluginInfo() const
   return ret;
 }
 
-void ApiManager::PluginDirectoryChanged() {
+void PluginManager::PluginDirectoryChanged() {
   rescan_timer_->start();
 }
 
-void ApiManager::RescanPlugins() {
+void PluginManager::RescanPlugins() {
   // Get the new list of plugins
   QMap<QString, clementine::AvailablePlugin> new_info = LoadAllPluginInfo();
 
@@ -232,7 +232,7 @@ void ApiManager::RescanPlugins() {
   }*/
 }
 
-bool ApiManager::LoadPluginInfo(const QString& path,
+bool PluginManager::LoadPluginInfo(const QString& path,
                                 clementine::AvailablePlugin* info) const {
   const QString ini_file = path + "/" + kIniFileName;
   const QString id = QFileInfo(path).fileName();

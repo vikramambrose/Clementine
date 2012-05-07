@@ -77,12 +77,12 @@ set(SOURCES
   analyzers/sonogram.cpp
   analyzers/turbine.cpp
 
-  api/apimanager.cpp
   api/clementine.cpp
   api/language.cpp
   api/player.cpp
   api/playerdelegate.cpp
   api/plugin.cpp
+  api/pluginmanager.cpp
 
   core/appearance.cpp
   core/application.cpp
@@ -376,8 +376,8 @@ set(HEADERS
   analyzers/sonogram.h
   analyzers/turbine.h
 
-  api/apimanager.h
   api/player_p.h
+  api/pluginmanager.h
 
   core/application.h
   core/backgroundstreams.h

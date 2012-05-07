@@ -23,7 +23,6 @@
 #include <QObject>
 
 class AlbumCoverLoader;
-class ApiManager;
 class Appearance;
 class CoverProviders;
 class CurrentArtLoader;
@@ -39,6 +38,7 @@ class Player;
 class PlaylistBackend;
 class PodcastDownloader;
 class PlaylistManager;
+class PluginManager;
 class PodcastBackend;
 class PodcastUpdater;
 class TagReaderClient;
@@ -70,7 +70,7 @@ public:
   PodcastUpdater* podcast_updater() const { return podcast_updater_; }
   PodcastDownloader* podcast_downloader() const { return podcast_downloader_; }
   GPodderSync* gpodder_sync() const { return gpodder_sync_; }
-  ApiManager* api_manager() const { return api_manager_; }
+  PluginManager* plugin_manager() const { return plugin_manager_; }
 
   LibraryBackend* library_backend() const;
   LibraryModel* library_model() const;
@@ -107,7 +107,7 @@ private:
   PodcastUpdater* podcast_updater_;
   PodcastDownloader* podcast_downloader_;
   GPodderSync* gpodder_sync_;
-  ApiManager* api_manager_;
+  PluginManager* plugin_manager_;
 
   QList<QObject*> objects_in_threads_;
   QList<QThread*> threads_;
