@@ -377,6 +377,7 @@ set(HEADERS
   analyzers/turbine.h
 
   api/apimanager.h
+  api/player_p.h
 
   core/application.h
   core/backgroundstreams.h

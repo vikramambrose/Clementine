@@ -15,28 +15,44 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CLEMENTINE_PLAYERDELEGATE_H
-#define CLEMENTINE_PLAYERDELEGATE_H
+#ifndef PLAYER_P_H
+#define PLAYER_P_H
 
-#include <clementine/Player>
+#include <clementine/PlayerDelegate>
 
-#include <boost/shared_ptr.hpp>
+#include <QObject>
+
+class Application;
 
 namespace clementine {
 
-class PlayerDelegate {
-public:
-  PlayerDelegate();
-  virtual ~PlayerDelegate();
+class PlayerListener;
 
-  virtual void StateChanged(clementine::Player::State state);
-  virtual void VolumeChanged(int percent);
-  virtual void PositionChanged(int64_t microseconds);
-  virtual void PlaylistFinished();
+struct PlayerPrivate {
+  Application* app_;
+
+  PlayerListener* listener_;
+  QList<PlayerDelegatePtr> delegates_;
 };
 
-typedef boost::shared_ptr<PlayerDelegate> PlayerDelegatePtr;
+class PlayerListener : public QObject {
+  Q_OBJECT
 
-} // namespace clementine
+public:
+  PlayerListener(PlayerPrivate* _d, QObject* parent = NULL);
 
-#endif // CLEMENTINE_PLAYERDELEGATE_H
+public slots:
+  void Playing();
+  void Paused();
+  void Stopped();
+  void PlaylistFinished();
+  void VolumeChanged(int volume);
+  void Seeked(qlonglong microseconds);
+
+private:
+  PlayerPrivate* d;
+};
+
+}
+
+#endif // PLAYER_P_H

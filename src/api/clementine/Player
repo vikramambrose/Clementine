@@ -18,13 +18,16 @@
 #ifndef CLEMENTINE_PLAYER_H
 #define CLEMENTINE_PLAYER_H
 
-#include <QScopedPointer>
+#include <boost/noncopyable.hpp>
+#include <boost/scoped_ptr.hpp>
+#include <boost/shared_ptr.hpp>
 
 namespace clementine {
 
 class PlayerDelegate;
+class PlayerPrivate;
 
-class Player {
+class Player : boost::noncopyable {
 public:
   enum State {
     State_Stopped = 0,
@@ -34,7 +37,7 @@ public:
 
   int GetVolumePercent() const;
   int GetPositionSeconds() const;
-  qlonglong GetPositionNanoseconds() const;
+  int64_t GetPositionNanoseconds() const;
   State GetState() const;
 
   void Play();
@@ -47,25 +50,22 @@ public:
   void SetVolumePercent(int percentage);
   void ToggleMute();
   void SeekToSeconds(int seconds);
-  void SeekToNanoseconds(qlonglong nanoseconds);
+  void SeekToNanoseconds(int64_t nanoseconds);
   void SetState(State state);
 
   void ShowOSD();
 
   // Register a delegate to receive notifications when the player's state
   // changes.
-  void RegisterDelegate(PlayerDelegate* delegate);
-  void UnregisterDelegate(PlayerDelegate* delegate);
+  void RegisterDelegate(boost::shared_ptr<PlayerDelegate> delegate);
+  void UnregisterDelegate(boost::shared_ptr<PlayerDelegate> delegate);
 
-  // Internal constructor used by Clementine.
+  // Internal bits used by Clementine.
   Player(void* app);
   ~Player();
 
 private:
-  Q_DISABLE_COPY(Player)
-
-  struct Private;
-  QScopedPointer<Private> d;
+  boost::scoped_ptr<PlayerPrivate> d;
 };
 
 } // namespace clementine

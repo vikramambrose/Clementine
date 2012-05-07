@@ -18,7 +18,7 @@
 #ifndef CLEMENTINE_PLUGIN_H
 #define CLEMENTINE_PLUGIN_H
 
-#include <QScopedPointer>
+#include <boost/scoped_ptr.hpp>
 
 namespace clementine {
 
@@ -36,7 +36,7 @@ public:
 
 private:
   struct Private;
-  QScopedPointer<Private> d;
+  boost::scoped_ptr<Private> d;
 };
 
 } // namespace clementine

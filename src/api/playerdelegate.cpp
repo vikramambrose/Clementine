@@ -17,6 +17,8 @@
 
 #include <clementine/PlayerDelegate>
 
+#include "core/logging.h"
+
 namespace clementine {
 
 PlayerDelegate::PlayerDelegate() {
@@ -31,7 +33,7 @@ void PlayerDelegate::StateChanged(Player::State state) {
 void PlayerDelegate::VolumeChanged(int percent) {
 }
 
-void PlayerDelegate::PositionChanged(qlonglong microseconds) {
+void PlayerDelegate::PositionChanged(int64_t microseconds) {
 }
 
 void PlayerDelegate::PlaylistFinished() {

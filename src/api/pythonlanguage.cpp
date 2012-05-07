@@ -55,14 +55,14 @@ struct PlayerDelegateWrapper : clementine::PlayerDelegate,
     this->PlayerDelegate::VolumeChanged(percent);
   }
 
-  void PositionChanged(qlonglong microseconds) {
+  void PositionChanged(int64_t microseconds) {
     if (override f = this->get_override("position_changed")) {
       f(microseconds);
     } else {
       DefaultPositionChanged(microseconds);
     }
   }
-  void DefaultPositionChanged(qlonglong microseconds) {
+  void DefaultPositionChanged(int64_t microseconds) {
     this->PlayerDelegate::PositionChanged(microseconds);
   }
 

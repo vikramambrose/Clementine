@@ -18,13 +18,14 @@
 #ifndef CLEMENTINE_CLEMENTINE_H
 #define CLEMENTINE_CLEMENTINE_H
 
-#include <QScopedPointer>
+#include <boost/noncopyable.hpp>
+#include <boost/scoped_ptr.hpp>
 
 namespace clementine {
 
 class Player;
 
-class Clementine {
+class Clementine : boost::noncopyable {
 public:
   Player* player() const;
 
@@ -32,10 +33,8 @@ public:
   ~Clementine();
 
 private:
-  Q_DISABLE_COPY(Clementine)
-
   struct Private;
-  QScopedPointer<Private> d;
+  boost::scoped_ptr<Private> d;
 };
 
 } // namespace clementine

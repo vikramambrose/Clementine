@@ -15,6 +15,7 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include "player_p.h"
 #include "core/application.h"
 #include "core/player.h"
 #include "core/timeconstants.h"
@@ -26,18 +27,15 @@
 
 namespace clementine {
 
-struct Player::Private {
-  Application* app_;
-  QList<PlayerDelegate*> delegates_;
-};
-
 Player::Player(void* app)
-  : d(new Private)
+  : d(new PlayerPrivate)
 {
   d->app_ = reinterpret_cast<Application*>(app);
+  d->listener_ = new PlayerListener(d.get());
 }
 
 Player::~Player() {
+  delete d->listener_;
 }
 
 int Player::GetVolumePercent() const {
@@ -48,7 +46,7 @@ int Player::GetPositionSeconds() const {
   return GetPositionNanoseconds() / kNsecPerSec;
 }
 
-qlonglong Player::GetPositionNanoseconds() const {
+int64_t Player::GetPositionNanoseconds() const {
   return d->app_->player()->engine()->position_nanosec();
 }
 
@@ -119,7 +117,7 @@ void Player::SeekToSeconds(int seconds) {
   d->app_->player()->SeekTo(seconds);
 }
 
-void Player::SeekToNanoseconds(qlonglong nanonseconds) {
+void Player::SeekToNanoseconds(int64_t nanonseconds) {
   SeekToSeconds(nanonseconds / kNsecPerSec);
 }
 
@@ -127,12 +125,61 @@ void Player::ShowOSD() {
   d->app_->player()->ShowOSD();
 }
 
-void Player::RegisterDelegate(PlayerDelegate* delegate) {
+void Player::RegisterDelegate(PlayerDelegatePtr delegate) {
   d->delegates_.append(delegate);
 }
 
-void Player::UnregisterDelegate(PlayerDelegate* delegate) {
+void Player::UnregisterDelegate(PlayerDelegatePtr delegate) {
   d->delegates_.removeAll(delegate);
+}
+
+
+PlayerListener::PlayerListener(PlayerPrivate* _d, QObject* parent)
+  : QObject(parent),
+    d(_d)
+{
+  connect(d->app_->player(), SIGNAL(Playing()), SLOT(Playing()));
+  connect(d->app_->player(), SIGNAL(Paused()), SLOT(Paused()));
+  connect(d->app_->player(), SIGNAL(Stopped()), SLOT(Stopped()));
+  connect(d->app_->player(), SIGNAL(PlaylistFinished()), SLOT(PlaylistFinished()));
+  connect(d->app_->player(), SIGNAL(VolumeChanged(int)), SLOT(VolumeChanged(int)));
+  connect(d->app_->player(), SIGNAL(Seeked(qlonglong)), SLOT(Seeked(qlonglong)));
+}
+
+void PlayerListener::Playing() {
+  foreach (PlayerDelegatePtr delegate, d->delegates_) {
+    delegate->StateChanged(Player::State_Playing);
+  }
+}
+
+void PlayerListener::Paused() {
+  foreach (PlayerDelegatePtr delegate, d->delegates_) {
+    delegate->StateChanged(Player::State_Paused);
+  }
+}
+
+void PlayerListener::Stopped() {
+  foreach (PlayerDelegatePtr delegate, d->delegates_) {
+    delegate->StateChanged(Player::State_Stopped);
+  }
+}
+
+void PlayerListener::PlaylistFinished() {
+  foreach (PlayerDelegatePtr delegate, d->delegates_) {
+    delegate->PlaylistFinished();
+  }
+}
+
+void PlayerListener::VolumeChanged(int volume) {
+  foreach (PlayerDelegatePtr delegate, d->delegates_) {
+    delegate->VolumeChanged(volume);
+  }
+}
+
+void PlayerListener::Seeked(qlonglong microseconds) {
+  foreach (PlayerDelegatePtr delegate, d->delegates_) {
+    delegate->PositionChanged(microseconds);
+  }
 }
 
 } // namespace clementine
