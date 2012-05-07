@@ -21,6 +21,7 @@
 #include "player.h"
 #include "tagreaderclient.h"
 #include "taskmanager.h"
+#include "api/apimanager.h"
 #include "covers/albumcoverloader.h"
 #include "covers/coverproviders.h"
 #include "covers/currentartloader.h"
@@ -55,7 +56,8 @@ Application::Application(QObject* parent)
     device_manager_(NULL),
     podcast_updater_(NULL),
     podcast_downloader_(NULL),
-    gpodder_sync_(NULL)
+    gpodder_sync_(NULL),
+    api_manager_(NULL)
 {
   tag_reader_client_ = new TagReaderClient(this);
   MoveToNewThread(tag_reader_client_);
@@ -86,14 +88,19 @@ Application::Application(QObject* parent)
   podcast_updater_ = new PodcastUpdater(this, this);
   podcast_downloader_ = new PodcastDownloader(this, this);
   gpodder_sync_ = new GPodderSync(this, this);
+  api_manager_ = new ApiManager(this);
 
   library_->Init();
   library_->StartThreads();
+
+  api_manager_->Init();
 
   DoInAMinuteOrSo(database_, SLOT(DoBackup()));
 }
 
 Application::~Application() {
+  delete api_manager_; api_manager_ = NULL;
+
   // It's important that the device manager is deleted before the database.
   // Deleting the database deletes all objects that have been created in its
   // thread, including some device library backends.

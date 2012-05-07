@@ -1,0 +1,73 @@
+/* This file is part of Clementine.
+   Copyright 2012, David Sansome <me@davidsansome.com>
+   
+   Clementine is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+   
+   Clementine is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#ifndef CLEMENTINE_PLAYER_H
+#define CLEMENTINE_PLAYER_H
+
+#include <QScopedPointer>
+
+namespace clementine {
+
+class PlayerDelegate;
+
+class Player {
+public:
+  enum State {
+    State_Stopped = 0,
+    State_Playing,
+    State_Paused
+  };
+
+  int GetVolumePercent() const;
+  int GetPositionSeconds() const;
+  qlonglong GetPositionNanoseconds() const;
+  State GetState() const;
+
+  void Play();
+  void Pause();
+  void PlayPause();
+  void Stop();
+  void Next();
+  void Previous();
+
+  void SetVolumePercent(int percentage);
+  void ToggleMute();
+  void SeekToSeconds(int seconds);
+  void SeekToNanoseconds(qlonglong nanoseconds);
+  void SetState(State state);
+
+  void ShowOSD();
+
+  // Register a delegate to receive notifications when the player's state
+  // changes.
+  void RegisterDelegate(PlayerDelegate* delegate);
+  void UnregisterDelegate(PlayerDelegate* delegate);
+
+  // Internal constructor used by Clementine.
+  Player(void* app);
+  ~Player();
+
+private:
+  Q_DISABLE_COPY(Player)
+
+  struct Private;
+  QScopedPointer<Private> d;
+};
+
+} // namespace clementine
+
+#endif // CLEMENTINE_PLAYER_H

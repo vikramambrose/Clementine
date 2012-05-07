@@ -61,6 +61,7 @@ endif(HAVE_BREAKPAD)
 include_directories(${CMAKE_SOURCE_DIR}/ext/libclementine-common)
 include_directories(${CMAKE_SOURCE_DIR}/ext/libclementine-tagreader)
 include_directories(${CMAKE_BINARY_DIR}/ext/libclementine-tagreader)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/api)
 
 cmake_policy(SET CMP0011 NEW)
 include(../cmake/ParseArguments.cmake)
@@ -75,6 +76,13 @@ set(SOURCES
   analyzers/nyancatanalyzer.cpp
   analyzers/sonogram.cpp
   analyzers/turbine.cpp
+
+  api/apimanager.cpp
+  api/clementine.cpp
+  api/language.cpp
+  api/player.cpp
+  api/playerdelegate.cpp
+  api/plugin.cpp
 
   core/appearance.cpp
   core/application.cpp
@@ -367,6 +375,8 @@ set(HEADERS
   analyzers/nyancatanalyzer.h
   analyzers/sonogram.h
   analyzers/turbine.h
+
+  api/apimanager.h
 
   core/application.h
   core/backgroundstreams.h
@@ -683,6 +693,13 @@ set(UI
   wiimotedev/wiimoteshortcutgrabber.ui
 )
 
+set(PUBLIC_HEADERS
+  api/clementine/Clementine
+  api/clementine/Player
+  api/clementine/PlayerDelegate
+  api/clementine/Plugin
+)
+
 set(RESOURCES
   ../data/data.qrc
 )
@@ -978,6 +995,13 @@ optional_source(HAVE_SAC
     devices/wmdmloader.h
 )
 
+# Python plugins
+optional_source(HAVE_PYTHON
+  INCLUDE_DIRECTORIES ${PYTHON_INCLUDE_DIRS}
+  SOURCES
+    api/pythonlanguage.cpp
+)
+
 # Hack to add Clementine to the Unity system tray whitelist
 optional_source(LINUX
   SOURCES core/ubuntuunityhack.cpp
@@ -1012,6 +1036,7 @@ add_library(clementine_lib STATIC
   ${POT}
   ${PO}
   ${OTHER_UIC_SOURCES}
+  ${PUBLIC_HEADERS}
 )
 
 add_dependencies(clementine_lib pot)
@@ -1039,6 +1064,11 @@ target_link_libraries(clementine_lib
   ${CMAKE_THREAD_LIBS_INIT}
   z
 )
+
+if(HAVE_PYTHON)
+  target_link_libraries(clementine_lib ${PYTHON_LIBRARIES})
+  target_link_libraries(clementine_lib ${Boost_PYTHON_LIBRARIES})
+endif()
 
 if(ENABLE_VISUALISATIONS)
   target_link_libraries(clementine_lib ${LIBPROJECTM_LIBRARIES})
