@@ -1002,6 +1002,7 @@ optional_source(HAVE_PYTHON
   INCLUDE_DIRECTORIES ${PYTHON_INCLUDE_DIRS}
   SOURCES
     api/pythonlanguage.cpp
+    api/python_utils.cpp
 )
 
 # Hack to add Clementine to the Unity system tray whitelist

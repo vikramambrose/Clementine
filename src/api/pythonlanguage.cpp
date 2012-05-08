@@ -17,91 +17,21 @@
 
 #include "availableplugin.h"
 #include "pythonlanguage.h"
+#include "python_utils.h"
+#include "python_wrappers.h"
 #include "core/logging.h"
-#include "core/song.h"
 
 #include <clementine/Clementine>
 #include <clementine/Player>
 #include <clementine/PlayerDelegate>
 #include <clementine/Plugin>
 
-#include <QFile>
-#include <QStringList>
-#include <QUrl>
-
 #include <boost/python.hpp>
 #include <Python.h>
 
+#include <QFile>
+
 using namespace boost::python;
-
-namespace {
-
-object AddModule(const QByteArray& source, const QByteArray& filename,
-                 const QString& module_name) {
-  object ret;
-
-  try {
-    // Create the Python code object
-    object code(handle<>(Py_CompileString(
-          source.constData(), filename.constData(), Py_file_input)));
-
-    // Create a module for the code object
-    ret = object(handle<>(PyImport_ExecCodeModule(
-        const_cast<char*>(module_name.toUtf8().constData()), code.ptr())));
-  } catch (error_already_set&) {
-    PyErr_Print();
-    PyErr_Clear();
-    return ret;
-  }
-
-  // Add the module to a parent module if one exists
-  const int dot_index = module_name.lastIndexOf('.');
-  if (dot_index != -1) {
-    const QString parent_module_name = module_name.left(dot_index);
-    try {
-      object parent_module(import(parent_module_name.toUtf8().constData()));
-      parent_module.attr(module_name.mid(dot_index + 1).toUtf8().constData()) = ret;
-    } catch (error_already_set&) {
-      PyErr_Print();
-      PyErr_Clear();
-    }
-  }
-
-  return ret;
-}
-
-object AddModule(const QString& filename, const QString& module_name) {
-  QFile file(filename);
-  if (!file.open(QIODevice::ReadOnly)) {
-    return object();
-  }
-
-  return AddModule(file.readAll(), filename.toUtf8(), module_name);
-}
-
-}
-
-#define WRAPPER_FUNCTION(cpp_name, python_name, arg_types, arg_names) \
-  void cpp_name arg_types { \
-    if (override f = this->get_override(#python_name)) { \
-      f arg_names ; \
-    } else { \
-      Default##cpp_name arg_names ; \
-    } \
-  } \
-  void Default##cpp_name arg_types  { \
-    this->PlayerDelegate::cpp_name arg_names ; \
-  }
-
-
-struct PlayerDelegateWrapper : clementine::PlayerDelegate,
-                               wrapper<clementine::PlayerDelegate> {
-  WRAPPER_FUNCTION(StateChanged, state_changed, (clementine::Player::State state), (state))
-  WRAPPER_FUNCTION(VolumeChanged, volume_changed, (int percent), (percent))
-  WRAPPER_FUNCTION(PositionChanged, position_changed, (int64_t microseconds), (microseconds))
-  WRAPPER_FUNCTION(PlaylistFinished, playlist_finished, (), ())
-  WRAPPER_FUNCTION(SongChanged, song_changed, (const Song& song), (song))
-};
 
 
 class PythonPlugin : public clementine::Plugin {
@@ -115,58 +45,6 @@ public:
 
 private:
   object py_object_;
-};
-
-
-struct SongConverter {
-  static PyObject* convert(const Song& song) {
-    // Create a dict containing the fields in this Song.
-    dict kwargs;
-    kwargs["id"] = song.id();
-    kwargs["directory_id"] = song.directory_id();
-    kwargs["title"] = song.title();
-    kwargs["artist"] = song.artist();
-    kwargs["album"] = song.album();
-    kwargs["albumartist"] = song.albumartist();
-    kwargs["composer"] = song.composer();
-    kwargs["track"] = song.track();
-    kwargs["disc"] = song.disc();
-    kwargs["bpm"] = song.bpm();
-    kwargs["year"] = song.year();
-    kwargs["genre"] = song.genre();
-    kwargs["comment"] = song.comment();
-    kwargs["compilation"] = song.is_compilation();
-    kwargs["length"] = song.length_nanosec();
-    kwargs["bitrate"] = song.bitrate();
-    kwargs["samplerate"] = song.samplerate();
-    kwargs["url"] = song.url().toString();
-    kwargs["unavailable"] = song.is_unavailable();
-    kwargs["mtime"] = song.mtime();
-    kwargs["ctime"] = song.ctime();
-    kwargs["filesize"] = song.filesize();
-    kwargs["filetype"] = int(song.filetype());
-    kwargs["art_automatic"] = song.art_automatic();
-    kwargs["art_manual"] = song.art_manual();
-    kwargs["playcount"] = song.playcount();
-    kwargs["skipcount"] = song.skipcount();
-    kwargs["lastplayed"] = song.lastplayed();
-    kwargs["score"] = song.score();
-    kwargs["rating"] = song.rating();
-    kwargs["cue_path"] = song.cue_path();
-
-    // Get the Python Song class.
-    object py_song_class(import("clementine.models").attr("Song"));
-
-    // Construct one as a copy of this Song.
-    return incref(py_song_class(*tuple(), **kwargs).ptr());
-  }
-};
-
-struct QStringConverter {
-  static PyObject* convert(const QString& s) {
-    const QByteArray utf8(s.toUtf8());
-    return incref(PyUnicode_FromStringAndSize(utf8.constData(), utf8.length()));
-  }
 };
 
 
@@ -234,10 +112,9 @@ bool PythonLanguage::Init() {
   Py_Initialize();
   initclementine();
 
-  to_python_converter<QString, QStringConverter>();
-  to_python_converter<Song, SongConverter>();
+  python_utils::RegisterTypeConverters();
 
-  if (!AddModule(":python/models.py", "clementine.models"))
+  if (!python_utils::AddModule(":python/models.py", "clementine.models"))
     return false;
 
   return true;
@@ -255,8 +132,8 @@ clementine::Plugin* PythonLanguage::LoadPlugin(const clementine::AvailablePlugin
   // Read its contents
   const QByteArray source = file.readAll();
 
-  object module(AddModule(source, filename.toUtf8(),
-                          QString("clementineplugin_" + plugin.id_).toUtf8()));
+  object module(python_utils::AddModule(source, filename.toUtf8(),
+        QString("clementineplugin_" + plugin.id_).toUtf8()));
   if (!module) {
     return NULL;
   }
