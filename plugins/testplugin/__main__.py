@@ -1,4 +1,5 @@
 import clementine
+import clementine.models
 
 class PlayerDelegate(clementine.PlayerDelegate):
   def state_changed(self, state):
@@ -9,6 +10,9 @@ class PlayerDelegate(clementine.PlayerDelegate):
 
   def position_changed(self, position):
     print "Seeked to", position
+
+  def song_changed(self, song):
+    print "Song changed to '%s' by '%s'" % (song.title, song.artist)
 
 
 class Plugin(object):

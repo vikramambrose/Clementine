@@ -20,6 +20,7 @@
 #include "core/player.h"
 #include "core/timeconstants.h"
 #include "engines/enginebase.h"
+#include "playlist/playlistmanager.h"
 
 #include <clementine/Player>
 
@@ -144,6 +145,8 @@ PlayerListener::PlayerListener(PlayerPrivate* _d, QObject* parent)
   connect(d->app_->player(), SIGNAL(PlaylistFinished()), SLOT(PlaylistFinished()));
   connect(d->app_->player(), SIGNAL(VolumeChanged(int)), SLOT(VolumeChanged(int)));
   connect(d->app_->player(), SIGNAL(Seeked(qlonglong)), SLOT(Seeked(qlonglong)));
+  connect(d->app_->playlist_manager(), SIGNAL(CurrentSongChanged(Song)),
+          SLOT(CurrentSongChanged(Song)));
 }
 
 void PlayerListener::Playing() {
@@ -179,6 +182,12 @@ void PlayerListener::VolumeChanged(int volume) {
 void PlayerListener::Seeked(qlonglong microseconds) {
   foreach (PlayerDelegatePtr delegate, d->delegates_) {
     delegate->PositionChanged(microseconds);
+  }
+}
+
+void PlayerListener::CurrentSongChanged(const Song& song) {
+  foreach (PlayerDelegatePtr delegate, d->delegates_) {
+    delegate->SongChanged(song);
   }
 }
 

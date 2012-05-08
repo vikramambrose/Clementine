@@ -49,6 +49,8 @@ public slots:
   void VolumeChanged(int volume);
   void Seeked(qlonglong microseconds);
 
+  void CurrentSongChanged(const Song& song);
+
 private:
   PlayerPrivate* d;
 };

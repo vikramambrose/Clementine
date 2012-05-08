@@ -22,6 +22,11 @@
 
 #include <boost/shared_ptr.hpp>
 
+// TODO: If the C++ API is made public then a wrapper for Song needs to be
+// added to the clementine namespace and PythonLanguage's SongConverter needs
+// to somehow get the original object to avoid a double conversion.
+class Song;
+
 namespace clementine {
 
 class PlayerDelegate {
@@ -33,6 +38,7 @@ public:
   virtual void VolumeChanged(int percent);
   virtual void PositionChanged(int64_t microseconds);
   virtual void PlaylistFinished();
+  virtual void SongChanged(const Song& song);
 };
 
 typedef boost::shared_ptr<PlayerDelegate> PlayerDelegatePtr;

@@ -39,4 +39,7 @@ void PlayerDelegate::PositionChanged(int64_t microseconds) {
 void PlayerDelegate::PlaylistFinished() {
 }
 
+void PlayerDelegate::SongChanged(const Song& song) {
+}
+
 } // namespace clementine
