@@ -25,6 +25,7 @@
 
 #include "config.h"
 #include "core/application.h"
+#include "core/clementinesingleapplication.h"
 #include "core/commandlineoptions.h"
 #include "core/crashreporting.h"
 #include "core/encoding.h"
@@ -57,7 +58,6 @@
 #include "version.h"
 #include "widgets/osd.h"
 
-#include "qtsingleapplication.h"
 #include "qtsinglecoreapplication.h"
 
 #include <QDir>
@@ -302,7 +302,7 @@ int main(int argc, char *argv[]) {
 
   IncreaseFDLimit();
 
-  QtSingleApplication a(argc, argv);
+  ClementineSingleApplication a(argc, argv);
 #ifdef Q_OS_DARWIN
   QCoreApplication::setLibraryPaths(
       QStringList() << QCoreApplication::applicationDirPath() + "/../PlugIns");

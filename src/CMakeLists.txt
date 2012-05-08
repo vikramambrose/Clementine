@@ -87,6 +87,7 @@ set(SOURCES
   core/appearance.cpp
   core/application.cpp
   core/backgroundstreams.cpp
+  core/clementinesingleapplication.cpp
   core/commandlineoptions.cpp
   core/crashreporting.cpp
   core/database.cpp
