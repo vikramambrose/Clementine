@@ -47,6 +47,20 @@ public:
 };
 
 
+namespace {
+  void LoggingHandler(int level, const QString& logger_name,
+                      int lineno, const QString& message) {
+    logging::Level        level_name = logging::Level_Debug;
+    if      (level >= 40) level_name = logging::Level_Error;
+    else if (level >= 30) level_name = logging::Level_Warning;
+    else if (level >= 20) level_name = logging::Level_Info;
+
+    logging::CreateLogger(level_name, logger_name, lineno)
+        << message.toUtf8().constData();
+  }
+}
+
+
 BOOST_PYTHON_MODULE(clementine) {
   class_<clementine::Clementine, clementine::ClementinePtr, boost::noncopyable>("Clementine", no_init)
       .add_property("player", &clementine::Clementine::player);
@@ -98,6 +112,8 @@ BOOST_PYTHON_MODULE(clementine) {
       .def("song_changed",
            &clementine::PlayerDelegate::SongChanged,
            &PlayerDelegateWrapper::DefaultSongChanged);
+
+  def("logging_handler", LoggingHandler);
 }
 
 
@@ -112,6 +128,9 @@ bool PythonLanguage::Init() {
   python_utils::RegisterTypeConverters();
 
   if (!python_utils::AddModule(":python/models.py", "clementine.models"))
+    return false;
+
+  if (!python_utils::AddModule(":python/clementinelogging.py", "clementine.clementinelogging"))
     return false;
 
   return true;

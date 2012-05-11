@@ -116,11 +116,29 @@ struct QStringConverter {
     const QByteArray utf8(s.toUtf8());
     return incref(PyUnicode_FromStringAndSize(utf8.constData(), utf8.length()));
   }
+
+  static void* convertible(PyObject* obj) {
+    if (!PyString_Check(obj))
+      return NULL;
+    return obj;
+  }
+
+  static void construct(PyObject* obj, boost::python::converter::rvalue_from_python_stage1_data* data) {
+    const char* value = PyString_AsString(obj);
+
+    void* storage = ((boost::python::converter::rvalue_from_python_storage<QString>*)data)->storage.bytes;
+    new (storage) QString(value);
+
+    data->convertible = storage;
+  }
 };
 
 void RegisterTypeConverters() {
   to_python_converter<QString, QStringConverter>();
   to_python_converter<Song, SongConverter>();
+  converter::registry::push_back(QStringConverter::convertible,
+                                 QStringConverter::construct,
+                                 type_id<QString>());
 }
 
 }

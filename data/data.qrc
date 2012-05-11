@@ -344,5 +344,6 @@
         <file>providers/itunes.png</file>
         <file>providers/bbc.png</file>
         <file>python/models.py</file>
+        <file>python/clementinelogging.py</file>
     </qresource>
 </RCC>

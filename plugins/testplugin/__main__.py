@@ -1,5 +1,9 @@
 import clementine
 import clementine.models
+import logging
+
+LOGGER = logging.getLogger("testplugin")
+
 
 class PlayerDelegate(clementine.PlayerDelegate):
   def state_changed(self, state):
@@ -17,6 +21,7 @@ class PlayerDelegate(clementine.PlayerDelegate):
 
 class Plugin(object):
   def __init__(self, app):
+    LOGGER.debug("Initialising plugin")
+
     self.app = app
     self.app.player.register_delegate(PlayerDelegate())
-    self.wibble = self
