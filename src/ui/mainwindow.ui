@@ -418,7 +418,7 @@
      <x>0</x>
      <y>0</y>
      <width>1131</width>
-     <height>23</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_music">
@@ -493,6 +493,7 @@
     <addaction name="action_full_library_scan"/>
     <addaction name="separator"/>
     <addaction name="action_configure"/>
+    <addaction name="action_plugins"/>
    </widget>
    <addaction name="menu_music"/>
    <addaction name="menu_playlist"/>
@@ -849,6 +850,11 @@
    </property>
    <property name="text">
     <string>Add podcast...</string>
+   </property>
+  </action>
+  <action name="action_plugins">
+   <property name="text">
+    <string>Plugins...</string>
    </property>
   </action>
  </widget>

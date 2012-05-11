@@ -19,8 +19,8 @@
 
 namespace clementine {
 
-Language::Language(Clementine* clem)
-  : clementine_(clem),
+Language::Language(Application* app)
+  : app_(app),
     is_initialised_(false)
 {
 }

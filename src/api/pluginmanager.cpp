@@ -34,6 +34,7 @@
 #include <QTimer>
 
 #include <clementine/Clementine>
+#include <clementine/Plugin>
 
 const char* PluginManager::kSettingsGroup = "Plugins";
 const char* PluginManager::kIniFileName = "clementine-plugin.ini";
@@ -41,13 +42,12 @@ const char* PluginManager::kIniSettingsGroup = "ClementinePlugin";
 
 PluginManager::PluginManager(Application* app)
   : app_(app),
-    clementine_(new clementine::Clementine(app)),
     watcher_(new QFileSystemWatcher(this)),
     rescan_timer_(new QTimer(this))
 {
   // Create languages
 #ifdef HAVE_PYTHON
-  AddLanguage(new PythonLanguage(clementine_));
+  AddLanguage(new PythonLanguage(app));
 #endif
 
   connect(watcher_, SIGNAL(directoryChanged(QString)), SLOT(PluginDirectoryChanged()));
@@ -82,7 +82,6 @@ PluginManager::PluginManager(Application* app)
 }
 
 PluginManager::~PluginManager() {
-  delete clementine_;
 }
 
 void PluginManager::AddLanguage(clementine::Language* language) {
@@ -99,6 +98,8 @@ void PluginManager::Init() {
   // Enable the ones that were enabled last time.
   foreach (const clementine::AvailablePlugin& info, available_plugins_) {
     MaybeAutoEnable(info);
+
+    emit PluginAdded(info.id_);
   }
 }
 
@@ -124,14 +125,10 @@ void PluginManager::MaybeAutoEnable(const clementine::AvailablePlugin& info) {
 
   // Load the plugin if it's enabled
   //if (enabled_plugins_.contains(info.id_)) {
-    info.language_->EnsureInitialised();
-    clementine::Plugin* plugin = info.language_->LoadPlugin(info);
-    if (!plugin) {
+    if (!DoLoadPlugin(info)) {
       // Failed to load?  Disable it so we don't try again
       enabled_plugins_.remove(info.id_);
       SaveSettings();
-    } else {
-      loaded_plugins_[info.id_] = plugin;
     }
   //}
 }
@@ -274,4 +271,60 @@ bool PluginManager::LoadPluginInfo(const QString& path,
   info->id_.replace(QRegExp("[^a-zA-Z0-9_]"), "_");
 
   return true;
+}
+
+bool PluginManager::IsPluginLoaded(const QString& id) const {
+  return loaded_plugins_.contains(id);
+}
+
+clementine::AvailablePlugin PluginManager::PluginInfo(const QString& id) const {
+  return available_plugins_[id];
+}
+
+QStringList PluginManager::AvailablePlugins() const {
+  return available_plugins_.keys();
+}
+
+void PluginManager::EnablePlugin(const QString& id) {
+  if (loaded_plugins_.contains(id)) {
+    // Already loaded.
+    return;
+  }
+
+  if (DoLoadPlugin(available_plugins_[id])) {
+    enabled_plugins_.insert(id);
+    SaveSettings();
+
+    emit PluginChanged(id);
+  }
+}
+
+bool PluginManager::DoLoadPlugin(const clementine::AvailablePlugin& info) {
+  qLog(Debug) << "Loading plugin" << info.id_;
+
+  info.language_->EnsureInitialised();
+  clementine::Plugin* plugin = info.language_->LoadPlugin(info);
+  if (plugin) {
+    loaded_plugins_[info.id_] = plugin;
+  }
+
+  return plugin;
+}
+
+void PluginManager::DisablePlugin(const QString& id) {
+  if (!loaded_plugins_.contains(id)) {
+    // Not loaded.
+    return;
+  }
+
+  qLog(Debug) << "Unloading plugin" << id;
+
+  clementine::Plugin* plugin = loaded_plugins_[id];
+  plugin->plugin_info().language_->UnloadPlugin(plugin);
+
+  loaded_plugins_.remove(id);
+  enabled_plugins_.remove(id);
+  SaveSettings();
+
+  emit PluginChanged(id);
 }

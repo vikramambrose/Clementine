@@ -191,4 +191,8 @@ void PlayerListener::CurrentSongChanged(const Song& song) {
   }
 }
 
+void Player::UnregisterAllDelegates() {
+  d->delegates_.clear();
+}
+
 } // namespace clementine

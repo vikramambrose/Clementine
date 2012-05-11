@@ -19,3 +19,4 @@ class Plugin(object):
   def __init__(self, app):
     self.app = app
     self.app.player.register_delegate(PlayerDelegate())
+    self.wibble = self

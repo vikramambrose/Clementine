@@ -17,6 +17,8 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "api/plugindialog.h"
+#include "api/pluginmodel.h"
 #include "core/appearance.h"
 #include "core/application.h"
 #include "core/backgroundstreams.h"
@@ -335,6 +337,7 @@ MainWindow::MainWindow(Application* app,
   connect(ui_->action_update_library, SIGNAL(triggered()), app_->library(), SLOT(IncrementalScan()));
   connect(ui_->action_full_library_scan, SIGNAL(triggered()), app_->library(), SLOT(FullScan()));
   connect(ui_->action_queue_manager, SIGNAL(triggered()), SLOT(ShowQueueManager()));
+  connect(ui_->action_plugins, SIGNAL(triggered()), SLOT(ShowPluginDialog()));
 
   background_streams_->AddAction("Rain", ui_->action_rain);
   background_streams_->AddAction("Hypnotoad", ui_->action_hypnotoad);
@@ -2221,4 +2224,13 @@ void MainWindow::ScrollToInternetIndex(const QModelIndex& index) {
 
 void MainWindow::AddPodcast() {
   app_->internet_model()->Service<PodcastService>()->AddPodcast();
+}
+
+void MainWindow::ShowPluginDialog() {
+  if (!plugin_dialog_) {
+    plugin_dialog_.reset(new PluginDialog(this));
+    plugin_dialog_->SetModel(new PluginModel(app_->plugin_manager(), this));
+  }
+
+  plugin_dialog_->show();
 }

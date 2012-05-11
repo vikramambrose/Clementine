@@ -28,7 +28,6 @@
 class Application;
 
 namespace clementine {
-  class Clementine;
   class Language;
   class Plugin;
 }
@@ -49,6 +48,21 @@ public:
 
   void Init();
 
+  // Get information about the available and loaded plugins.
+  QStringList AvailablePlugins() const;
+  bool IsPluginLoaded(const QString& id) const;
+  clementine::AvailablePlugin PluginInfo(const QString& id) const;
+
+public slots:
+  // Load an unload plugins.
+  void EnablePlugin(const QString& id);
+  void DisablePlugin(const QString& id);
+
+signals:
+  void PluginAdded(const QString& id);
+  void PluginRemoved(const QString& id);
+  void PluginChanged(const QString& id);
+
 private slots:
   void PluginDirectoryChanged();
   void RescanPlugins();
@@ -63,13 +77,14 @@ private:
 
   bool LoadPluginInfo(const QString& path, clementine::AvailablePlugin*) const;
 
+  bool DoLoadPlugin(const clementine::AvailablePlugin& plugin);
+
 private:
   Application* app_;
 
   QStringList search_paths_;
   QSet<QString> enabled_plugins_;
 
-  clementine::Clementine* clementine_;
   QMap<QString, clementine::Language*> languages_;
 
   QMap<QString, clementine::AvailablePlugin> available_plugins_;

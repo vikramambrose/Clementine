@@ -60,6 +60,7 @@ class OSD;
 class Player;
 class PlaylistBackend;
 class PlaylistManager;
+class PluginDialog;
 class QueueManager;
 class InternetItem;
 class InternetModel;
@@ -233,6 +234,7 @@ class MainWindow : public QMainWindow, public PlatformInterface {
   void OpenSettingsDialog();
   void OpenSettingsDialogAtPage(SettingsDialog::Page page);
   void ShowSongInfoConfig();
+  void ShowPluginDialog();
 
   void SaveGeometry();
 
@@ -287,6 +289,7 @@ class MainWindow : public QMainWindow, public PlatformInterface {
   boost::scoped_ptr<ErrorDialog> error_dialog_;
   boost::scoped_ptr<OrganiseDialog> organise_dialog_;
   boost::scoped_ptr<QueueManager> queue_manager_;
+  boost::scoped_ptr<PluginDialog> plugin_dialog_;
 
   boost::scoped_ptr<TagFetcher> tag_fetcher_;
   boost::scoped_ptr<TrackSelectionDialog> track_selection_dialog_;

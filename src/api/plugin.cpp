@@ -16,16 +16,18 @@
 */
 
 #include "availableplugin.h"
+
+#include <clementine/Clementine>
 #include <clementine/Plugin>
 
 namespace clementine {
 
 struct Plugin::Private {
-  Clementine* clementine_;
+  boost::shared_ptr<Clementine> clementine_;
   AvailablePlugin plugin_info_;
 };
 
-Plugin::Plugin(Clementine* clem, const AvailablePlugin& plugin_info)
+Plugin::Plugin(boost::shared_ptr<Clementine> clem, const AvailablePlugin& plugin_info)
   : d(new Private)
 {
   d->clementine_ = clem;
@@ -33,9 +35,10 @@ Plugin::Plugin(Clementine* clem, const AvailablePlugin& plugin_info)
 }
 
 Plugin::~Plugin() {
+  d->clementine_->UnregisterAllDelegates();
 }
 
-Clementine* Plugin::clementine() const {
+boost::shared_ptr<Clementine> Plugin::clementine() const {
   return d->clementine_;
 }
 

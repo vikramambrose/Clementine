@@ -82,7 +82,10 @@ set(SOURCES
   api/player.cpp
   api/playerdelegate.cpp
   api/plugin.cpp
+  api/plugindialog.cpp
+  api/plugindialoglist.cpp
   api/pluginmanager.cpp
+  api/pluginmodel.cpp
 
   core/appearance.cpp
   core/application.cpp
@@ -378,7 +381,9 @@ set(HEADERS
   analyzers/turbine.h
 
   api/player_p.h
+  api/plugindialog.h
   api/pluginmanager.h
+  api/pluginmodel.h
 
   core/application.h
   core/backgroundstreams.h
@@ -612,6 +617,8 @@ set(HEADERS
 )
 
 set(UI
+  api/plugindialog.ui
+
   covers/coversearchstatisticsdialog.ui
 
   devices/deviceproperties.ui

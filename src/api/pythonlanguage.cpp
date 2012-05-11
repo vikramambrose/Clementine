@@ -36,26 +36,23 @@ using namespace boost::python;
 
 class PythonPlugin : public clementine::Plugin {
 public:
-  PythonPlugin(object py_object, clementine::Clementine* clem,
+  PythonPlugin(object py_object, clementine::ClementinePtr clem,
                const clementine::AvailablePlugin& plugin_info)
     : Plugin(clem, plugin_info),
       py_object_(py_object)
   {
   }
 
-private:
   object py_object_;
 };
 
 
 BOOST_PYTHON_MODULE(clementine) {
-  class_<clementine::Clementine, boost::noncopyable>("Clementine", no_init)
-      .add_property("player",
-                    make_function(&clementine::Clementine::player,
-                                  return_value_policy<reference_existing_object>()));
+  class_<clementine::Clementine, clementine::ClementinePtr, boost::noncopyable>("Clementine", no_init)
+      .add_property("player", &clementine::Clementine::player);
 
   {
-    scope s = class_<clementine::Player, boost::noncopyable>("Player", no_init)
+    scope s = class_<clementine::Player, clementine::PlayerPtr, boost::noncopyable>("Player", no_init)
         .add_property("volume_percent",
                       &clementine::Player::GetVolumePercent,
                       &clementine::Player::SetVolumePercent)
@@ -104,8 +101,8 @@ BOOST_PYTHON_MODULE(clementine) {
 }
 
 
-PythonLanguage::PythonLanguage(clementine::Clementine* clem)
-  : clementine::Language(clem) {
+PythonLanguage::PythonLanguage(Application* app)
+  : clementine::Language(app) {
 }
 
 bool PythonLanguage::Init() {
@@ -153,12 +150,13 @@ clementine::Plugin* PythonLanguage::LoadPlugin(const clementine::AvailablePlugin
     return NULL;
   }
 
+  // Create a new Clementine instance for this plugin.
+  clementine::ClementinePtr clementine(new clementine::Clementine(app()));
+
   // Try to instantiate it.
   object py_object;
   try {
-    object py_app(handle<>(
-        reference_existing_object::apply<clementine::Clementine*>::type()(clementine_)));
-    py_object = plugin_class(py_app);
+    py_object = plugin_class(clementine);
   } catch (error_already_set&) {
     PyErr_Print();
     PyErr_Clear();
@@ -166,8 +164,29 @@ clementine::Plugin* PythonLanguage::LoadPlugin(const clementine::AvailablePlugin
   }
 
   // Create and return the C++ plugin.
-  return new PythonPlugin(py_object, clementine_, plugin);
+  return new PythonPlugin(py_object, clementine, plugin);
 }
 
 void PythonLanguage::UnloadPlugin(clementine::Plugin* plugin) {
+  // Grab a reference to the actual Python Plugin instance so we can get its
+  // reference count after we delete the C++ plugin.
+  object py_object = static_cast<PythonPlugin*>(plugin)->py_object_;
+  const QString plugin_id = plugin->plugin_info().id_;
+
+  delete plugin;
+
+  // The plugin's refcount should now be exactly 1.  If it isn't, it's holding
+  // a circular reference.
+  if (py_object.ptr()->ob_refcnt != 1) {
+    // Try running the garbage collector.
+    PyGC_Collect();
+
+    if (py_object.ptr()->ob_refcnt != 1) {
+      // If the reference count is still greater than 1 there's nothing we can
+      // do - it's a bug in the plugin.
+      qLog(Warning) << "Plugin" << plugin_id << "has a circular reference"
+                    << "(refcount" << py_object.ptr()->ob_refcnt << ") and"
+                    << "could not be unloaded properly.";
+    }
+  }
 }

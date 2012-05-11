@@ -20,6 +20,8 @@
 
 #include <QString>
 
+class Application;
+
 namespace clementine {
 
 class AvailablePlugin;
@@ -30,7 +32,7 @@ class Plugin;
 // Each Language finds and loads its own plugins.
 class Language {
 public:
-  Language(clementine::Clementine* clem);
+  Language(Application* app);
   virtual ~Language() {}
 
   virtual QString name() const = 0;
@@ -48,10 +50,10 @@ protected:
   // Called before this Language's first plugin is loaded.
   virtual bool Init() = 0;
 
-protected:
-  Clementine* clementine_;
+  Application* app() const { return app_; }
 
 private:
+  Application* app_;
   bool is_initialised_;
 };
 

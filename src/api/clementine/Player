@@ -60,13 +60,17 @@ public:
   void RegisterDelegate(boost::shared_ptr<PlayerDelegate> delegate);
   void UnregisterDelegate(boost::shared_ptr<PlayerDelegate> delegate);
 
-  // Internal bits used by Clementine.
+  // Used internally by Clementine
   Player(void* app);
   ~Player();
+
+  void UnregisterAllDelegates();
 
 private:
   boost::scoped_ptr<PlayerPrivate> d;
 };
+
+typedef boost::shared_ptr<Player> PlayerPtr;
 
 } // namespace clementine
 

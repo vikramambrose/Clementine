@@ -15,29 +15,40 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef PYTHONLANGUAGE_H
-#define PYTHONLANGUAGE_H
+#ifndef PLUGINMODEL_H
+#define PLUGINMODEL_H
 
-#include "language.h"
+#include <QStandardItemModel>
 
-#include <QMap>
+class PluginManager;
 
-#include <boost/python.hpp>
+class PluginModel : public QStandardItemModel {
+  Q_OBJECT
 
-class PythonLanguage : public clementine::Language {
 public:
-  PythonLanguage(Application* app);
+  PluginModel(PluginManager* manager, QObject* parent = 0);
 
-  QString name() const { return "python"; }
+  enum Role {
+    Role_Description = Qt::UserRole,
+    Role_Language,
+    Role_IsEnabled,
+    Role_Id,
 
-  virtual clementine::Plugin* LoadPlugin(const clementine::AvailablePlugin& plugin);
-  virtual void UnloadPlugin(clementine::Plugin* plugin);
+    RoleCount
+  };
 
-protected:
-  virtual bool Init();
+public slots:
+  void Enable(const QModelIndex& index);
+  void Disable(const QModelIndex& index);
+
+private slots:
+  void PluginAdded(const QString& id);
+  void PluginRemoved(const QString& id);
+  void PluginChanged(const QString& id);
 
 private:
-  QMap<QString, boost::python::object> loaded_plugins_;
+  PluginManager* manager_;
+  QMap<QString, QStandardItem*> items_;
 };
 
-#endif // PYTHONLANGUAGE_H
+#endif // PLUGINMODEL_H

@@ -25,22 +25,25 @@ namespace clementine {
 struct Clementine::Private {
   Application* app_;
 
-  Player* player_;
+  boost::shared_ptr<Player> player_;
 };
 
 Clementine::Clementine(void* app)
   : d(new Private)
 {
   d->app_ = reinterpret_cast<Application*>(app);
-  d->player_ = new Player(app);
+  d->player_.reset(new Player(app));
 }
 
 Clementine::~Clementine() {
-  delete d->player_;
 }
 
-Player* Clementine::player() const {
+boost::shared_ptr<Player> Clementine::player() const {
   return d->player_;
+}
+
+void Clementine::UnregisterAllDelegates() {
+  d->player_->UnregisterAllDelegates();
 }
 
 } // namespace clementine
