@@ -55,8 +55,13 @@ namespace {
     else if (level >= 30) level_name = logging::Level_Warning;
     else if (level >= 20) level_name = logging::Level_Info;
 
-    logging::CreateLogger(level_name, logger_name, lineno)
-        << message.toUtf8().constData();
+    QDebug dbg = logging::CreateLogger(level_name, logger_name, lineno);
+
+    // There's no QDebug::operator<< that takes a unicode string without
+    // printing quotes around it.  operator<<(const char*) passes the bytes
+    // through QString::fromAscii first, destroying any UTF-8 characters.
+    // Luckily the QTextStream is the first thing inside the QDebug struct...
+    (**reinterpret_cast<QTextStream**>(&dbg)) << message;
   }
 }
 

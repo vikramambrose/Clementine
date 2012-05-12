@@ -16,6 +16,7 @@
 */
 
 #include "python_utils.h"
+#include "core/logging.h"
 #include "core/song.h"
 
 #include <QFile>
@@ -118,16 +119,23 @@ struct QStringConverter {
   }
 
   static void* convertible(PyObject* obj) {
-    if (!PyString_Check(obj))
+    if (!PyString_Check(obj) && !PyUnicode_Check(obj))
       return NULL;
     return obj;
   }
 
   static void construct(PyObject* obj, boost::python::converter::rvalue_from_python_stage1_data* data) {
-    const char* value = PyString_AsString(obj);
-
     void* storage = ((boost::python::converter::rvalue_from_python_storage<QString>*)data)->storage.bytes;
-    new (storage) QString(value);
+
+    if (PyString_Check(obj)) {
+      new (storage) QString(PyString_AsString(obj));
+    } else {
+#if Py_UNICODE_SIZE == 4
+      new (storage) QString(QString::fromUcs4(PyUnicode_AS_UNICODE(obj), PyUnicode_GET_SIZE(obj)));
+#else
+      new (storage) QString(QString::fromUtf16(PyUnicode_AS_UNICODE(obj), PyUnicode_GET_SIZE(obj)));
+#endif
+    }
 
     data->convertible = storage;
   }
