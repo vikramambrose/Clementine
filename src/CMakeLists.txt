@@ -79,6 +79,7 @@ set(SOURCES
 
   api/clementine.cpp
   api/database.cpp
+  api/databasedelegate.cpp
   api/language.cpp
   api/player.cpp
   api/playerdelegate.cpp
@@ -381,6 +382,7 @@ set(HEADERS
   analyzers/sonogram.h
   analyzers/turbine.h
 
+  api/database_p.h
   api/player_p.h
   api/plugindialog.h
   api/pluginmanager.h
@@ -706,6 +708,7 @@ set(UI
 set(PUBLIC_HEADERS
   api/clementine/Clementine
   api/clementine/Database
+  api/clementine/DatabaseDelegate
   api/clementine/Player
   api/clementine/PlayerDelegate
   api/clementine/Plugin

@@ -15,43 +15,31 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <clementine/Clementine>
-#include <clementine/Database>
-#include <clementine/Player>
+#ifndef CLEMENTINE_DATABASEDELEGATE_H
+#define CLEMENTINE_DATABASEDELEGATE_H
 
-class Application;
+#include <QList>
+
+#include <boost/shared_ptr.hpp>
+
+class Song;
 
 namespace clementine {
 
-struct Clementine::Private {
-  Application* app_;
+class DatabaseDelegate {
+public:
+  DatabaseDelegate();
+  virtual ~DatabaseDelegate();
 
-  PlayerPtr player_;
-  DatabasePtr database_;
+  virtual void DirectoryAdded(const QString& path);
+  virtual void DirectoryRemoved(const QString& path);
+  virtual void SongsChanged(const QList<Song>& songs);
+  virtual void SongsRemoved(const QList<Song>& songs);
+  virtual void TotalSongCountUpdated(int total);
 };
 
-Clementine::Clementine(void* app)
-  : d(new Private)
-{
-  d->app_ = reinterpret_cast<Application*>(app);
-  d->player_.reset(new Player(app));
-  d->database_.reset(new Database(app));
-}
-
-Clementine::~Clementine() {
-}
-
-PlayerPtr Clementine::player() const {
-  return d->player_;
-}
-
-DatabasePtr Clementine::database() const {
-  return d->database_;
-}
-
-void Clementine::UnregisterAllDelegates() {
-  d->player_->UnregisterAllDelegates();
-  d->database_->UnregisterAllDelegates();
-}
+typedef boost::shared_ptr<DatabaseDelegate> DatabaseDelegatePtr;
 
 } // namespace clementine
+
+#endif // CLEMENTINE_DATABASEDELEGATE_H

@@ -42,7 +42,7 @@ class PlayerListener : public QObject {
 public:
   PlayerListener(PlayerPrivate* _d, QObject* parent = NULL);
 
-public slots:
+private slots:
   void Playing();
   void Paused();
   void Stopped();

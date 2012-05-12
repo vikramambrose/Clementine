@@ -141,9 +141,24 @@ struct QStringConverter {
   }
 };
 
+template <typename T>
+struct QListConverter {
+  static PyObject* convert(const QList<T>& l) {
+    list ret;
+    foreach (const T& item, l) {
+      ret.append(item);
+    }
+    return incref(ret.ptr());
+  }
+};
+
 void RegisterTypeConverters() {
   to_python_converter<QString, QStringConverter>();
   to_python_converter<Song, SongConverter>();
+
+  to_python_converter<QList<QString>, QListConverter<QString> >();
+  to_python_converter<QList<Song>, QListConverter<Song> >();
+
   converter::registry::push_back(QStringConverter::convertible,
                                  QStringConverter::construct,
                                  type_id<QString>());

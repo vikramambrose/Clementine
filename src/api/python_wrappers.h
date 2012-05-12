@@ -20,6 +20,7 @@
 
 #include "core/song.h"
 
+#include <clementine/DatabaseDelegate>
 #include <clementine/PlayerDelegate>
 
 #include <boost/python.hpp>
@@ -48,6 +49,15 @@ struct PlayerDelegateWrapper : clementine::PlayerDelegate,
   WRAPPER_FUNCTION(PlayerDelegateWrapper, PositionChanged, position_changed, (int64_t microseconds), (microseconds))
   WRAPPER_FUNCTION(PlayerDelegateWrapper, PlaylistFinished, playlist_finished, (), ())
   WRAPPER_FUNCTION(PlayerDelegateWrapper, SongChanged, song_changed, (const Song& song), (song))
+};
+
+struct DatabaseDelegateWrapper : clementine::DatabaseDelegate,
+                                 boost::python::wrapper<clementine::DatabaseDelegate> {
+  WRAPPER_FUNCTION(DatabaseDelegateWrapper, DirectoryAdded, directory_added, (const QString& path), (path))
+  WRAPPER_FUNCTION(DatabaseDelegateWrapper, DirectoryRemoved, directory_removed, (const QString& path), (path))
+  WRAPPER_FUNCTION(DatabaseDelegateWrapper, SongsChanged, songs_changed, (const QList<Song>& songs), (songs))
+  WRAPPER_FUNCTION(DatabaseDelegateWrapper, SongsRemoved, songs_removed, (const QList<Song>& songs), (songs))
+  WRAPPER_FUNCTION(DatabaseDelegateWrapper, TotalSongCountUpdated, total_song_count_updated, (int total), (total))
 };
 
 

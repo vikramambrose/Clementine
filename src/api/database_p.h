@@ -18,13 +18,41 @@
 #ifndef CLEMENTINE_DATABASE_P_H
 #define CLEMENTINE_DATABASE_P_H
 
+#include "core/song.h"
+#include "library/directory.h"
+
+#include <clementine/DatabaseDelegate>
+
 class Application;
 
 namespace clementine {
 
+class DatabaseListener;
+
 class DatabasePrivate {
 public:
   Application* app_;
+
+  DatabaseListener* listener_;
+  QList<DatabaseDelegatePtr> delegates_;
+};
+
+class DatabaseListener : public QObject {
+  Q_OBJECT
+
+public:
+  DatabaseListener(DatabasePrivate* _d, QObject* parent = NULL);
+
+private slots:
+  void DirectoryDiscovered(const Directory& dir, const SubdirectoryList& subdirs);
+  void DirectoryDeleted(const Directory& dir);
+
+  void SongsDiscovered(const SongList& songs);
+  void SongsDeleted(const SongList& songs);
+  void TotalSongCountUpdated(int total);
+
+private:
+  DatabasePrivate* d;
 };
 
 }

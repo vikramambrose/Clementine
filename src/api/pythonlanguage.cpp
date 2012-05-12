@@ -23,6 +23,7 @@
 
 #include <clementine/Clementine>
 #include <clementine/Database>
+#include <clementine/DatabaseDelegate>
 #include <clementine/Player>
 #include <clementine/PlayerDelegate>
 #include <clementine/Plugin>
@@ -121,7 +122,26 @@ BOOST_PYTHON_MODULE(clementine) {
            &PlayerDelegateWrapper::DefaultSongChanged);
 
   class_<clementine::Database, clementine::DatabasePtr, boost::noncopyable>("Database", no_init)
-      .add_property("database_url", &clementine::Database::DatabaseUrl);
+      .add_property("database_url", &clementine::Database::DatabaseUrl)
+      .def("register_delegate", &clementine::Database::RegisterDelegate)
+      .def("unregister_delegate", &clementine::Database::UnregisterDelegate);
+
+  class_<DatabaseDelegateWrapper, boost::noncopyable>("DatabaseDelegate")
+      .def("directory_added",
+           &clementine::DatabaseDelegate::DirectoryAdded,
+           &DatabaseDelegateWrapper::DefaultDirectoryAdded)
+      .def("directory_removed",
+           &clementine::DatabaseDelegate::DirectoryRemoved,
+           &DatabaseDelegateWrapper::DefaultDirectoryRemoved)
+      .def("songs_changed",
+           &clementine::DatabaseDelegate::SongsChanged,
+           &DatabaseDelegateWrapper::DefaultSongsChanged)
+      .def("songs_removed",
+           &clementine::DatabaseDelegate::SongsRemoved,
+           &DatabaseDelegateWrapper::DefaultSongsRemoved)
+      .def("total_song_count_updated",
+           &clementine::DatabaseDelegate::TotalSongCountUpdated,
+           &DatabaseDelegateWrapper::DefaultTotalSongCountUpdated);
 
   def("logging_handler", LoggingHandler);
 }

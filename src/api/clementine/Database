@@ -34,9 +34,16 @@ public:
   // Used by the Python SQLAlchemy integration
   QString DatabaseUrl() const;
 
+  // Register a delegate to receive notifications when songs are added or
+  // removed from the library
+  void RegisterDelegate(boost::shared_ptr<DatabaseDelegate> delegate);
+  void UnregisterDelegate(boost::shared_ptr<DatabaseDelegate> delegate);
+
   // Used internally by Clementine
   Database(void* app);
   ~Database();
+
+  void UnregisterAllDelegates();
 
 private:
   boost::scoped_ptr<DatabasePrivate> d;

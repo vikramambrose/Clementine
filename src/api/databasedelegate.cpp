@@ -15,43 +15,29 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <clementine/Clementine>
-#include <clementine/Database>
-#include <clementine/Player>
-
-class Application;
+#include <clementine/DatabaseDelegate>
 
 namespace clementine {
 
-struct Clementine::Private {
-  Application* app_;
-
-  PlayerPtr player_;
-  DatabasePtr database_;
-};
-
-Clementine::Clementine(void* app)
-  : d(new Private)
-{
-  d->app_ = reinterpret_cast<Application*>(app);
-  d->player_.reset(new Player(app));
-  d->database_.reset(new Database(app));
+DatabaseDelegate::DatabaseDelegate() {
 }
 
-Clementine::~Clementine() {
+DatabaseDelegate::~DatabaseDelegate() {
 }
 
-PlayerPtr Clementine::player() const {
-  return d->player_;
+void DatabaseDelegate::DirectoryAdded(const QString& path) {
 }
 
-DatabasePtr Clementine::database() const {
-  return d->database_;
+void DatabaseDelegate::DirectoryRemoved(const QString& path) {
 }
 
-void Clementine::UnregisterAllDelegates() {
-  d->player_->UnregisterAllDelegates();
-  d->database_->UnregisterAllDelegates();
+void DatabaseDelegate::SongsChanged(const QList<Song>& songs) {
+}
+
+void DatabaseDelegate::SongsRemoved(const QList<Song>& songs) {
+}
+
+void DatabaseDelegate::TotalSongCountUpdated(int total) {
 }
 
 } // namespace clementine
