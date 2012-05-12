@@ -32,7 +32,9 @@ namespace clementine {
   class Plugin;
 }
 
+class QAction;
 class QFileSystemWatcher;
+class QMenu;
 class QTimer;
 
 class PluginManager : public QObject {
@@ -47,6 +49,10 @@ public:
   static const char* kIniSettingsGroup;
 
   void Init();
+
+  // Plugins can place menu items at registered extension points.
+  void RegisterExtensionPoint(const QString& name, QMenu* menu, QAction* before = NULL);
+  bool AddAction(const QString& extension_point, QAction* action);
 
   // Get information about the available and loaded plugins.
   QStringList AvailablePlugins() const;
@@ -80,6 +86,15 @@ private:
   bool DoLoadPlugin(const clementine::AvailablePlugin& plugin);
 
 private:
+  struct ExtensionPoint {
+    ExtensionPoint(QMenu* menu = NULL, QAction* before = NULL)
+      : menu_(menu), before_(before) {}
+
+    QMenu* menu_;
+    QAction* before_;
+  };
+
+private:
   Application* app_;
 
   QStringList search_paths_;
@@ -93,6 +108,8 @@ private:
   // Watches script directories for changes
   QFileSystemWatcher* watcher_;
   QTimer* rescan_timer_;
+
+  QMap<QString, ExtensionPoint> extension_points_;
 };
 
 #endif // PLUGINMANAGER_H

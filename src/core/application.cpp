@@ -93,8 +93,6 @@ Application::Application(QObject* parent)
   library_->Init();
   library_->StartThreads();
 
-  plugin_manager_->Init();
-
   DoInAMinuteOrSo(database_, SLOT(DoBackup()));
 }
 

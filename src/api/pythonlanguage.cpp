@@ -21,12 +21,14 @@
 #include "python_wrappers.h"
 #include "core/logging.h"
 
+#include <clementine/Action>
 #include <clementine/Clementine>
 #include <clementine/Database>
 #include <clementine/DatabaseDelegate>
 #include <clementine/Player>
 #include <clementine/PlayerDelegate>
 #include <clementine/Plugin>
+#include <clementine/UserInterface>
 
 #include <boost/python.hpp>
 #include <Python.h>
@@ -71,7 +73,8 @@ namespace {
 BOOST_PYTHON_MODULE(clementine) {
   class_<clementine::Clementine, clementine::ClementinePtr, boost::noncopyable>("Clementine", no_init)
       .add_property("player", &clementine::Clementine::player)
-      .add_property("database", &clementine::Clementine::database);
+      .add_property("database", &clementine::Clementine::database)
+      .add_property("user_interface", &clementine::Clementine::user_interface);
 
   {
     scope s = class_<clementine::Player, clementine::PlayerPtr, boost::noncopyable>("Player", no_init)
@@ -142,6 +145,17 @@ BOOST_PYTHON_MODULE(clementine) {
       .def("total_song_count_updated",
            &clementine::DatabaseDelegate::TotalSongCountUpdated,
            &DatabaseDelegateWrapper::DefaultTotalSongCountUpdated);
+
+  class_<ActionWrapper, boost::noncopyable>("Action", init<QString>())
+      .def(init<QString, QString>())
+      .add_property("enabled", &clementine::Action::IsEnabled, &clementine::Action::SetEnabled)
+      .add_property("text", &clementine::Action::Text, &clementine::Action::SetText)
+      .add_property("icon", &clementine::Action::Icon, &clementine::Action::SetIcon)
+      .def("triggered", &clementine::Action::Triggered, &ActionWrapper::Triggered);
+
+  class_<clementine::UserInterface, clementine::UserInterfacePtr, boost::noncopyable>("UserInterface", no_init)
+      .def("add_menu_item", &clementine::UserInterface::AddMenuItem)
+      .def("remove_menu_item", &clementine::UserInterface::RemoveMenuItem);
 
   def("logging_handler", LoggingHandler);
 }

@@ -18,6 +18,7 @@
 #include <clementine/Clementine>
 #include <clementine/Database>
 #include <clementine/Player>
+#include <clementine/UserInterface>
 
 class Application;
 
@@ -28,6 +29,7 @@ struct Clementine::Private {
 
   PlayerPtr player_;
   DatabasePtr database_;
+  UserInterfacePtr user_interface_;
 };
 
 Clementine::Clementine(void* app)
@@ -36,6 +38,7 @@ Clementine::Clementine(void* app)
   d->app_ = reinterpret_cast<Application*>(app);
   d->player_.reset(new Player(app));
   d->database_.reset(new Database(app));
+  d->user_interface_.reset(new UserInterface(app));
 }
 
 Clementine::~Clementine() {
@@ -49,9 +52,14 @@ DatabasePtr Clementine::database() const {
   return d->database_;
 }
 
+UserInterfacePtr Clementine::user_interface() const {
+  return d->user_interface_;
+}
+
 void Clementine::UnregisterAllDelegates() {
   d->player_->UnregisterAllDelegates();
   d->database_->UnregisterAllDelegates();
+  d->user_interface_->RemoveAll();
 }
 
 } // namespace clementine

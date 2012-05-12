@@ -15,38 +15,37 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CLEMENTINE_CLEMENTINE_H
-#define CLEMENTINE_CLEMENTINE_H
+#ifndef CLEMENTINE_USERINTERFACE_H
+#define CLEMENTINE_USERINTERFACE_H
+
+#include <QString>
 
 #include <boost/noncopyable.hpp>
-#include <boost/shared_ptr.hpp>
 #include <boost/scoped_ptr.hpp>
+#include <boost/shared_ptr.hpp>
 
 namespace clementine {
 
-class Database;
-class Player;
-class UserInterface;
+class Action;
 
-class Clementine : boost::noncopyable {
+class UserInterface : boost::noncopyable {
 public:
-  boost::shared_ptr<Player> player() const;
-  boost::shared_ptr<Database> database() const;
-  boost::shared_ptr<UserInterface> user_interface() const;
+  bool AddMenuItem(const QString& location, boost::shared_ptr<Action> action);
+  void RemoveMenuItem(boost::shared_ptr<Action> action);
 
   // Used internally by Clementine
-  Clementine(void* app);
-  ~Clementine();
+  UserInterface(void* app);
+  ~UserInterface();
 
-  void UnregisterAllDelegates();
+  void RemoveAll();
 
 private:
   struct Private;
   boost::scoped_ptr<Private> d;
 };
 
-typedef boost::shared_ptr<Clementine> ClementinePtr;
+typedef boost::shared_ptr<UserInterface> UserInterfacePtr;
 
 } // namespace clementine
 
-#endif // CLEMENTINE_CLEMENTINE_H
+#endif // CLEMENTINE_USERINTERFACE_H

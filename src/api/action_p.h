@@ -15,38 +15,50 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CLEMENTINE_CLEMENTINE_H
-#define CLEMENTINE_CLEMENTINE_H
+#ifndef CLEMENTINE_ACTION_P_H
+#define CLEMENTINE_ACTION_P_H
 
-#include <boost/noncopyable.hpp>
-#include <boost/shared_ptr.hpp>
-#include <boost/scoped_ptr.hpp>
+#include <QObject>
+
+class QAction;
 
 namespace clementine {
 
-class Database;
-class Player;
-class UserInterface;
+class Action;
+class ActionListener;
 
-class Clementine : boost::noncopyable {
+class ActionPrivate {
 public:
-  boost::shared_ptr<Player> player() const;
-  boost::shared_ptr<Database> database() const;
-  boost::shared_ptr<UserInterface> user_interface() const;
+  ActionPrivate(Action* action)
+    : action_(action),
+      listener_(NULL),
+      enabled_(true),
+      q_action_(NULL)
+  {}
 
-  // Used internally by Clementine
-  Clementine(void* app);
-  ~Clementine();
+  Action* action_;
+  ActionListener* listener_;
 
-  void UnregisterAllDelegates();
+  bool enabled_;
+  QString text_;
+  QString icon_;
 
-private:
-  struct Private;
-  boost::scoped_ptr<Private> d;
+  QAction* q_action_;
 };
 
-typedef boost::shared_ptr<Clementine> ClementinePtr;
+class ActionListener : public QObject {
+  Q_OBJECT
 
-} // namespace clementine
+public:
+  ActionListener(ActionPrivate* _d, QObject* parent = NULL);
 
-#endif // CLEMENTINE_CLEMENTINE_H
+public slots:
+  void Triggered();
+
+private:
+  ActionPrivate* d;
+};
+
+}
+
+#endif // CLEMENTINE_ACTION_P_H

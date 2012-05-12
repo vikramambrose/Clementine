@@ -15,38 +15,45 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CLEMENTINE_CLEMENTINE_H
-#define CLEMENTINE_CLEMENTINE_H
+#ifndef CLEMENTINE_ACTION_H
+#define CLEMENTINE_ACTION_H
+
+#include <QString>
 
 #include <boost/noncopyable.hpp>
-#include <boost/shared_ptr.hpp>
 #include <boost/scoped_ptr.hpp>
+#include <boost/shared_ptr.hpp>
 
 namespace clementine {
 
-class Database;
-class Player;
-class UserInterface;
+class ActionPrivate;
 
-class Clementine : boost::noncopyable {
+class Action : boost::noncopyable {
 public:
-  boost::shared_ptr<Player> player() const;
-  boost::shared_ptr<Database> database() const;
-  boost::shared_ptr<UserInterface> user_interface() const;
+  Action(const QString& text);
+  Action(const QString& icon, const QString& text);
+  virtual ~Action();
+
+  bool IsEnabled() const;
+  QString Text() const;
+  QString Icon() const;
+
+  void SetEnabled(bool enabled);
+  void SetText(const QString& text);
+  void SetIcon(const QString& icon);
+
+  virtual void Triggered();
 
   // Used internally by Clementine
-  Clementine(void* app);
-  ~Clementine();
-
-  void UnregisterAllDelegates();
+  bool Attach(void* data);
+  void Unattach();
 
 private:
-  struct Private;
-  boost::scoped_ptr<Private> d;
+  boost::scoped_ptr<ActionPrivate> d;
 };
 
-typedef boost::shared_ptr<Clementine> ClementinePtr;
+typedef boost::shared_ptr<Action> ActionPtr;
 
 } // namespace clementine
 
-#endif // CLEMENTINE_CLEMENTINE_H
+#endif // CLEMENTINE_ACTION_H

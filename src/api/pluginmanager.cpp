@@ -30,6 +30,7 @@
 #include <QDirIterator>
 #include <QFile>
 #include <QFileSystemWatcher>
+#include <QMenu>
 #include <QSettings>
 #include <QTimer>
 
@@ -327,4 +328,20 @@ void PluginManager::DisablePlugin(const QString& id) {
   SaveSettings();
 
   emit PluginChanged(id);
+}
+
+void PluginManager::RegisterExtensionPoint(const QString& name, QMenu* menu, QAction* before) {
+  Q_ASSERT(!extension_points_.contains(name));
+
+  extension_points_[name] = ExtensionPoint(menu, before);
+}
+
+bool PluginManager::AddAction(const QString& extension_point, QAction* action) {
+  if (!extension_points_.contains(extension_point))
+    return false;
+
+  const ExtensionPoint& point = extension_points_[extension_point];
+  point.menu_->insertAction(point.before_, action);
+
+  return true;
 }

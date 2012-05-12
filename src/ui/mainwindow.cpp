@@ -18,6 +18,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "api/plugindialog.h"
+#include "api/pluginmanager.h"
 #include "api/pluginmodel.h"
 #include "core/appearance.h"
 #include "core/application.h"
@@ -659,6 +660,9 @@ MainWindow::MainWindow(Application* app,
   ScrobbleButtonVisibilityChanged(false);
 #endif
 
+  // Plugin extension points
+  app_->plugin_manager()->RegisterExtensionPoint("extras", ui_->menu_extras);
+
   // Load settings
   qLog(Debug) << "Loading settings";
   settings_.beginGroup(kSettingsGroup);
@@ -716,6 +720,8 @@ MainWindow::MainWindow(Application* app,
   CheckFullRescanRevisions();
 
   qLog(Debug) << "Started";
+
+  app_->plugin_manager()->Init();
 }
 
 MainWindow::~MainWindow() {

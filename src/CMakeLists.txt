@@ -77,6 +77,7 @@ set(SOURCES
   analyzers/sonogram.cpp
   analyzers/turbine.cpp
 
+  api/action.cpp
   api/clementine.cpp
   api/database.cpp
   api/databasedelegate.cpp
@@ -88,6 +89,7 @@ set(SOURCES
   api/plugindialoglist.cpp
   api/pluginmanager.cpp
   api/pluginmodel.cpp
+  api/userinterface.cpp
 
   core/appearance.cpp
   core/application.cpp
@@ -382,6 +384,7 @@ set(HEADERS
   analyzers/sonogram.h
   analyzers/turbine.h
 
+  api/action_p.h
   api/database_p.h
   api/player_p.h
   api/plugindialog.h
@@ -706,12 +709,14 @@ set(UI
 )
 
 set(PUBLIC_HEADERS
+  api/clementine/Action
   api/clementine/Clementine
   api/clementine/Database
   api/clementine/DatabaseDelegate
   api/clementine/Player
   api/clementine/PlayerDelegate
   api/clementine/Plugin
+  api/clementine/UserInterface
 )
 
 set(RESOURCES
