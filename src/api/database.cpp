@@ -15,42 +15,25 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <clementine/Clementine>
-#include <clementine/Database>
-#include <clementine/Player>
+#include "database_p.h"
+#include "core/application.h"
+#include "core/database.h"
 
-class Application;
+#include <clementine/Database>
 
 namespace clementine {
 
-struct Clementine::Private {
-  Application* app_;
-
-  PlayerPtr player_;
-  DatabasePtr database_;
-};
-
-Clementine::Clementine(void* app)
-  : d(new Private)
+Database::Database(void* app)
+  : d(new DatabasePrivate)
 {
   d->app_ = reinterpret_cast<Application*>(app);
-  d->player_.reset(new Player(app));
-  d->database_.reset(new Database(app));
 }
 
-Clementine::~Clementine() {
+Database::~Database() {
 }
 
-PlayerPtr Clementine::player() const {
-  return d->player_;
-}
-
-DatabasePtr Clementine::database() const {
-  return d->database_;
-}
-
-void Clementine::UnregisterAllDelegates() {
-  d->player_->UnregisterAllDelegates();
+QString Database::DatabaseUrl() const {
+  return "sqlite:///" + d->app_->database()->Connect().databaseName();
 }
 
 } // namespace clementine

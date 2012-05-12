@@ -78,6 +78,7 @@ set(SOURCES
   analyzers/turbine.cpp
 
   api/clementine.cpp
+  api/database.cpp
   api/language.cpp
   api/player.cpp
   api/playerdelegate.cpp
@@ -704,6 +705,7 @@ set(UI
 
 set(PUBLIC_HEADERS
   api/clementine/Clementine
+  api/clementine/Database
   api/clementine/Player
   api/clementine/PlayerDelegate
   api/clementine/Plugin

@@ -15,48 +15,35 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef LANGUAGE_H
-#define LANGUAGE_H
+#ifndef CLEMENTINE_DATABASE_H
+#define CLEMENTINE_DATABASE_H
 
 #include <QString>
 
-class Application;
+#include <boost/noncopyable.hpp>
+#include <boost/scoped_ptr.hpp>
+#include <boost/shared_ptr.hpp>
 
 namespace clementine {
 
-class AvailablePlugin;
-class Clementine;
-class Language;
-class Plugin;
+class DatabaseDelegate;
+class DatabasePrivate;
 
-// Each Language finds and loads its own plugins.
-class Language {
+class Database : boost::noncopyable {
 public:
-  Language(Application* app);
-  virtual ~Language() {}
+  // Used by the Python SQLAlchemy integration
+  QString DatabaseUrl() const;
 
-  Application* app() const { return app_; }
-
-  virtual QString name() const = 0;
-
-  // Loads a plugin that hasn't been loaded yet.  Returns the new plugin, or
-  // NULL if it couldn't be loaded.
-  virtual Plugin* LoadPlugin(const AvailablePlugin& plugin) = 0;
-
-  // Unloads an already loaded plugin.  This must also delete the plugin object.
-  virtual void UnloadPlugin(Plugin* plugin) = 0;
-
-  bool EnsureInitialised();
-
-protected:
-  // Called before this Language's first plugin is loaded.
-  virtual bool Init() = 0;
+  // Used internally by Clementine
+  Database(void* app);
+  ~Database();
 
 private:
-  Application* app_;
-  bool is_initialised_;
+  boost::scoped_ptr<DatabasePrivate> d;
 };
+
+typedef boost::shared_ptr<Database> DatabasePtr;
 
 } // namespace clementine
 
-#endif // LANGUAGE_H
+#endif // CLEMENTINE_DATABASE_H

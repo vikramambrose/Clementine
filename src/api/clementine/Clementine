@@ -24,11 +24,13 @@
 
 namespace clementine {
 
+class Database;
 class Player;
 
 class Clementine : boost::noncopyable {
 public:
   boost::shared_ptr<Player> player() const;
+  boost::shared_ptr<Database> database() const;
 
   // Used internally by Clementine
   Clementine(void* app);

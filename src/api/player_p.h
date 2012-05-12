@@ -28,7 +28,8 @@ namespace clementine {
 
 class PlayerListener;
 
-struct PlayerPrivate {
+class PlayerPrivate {
+public:
   Application* app_;
 
   PlayerListener* listener_;

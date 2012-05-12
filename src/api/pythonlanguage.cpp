@@ -22,6 +22,7 @@
 #include "core/logging.h"
 
 #include <clementine/Clementine>
+#include <clementine/Database>
 #include <clementine/Player>
 #include <clementine/PlayerDelegate>
 #include <clementine/Plugin>
@@ -68,7 +69,8 @@ namespace {
 
 BOOST_PYTHON_MODULE(clementine) {
   class_<clementine::Clementine, clementine::ClementinePtr, boost::noncopyable>("Clementine", no_init)
-      .add_property("player", &clementine::Clementine::player);
+      .add_property("player", &clementine::Clementine::player)
+      .add_property("database", &clementine::Clementine::database);
 
   {
     scope s = class_<clementine::Player, clementine::PlayerPtr, boost::noncopyable>("Player", no_init)
@@ -118,6 +120,9 @@ BOOST_PYTHON_MODULE(clementine) {
            &clementine::PlayerDelegate::SongChanged,
            &PlayerDelegateWrapper::DefaultSongChanged);
 
+  class_<clementine::Database, clementine::DatabasePtr, boost::noncopyable>("Database", no_init)
+      .add_property("database_url", &clementine::Database::DatabaseUrl);
+
   def("logging_handler", LoggingHandler);
 }
 
@@ -135,7 +140,10 @@ bool PythonLanguage::Init() {
   if (!python_utils::AddModule(":python/models.py", "clementine.models"))
     return false;
 
-  if (!python_utils::AddModule(":python/clementinelogging.py", "clementine.clementinelogging"))
+  if (!python_utils::AddModule(":python/logging_integration.py", "clementine.logging_integration"))
+    return false;
+
+  if (!python_utils::AddModule(":python/sqlalchemy_integration.py", "clementine.sqlalchemy_integration"))
     return false;
 
   return true;

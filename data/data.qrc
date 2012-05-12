@@ -344,6 +344,7 @@
         <file>providers/itunes.png</file>
         <file>providers/bbc.png</file>
         <file>python/models.py</file>
-        <file>python/clementinelogging.py</file>
+        <file>python/logging_integration.py</file>
+        <file>python/sqlalchemy_integration.py</file>
     </qresource>
 </RCC>
