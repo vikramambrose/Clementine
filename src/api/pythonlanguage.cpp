@@ -33,7 +33,9 @@
 #include <boost/python.hpp>
 #include <Python.h>
 
+#include <QCoreApplication>
 #include <QFile>
+#include <QStringList>
 
 using namespace boost::python;
 
@@ -167,10 +169,58 @@ PythonLanguage::PythonLanguage(Application* app)
 
 bool PythonLanguage::Init() {
   Py_Initialize();
+  
+  // Add the C++ clementine package.
   initclementine();
 
+  // Register boost::python converters for types in the clementine package.
   python_utils::RegisterTypeConverters();
+  
+  // Add bundled 3rdparty packages to the pythonpath
+  QStringList thirdparty_search_path = QStringList()
+      // Windows and in-source-tree
+      << QCoreApplication::applicationDirPath() + "/pythonlibs"
+      
+#ifdef USE_INSTALL_PREFIX
+      << CMAKE_INSTALL_PREFIX "/share/clementine/pythonlibs"
+#endif
+      << "/usr/share/clementine/pythonlibs"
+      << "/usr/local/share/clementine/pythonlibs";
+  
+#if defined(Q_OS_MAC)
+  thirdparty_search_path << mac::GetResourcesPath() + "/pythonlibs";
+#endif
+  
+  const QStringList thirdparty_packages = QStringList()
+      << "SQLAlchemy-0.7.7.zip";
+  
+  list sys_path = extract<list>(import("sys").attr("path"));
+  
+  foreach (const QString& package, thirdparty_packages) {
+    bool found = false;
+    foreach (const QString& search_path, thirdparty_search_path) {
+      const QString path = search_path + "/" + package;
+      if (QFile::exists(path)) {
+        qLog(Debug) << "Adding" << path << "to sys.path";
+        
+        try {
+          sys_path.insert(0, path);
+          found = true;
+          break;
+        } catch (error_already_set&) {
+          PyErr_Print();
+          PyErr_Clear();
+        }
+      }
+    }
+    
+    if (!found) {
+      qLog(Warning) << "Required third party package" << package << "not found";
+      qLog(Warning) << "Search path was:" << thirdparty_search_path;
+    }
+  }
 
+  // Add additional Python modules in the clementine package.
   if (!python_utils::AddModule(":python/models.py", "clementine.models"))
     return false;
 

@@ -259,6 +259,7 @@ endif(QCA_FOUND AND HAVE_SPOTIFY)
 
 if(ENABLE_PYTHON AND PYTHONLIBS_FOUND AND Boost_PYTHON_FOUND)
   set(HAVE_PYTHON ON)
+  add_subdirectory(3rdparty/SQLAlchemy)
 endif()
 
 
