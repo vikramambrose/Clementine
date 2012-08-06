@@ -34,6 +34,7 @@ GoogleDriveSettingsPage::GoogleDriveSettingsPage(SettingsDialog* parent)
     item_needs_selecting_(false)
 {
   ui_->setupUi(this);
+  connect(ui_->authorise, SIGNAL(clicked(bool)), SLOT(Authorise()));
 }
 
 GoogleDriveSettingsPage::~GoogleDriveSettingsPage() {
@@ -50,9 +51,9 @@ void GoogleDriveSettingsPage::Load() {
   if (!model_) {
     GoogleDriveService* service =
         dialog()->app()->internet_model()->Service<GoogleDriveService>();
-    google_drive::Client* client = service->client();
+    client_ = service->client();
 
-    model_ = new google_drive::FolderModel(client, this);
+    model_ = new google_drive::FolderModel(client_, this);
     proxy_model_ = new QSortFilterProxyModel(this);
     proxy_model_->setSourceModel(model_);
     proxy_model_->setDynamicSortFilter(true);
@@ -87,4 +88,8 @@ void GoogleDriveSettingsPage::DirectoryRowsInserted(const QModelIndex& parent) {
       item_needs_selecting_ = false;
     }
   }
+}
+
+void GoogleDriveSettingsPage::Authorise() {
+  client_->Connect();
 }

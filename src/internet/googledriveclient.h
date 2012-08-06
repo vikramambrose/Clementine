@@ -154,7 +154,7 @@ private:
   void AddAuthorizationHeader(QNetworkRequest* request) const;
   void MakeListFilesRequest(ListFilesResponse* response,
                             const QString& page_token = QString());
-  
+
 private:
   QNetworkAccessManager* network_;
 

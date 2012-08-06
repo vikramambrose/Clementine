@@ -28,12 +28,13 @@ class Ui_GoogleDriveSettingsPage;
 class QSortFilterProxyModel;
 
 namespace google_drive {
+  class Client;
   class FolderModel;
 }
 
 class GoogleDriveSettingsPage : public SettingsPage {
   Q_OBJECT
-  
+
 public:
   GoogleDriveSettingsPage(SettingsDialog* parent = 0);
   ~GoogleDriveSettingsPage();
@@ -43,12 +44,15 @@ public:
 
 private slots:
   void DirectoryRowsInserted(const QModelIndex& parent);
-  
+  void Authorise();
+
 private:
   Ui_GoogleDriveSettingsPage* ui_;
 
   google_drive::FolderModel* model_;
   QSortFilterProxyModel* proxy_model_;
+
+  google_drive::Client* client_;
 
   QString destination_folder_id_;
   bool item_needs_selecting_;
