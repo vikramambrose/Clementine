@@ -398,7 +398,7 @@ bool GstEnginePipeline::Init() {
     GstRTSPMediaMapping* mapping = gst_rtsp_server_get_media_mapping(server);
     GstRTSPMediaFactoryCustom* factory = gst_rtsp_media_factory_custom_new();
 
-    gst_rtsp_media_factory_set_shared(GST_RTSP_MEDIA_FACTORY(factory), FALSE);
+    gst_rtsp_media_factory_set_shared(GST_RTSP_MEDIA_FACTORY(factory), TRUE);
     gst_rtsp_media_factory_custom_set_bin(factory, rtspbin);
 
     gst_rtsp_media_mapping_add_factory(mapping, "/test", GST_RTSP_MEDIA_FACTORY(factory));
