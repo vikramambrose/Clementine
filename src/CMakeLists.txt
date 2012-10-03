@@ -1088,6 +1088,7 @@ target_link_libraries(clementine_lib
   ${CMAKE_THREAD_LIBS_INIT}
   z
   Qocoa
+  gstrtspserver
 )
 
 if(ENABLE_VISUALISATIONS)

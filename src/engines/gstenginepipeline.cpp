@@ -33,6 +33,12 @@
 #  include "internet/spotifyservice.h"
 #endif
 
+#include <gst/app/gstappsink.h>
+#include <gst/app/gstappsrc.h>
+#include <gst/rtsp-server/rtsp-server.h>
+
+#include "gst/rtsp/rtsp-media-factory-custom.h"
+
 const int GstEnginePipeline::kGstStateTimeoutNanosecs = 10000000;
 const int GstEnginePipeline::kFaderFudgeMsec = 2000;
 
@@ -196,6 +202,14 @@ GstElement* GstEnginePipeline::CreateDecodeBinFromString(const char* pipeline) {
   }
 }
 
+static GstFlowReturn OnNewBuffer(GstAppSink* appsink, gpointer userdata) {
+  qDebug() << Q_FUNC_INFO;
+  GstAppSrc* appsrc = reinterpret_cast<GstAppSrc*>(userdata);
+  GstBuffer* buffer = gst_app_sink_pull_buffer(appsink);
+  GstFlowReturn ret = gst_app_src_push_buffer(appsrc, buffer);
+  return ret;
+}
+
 bool GstEnginePipeline::Init() {
   // Here we create all the parts of the gstreamer pipeline - from the source
   // to the sink.  The parts of the pipeline are split up into bins:
@@ -290,7 +304,7 @@ bool GstEnginePipeline::Init() {
 
   // Configure the fakesink properly
   g_object_set(G_OBJECT(probe_sink), "sync", TRUE, NULL);
-  
+
   // Set the equalizer bands
   g_object_set(G_OBJECT(equalizer_), "num-bands", 10, NULL);
 
@@ -323,7 +337,7 @@ bool GstEnginePipeline::Init() {
   }
 
   gst_element_link(queue_, audioconvert_);
-  
+
   // Create the caps to put in each path in the tee.  The scope path gets 16-bit
   // ints and the audiosink path gets float32.
   GstCaps* caps16 = gst_caps_new_simple ("audio/x-raw-int",
@@ -346,6 +360,51 @@ bool GstEnginePipeline::Init() {
   // Link the outputs of tee to the queues on each path.
   gst_pad_link(gst_element_get_request_pad(tee, "src%d"), gst_element_get_pad(probe_queue, "sink"));
   gst_pad_link(gst_element_get_request_pad(tee, "src%d"), gst_element_get_pad(audio_queue, "sink"));
+
+  {
+    // Build pipeline for RTSP.
+    GstElement* rtspbin = gst_bin_new("rtspbin");
+    GstElement* appsrc = engine_->CreateElement("appsrc", rtspbin);
+    GstElement* audioconvert = engine_->CreateElement("audioconvert", rtspbin);
+    GstElement* resample = engine_->CreateElement("audioresample", rtspbin);
+    GstElement* vorbisenc = engine_->CreateElement("speexenc", rtspbin);
+    GstElement* vorbispay = gst_element_factory_make("rtpspeexpay", "pay0");
+    gst_bin_add(GST_BIN(rtspbin), vorbispay);
+
+    gst_element_link_many(
+        appsrc, audioconvert, resample, vorbisenc, vorbispay, NULL);
+
+    // Add elements for streaming to RTSP pipeline via appsink/src.
+    GstElement* queue = engine_->CreateElement("queue", audiobin_);
+    GstElement* appsink = engine_->CreateElement("appsink", audiobin_);
+    g_object_set(G_OBJECT(appsink), "drop", TRUE, NULL);
+    g_object_set(G_OBJECT(appsink), "sync", FALSE, NULL);
+    g_object_set(G_OBJECT(appsink), "emit-signals", TRUE, NULL);
+
+    GstAppSinkCallbacks callbacks;
+    memset(&callbacks, 0, sizeof(callbacks));
+    callbacks.new_buffer = OnNewBuffer;
+    gst_app_sink_set_callbacks(
+        reinterpret_cast<GstAppSink*>(appsink),
+        &callbacks,
+        appsrc,
+        NULL);
+
+    gboolean r = gst_element_link_many(queue, appsink, NULL);
+    GstPadLinkReturn ret = gst_pad_link(gst_element_get_request_pad(tee, "src%d"), gst_element_get_pad(queue, "sink"));
+
+    qLog(Debug) << "Linking pad:" << ret << r;
+    GstRTSPServer* server = gst_rtsp_server_new();
+    GstRTSPMediaMapping* mapping = gst_rtsp_server_get_media_mapping(server);
+    GstRTSPMediaFactoryCustom* factory = gst_rtsp_media_factory_custom_new();
+
+    gst_rtsp_media_factory_set_shared(GST_RTSP_MEDIA_FACTORY(factory), FALSE);
+    gst_rtsp_media_factory_custom_set_bin(factory, rtspbin);
+
+    gst_rtsp_media_mapping_add_factory(mapping, "/test", GST_RTSP_MEDIA_FACTORY(factory));
+    g_object_unref(mapping);
+    gst_rtsp_server_attach(server, NULL);
+  }
 
   // Link replaygain elements if enabled.
   if (rg_enabled_) {

@@ -59,6 +59,7 @@ pkg_check_modules(SPOTIFY libspotify>=12.1.45)
 pkg_check_modules(CDIO libcdio)
 pkg_check_modules(QCA qca2)
 pkg_check_modules(CHROMAPRINT libchromaprint)
+pkg_check_modules(GSTRTSP gst-rtsp-server-0.10)
 
 if (WIN32)
   find_package(ZLIB REQUIRED)
@@ -396,6 +397,8 @@ endif(WITH_DEBIAN)
 if(IMOBILEDEVICE_FOUND AND PLIST_FOUND)
   add_subdirectory(gst/afcsrc)
 endif(IMOBILEDEVICE_FOUND AND PLIST_FOUND)
+
+add_subdirectory(gst/rtsp)
 
 if(HAVE_BREAKPAD)
   add_subdirectory(3rdparty/google-breakpad)
