@@ -203,7 +203,6 @@ GstElement* GstEnginePipeline::CreateDecodeBinFromString(const char* pipeline) {
 }
 
 static GstFlowReturn OnNewBuffer(GstAppSink* appsink, gpointer userdata) {
-  qDebug() << Q_FUNC_INFO;
   GstAppSrc* appsrc = reinterpret_cast<GstAppSrc*>(userdata);
   GstBuffer* buffer = gst_app_sink_pull_buffer(appsink);
   GstFlowReturn ret = gst_app_src_push_buffer(appsrc, buffer);
@@ -367,8 +366,8 @@ bool GstEnginePipeline::Init() {
     GstElement* appsrc = engine_->CreateElement("appsrc", rtspbin);
     GstElement* audioconvert = engine_->CreateElement("audioconvert", rtspbin);
     GstElement* resample = engine_->CreateElement("audioresample", rtspbin);
-    GstElement* vorbisenc = engine_->CreateElement("speexenc", rtspbin);
-    GstElement* vorbispay = gst_element_factory_make("rtpspeexpay", "pay0");
+    GstElement* vorbisenc = engine_->CreateElement("lame", rtspbin);
+    GstElement* vorbispay = gst_element_factory_make("rtpmpapay", "pay0");
     gst_bin_add(GST_BIN(rtspbin), vorbispay);
 
     gst_element_link_many(
