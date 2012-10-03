@@ -200,7 +200,7 @@ GstElement* GstEnginePipeline::CreateDecodeBinFromString(const char* pipeline) {
 }
 
 static GstFlowReturn OnNewRTSPBuffer(GstAppSink* appsink, gpointer userdata) {
-  // TODO: Support multiple streams into this appsrc.
+  // TODO: Support multiple streams into this appsrc (adder?).
   GstAppSrc* appsrc = reinterpret_cast<GstAppSrc*>(userdata);
   GstBuffer* buffer = gst_app_sink_pull_buffer(appsink);
   return gst_app_src_push_buffer(appsrc, buffer);
@@ -225,6 +225,7 @@ bool GstEnginePipeline::Init() {
   //   tee1 ! probe_queue ! probe_converter ! <caps16> ! probe_sink
   //   tee2 ! audio_queue ! equalizer_preamp ! equalizer ! volume ! audioscale
   //        ! convert ! audiosink
+  //   tee3 ! queue ! appsink -> RTSP pipeline
 
   // Audio bin
   audiobin_ = gst_bin_new("audiobin");
