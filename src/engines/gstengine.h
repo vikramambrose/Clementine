@@ -34,8 +34,9 @@
 #include <QStringList>
 #include <QTimerEvent>
 
-#include <gst/gst.h>
 #include <boost/shared_ptr.hpp>
+#include <gst/gst.h>
+#include <gst/rtsp-server/rtsp-server.h>
 
 class QTimer;
 class QTimerEvent;
@@ -67,7 +68,7 @@ class GstEngine : public Engine::Base, public BufferConsumer {
   static const char* kAutoSink;
 
   bool Init();
-  void EnsureInitialised() { initialising_.waitForFinished(); }
+  void EnsureInitialised();
   static void InitialiseGstreamer();
 
   int AddBackgroundStream(const QUrl& url);
@@ -86,6 +87,8 @@ class GstEngine : public Engine::Base, public BufferConsumer {
 
   // BufferConsumer
   void ConsumeBuffer(GstBuffer *buffer, int pipeline_id);
+
+  GstElement* rtsp_appsrc() { return rtsp_appsrc_; }
 
  public slots:
   void StartPreloading(const QUrl& url, bool force_stop_at_end,
@@ -141,6 +144,8 @@ class GstEngine : public Engine::Base, public BufferConsumer {
 
   void StartTimers();
   void StopTimers();
+
+  void InitRTSP();
 
   boost::shared_ptr<GstEnginePipeline> CreatePipeline();
   boost::shared_ptr<GstEnginePipeline> CreatePipeline(const QUrl& url, qint64 end_nanosec);
@@ -203,6 +208,10 @@ class GstEngine : public Engine::Base, public BufferConsumer {
   int next_element_id_;
 
   QHash<int, boost::shared_ptr<GstEnginePipeline> > background_streams_;
+
+  GstElement* rtsp_appsrc_;
+  GstRTSPMediaFactory* rtsp_media_factory_;
+  GstRTSPServer* rtsp_server_;
 };
 
 

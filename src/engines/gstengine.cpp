@@ -34,6 +34,8 @@
 # include "gst/moodbar/spectrum.h"
 #endif
 
+#include "gst/rtsp/rtsp-media-factory-custom.h"
+
 #include <math.h>
 #include <unistd.h>
 #include <vector>
@@ -41,15 +43,16 @@
 
 #include <boost/bind.hpp>
 
-#include <QTimer>
-#include <QRegExp>
-#include <QFile>
-#include <QSettings>
-#include <QtDebug>
 #include <QCoreApplication>
-#include <QTimeLine>
 #include <QDir>
+#include <QFile>
+#include <QRegExp>
+#include <QSettings>
 #include <QtConcurrentRun>
+#include <QtDebug>
+#include <QTime>
+#include <QTimeLine>
+#include <QTimer>
 
 #include <gst/gst.h>
 
@@ -85,7 +88,10 @@ GstEngine::GstEngine(TaskManager* task_manager)
     mono_playback_(false),
     seek_timer_(new QTimer(this)),
     timer_id_(-1),
-    next_element_id_(0)
+    next_element_id_(0),
+    rtsp_appsrc_(NULL),
+    rtsp_media_factory_(NULL),
+    rtsp_server_(NULL)
 {
   seek_timer_->setSingleShot(true);
   seek_timer_->setInterval(kSeekDelayNanosec / kNsecPerMsec);
@@ -112,6 +118,13 @@ bool GstEngine::Init() {
   return true;
 }
 
+void GstEngine::EnsureInitialised() {
+  initialising_.waitForFinished();
+  if (!rtsp_server_) {
+    InitRTSP();
+  }
+}
+
 void GstEngine::InitialiseGstreamer() {
   gst_init(NULL, NULL);
 
@@ -122,6 +135,47 @@ void GstEngine::InitialiseGstreamer() {
 #ifdef HAVE_MOODBAR
   gstmoodbar_register_static();
 #endif
+}
+
+// The RTSP stream requires a independent pipeline from the core pipeline, but
+// we still need the data from the core pipeline available.
+// This is accomplished by adding an appsink in the core pipeline and copying
+// the buffers directly to the appsrc at the beginning of the RTSP pipeline.
+// This also means we don't reconstruct the RTSP pipeline for each track, so we
+// should be able to keep a continuous stream flowing.
+void GstEngine::InitRTSP() {
+  QTime time;
+  time.start();
+  qLog(Debug) << "Initialising RTSP pipeline";
+  // Build pipeline for RTSP.
+  GstElement* rtspbin = gst_bin_new("rtspbin");
+  rtsp_appsrc_ = CreateElement("appsrc", rtspbin);
+  GstElement* audioconvert = CreateElement("audioconvert", rtspbin);
+  GstElement* resample = CreateElement("audioresample", rtspbin);
+  GstElement* mp3enc = CreateElement("lame", rtspbin);
+  // The RTSP server requires each payloader to be named pay{n}.
+  GstElement* mp3pay = gst_element_factory_make("rtpmpapay", "pay0");
+  gst_bin_add(GST_BIN(rtspbin), mp3pay);
+
+  gst_element_link_many(
+      rtsp_appsrc_, audioconvert, resample, mp3enc, mp3pay, NULL);
+
+  rtsp_server_ = gst_rtsp_server_new();
+  GstRTSPMediaMapping* mapping = gst_rtsp_server_get_media_mapping(rtsp_server_);
+  rtsp_media_factory_ = GST_RTSP_MEDIA_FACTORY(gst_rtsp_media_factory_custom_new());
+
+  // One stream for all clients, logical for a live stream.
+  gst_rtsp_media_factory_set_shared(rtsp_media_factory_, TRUE);
+  // Set the pipeline contents for the RTSP factory.
+  gst_rtsp_media_factory_custom_set_bin(
+      GST_RTSP_MEDIA_FACTORY_CUSTOM(rtsp_media_factory_), rtspbin);
+
+  // Map a URL path to our factory.
+  gst_rtsp_media_mapping_add_factory(mapping, "/test", rtsp_media_factory_);
+  g_object_unref(mapping);
+  gst_rtsp_server_attach(rtsp_server_, NULL);
+
+  qLog(Debug) << "Initialised RTSP pipeline in:" << time.elapsed();
 }
 
 void GstEngine::ReloadSettings() {

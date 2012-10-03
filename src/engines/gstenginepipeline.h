@@ -26,8 +26,9 @@
 #include <QTimeLine>
 #include <QUrl>
 
-#include <gst/gst.h>
 #include <boost/scoped_ptr.hpp>
+#include <gst/gst.h>
+#include <gst/rtsp-server/rtsp-server.h>
 
 #include "engine_fwd.h"
 
@@ -57,6 +58,8 @@ class GstEnginePipeline : public QObject {
   // Creates the pipeline, returns false on error
   bool InitFromUrl(const QUrl& url, qint64 end_nanosec);
   bool InitFromString(const QString& pipeline);
+
+  void InitRTSP();
 
   // BufferConsumers get fed audio data.  Thread-safe.
   void AddBufferConsumer(BufferConsumer* consumer);
@@ -266,6 +269,10 @@ class GstEnginePipeline : public QObject {
   uint bus_cb_id_;
 
   QThreadPool set_state_threadpool_;
+
+  GstRTSPServer* rtsp_server_;
+  GstRTSPMediaFactory* rtsp_media_factory_;
+  GstElement* rtsp_appsrc_;
 };
 
 #endif // GSTENGINEPIPELINE_H

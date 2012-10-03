@@ -35,9 +35,6 @@
 
 #include <gst/app/gstappsink.h>
 #include <gst/app/gstappsrc.h>
-#include <gst/rtsp-server/rtsp-server.h>
-
-#include "gst/rtsp/rtsp-media-factory-custom.h"
 
 const int GstEnginePipeline::kGstStateTimeoutNanosecs = 10000000;
 const int GstEnginePipeline::kFaderFudgeMsec = 2000;
@@ -202,12 +199,13 @@ GstElement* GstEnginePipeline::CreateDecodeBinFromString(const char* pipeline) {
   }
 }
 
-static GstFlowReturn OnNewBuffer(GstAppSink* appsink, gpointer userdata) {
+static GstFlowReturn OnNewRTSPBuffer(GstAppSink* appsink, gpointer userdata) {
+  // TODO: Support multiple streams into this appsrc.
   GstAppSrc* appsrc = reinterpret_cast<GstAppSrc*>(userdata);
   GstBuffer* buffer = gst_app_sink_pull_buffer(appsink);
-  GstFlowReturn ret = gst_app_src_push_buffer(appsrc, buffer);
-  return ret;
+  return gst_app_src_push_buffer(appsrc, buffer);
 }
+
 
 bool GstEnginePipeline::Init() {
   // Here we create all the parts of the gstreamer pipeline - from the source
@@ -361,48 +359,25 @@ bool GstEnginePipeline::Init() {
   gst_pad_link(gst_element_get_request_pad(tee, "src%d"), gst_element_get_pad(audio_queue, "sink"));
 
   {
-    // Build pipeline for RTSP.
-    GstElement* rtspbin = gst_bin_new("rtspbin");
-    GstElement* appsrc = engine_->CreateElement("appsrc", rtspbin);
-    GstElement* audioconvert = engine_->CreateElement("audioconvert", rtspbin);
-    GstElement* resample = engine_->CreateElement("audioresample", rtspbin);
-    GstElement* vorbisenc = engine_->CreateElement("lame", rtspbin);
-    GstElement* vorbispay = gst_element_factory_make("rtpmpapay", "pay0");
-    gst_bin_add(GST_BIN(rtspbin), vorbispay);
-
-    gst_element_link_many(
-        appsrc, audioconvert, resample, vorbisenc, vorbispay, NULL);
-
     // Add elements for streaming to RTSP pipeline via appsink/src.
     GstElement* queue = engine_->CreateElement("queue", audiobin_);
     GstElement* appsink = engine_->CreateElement("appsink", audiobin_);
     g_object_set(G_OBJECT(appsink), "drop", TRUE, NULL);
+    // The RTSP stream doesn't need to play in sync with the main pipeline.
     g_object_set(G_OBJECT(appsink), "sync", FALSE, NULL);
     g_object_set(G_OBJECT(appsink), "emit-signals", TRUE, NULL);
 
     GstAppSinkCallbacks callbacks;
     memset(&callbacks, 0, sizeof(callbacks));
-    callbacks.new_buffer = OnNewBuffer;
+    callbacks.new_buffer = OnNewRTSPBuffer;
     gst_app_sink_set_callbacks(
         reinterpret_cast<GstAppSink*>(appsink),
         &callbacks,
-        appsrc,
+        engine_->rtsp_appsrc(),
         NULL);
 
-    gboolean r = gst_element_link_many(queue, appsink, NULL);
-    GstPadLinkReturn ret = gst_pad_link(gst_element_get_request_pad(tee, "src%d"), gst_element_get_pad(queue, "sink"));
-
-    qLog(Debug) << "Linking pad:" << ret << r;
-    GstRTSPServer* server = gst_rtsp_server_new();
-    GstRTSPMediaMapping* mapping = gst_rtsp_server_get_media_mapping(server);
-    GstRTSPMediaFactoryCustom* factory = gst_rtsp_media_factory_custom_new();
-
-    gst_rtsp_media_factory_set_shared(GST_RTSP_MEDIA_FACTORY(factory), TRUE);
-    gst_rtsp_media_factory_custom_set_bin(factory, rtspbin);
-
-    gst_rtsp_media_mapping_add_factory(mapping, "/test", GST_RTSP_MEDIA_FACTORY(factory));
-    g_object_unref(mapping);
-    gst_rtsp_server_attach(server, NULL);
+    gst_element_link_many(queue, appsink, NULL);
+    gst_pad_link(gst_element_get_request_pad(tee, "src%d"), gst_element_get_pad(queue, "sink"));
   }
 
   // Link replaygain elements if enabled.
@@ -453,7 +428,7 @@ bool GstEnginePipeline::InitFromString(const QString& pipeline) {
 
 bool GstEnginePipeline::InitFromUrl(const QUrl &url, qint64 end_nanosec) {
   pipeline_ = gst_pipeline_new("pipeline");
-  
+
   if (url.scheme() == "cdda" && !url.path().isEmpty()) {
     // Currently, Gstreamer can't handle input CD devices inside cdda URL. So
     // we handle them ourselve: we extract the track number and re-create an
