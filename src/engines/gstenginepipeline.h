@@ -28,7 +28,6 @@
 
 #include <boost/scoped_ptr.hpp>
 #include <gst/gst.h>
-#include <gst/rtsp-server/rtsp-server.h>
 
 #include "engine_fwd.h"
 

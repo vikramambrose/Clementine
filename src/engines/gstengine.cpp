@@ -105,6 +105,9 @@ GstEngine::~GstEngine() {
 
   current_pipeline_.reset();
 
+  gst_object_unref(rtsp_server_);
+  gst_object_unref(rtsp_media_factory_);
+
   // Destroy scope delay queue
   ClearScopeBuffers();
   g_queue_free(delayq_);
@@ -176,7 +179,7 @@ void GstEngine::InitRTSP() {
 
   // Map a URL path to our factory.
   gst_rtsp_media_mapping_add_factory(mapping, "/test", rtsp_media_factory_);
-  g_object_unref(mapping);
+  gst_object_unref(mapping);
   gst_rtsp_server_attach(rtsp_server_, NULL);
 
   qLog(Debug) << "Initialised RTSP pipeline in:" << time.elapsed();

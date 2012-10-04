@@ -377,7 +377,7 @@ bool GstEnginePipeline::Init() {
         engine_->rtsp_appsrc(),
         NULL);
 
-    gst_element_link_many(queue, appsink, NULL);
+    gst_element_link(queue, appsink);
     gst_pad_link(gst_element_get_request_pad(tee, "src%d"), gst_element_get_pad(queue, "sink"));
   }
 
