@@ -150,6 +150,9 @@ void GstEngine::InitRTSP() {
   // Build pipeline for RTSP.
   GstElement* rtspbin = gst_bin_new("rtspbin");
   rtsp_appsrc_ = CreateElement("appsrc", rtspbin);
+  GstElement* silence = CreateElement("audiotestsrc", rtspbin);
+  GstElement* adder = CreateElement("adder", rtspbin);
+  g_object_set(G_OBJECT(silence), "wave", 4, NULL);
   GstElement* audioconvert = CreateElement("audioconvert", rtspbin);
   GstElement* resample = CreateElement("audioresample", rtspbin);
   GstElement* mp3enc = CreateElement("lame", rtspbin);
@@ -158,7 +161,8 @@ void GstEngine::InitRTSP() {
   gst_bin_add(GST_BIN(rtspbin), mp3pay);
 
   gst_element_link_many(
-      rtsp_appsrc_, audioconvert, resample, mp3enc, mp3pay, NULL);
+      rtsp_appsrc_, adder, audioconvert, resample, mp3enc, mp3pay, NULL);
+  gst_element_link(silence, adder);
 
   rtsp_server_ = gst_rtsp_server_new();
   GstRTSPMediaMapping* mapping = gst_rtsp_server_get_media_mapping(rtsp_server_);

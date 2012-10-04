@@ -201,11 +201,6 @@ custom_get_element (GstRTSPMediaFactory * factory, const GstRTSPUrl * url)
 
   g_mutex_lock (factory->lock);
 
-  if (GST_RTSP_MEDIA_FACTORY_CUSTOM(factory)->bin) {
-    g_mutex_unlock(factory->lock);
-    return GST_RTSP_MEDIA_FACTORY_CUSTOM(factory)->bin;
-  }
-
   topbin = gst_bin_new ("GstRTSPMediaFactoryCustom");
   g_assert (topbin != NULL);
 
@@ -222,9 +217,9 @@ custom_get_element (GstRTSPMediaFactory * factory, const GstRTSPUrl * url)
   }
   else /* get the user provided bin */
       element = GST_RTSP_MEDIA_FACTORY_CUSTOM(factory)->bin;
-  
+
   gst_bin_add (GST_BIN_CAST (topbin), element);
-    
+
   g_mutex_unlock (factory->lock);
 
   if (error != NULL) {
