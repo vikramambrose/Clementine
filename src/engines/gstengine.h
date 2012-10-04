@@ -83,7 +83,10 @@ class GstEngine : public Engine::Base, public BufferConsumer {
   PluginDetailsList GetOutputsList() const { return GetPluginList( "Sink/Audio" ); }
   static bool DoesThisSinkSupportChangingTheOutputDeviceToAUserEditableString(const QString& name);
 
-  GstElement* CreateElement(const QString& factoryName, GstElement* bin = 0);
+  GstElement* CreateElement(
+      const QString& factoryName,
+      GstElement* bin = 0,
+      const QString& name = QString::null);
 
   // BufferConsumer
   void ConsumeBuffer(GstBuffer *buffer, int pipeline_id);

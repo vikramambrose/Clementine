@@ -170,6 +170,9 @@ static void AppSrcEnoughData(GstElement* appsrc, gpointer user_data) {
 // This also means we don't reconstruct the RTSP pipeline for each track, so we
 // should be able to keep a continuous stream flowing.
 //
+// To make sure we're always feeding the stream some audio data, we switch to a
+// silent stream when the appsrc buffer runs low (eg. pressing pause).
+//
 // appsrc -----> input-selector -> audioconvert -> audioresample -> lame -> rtpmpapay
 // silence --/
 void GstEngine::InitRTSP() {
@@ -178,27 +181,31 @@ void GstEngine::InitRTSP() {
   qLog(Debug) << "Initialising RTSP pipeline";
   // Build pipeline for RTSP.
   GstElement* rtspbin = gst_bin_new("rtspbin");
+
   GstElement* selector = CreateElement("input-selector", rtspbin);
   g_object_set(G_OBJECT(selector), "sync-streams", TRUE, NULL);
+
   rtsp_appsrc_ = CreateElement("appsrc", rtspbin);
   g_object_set(G_OBJECT(rtsp_appsrc_), "format", GST_FORMAT_TIME, NULL);
   // Switch to the silent stream when we do not have any audio.
   CHECKED_GCONNECT(rtsp_appsrc_, "need-data", AppSrcNeedData, selector);
   // Switch back to the audio stream when the buffer is full.
   CHECKED_GCONNECT(rtsp_appsrc_, "enough-data", AppSrcEnoughData, selector);
+
   GstElement* silence = CreateElement("audiotestsrc", rtspbin);
   g_object_set(G_OBJECT(silence), "wave", 4, NULL);
   GstElement* audioconvert = CreateElement("audioconvert", rtspbin);
   GstElement* resample = CreateElement("audioresample", rtspbin);
   GstElement* mp3enc = CreateElement("lame", rtspbin);
+
   // The RTSP server requires each payloader to be named pay{n}.
-  GstElement* mp3pay = gst_element_factory_make("rtpmpapay", "pay0");
-  gst_bin_add(GST_BIN(rtspbin), mp3pay);
+  GstElement* mp3pay = CreateElement("rtpmpapay", rtspbin, "pay0");
 
   gst_element_link_many(
       rtsp_appsrc_, selector, audioconvert, resample, mp3enc, mp3pay, NULL);
   gst_element_link(silence, selector);
 
+  // Use the silent stream by default.
   GstPad* silence_pad = gst_element_get_static_pad(selector, "sink1");
   g_object_set(G_OBJECT(selector), "active-pad", silence_pad, NULL);
 
@@ -699,12 +706,18 @@ void GstEngine::NewMetaData(int pipeline_id, const Engine::SimpleMetaBundle& bun
   emit MetaData(bundle);
 }
 
-GstElement* GstEngine::CreateElement(const QString& factoryName, GstElement* bin) {
+GstElement* GstEngine::CreateElement(
+    const QString& factoryName, GstElement* bin, const QString& name) {
   // Make a unique name
-  QString name = factoryName + "-" + QString::number(next_element_id_ ++);
+  QString real_name;
+  if (name.isNull()) {
+    real_name = factoryName + "-" + QString::number(next_element_id_ ++);
+  } else {
+    real_name = name;
+  }
 
   GstElement* element = gst_element_factory_make(
-      factoryName.toAscii().constData(), name.toAscii().constData());
+      factoryName.toAscii().constData(), real_name.toAscii().constData());
 
   if (!element) {
     emit Error(QString("GStreamer could not create the element: %1.  "
