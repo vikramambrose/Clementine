@@ -175,6 +175,9 @@ static void AppSrcEnoughData(GstElement* appsrc, gpointer user_data) {
 //
 // appsrc -----> input-selector -> audioconvert -> audioresample -> lame -> rtpmpapay
 // silence --/
+//
+// TODO: Support multiple input pipelines by adding a new appsrc guarded by an
+// input-selector for each pipeline and merging them in an adder.
 void GstEngine::InitRTSP() {
   QTime time;
   time.start();
