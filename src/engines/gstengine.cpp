@@ -146,6 +146,9 @@ void GstEngine::InitialiseGstreamer() {
 // the buffers directly to the appsrc at the beginning of the RTSP pipeline.
 // This also means we don't reconstruct the RTSP pipeline for each track, so we
 // should be able to keep a continuous stream flowing.
+//
+// appsrc -----> adder -> audioconvert -> audioresample -> lame -> rtpmpapay
+// silence --/
 void GstEngine::InitRTSP() {
   QTime time;
   time.start();
@@ -153,9 +156,10 @@ void GstEngine::InitRTSP() {
   // Build pipeline for RTSP.
   GstElement* rtspbin = gst_bin_new("rtspbin");
   rtsp_appsrc_ = CreateElement("appsrc", rtspbin);
+  g_object_set(G_OBJECT(rtsp_appsrc_), "format", GST_FORMAT_TIME, NULL);
   GstElement* silence = CreateElement("audiotestsrc", rtspbin);
-  GstElement* adder = CreateElement("adder", rtspbin);
   g_object_set(G_OBJECT(silence), "wave", 4, NULL);
+  GstElement* adder = CreateElement("adder", rtspbin);
   GstElement* audioconvert = CreateElement("audioconvert", rtspbin);
   GstElement* resample = CreateElement("audioresample", rtspbin);
   GstElement* mp3enc = CreateElement("lame", rtspbin);
