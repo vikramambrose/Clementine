@@ -268,10 +268,6 @@ class GstEnginePipeline : public QObject {
   uint bus_cb_id_;
 
   QThreadPool set_state_threadpool_;
-
-  GstRTSPServer* rtsp_server_;
-  GstRTSPMediaFactory* rtsp_media_factory_;
-  GstElement* rtsp_appsrc_;
 };
 
 #endif // GSTENGINEPIPELINE_H
