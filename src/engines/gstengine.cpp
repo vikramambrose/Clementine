@@ -141,22 +141,30 @@ void GstEngine::InitialiseGstreamer() {
 #endif
 }
 
-static void AppSrcNeedData(GstElement* appsrc, guint arg0, gpointer user_data) {
+static void RTSPBufferUnderrun(GstQueue*, gpointer user_data) {
   GstElement* selector = reinterpret_cast<GstElement*>(user_data);
   GstPad* current_pad = NULL;
   g_object_get(G_OBJECT(selector), "active-pad", &current_pad, NULL);
   GstPad* silence_pad = gst_element_get_static_pad(selector, "sink1");
+  qLog(Debug) << Q_FUNC_INFO
+              << gst_pad_get_name(current_pad)
+              << gst_pad_get_name(silence_pad);
   if (current_pad != silence_pad) {
     qLog(Debug) << "Switching to silence";
     g_object_set(G_OBJECT(selector), "active-pad", silence_pad, NULL);
   }
 }
 
-static void AppSrcEnoughData(GstElement* appsrc, gpointer user_data) {
+static void RTSPBufferOverrun(GstQueue*, gpointer user_data) {
   GstElement* selector = reinterpret_cast<GstElement*>(user_data);
   GstPad* current_pad = NULL;
-  g_object_get(G_OBJECT(selector), "active-pad", &current_pad, NULL);
+  quint32 n_pads = 0;
+  g_object_get(G_OBJECT(selector), "active-pad", &current_pad, "n-pads", &n_pads, NULL);
   GstPad* rtsp_pad = gst_element_get_static_pad(selector, "sink0");
+
+  qLog(Debug) << Q_FUNC_INFO << n_pads
+              << gst_pad_get_name(current_pad)
+              << gst_pad_get_name(rtsp_pad);
   if (current_pad != rtsp_pad) {
     qLog(Debug) << "Switching to appsrc";
     g_object_set(G_OBJECT(selector), "active-pad", rtsp_pad, NULL);
@@ -190,22 +198,25 @@ void GstEngine::InitRTSP() {
 
   rtsp_appsrc_ = CreateElement("appsrc", rtspbin);
   g_object_set(G_OBJECT(rtsp_appsrc_), "format", GST_FORMAT_TIME, NULL);
-  // Switch to the silent stream when we do not have any audio.
-  CHECKED_GCONNECT(rtsp_appsrc_, "need-data", AppSrcNeedData, selector);
-  // Switch back to the audio stream when the buffer is full.
-  CHECKED_GCONNECT(rtsp_appsrc_, "enough-data", AppSrcEnoughData, selector);
+  g_object_set(G_OBJECT(rtsp_appsrc_), "min-percent", 50, NULL);
+
+  GstElement* appsrc_queue = CreateElement("queue", rtspbin);
+  CHECKED_GCONNECT(appsrc_queue, "underrun", RTSPBufferUnderrun, selector);
+  CHECKED_GCONNECT(appsrc_queue, "overrun", RTSPBufferOverrun, selector);
 
   GstElement* silence = CreateElement("audiotestsrc", rtspbin);
   g_object_set(G_OBJECT(silence), "wave", 4, NULL);
   GstElement* audioconvert = CreateElement("audioconvert", rtspbin);
   GstElement* resample = CreateElement("audioresample", rtspbin);
   GstElement* mp3enc = CreateElement("lame", rtspbin);
+  GstElement* queue = CreateElement("queue", rtspbin);
 
   // The RTSP server requires each payloader to be named pay{n}.
   GstElement* mp3pay = CreateElement("rtpmpapay", rtspbin, "pay0");
 
   gst_element_link_many(
-      rtsp_appsrc_, selector, audioconvert, resample, mp3enc, mp3pay, NULL);
+      rtsp_appsrc_, appsrc_queue, selector, queue,
+      audioconvert, resample, mp3enc, mp3pay, NULL);
   gst_element_link(silence, selector);
 
   // Use the silent stream by default.
