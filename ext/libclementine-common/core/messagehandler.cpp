@@ -65,6 +65,7 @@ void _MessageHandlerBase::DeviceReadyRead() {
       s >> expected_length_;
 
       reading_protobuf_ = true;
+      qLog(Debug) << "Read header length" << expected_length_;
     }
 
     // Read some of the message
@@ -72,6 +73,7 @@ void _MessageHandlerBase::DeviceReadyRead() {
 
     // Did we get everything?
     if (buffer_.size() == expected_length_) {
+      qLog(Debug) << "Read complete protobuf";
       // Parse the message
       if (!RawMessageArrived(buffer_.data())) {
         qLog(Error) << "Malformed protobuf message";
@@ -80,6 +82,7 @@ void _MessageHandlerBase::DeviceReadyRead() {
       }
 
       // Clear the buffer
+      qLog(Debug) << "Ready to accept next protobuf";
       buffer_.close();
       buffer_.setData(QByteArray());
       buffer_.open(QIODevice::ReadWrite);
@@ -89,19 +92,24 @@ void _MessageHandlerBase::DeviceReadyRead() {
 }
 
 void _MessageHandlerBase::WriteMessage(const QByteArray& data) {
+  qLog(Debug) << "Writing message" << data.toHex();
+
   QDataStream s(device_);
   s << quint32(data.length());
   s.writeRawData(data.data(), data.length());
 
   // Sorry.
+  qLog(Debug) << "Flushing";
   if (flush_abstract_socket_) {
     ((static_cast<QAbstractSocket*>(device_))->*(flush_abstract_socket_))();
   } else if (flush_local_socket_) {
     ((static_cast<QLocalSocket*>(device_))->*(flush_local_socket_))();
   }
+  qLog(Debug) << "Write finished";
 }
 
 void _MessageHandlerBase::DeviceClosed() {
+  qLog(Debug) << "Device closed";
   is_device_closed_ = true;
   AbortAll();
 }

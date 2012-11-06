@@ -25,9 +25,9 @@ _MessageReplyBase::_MessageReplyBase(QObject* parent)
 }
 
 bool _MessageReplyBase::WaitForFinished() {
-  qLog(Debug) << "Waiting on ID" << id();
+  qLog(Debug) << "Waiting on ID" << id() << this;
   semaphore_.acquire();
-  qLog(Debug) << "Acquired ID" << id();
+  qLog(Debug) << "Acquired ID" << id() << this;
   return success_;
 }
 

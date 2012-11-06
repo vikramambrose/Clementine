@@ -354,7 +354,9 @@ WorkerPool<HandlerType>::NewReply(MessageType* message) {
 template <typename HandlerType>
 typename WorkerPool<HandlerType>::ReplyType*
 WorkerPool<HandlerType>::SendMessageWithReply(MessageType* message) {
+  qLog(Debug) << "Creating reply for message";
   ReplyType* reply = NewReply(message);
+  qLog(Debug) << "Reply" << reply << "got ID" << reply->id();
 
   // Add the pending reply to the queue
   {
@@ -363,6 +365,7 @@ WorkerPool<HandlerType>::SendMessageWithReply(MessageType* message) {
   }
 
   // Wake up the main thread
+  qLog(Debug) << "Waking main thread";
   metaObject()->invokeMethod(this, "SendQueuedMessages", Qt::QueuedConnection);
 
   return reply;
@@ -370,6 +373,7 @@ WorkerPool<HandlerType>::SendMessageWithReply(MessageType* message) {
 
 template <typename HandlerType>
 void WorkerPool<HandlerType>::SendQueuedMessages() {
+  qLog(Debug) << "Sending queued messages";
   QMutexLocker l(&message_queue_mutex_);
 
   while (!message_queue_.isEmpty()) {
@@ -384,8 +388,11 @@ void WorkerPool<HandlerType>::SendQueuedMessages() {
       break;
     }
 
+    qLog(Debug) << "Passing message to handler" << handler;
     handler->SendRequest(reply);
   }
+
+  qLog(Debug) << "Done sending queued messages";
 }
 
 template <typename HandlerType>

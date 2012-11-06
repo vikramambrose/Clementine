@@ -165,15 +165,21 @@ template<typename MT>
 bool AbstractMessageHandler<MT>::RawMessageArrived(const QByteArray& data) {
   MessageType message;
   if (!message.ParseFromArray(data.constData(), data.size())) {
+    qLog(Debug) << "ParseFromArray failed";
     return false;
   }
 
+  qLog(Debug) << "Raw message arrived:" << data.toHex();
+
+  qLog(Debug) << "Finding pending reply for ID" << message.id();
   ReplyType* reply = pending_replies_.take(message.id());
 
   if (reply) {
     // This is a reply to a message that we created earlier.
+    qLog(Debug) << "Waking up pending reply" << reply;
     reply->SetReply(message);
   } else {
+    qLog(Debug) << "Calling MessageArrived";
     MessageArrived(message);
   }
 
