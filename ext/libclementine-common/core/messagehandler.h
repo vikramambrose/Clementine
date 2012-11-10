@@ -62,6 +62,7 @@ public:
 protected slots:
   void WriteMessage(const QByteArray& data);
   void DeviceReadyRead();
+  void DeviceBytesWritten(qint64 bytes);
   virtual void DeviceClosed();
 
 protected:
@@ -75,10 +76,6 @@ protected:
   QIODevice* device_;
   FlushAbstractSocket flush_abstract_socket_;
   FlushLocalSocket flush_local_socket_;
-
-  bool reading_protobuf_;
-  quint32 expected_length_;
-  QBuffer buffer_;
 
   bool is_device_closed_;
 };
@@ -169,7 +166,7 @@ bool AbstractMessageHandler<MT>::RawMessageArrived(const QByteArray& data) {
     return false;
   }
 
-  qLog(Debug) << "Raw message arrived:" << data.toHex();
+  qLog(Debug) << "Raw message arrived";
 
   qLog(Debug) << "Finding pending reply for ID" << message.id();
   ReplyType* reply = pending_replies_.take(message.id());

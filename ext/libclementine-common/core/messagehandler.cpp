@@ -30,8 +30,6 @@ _MessageHandlerBase::_MessageHandlerBase(QIODevice* device, QObject* parent)
     device_(NULL),
     flush_abstract_socket_(NULL),
     flush_local_socket_(NULL),
-    reading_protobuf_(false),
-    expected_length_(0),
     is_device_closed_(false) {
   if (device) {
     SetDevice(device);
@@ -41,9 +39,8 @@ _MessageHandlerBase::_MessageHandlerBase(QIODevice* device, QObject* parent)
 void _MessageHandlerBase::SetDevice(QIODevice* device) {
   device_ = device;
 
-  buffer_.open(QIODevice::ReadWrite);
-
   connect(device, SIGNAL(readyRead()), SLOT(DeviceReadyRead()));
+  connect(device, SIGNAL(bytesWritten(qint64)), SLOT(DeviceBytesWritten(qint64)));
 
   // Yeah I know.
   if (QAbstractSocket* socket = qobject_cast<QAbstractSocket*>(device)) {
@@ -59,53 +56,52 @@ void _MessageHandlerBase::SetDevice(QIODevice* device) {
 
 void _MessageHandlerBase::DeviceReadyRead() {
   while (device_->bytesAvailable()) {
-    if (!reading_protobuf_) {
-      // Read the length of the next message
-      QDataStream s(device_);
-      s >> expected_length_;
+    qLog(Debug) << "Device has" << device_->bytesAvailable() << "bytes ready to read";
 
-      reading_protobuf_ = true;
-      qLog(Debug) << "Read header length" << expected_length_;
+    QDataStream s(device_);
+    char* data_pointer = 0;
+    uint data_length = 0;
+    s.readBytes(data_pointer, data_length);
+
+    QByteArray data = QByteArray::fromRawData(data_pointer, data_length);
+    qLog(Debug) << "Read" << data.length() << "bytes:" << data.toHex();
+
+    // Parse the message
+    if (!RawMessageArrived(data)) {
+      qLog(Error) << "Malformed protobuf message";
+      delete[] data_pointer;
+      device_->close();
+      return;
     }
 
-    // Read some of the message
-    buffer_.write(device_->read(expected_length_ - buffer_.size()));
-
-    // Did we get everything?
-    if (buffer_.size() == expected_length_) {
-      qLog(Debug) << "Read complete protobuf";
-      // Parse the message
-      if (!RawMessageArrived(buffer_.data())) {
-        qLog(Error) << "Malformed protobuf message";
-        device_->close();
-        return;
-      }
-
-      // Clear the buffer
-      qLog(Debug) << "Ready to accept next protobuf";
-      buffer_.close();
-      buffer_.setData(QByteArray());
-      buffer_.open(QIODevice::ReadWrite);
-      reading_protobuf_ = false;
-    }
+    // Clear the buffer
+    qLog(Debug) << "Ready to accept next protobuf";
+    delete[] data_pointer;
   }
 }
 
 void _MessageHandlerBase::WriteMessage(const QByteArray& data) {
-  qLog(Debug) << "Writing message" << data.toHex();
+  qLog(Debug) << "Writing message" << data.toHex() << "(length" << data.length() << ")";
+  qLog(Debug) << "Bytes to write" << device_->bytesToWrite();
 
   QDataStream s(device_);
-  s << quint32(data.length());
-  s.writeRawData(data.data(), data.length());
+  s.writeBytes(data.constData(), data.length());
+
+  qLog(Debug) << "Bytes to write" << device_->bytesToWrite();
 
   // Sorry.
-  qLog(Debug) << "Flushing";
   if (flush_abstract_socket_) {
+    qLog(Debug) << "Flushing abstract socket";
     ((static_cast<QAbstractSocket*>(device_))->*(flush_abstract_socket_))();
   } else if (flush_local_socket_) {
+    qLog(Debug) << "Flushing local socket";
     ((static_cast<QLocalSocket*>(device_))->*(flush_local_socket_))();
   }
-  qLog(Debug) << "Write finished";
+  qLog(Debug) << "Bytes to write" << device_->bytesToWrite();
+}
+
+void _MessageHandlerBase::DeviceBytesWritten(qint64 bytes) {
+  qLog(Debug) << "Written" << bytes << "bytes";
 }
 
 void _MessageHandlerBase::DeviceClosed() {
