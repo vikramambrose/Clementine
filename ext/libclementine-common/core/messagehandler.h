@@ -134,6 +134,8 @@ template<typename MT>
 void AbstractMessageHandler<MT>::SendMessage(const MessageType& message) {
   Q_ASSERT(QThread::currentThread() == thread());
 
+  qLog(Debug) << "Sending message" << message.ShortDebugString().c_str();
+
   std::string data = message.SerializeAsString();
   WriteMessage(QByteArray(data.data(), data.size()));
 }
@@ -161,10 +163,13 @@ void AbstractMessageHandler<MT>::SendReply(const MessageType& request,
 template<typename MT>
 bool AbstractMessageHandler<MT>::RawMessageArrived(const QByteArray& data) {
   MessageType message;
+  qLog(Debug) << "Empty message:" << message.ShortDebugString().c_str();
   if (!message.ParseFromArray(data.constData(), data.size())) {
     qLog(Debug) << "ParseFromArray failed";
     return false;
   }
+
+  qLog(Debug) << "Parsed message" << message.ShortDebugString().c_str();
 
   qLog(Debug) << "Raw message arrived";
 
