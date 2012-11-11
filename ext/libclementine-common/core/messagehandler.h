@@ -33,6 +33,8 @@
 #include "core/logging.h"
 #include "core/messagereply.h"
 
+#include <google/protobuf/generated_message_util.h>
+
 class QAbstractSocket;
 class QIODevice;
 class QLocalSocket;
@@ -164,6 +166,9 @@ template<typename MT>
 bool AbstractMessageHandler<MT>::RawMessageArrived(const QByteArray& data) {
   MessageType message;
   qLog(Debug) << "Empty message:" << message.ShortDebugString().c_str();
+
+  qLog(Debug) << "kEmptyString is at" << &google::protobuf::internal::kEmptyString;
+
   if (!message.ParseFromArray(data.constData(), data.size())) {
     qLog(Debug) << "ParseFromArray failed";
     return false;

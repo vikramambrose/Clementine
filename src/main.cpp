@@ -50,6 +50,8 @@
 #include "version.h"
 #include "widgets/osd.h"
 
+#include "tagreadermessages.pb.h"
+
 #include "qtsingleapplication.h"
 #include "qtsinglecoreapplication.h"
 
@@ -61,6 +63,7 @@
 #include <QSqlQuery>
 #include <QTextCodec>
 #include <QTranslator>
+#include <QtConcurrentRun>
 #include <QtDebug>
 
 #include <glib-object.h>
@@ -224,6 +227,18 @@ void ScanGIOModulePath() {
   }
 }
 #endif
+
+void ParseAProto() {
+  const QByteArray data = QByteArray::fromHex(
+        "08001a8b010a8801b2014566696c653a2f2f2f453a2f4d7573696b2f28414c42554d2"
+        "9253230476f74616e25323050726f6a6563742532302d253230416d6269656e742532"
+        "304c6f756e67652e6d786dba012a28414c42554d2920476f74616e2050726f6a65637"
+        "4202d20416d6269656e74204c6f756e67652e6d786dc001c7a7efd104c801bad685e4"
+        "04d001eeca32");
+  pb::tagreader::Message message;
+  message.ParseFromArray(data.constData(), data.size());
+  qLog(Debug) << "Parsed a proto:" << message.ShortDebugString().c_str();
+}
 
 int main(int argc, char *argv[]) {
   if (CrashReporting::SendCrashReport(argc, argv)) {
@@ -390,6 +405,10 @@ int main(int argc, char *argv[]) {
 
   // Icons
   IconLoader::Init();
+
+  ParseAProto();
+  QtConcurrent::run(&ParseAProto);
+  qLog(Debug) << "kEmptyString is at" << &google::protobuf::internal::kEmptyString;
 
   Application app;
 
