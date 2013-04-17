@@ -166,6 +166,7 @@ set(SOURCES
   internet/digitallyimportedsettingspage.cpp
   internet/digitallyimportedurlhandler.cpp
   internet/geolocator.cpp
+  internet/googleglasssettingspage.cpp
   internet/groovesharkradio.cpp
   internet/groovesharkservice.cpp
   internet/groovesharksettingspage.cpp
@@ -458,6 +459,7 @@ set(HEADERS
   internet/digitallyimportedservicebase.h
   internet/digitallyimportedsettingspage.h
   internet/geolocator.h
+  internet/googleglasssettingspage.h
   internet/groovesharkservice.h
   internet/groovesharksettingspage.h
   internet/groovesharkurlhandler.h
@@ -661,6 +663,7 @@ set(UI
   globalsearch/suggestionwidget.ui
 
   internet/digitallyimportedsettingspage.ui
+  internet/googleglasssettingspage.ui
   internet/groovesharksettingspage.ui
   internet/icecastfilterwidget.ui
   internet/internetviewcontainer.ui

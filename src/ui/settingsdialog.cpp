@@ -36,6 +36,7 @@
 #include "engines/gstengine.h"
 #include "globalsearch/globalsearchsettingspage.h"
 #include "internet/digitallyimportedsettingspage.h"
+#include "internet/googleglasssettingspage.h"
 #include "internet/groovesharksettingspage.h"
 #include "internet/magnatunesettingspage.h"
 #include "internet/subsonicsettingspage.h"
@@ -150,6 +151,8 @@ SettingsDialog::SettingsDialog(Application* app, BackgroundStreams* streams, QWi
   AddPage(Page_Appearance, new AppearanceSettingsPage(this), iface);
   AddPage(Page_SongInformation, new SongInfoSettingsPage(this), iface);
   AddPage(Page_Notifications, new NotificationsSettingsPage(this), iface);
+
+  AddPage(Page_GoogleGlass, new GoogleGlassSettingsPage(this), iface);
 
   // Internet providers
   QTreeWidgetItem* providers = AddCategory(tr("Internet providers"));
