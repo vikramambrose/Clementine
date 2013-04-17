@@ -372,6 +372,7 @@ set(SOURCES
   widgets/multiloadingindicator.cpp
   widgets/nowplayingwidget.cpp
   widgets/osd.cpp
+  widgets/osdglass.cpp
   widgets/osdpretty.cpp
   widgets/prettyimage.cpp
   widgets/prettyimageview.cpp
@@ -637,6 +638,7 @@ set(HEADERS
   widgets/multiloadingindicator.h
   widgets/nowplayingwidget.h
   widgets/osd.h
+  widgets/osdglass.h
   widgets/osdpretty.h
   widgets/prettyimage.h
   widgets/prettyimageview.h

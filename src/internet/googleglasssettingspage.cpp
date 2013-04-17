@@ -28,25 +28,23 @@
 #include "internet/oauthenticator.h"
 #include "ui/settingsdialog.h"
 
-namespace {
+const char* GoogleGlassSettingsPage::kSettingsGroup = "GoogleGlass";
 
-static const char* kSettingsGroup = "GoogleGlass";
-static const char* kOAuthEndpoint = "https://accounts.google.com/o/oauth2/auth";
-static const char* kOAuthTokenEndpoint =
-    "https://accounts.google.com/o/oauth2/token";
-static const char* kOAuthScope =
-    "https://www.googleapis.com/auth/userinfo.email"
-    " https://www.googleapis.com/auth/glass.timeline";
-static const char* kClientId =
-    "701906459320.apps.googleusercontent.com";
-static const char* kClientSecret = "oKx6S1Bl0TwVeXv9XRswJGCN";
-static const char* kGoogleUserInfoEndpoint =
-    "https://www.googleapis.com/oauth2/v1/userinfo";
+const char* GoogleGlassSettingsPage::kOAuthEndpoint = "https://accounts.google.com/o/oauth2/auth";
+const char* GoogleGlassSettingsPage::kOAuthTokenEndpoint =
+  "https://accounts.google.com/o/oauth2/token";
+const char* GoogleGlassSettingsPage::kOAuthScope =
+  "https://www.googleapis.com/auth/userinfo.email"
+  " https://www.googleapis.com/auth/glass.timeline";
+const char* GoogleGlassSettingsPage::kClientId =
+  "701906459320.apps.googleusercontent.com";
+const char* GoogleGlassSettingsPage::kClientSecret = "oKx6S1Bl0TwVeXv9XRswJGCN";
+const char* GoogleGlassSettingsPage::kGoogleUserInfoEndpoint =
+  "https://www.googleapis.com/oauth2/v1/userinfo";
 
-static const char* kGlassTimelineUploadUrl =
-    "https://www.googleapis.com/mirror/v1/timeline";
+const char* GoogleGlassSettingsPage::kGlassTimelineUploadUrl =
+  "https://www.googleapis.com/mirror/v1/timeline";
 
-}  // namespace
 
 GoogleGlassSettingsPage::GoogleGlassSettingsPage(SettingsDialog* parent)
   : SettingsPage(parent),

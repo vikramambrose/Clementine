@@ -29,6 +29,7 @@
 
 class Application;
 class OrgFreedesktopNotificationsInterface;
+class OSDGlass;
 class OSDPretty;
 class SystemTrayIcon;
 
@@ -56,6 +57,7 @@ class OSD : public QObject {
     Native,
     TrayPopup,
     Pretty,
+    GoogleGlass,
   };
 
   // Implemented in the OS-specific files
@@ -140,6 +142,8 @@ class OSD : public QObject {
   uint notification_id_;
   QDateTime last_notification_time_;
 #endif
+
+  OSDGlass* glass_osd_;
 };
 
 #endif // OSD_H

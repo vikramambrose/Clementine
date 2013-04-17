@@ -15,21 +15,23 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "config.h"
-#include "core/application.h"
-#include "core/logging.h"
-#include "covers/currentartloader.h"
 #include "osd.h"
-#include "osdpretty.h"
-#include "ui/systemtrayicon.h"
-
-#ifdef HAVE_DBUS
-# include "dbus/notification.h"
-#endif
 
 #include <QCoreApplication>
 #include <QtDebug>
 #include <QSettings>
+
+#include "config.h"
+#include "core/application.h"
+#include "core/logging.h"
+#include "covers/currentartloader.h"
+#include "ui/systemtrayicon.h"
+#include "widgets/osdglass.h"
+#include "widgets/osdpretty.h"
+
+#ifdef HAVE_DBUS
+# include "dbus/notification.h"
+#endif
 
 const char* OSD::kSettingsGroup = "OSD";
 
@@ -48,8 +50,8 @@ OSD::OSD(SystemTrayIcon* tray_icon, Application* app, QObject* parent)
     preview_mode_(false),
     force_show_next_(false),
     ignore_next_stopped_(false),
-    pretty_popup_(new OSDPretty(OSDPretty::Mode_Popup))
-{
+    pretty_popup_(new OSDPretty(OSDPretty::Mode_Popup)),
+    glass_osd_(new OSDGlass(this)) {
   connect(app_->current_art_loader(), SIGNAL(ThumbnailLoaded(Song,QString,QImage)),
           SLOT(AlbumArtLoaded(Song,QString,QImage)));
 
@@ -195,6 +197,7 @@ void OSD::ShowMessage(const QString& summary,
                       const QString& message,
                       const QString& icon,
                       const QImage& image) {
+  glass_osd_->ShowMessage(summary, message, icon, image);
   if (pretty_popup_->toggle_mode()) {
     pretty_popup_->ShowMessage(summary, message, image);
   } else {

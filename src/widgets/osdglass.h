@@ -15,51 +15,34 @@
    along with Clementine.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef GOOGLEGLASSSETTINGSPAGE_H
-#define GOOGLEGLASSSETTINGSPAGE_H
+#ifndef OSDGLASS_H
+#define OSDGLASS_H
 
-#include "ui/settingspage.h"
+#include <QObject>
 
 class NetworkAccessManager;
 class OAuthenticator;
+class QImage;
 class QNetworkReply;
-class Ui_GoogleGlassSettingsPage;
 
-class GoogleGlassSettingsPage : public SettingsPage {
+class OSDGlass : public QObject {
   Q_OBJECT
+ public:
+  OSDGlass(QObject* parent = 0);
 
-public:
-  GoogleGlassSettingsPage(SettingsDialog* parent = 0);
-  ~GoogleGlassSettingsPage();
+  void ShowMessage(
+      const QString& summary,
+      const QString& message,
+      const QString& icon,
+      const QImage& image);
 
-  void Load();
-  void Save();
-
-  // QObject
-  bool eventFilter(QObject* object, QEvent* event);
-
-  static const char* kSettingsGroup;
-  static const char* kOAuthEndpoint;
-  static const char* kOAuthTokenEndpoint;
-  static const char* kOAuthScope;
-  static const char* kClientId;
-  static const char* kClientSecret;
-  static const char* kGoogleUserInfoEndpoint;
-
-  static const char* kGlassTimelineUploadUrl;
-
-private slots:
-  void LoginClicked();
-  void LogoutClicked();
-
+ private slots:
   void AuthoriseFinished(OAuthenticator* authenticator);
-  void FetchUserInfoFinished(QNetworkReply* reply);
   void TimelineInsertFinished(QNetworkReply* reply);
 
-private:
-  Ui_GoogleGlassSettingsPage* ui_;
-  QString access_token_;
+ private:
   NetworkAccessManager* network_;
+  QString access_token_;
 };
 
-#endif // GOOGLEGLASSSETTINGSPAGE_H
+#endif  // OSDGLASS_H
