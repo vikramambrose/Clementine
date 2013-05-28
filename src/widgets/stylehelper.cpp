@@ -233,9 +233,12 @@ void StyleHelper::drawIconWithShadow(const QIcon &icon, const QRect &rect,
         QPixmapCache::insert(pixmapName, cache);
     }
 
-    QRect targetRect = cache.rect();
-    targetRect.moveCenter(rect.center());
-    p->drawPixmap(targetRect.topLeft() - offset, cache);
+    QRect target_rect = rect;
+    const int max_dimension = qMin(target_rect.height(), target_rect.width());
+    target_rect.setWidth(max_dimension);
+    target_rect.setHeight(max_dimension);
+    target_rect.moveCenter(rect.center());
+    p->drawPixmap(target_rect, cache, cache.rect());
 }
 
 } // namespace Utils
