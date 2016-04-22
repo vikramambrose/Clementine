@@ -151,6 +151,7 @@ set(SOURCES
   globalsearch/spotifysearchprovider.cpp
   globalsearch/suggestionwidget.cpp
   globalsearch/urlsearchprovider.cpp
+  globalsearch/youtubesearchprovider.cpp
 
   internet/core/cloudfilesearchprovider.cpp
   internet/core/cloudfileservice.cpp
@@ -458,6 +459,7 @@ set(HEADERS
   globalsearch/soundcloudsearchprovider.h
   globalsearch/spotifysearchprovider.h
   globalsearch/suggestionwidget.h
+  globalsearch/youtubesearchprovider.h
 
   internet/core/cloudfileservice.h
   internet/digitally/digitallyimportedclient.h
@@ -1252,6 +1254,8 @@ target_link_libraries(clementine_lib
   z
   Qocoa
 )
+
+qt5_use_modules(clementine_lib WebEngineWidgets)
 
 if(HAVE_VK)
   target_link_libraries(clementine_lib ${VREEN_LIBRARIES})

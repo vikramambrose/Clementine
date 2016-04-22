@@ -34,16 +34,12 @@ endif (UNIX AND NOT APPLE)
 
 set(QT_MIN_VERSION 5.6.0)
 
-find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core OpenGL Sql Network Xml Widgets Concurrent Test)
+find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core OpenGL Sql Network Xml Widgets Concurrent Test WebEngineWidgets)
 find_package(X11)
 if(X11_FOUND)
   find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS X11Extras)
 endif()
 
-
-if(NOT APPLE)
-  find_package(Qt5 COMPONENTS WebKitWidgets)
-endif(NOT APPLE)
 
 # Find Qt's lconvert binary.  Try qt's binary dir first, fall back to looking in PATH
 find_program(QT_LCONVERT_EXECUTABLE NAMES lconvert lconvert-qt5 PATHS ${QT_BINARY_DIR} NO_DEFAULT_PATH)

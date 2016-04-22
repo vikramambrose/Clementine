@@ -36,6 +36,7 @@
 #include "covers/musicbrainzcoverprovider.h"
 #include "devices/devicemanager.h"
 #include "globalsearch/globalsearch.h"
+#include "globalsearch/youtubesearchprovider.h"
 #include "internet/core/internetmodel.h"
 #include "internet/core/scrobbler.h"
 #include "internet/podcasts/gpoddersync.h"
@@ -109,7 +110,12 @@ class ApplicationImpl {
         player_([=]() { return new Player(app, app); }),
         playlist_manager_([=]() { return new PlaylistManager(app); }),
         current_art_loader_([=]() { return new CurrentArtLoader(app, app); }),
-        global_search_([=]() { return new GlobalSearch(app, app); }),
+        global_search_([=]() {
+          GlobalSearch* global_search = new GlobalSearch(app, app);
+          global_search->AddProvider(
+              new YoutubeSearchProvider(app, global_search));
+          return global_search;
+        }),
         internet_model_([=]() { return new InternetModel(app, app); }),
         library_([=]() { return new Library(app, app); }),
         device_manager_([=]() { return new DeviceManager(app, app); }),
