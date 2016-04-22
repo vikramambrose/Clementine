@@ -193,6 +193,7 @@ set(SOURCES
   internet/subsonic/subsonicsettingspage.cpp
   internet/subsonic/subsonicurlhandler.cpp
   internet/subsonic/subsonicdynamicplaylist.cpp
+  internet/youtube/youtubeurlhandler.cpp
 
   library/groupbydialog.cpp
   library/library.cpp
@@ -498,6 +499,7 @@ set(HEADERS
   internet/subsonic/subsonicsettingspage.h
   internet/subsonic/subsonicurlhandler.h
   internet/subsonic/subsonicdynamicplaylist.h
+  internet/youtube/youtubeurlhandler.h
 
   library/groupbydialog.h
   library/library.h
@@ -510,11 +512,11 @@ set(HEADERS
   library/libraryviewcontainer.h
   library/librarywatcher.h
   library/savedgroupingmanager.h
-  
+
   musicbrainz/acoustidclient.h
   musicbrainz/musicbrainzclient.h
   musicbrainz/tagfetcher.h
-  
+
   networkremote/networkremotehelper.h
   networkremote/networkremote.h
   networkremote/incomingdataparser.h

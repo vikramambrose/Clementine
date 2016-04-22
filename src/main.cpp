@@ -275,6 +275,7 @@ int main(int argc, char* argv[]) {
 
   CommandlineOptions options(argc, argv);
 
+  /*
   {
     // Only start a core application now so we can check if there's another
     // Clementine running without needing an X server.
@@ -300,6 +301,7 @@ int main(int argc, char* argv[]) {
       // Couldn't send the message so start anyway
     }
   }
+  */
 
 #ifdef Q_OS_DARWIN
   // Must happen after QCoreApplication::setOrganizationName().

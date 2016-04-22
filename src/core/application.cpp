@@ -44,6 +44,7 @@
 #include "internet/podcasts/podcastdeleter.h"
 #include "internet/podcasts/podcastdownloader.h"
 #include "internet/podcasts/podcastupdater.h"
+#include "internet/youtube/youtubeurlhandler.h"
 #include "library/librarybackend.h"
 #include "library/library.h"
 #include "moodbar/moodbarcontroller.h"
@@ -107,7 +108,11 @@ class ApplicationImpl {
           return cover_providers;
         }),
         task_manager_([=]() { return new TaskManager(app); }),
-        player_([=]() { return new Player(app, app); }),
+        player_([=]() {
+          Player* player = new Player(app, app);
+          player->RegisterUrlHandler(new YoutubeUrlHandler(app));
+          return player;
+        }),
         playlist_manager_([=]() { return new PlaylistManager(app); }),
         current_art_loader_([=]() { return new CurrentArtLoader(app, app); }),
         global_search_([=]() {
