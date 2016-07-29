@@ -33,6 +33,7 @@
 #include "playlist/playlistitem.h"
 #include "ui/organisedialog.h"
 #include "ui/settingsdialog.h"
+#include "ui/streamdetailsdialog.h"
 
 class About;
 class AddStreamDialog;
@@ -72,6 +73,7 @@ class RipCDDialog;
 class Song;
 class SongInfoBase;
 class SongInfoView;
+class StreamDetailsDialog;
 class SystemTrayIcon;
 class TagFetcher;
 class TaskManager;
@@ -165,6 +167,7 @@ signals:
   void PlaylistEditFinished(const QModelIndex& index);
   void EditTracks();
   void EditTagDialogAccepted();
+  void ShowStreamDetails();
   void RenumberTracks();
   void SelectionSetValue();
   void EditValue();

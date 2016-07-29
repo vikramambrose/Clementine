@@ -23,6 +23,7 @@
 
 #include <QCloseEvent>
 #include <QDir>
+#include <QErrorMessage>
 #include <QFileDialog>
 #include <QFileSystemModel>
 #include <QLinearGradient>
@@ -101,12 +102,14 @@
 #include "smartplaylists/generatormimedata.h"
 #include "songinfo/artistinfoview.h"
 #include "songinfo/songinfoview.h"
+#include "songinfo/streamdiscoverer.h"
 #include "transcoder/transcodedialog.h"
 #include "ui/about.h"
 #include "ui/addstreamdialog.h"
 #include "ui/albumcovermanager.h"
 #include "ui/console.h"
 #include "ui/edittagdialog.h"
+#include "ui/streamdetailsdialog.h"
 #include "ui/equalizer.h"
 #include "ui/iconloader.h"
 #include "ui/organisedialog.h"
@@ -434,6 +437,8 @@ MainWindow::MainWindow(Application* app, SystemTrayIcon* tray_icon, OSD* osd,
   connect(ui_->action_remove_from_playlist, SIGNAL(triggered()),
           SLOT(PlaylistRemoveCurrent()));
   connect(ui_->action_edit_track, SIGNAL(triggered()), SLOT(EditTracks()));
+  connect(ui_->action_view_stream_details, SIGNAL(triggered()),
+          SLOT(ShowStreamDetails()));
   connect(ui_->action_renumber_tracks, SIGNAL(triggered()),
           SLOT(RenumberTracks()));
   connect(ui_->action_selection_set_value, SIGNAL(triggered()),
@@ -682,6 +687,7 @@ MainWindow::MainWindow(Application* app, SystemTrayIcon* tray_icon, OSD* osd,
   playlist_menu_->addAction(ui_->action_remove_from_playlist);
   playlist_undoredo_ = playlist_menu_->addSeparator();
   playlist_menu_->addAction(ui_->action_edit_track);
+  playlist_menu_->addAction(ui_->action_view_stream_details);
   playlist_menu_->addAction(ui_->action_edit_value);
   playlist_menu_->addAction(ui_->action_renumber_tracks);
   playlist_menu_->addAction(ui_->action_selection_set_value);
@@ -1706,6 +1712,10 @@ void MainWindow::PlaylistRightClick(const QPoint& global_pos,
   // no 'show in browser' action if only streams are selected
   playlist_open_in_browser_->setVisible(streams != all);
 
+  // If exactly one stream is selected, enable the 'show details' action.
+  ui_->action_view_stream_details->setEnabled(all == 1 && streams == 1);
+  ui_->action_view_stream_details->setVisible(all == 1 && streams == 1);
+
   bool track_column = (index.column() == Playlist::Column_Track);
   ui_->action_renumber_tracks->setVisible(editable >= 2 && track_column);
   ui_->action_selection_set_value->setVisible(editable >= 2 && !track_column);
@@ -1874,6 +1884,30 @@ void MainWindow::EditTagDialogAccepted() {
   ui_->playlist->view()->update();
 
   app_->playlist_manager()->current()->Save();
+}
+
+void MainWindow::ShowStreamDetails() {
+  int row = playlist_menu_index_.row();
+  Song song = app_->playlist_manager()->current()->item_at(row)->Metadata();
+  QString url = song.url().toString();
+
+  StreamDiscoverer discoverer(url);
+  if (discoverer.discoveryValid()) {
+    StreamDetailsDialog stream_details_dialog(this);
+
+    stream_details_dialog.setUrl(discoverer.url());
+    stream_details_dialog.setFormat(discoverer.format());
+    stream_details_dialog.setBitrate(discoverer.bitrate());
+    stream_details_dialog.setChannels(discoverer.channels());
+    stream_details_dialog.setDepth(discoverer.depth());
+    stream_details_dialog.setSampleRate(discoverer.sampleRate());
+
+    stream_details_dialog.exec();
+  } else {
+    QMessageBox error_box(QMessageBox::Critical, tr("Error"),
+                          tr("Could not get the stream's details"));
+    error_box.exec();
+  }
 }
 
 void MainWindow::RenumberTracks() {
