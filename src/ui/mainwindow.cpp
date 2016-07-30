@@ -176,6 +176,7 @@ MainWindow::MainWindow(Application* app, SystemTrayIcon* tray_icon, OSD* osd,
       tray_icon_(tray_icon),
       osd_(osd),
       edit_tag_dialog_(std::bind(&MainWindow::CreateEditTagDialog, this)),
+      stream_discoverer_(std::bind(&MainWindow::CreateStreamDiscoverer, this)),
       global_shortcuts_(new GlobalShortcuts(this)),
       global_search_view_(new GlobalSearchView(app_, this)),
       library_view_(new LibraryViewContainer(this)),
@@ -399,8 +400,7 @@ MainWindow::MainWindow(Application* app, SystemTrayIcon* tray_icon, OSD* osd,
           SLOT(CopyFilesToLibrary(QList<QUrl>)));
   connect(file_view_, SIGNAL(MoveToLibrary(QList<QUrl>)),
           SLOT(MoveFilesToLibrary(QList<QUrl>)));
-  connect(file_view_, SIGNAL(EditTags(QList<QUrl>)),
-          SLOT(EditFileTags(QList<QUrl>)));
+  connect(file_view_, SIGNAL(s(QList<QUrl>)), SLOT(EditFileTags(QList<QUrl>)));
   connect(file_view_, SIGNAL(CopyToDevice(QList<QUrl>)),
           SLOT(CopyFilesToDevice(QList<QUrl>)));
   file_view_->SetTaskManager(app_->task_manager());
@@ -438,7 +438,7 @@ MainWindow::MainWindow(Application* app, SystemTrayIcon* tray_icon, OSD* osd,
           SLOT(PlaylistRemoveCurrent()));
   connect(ui_->action_edit_track, SIGNAL(triggered()), SLOT(EditTracks()));
   connect(ui_->action_view_stream_details, SIGNAL(triggered()),
-          SLOT(ShowStreamDetails()));
+          SLOT(DiscoverStreamDetails()));
   connect(ui_->action_renumber_tracks, SIGNAL(triggered()),
           SLOT(RenumberTracks()));
   connect(ui_->action_selection_set_value, SIGNAL(triggered()),
@@ -1886,28 +1886,27 @@ void MainWindow::EditTagDialogAccepted() {
   app_->playlist_manager()->current()->Save();
 }
 
-void MainWindow::ShowStreamDetails() {
+void MainWindow::DiscoverStreamDetails() {
   int row = playlist_menu_index_.row();
   Song song = app_->playlist_manager()->current()->item_at(row)->Metadata();
+
   QString url = song.url().toString();
+  qLog(Debug) << "Attempting to discover " << url << endl;
 
-  StreamDiscoverer discoverer(url);
-  if (discoverer.discoveryValid()) {
-    StreamDetailsDialog stream_details_dialog(this);
+  stream_discoverer_->discover(url);
+}
 
-    stream_details_dialog.setUrl(discoverer.url());
-    stream_details_dialog.setFormat(discoverer.format());
-    stream_details_dialog.setBitrate(discoverer.bitrate());
-    stream_details_dialog.setChannels(discoverer.channels());
-    stream_details_dialog.setDepth(discoverer.depth());
-    stream_details_dialog.setSampleRate(discoverer.sampleRate());
+void MainWindow::ShowStreamDetails() {
+  StreamDetailsDialog stream_details_dialog(this);
 
-    stream_details_dialog.exec();
-  } else {
-    QMessageBox error_box(QMessageBox::Critical, tr("Error"),
-                          tr("Could not get the stream's details"));
-    error_box.exec();
-  }
+  stream_details_dialog.setUrl(stream_discoverer_->url());
+  stream_details_dialog.setFormat(stream_discoverer_->format());
+  stream_details_dialog.setBitrate(stream_discoverer_->bitrate());
+  stream_details_dialog.setChannels(stream_discoverer_->channels());
+  stream_details_dialog.setDepth(stream_discoverer_->depth());
+  stream_details_dialog.setSampleRate(stream_discoverer_->sampleRate());
+
+  stream_details_dialog.exec();
 }
 
 void MainWindow::RenumberTracks() {
@@ -2512,6 +2511,13 @@ EditTagDialog* MainWindow::CreateEditTagDialog() {
   connect(edit_tag_dialog, SIGNAL(Error(QString)),
           SLOT(ShowErrorDialog(QString)));
   return edit_tag_dialog;
+}
+
+StreamDiscoverer* MainWindow::CreateStreamDiscoverer() {
+  StreamDiscoverer* discoverer = new StreamDiscoverer();
+  connect(discoverer, SIGNAL(DataReady()), SLOT(ShowStreamDetails()));
+  connect(discoverer, SIGNAL(Error(QString)), SLOT(ShowErrorDialog(QString)));
+  return discoverer;
 }
 
 void MainWindow::ShowAboutDialog() { about_dialog_->show(); }
