@@ -169,7 +169,7 @@ signals:
   void EditTracks();
   void EditTagDialogAccepted();
   void DiscoverStreamDetails();
-  void ShowStreamDetails();
+  void ShowStreamDetails(StreamDetails details);
   void RenumberTracks();
   void SelectionSetValue();
   void EditValue();

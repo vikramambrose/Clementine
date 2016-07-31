@@ -1,10 +1,21 @@
 #ifndef STREAMDISCOVERER_H
 #define STREAMDISCOVERER_H
 
-#include <QString>
-#include <QObject>
-
 #include <gst/pbutils/pbutils.h>
+
+#include <QMetaType>
+#include <QObject>
+#include <QString>
+
+struct StreamDetails {
+  QString url;
+  QString format;
+  unsigned int bitrate;
+  unsigned int depth;
+  unsigned int channels;
+  unsigned int sample_rate;
+};
+Q_DECLARE_METATYPE(StreamDetails)
 
 class StreamDiscoverer : public QObject {
   Q_OBJECT
@@ -13,33 +24,15 @@ class StreamDiscoverer : public QObject {
   StreamDiscoverer();
   ~StreamDiscoverer();
 
- public slots:
   void discover(QString url);
-
-  bool dataValid() const;
-  const QString& url() const;
-  const QString& format()
-      const;  // This is localized, so only for human consumption.
-  unsigned int bitrate() const;
-  unsigned int depth() const;
-  unsigned int channels() const;
-  unsigned int sampleRate() const;
 
 signals:
   void DiscoverererFinished();
-  void DataReady();
+  void DataReady(StreamDetails data);
   void Error(const QString& message);
 
  private:
   GstDiscoverer* discoverer_;
-
-  QString url_;
-  QString format_description_;
-  unsigned int bitrate_;
-  unsigned int channels_;
-  unsigned int depth_;
-  unsigned int sample_rate_;
-  bool data_valid_;
 
   static const unsigned int kDiscoveryTimeoutS;
 

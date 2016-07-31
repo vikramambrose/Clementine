@@ -23,7 +23,6 @@
 
 #include <QCloseEvent>
 #include <QDir>
-#include <QErrorMessage>
 #include <QFileDialog>
 #include <QFileSystemModel>
 #include <QLinearGradient>
@@ -400,7 +399,8 @@ MainWindow::MainWindow(Application* app, SystemTrayIcon* tray_icon, OSD* osd,
           SLOT(CopyFilesToLibrary(QList<QUrl>)));
   connect(file_view_, SIGNAL(MoveToLibrary(QList<QUrl>)),
           SLOT(MoveFilesToLibrary(QList<QUrl>)));
-  connect(file_view_, SIGNAL(s(QList<QUrl>)), SLOT(EditFileTags(QList<QUrl>)));
+  connect(file_view_, SIGNAL(EditTags(QList<QUrl>)),
+          SLOT(EditFileTags(QList<QUrl>)));
   connect(file_view_, SIGNAL(CopyToDevice(QList<QUrl>)),
           SLOT(CopyFilesToDevice(QList<QUrl>)));
   file_view_->SetTaskManager(app_->task_manager());
@@ -1896,15 +1896,15 @@ void MainWindow::DiscoverStreamDetails() {
   stream_discoverer_->discover(url);
 }
 
-void MainWindow::ShowStreamDetails() {
+void MainWindow::ShowStreamDetails(StreamDetails details) {
   StreamDetailsDialog stream_details_dialog(this);
 
-  stream_details_dialog.setUrl(stream_discoverer_->url());
-  stream_details_dialog.setFormat(stream_discoverer_->format());
-  stream_details_dialog.setBitrate(stream_discoverer_->bitrate());
-  stream_details_dialog.setChannels(stream_discoverer_->channels());
-  stream_details_dialog.setDepth(stream_discoverer_->depth());
-  stream_details_dialog.setSampleRate(stream_discoverer_->sampleRate());
+  stream_details_dialog.setUrl(details.url);
+  stream_details_dialog.setFormat(details.format);
+  stream_details_dialog.setBitrate(details.bitrate);
+  stream_details_dialog.setChannels(details.channels);
+  stream_details_dialog.setDepth(details.depth);
+  stream_details_dialog.setSampleRate(details.sample_rate);
 
   stream_details_dialog.exec();
 }
@@ -2515,7 +2515,8 @@ EditTagDialog* MainWindow::CreateEditTagDialog() {
 
 StreamDiscoverer* MainWindow::CreateStreamDiscoverer() {
   StreamDiscoverer* discoverer = new StreamDiscoverer();
-  connect(discoverer, SIGNAL(DataReady()), SLOT(ShowStreamDetails()));
+  connect(discoverer, SIGNAL(DataReady(StreamDetails)),
+          SLOT(ShowStreamDetails(StreamDetails)));
   connect(discoverer, SIGNAL(Error(QString)), SLOT(ShowErrorDialog(QString)));
   return discoverer;
 }
