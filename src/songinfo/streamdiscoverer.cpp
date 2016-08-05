@@ -25,19 +25,18 @@ StreamDiscoverer::StreamDiscoverer() : QObject(nullptr) {
 }
 
 StreamDiscoverer::~StreamDiscoverer() {
-  // Stop the discoverer process and free it:
-  qLog(Debug) << "~Streamdiscoverer()" << endl;
   gst_discoverer_stop(discoverer_);
   g_object_unref(discoverer_);
 }
 
 void StreamDiscoverer::discover(QString url) {
   // Adding the request to discover the url given as a parameter:
-  qLog(Debug) << "discover(" << url << ")";
+  qLog(Debug) << "Discover " << url;
   std::string url_std = url.toStdString();
   const char* url_c = url_std.c_str();
   if (!gst_discoverer_discover_uri_async(discoverer_, url_c)) {
-    qLog(Error) << "Failed to start discovering URL " << url << endl;
+    qLog(Error) << "Failed to start discovering " << url
+                << endl;
     g_object_unref(discoverer_);
     return;
   }
@@ -53,11 +52,9 @@ void StreamDiscoverer::on_discovered_cb(GstDiscoverer* discoverer,
                                         gpointer self) {
   StreamDiscoverer* instance = reinterpret_cast<StreamDiscoverer*>(self);
 
-  qLog(Debug) << "on_discovered_cb(" << instance;
+  qLog(Debug) << "on_discovered_cb";
 
-  // Redirected?
   QString discovered_url(gst_discoverer_info_get_uri(info));
-  qLog(Debug) << "URL: " << discovered_url << endl;
 
   GstDiscovererResult result = gst_discoverer_info_get_result(info);
   if (result != GST_DISCOVERER_OK) {
@@ -72,6 +69,7 @@ void StreamDiscoverer::on_discovered_cb(GstDiscoverer* discoverer,
               << endl;
 
   if (audio_streams != NULL) {
+    qLog(Debug) << "Discovery successful " << endl;
     // We found a valid audio stream, extracting and saving its info:
     GstDiscovererStreamInfo* stream_audio_info =
         (GstDiscovererStreamInfo*)g_list_first(audio_streams)->data;
