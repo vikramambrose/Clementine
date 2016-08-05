@@ -768,6 +768,7 @@ set(UI
   ui/organiseerrordialog.ui
   ui/playbacksettingspage.ui
   ui/settingsdialog.ui
+  ui/streamdetailsdialog.ui
   ui/trackselectiondialog.ui
 
   widgets/equalizerslider.ui
