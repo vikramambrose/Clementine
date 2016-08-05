@@ -24,7 +24,10 @@ void StreamDetailsDialog::setChannels(unsigned int channels) {
   ui->channels->setText(QString::number(channels));
 }
 void StreamDetailsDialog::setDepth(unsigned int depth) {
-  ui->depth->setText(QString("%1 bits").arg(depth));
+  // ui->depth->setText(QString("%1 bits").arg(depth));
+  // Right now GStreamer reports incorrect numbers for MP3 and AAC streams.
+  ui->depth->setVisible(false);
+  ui->depth_label->setVisible(false);
 }
 void StreamDetailsDialog::setSampleRate(unsigned int sample_rate) {
   ui->sample_rate->setText(QString("%1 Hz").arg(sample_rate));
