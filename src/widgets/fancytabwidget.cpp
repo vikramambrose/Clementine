@@ -205,6 +205,10 @@ protected:
                     tabrectText.translate(0,-5);
                 }
 
+                const QString text(p.fontMetrics().elidedText(this->tabText(index),
+                                                              Qt::ElideRight,
+                                                              tabrectText.width()));
+
                 p.setTransform(m);
 
                 QFont boldFont(p.font());
@@ -215,12 +219,12 @@ protected:
                 // Text drop shadow color 
                 p.setPen(selected ? QColor(255,255,255,160) : QColor(0,0,0,110) );
                 p.translate(0, 3);
-                p.drawText(tabrectText, textFlags, tabText(index));
+                p.drawText(tabrectText, textFlags, text);
 
                 // Text foreground color 
                 p.translate(0, -1);
                 p.setPen(selected ? QColor(60, 60, 60) : Utils::StyleHelper::panelTextColor());
-                p.drawText(tabrectText, textFlags, tabText(index));
+                p.drawText(tabrectText, textFlags, text);
 
 
                 // Draw the icon
